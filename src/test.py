@@ -1,1 +1,1 @@
-This is a test file
+str = "This is a test file"
