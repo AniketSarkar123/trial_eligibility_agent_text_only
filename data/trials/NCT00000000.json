@@ -1,0 +1,14 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT00000001",
+      "officialTitle": "Sample Breast Cancer Trial"
+    },
+    "eligibilityModule": {
+      "sex": "FEMALE",
+      "minimumAge": "18 Years",
+      "maximumAge": "75 Years",
+      "eligibilityCriteria": "Inclusion Criteria:\n- Postmenopausal women\n- HER2-negative breast cancer\n- ECOG performance status <= 1\n- Hemoglobin >= 10 g/dL\n- ANC >= 1500 cells/uL\n- Platelets >= 100000 /uL\n- Creatinine <= 1.5 mg/dL\n- No prior CDK4/6 inhibitor\n\nExclusion Criteria:\n- Brain metastases\n- Prior palbociclib use\n"
+    }
+  }
+}
