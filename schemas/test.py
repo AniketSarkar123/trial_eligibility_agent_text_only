@@ -1,1 +1,1 @@
-This is a test file
+src = "This is a test file"
