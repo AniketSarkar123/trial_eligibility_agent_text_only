@@ -150,7 +150,147 @@ def parse_free_text_criteria(
     If you go with Option A, you MUST evaluate this separately and report
     it as a potential confound.
     """
-    # TODO: Implement chosen approach
-    # For now, return empty - you'll supplement with manual annotation
-    # of trial criteria for your evaluation set
-    return []
+    criteria = []
+    if not eligibility_text:
+        return criteria
+
+    # State tracker to determine if current line is inclusion or exclusion
+    is_inclusion_block = True
+    criterion_idx = 1
+    
+    # Helper to map text operators to the Enum
+    op_map = {
+        ">=": Operator.GTE,
+        ">": Operator.GT,
+        "<=": Operator.LTE,
+        "<": Operator.LT,
+        "=": Operator.EQ,
+        "==": Operator.EQ
+    }
+
+    lines = eligibility_text.split('\n')
+    
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+            
+        # 1. Block State Management
+        if "Inclusion Criteria" in line:
+            is_inclusion_block = True
+            continue
+        elif "Exclusion Criteria" in line:
+            is_inclusion_block = False
+            continue
+            
+        # 2. Pattern Match: ECOG Performance Status
+        # e.g., "ECOG performance status <= 1"
+        ecog_match = re.search(r'ECOG.*?([<>=]+)\s*(\d+)', line, re.IGNORECASE)
+        if ecog_match:
+            op_str, val_str = ecog_match.groups()
+            criteria.append(TrialCriterion(
+                criterion_id=f"{nct_id}_FREE_{criterion_idx}",
+                category=CriterionType.CLINICAL,
+                description=line,
+                field="ecog_score",
+                operator=op_map.get(op_str, Operator.LTE),
+                value=int(val_str),
+                is_inclusion=is_inclusion_block
+            ))
+            criterion_idx += 1
+            continue
+
+        # 3. Pattern Match: Lab Values
+        # Maps common lab names to their corresponding patient schema fields
+        lab_patterns = [
+            (r'Hemoglobin', 'lab: hemoglobin', 'g/dL'),
+            (r'ANC|Absolute Neutrophil Count', 'lab: ANC', 'cells/uL'),
+            (r'Platelets', 'lab: platelets', '/uL'),
+            (r'Creatinine', 'lab: creatinine', 'mg/dL'),
+            (r'Bilirubin', 'lab: total bilirubin', 'mg/dL'),
+        ]
+        
+        matched_lab = False
+        for lab_name, field_name, default_unit in lab_patterns:
+            # Matches text like "Hemoglobin >= 10 g/dL"
+            lab_match = re.search(rf'{lab_name}.*?([<>=]+)\s*([\d.]+)\s*([a-zA-Z/%0-9]+)?', line, re.IGNORECASE)
+            if lab_match:
+                op_str, val_str, unit_str = lab_match.groups()
+                criteria.append(TrialCriterion(
+                    criterion_id=f"{nct_id}_FREE_{criterion_idx}",
+                    category=CriterionType.LAB_VALUE,
+                    description=line,
+                    field=field_name,
+                    operator=op_map.get(op_str, Operator.GTE),
+                    value=float(val_str),
+                    unit=unit_str if unit_str else default_unit,
+                    is_inclusion=is_inclusion_block
+                ))
+                criterion_idx += 1
+                matched_lab = True
+                break
+        if matched_lab:
+            continue
+            
+        # 4. Pattern Match: Menopausal Status
+        if re.search(r'postmenopausal', line, re.IGNORECASE):
+            criteria.append(TrialCriterion(
+                criterion_id=f"{nct_id}_FREE_{criterion_idx}",
+                category=CriterionType.DEMOGRAPHIC,
+                description=line,
+                field="menopausal_status",
+                operator=Operator.EQ,
+                value="postmenopausal",
+                is_inclusion=is_inclusion_block
+            ))
+            criterion_idx += 1
+            continue
+            
+        # 5. Pattern Match: HER2 Status
+        if re.search(r'HER2.?(negative|-)', line, re.IGNORECASE):
+            criteria.append(TrialCriterion(
+                criterion_id=f"{nct_id}_FREE_{criterion_idx}",
+                category=CriterionType.BIOMARKER,
+                description=line,
+                field="her2_status",
+                operator=Operator.EQ,
+                value="negative",
+                is_inclusion=is_inclusion_block
+            ))
+            criterion_idx += 1
+            continue
+            
+        # 6. Pattern Match: Brain Metastases
+        if re.search(r'brain metastas(es|is)', line, re.IGNORECASE):
+            # For exclusions, having anything other than "none" is a fail condition
+            criteria.append(TrialCriterion(
+                criterion_id=f"{nct_id}_FREE_{criterion_idx}",
+                category=CriterionType.CLINICAL,
+                description=line,
+                field="brain_metastases",
+                operator=Operator.NEQ,  # Triggers if patient has active/stable mets
+                value="none",
+                is_inclusion=is_inclusion_block 
+            ))
+            criterion_idx += 1
+            continue
+
+        # 7. Pattern Match: Prior Therapies (e.g. CDK4/6 inhibitors)
+        prior_class_match = re.search(r'(prior|previous).*?(CDK4/6|aromatase|taxane)', line, re.IGNORECASE)
+        if prior_class_match:
+            drug_class = prior_class_match.group(2).strip().lower()
+            
+            # Check if the rule is forbidding the drug ("No prior...")
+            if "no " in line.lower() or not is_inclusion_block:
+                criteria.append(TrialCriterion(
+                    criterion_id=f"{nct_id}_FREE_{criterion_idx}",
+                    category=CriterionType.PRIOR_THERAPY,
+                    description=line,
+                    field=f"prior_drug_class:{drug_class} inhibitor", 
+                    operator=Operator.EQ,
+                    value=False,  
+                    is_inclusion=True # Treat "No prior X" as an inclusion requirement that Prior=False
+                ))
+                criterion_idx += 1
+
+    return criteria
