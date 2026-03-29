@@ -23,6 +23,7 @@ Some criteria come pre-structured (age, sex).
 The free-text eligibilityCriteria block needs further parsing.
 """
 
+import re
 from enum import Enum
 
 from pydantic import BaseModel
@@ -213,7 +214,7 @@ def parse_free_text_criteria(
         matched_lab = False
         for lab_name, field_name, default_unit in lab_patterns:
             # Matches text like "Hemoglobin >= 10 g/dL"
-            lab_match = re.search(rf'{lab_name}.*?([<>=]+)\s*([\d.]+)\s*([a-zA-Z/%0-9]+)?', line, re.IGNORECASE)
+            lab_match = re.search(rf'(?:{lab_name}).*?([<>=]+)\s*([\d.]+)\s*([a-zA-Z/%0-9]+)?', line, re.IGNORECASE)
             if lab_match:
                 op_str, val_str, unit_str = lab_match.groups()
                 criteria.append(TrialCriterion(
