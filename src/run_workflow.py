@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-# Import your pipeline function
+# Import the pipeline function
 from src.pipeline import run_pipeline
 
 def main():
@@ -14,7 +14,7 @@ def main():
     print("Running pipeline...")
     
     # 2. Call the run_pipeline function explicitly
-    # Make sure you have Ollama running with the model you specify here
+    # Make sure you have Ollama running with the phi4-mini model
     pipeline_output = run_pipeline(
         clinical_text=patient_text,
         trial_json=trial_dict,
