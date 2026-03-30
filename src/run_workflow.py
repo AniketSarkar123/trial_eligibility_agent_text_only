@@ -18,7 +18,7 @@ def main():
     pipeline_output = run_pipeline(
         clinical_text=patient_text,
         trial_json=trial_dict,
-        model="phi4-mini" 
+        model="llama3" 
     )
 
     # 3. Create a results directory if it doesn't exist
