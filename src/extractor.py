@@ -20,7 +20,7 @@ from schemas.patient import PatientProfile
 
 
 def get_client(
-    model: str = "phi4-mini",
+    model: str = "llama3",
     base_url: str = "http://localhost:11434/v1",
 ) -> tuple[instructor.Instructor, str]:
     """
@@ -94,7 +94,7 @@ producing the JSON output. After reasoning, output ONLY the JSON object.
 
 def extract_patient(
     clinical_text: str,
-    model: str = "phi4-mini",
+    model: str = "llama3",
     client: instructor.Instructor | None = None,
     temperature: float = 0.0,
 ) -> tuple[PatientProfile, dict]:
