@@ -117,19 +117,23 @@ def parse_free_text_criteria(
     client, _ = get_client(model=model)
 
     # The System Prompt acts as the new "Regex"
-    system_prompt = """You are an expert clinical trial parser. Extract all inclusion and exclusion criteria from the text into a structured list.
+   system_prompt = """You are an expert clinical trial parser. Extract all criteria into a SINGLE list named `criteria`. 
+    CRITICAL: DO NOT create separate "inclusion_criteria" and "exclusion_criteria" lists. Put everything into the one `criteria` list.
+
+    CRITICAL RULES FOR 'category':
+    - You MUST use exactly one of these: 'demographic', 'biomarker', 'clinical', 'lab_value', 'prior_therapy', 'comorbidity'.
+    - NEVER use "inclusion" or "exclusion" as a category.
 
     CRITICAL RULES FOR THE 'field' NAME:
-    - For lab tests, prefix with 'lab: ' (e.g., 'lab: hemoglobin', 'lab: ANC', 'lab: platelets', 'lab: creatinine').
-    - For prior drug classes, use 'prior_drug_class:<class>' (e.g., 'prior_drug_class:cdk4/6 inhibitor').
-    - For specific prior drugs, use 'prior_drug:<drug>' (e.g., 'prior_drug:palbociclib').
-    - For other standard fields, use exactly: 'menopausal_status', 'her2_status', 'ecog_score', 'brain_metastases'.
+    - For lab tests, prefix with 'lab: ' (e.g., 'lab: hemoglobin').
+    - For prior drug classes, use 'prior_drug_class:<class>'.
+    - For specific prior drugs, use 'prior_drug:<drug>'.
+    - For standard oncology fields, use EXACTLY: 'menopausal_status', 'her2_status', 'ecog_score', 'brain_metastases', 'is_metastatic'.
+    - If a criterion is about complex diseases, administrative rules, or things that don't fit the standard fields, set the field name to 'unmapped_rule'.
 
     CRITICAL RULES FOR 'is_inclusion':
     - Set to `true` if it is an Inclusion Criterion.
-    - Set to `false` if it is an Exclusion Criterion. (e.g., "Brain metastases" under Exclusions should be `is_inclusion: false`).
-
-    Extract the exact operator (eq, neq, gte, lte, gt, lt) and numeric/string value.
+    - Set to `false` if it is an Exclusion Criterion.
     """
 
     try:
