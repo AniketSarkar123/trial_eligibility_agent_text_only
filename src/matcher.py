@@ -1,22 +1,19 @@
-# ============================================================
-# Deterministic Matching Engine
-# File: src/matcher.py
-# ============================================================
-
 """
-Deterministic matching: Patient JSON vs Trial criteria.
-NO LLM involved. Pure Python logic.
+Hybrid matching: Patient JSON vs Trial criteria.
+Uses pure Python logic for structured data, and LLM fallback for unmapped rules.
 """
 
+import json
+from typing import Literal
 from pydantic import BaseModel
 
 from schemas.patient import PatientProfile
 from src.trial_parser import TrialCriterion, Operator
+from src.extractor import get_client  # Ensure this points to your client setup
 
 
 class MatchResult(BaseModel):
     """Result of evaluating one criterion against a patient."""
-
     criterion: TrialCriterion
     status: str  # "pass", "fail", "indeterminate"
     patient_value: str | int | float | bool | None
@@ -25,13 +22,59 @@ class MatchResult(BaseModel):
 
 class EligibilityResult(BaseModel):
     """Full eligibility result for a patient-trial pair."""
-
     nct_id: str
     eligible: bool  # True only if ALL criteria pass
     has_indeterminate: bool
     results: list[MatchResult]
     failing_criteria: list[MatchResult]
     indeterminate_criteria: list[MatchResult]
+
+
+# --- LLM Fallback Models and Functions ---
+class RuleEvaluation(BaseModel):
+    """How the LLM responds when evaluating an unmapped rule."""
+    status: Literal["pass", "fail", "indeterminate"]
+    reason: str
+
+
+def evaluate_unmapped_rule_with_llm(
+    patient_json: str, 
+    criterion_desc: str, 
+    is_inclusion: bool, 
+    model: str = "llama3"
+) -> RuleEvaluation:
+    """Uses the LLM to read the description and evaluate it against the patient."""
+    client, _ = get_client(model=model)
+    
+    rule_type = "Inclusion Criterion (Patient MUST meet this)" if is_inclusion else "Exclusion Criterion (Patient MUST NOT meet this)"
+    
+    prompt = f"""You are an expert oncologist. Determine if the patient meets this complex clinical trial rule.
+    
+    PATIENT PROFILE:
+    {patient_json}
+    
+    TRIAL RULE:
+    {criterion_desc}
+    Rule Type: {rule_type}
+    
+    INSTRUCTIONS:
+    1. If the patient clearly passes the rule based on the profile, return "pass".
+    2. If the patient clearly fails the rule based on the profile, return "fail".
+    3. If the patient profile lacks the information needed to evaluate the rule, return "indeterminate".
+    Provide a brief, 1-sentence reason referencing specific patient facts.
+    """
+    
+    try:
+        result = client.chat.completions.create(
+            model=model,
+            response_model=RuleEvaluation,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.0,
+            max_retries=3
+        )
+        return result
+    except Exception as e:
+        return RuleEvaluation(status="indeterminate", reason=f"LLM fallback failed: {e}")
 
 
 def get_patient_value(patient: PatientProfile, field: str):
@@ -86,6 +129,23 @@ def evaluate_criterion(
 ) -> MatchResult:
     """Evaluate a single criterion against a patient."""
 
+    # --- NEW: Intercept unmapped rules for LLM evaluation ---
+    if criterion.field == "unmapped_rule":
+        patient_data_str = patient.model_dump_json(exclude_none=True)
+        llm_eval = evaluate_unmapped_rule_with_llm(
+            patient_json=patient_data_str,
+            criterion_desc=criterion.description,
+            is_inclusion=criterion.is_inclusion
+        )
+        
+        return MatchResult(
+            criterion=criterion,
+            status=llm_eval.status,
+            patient_value="[LLM Evaluated]",  # Special marker for the why-not report
+            reason=f"LLM Fallback: {llm_eval.reason}"
+        )
+
+    # --- Standard Deterministic Evaluation ---
     value, found = get_patient_value(patient, criterion.field)
 
     if not found or value is None:
@@ -183,4 +243,3 @@ def evaluate_eligibility(
         failing_criteria=failing,
         indeterminate_criteria=indeterminate,
     )
-
