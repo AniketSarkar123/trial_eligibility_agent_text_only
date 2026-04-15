@@ -117,7 +117,7 @@ def parse_free_text_criteria(
     client, _ = get_client(model=model)
 
     # The System Prompt acts as the new "Regex"
-   system_prompt = """You are an expert clinical trial parser. Extract all criteria into a SINGLE list named `criteria`. 
+    system_prompt = """You are an expert clinical trial parser. Extract all criteria into a SINGLE list named `criteria`. 
     CRITICAL: DO NOT create separate "inclusion_criteria" and "exclusion_criteria" lists. Put everything into the one `criteria` list.
 
     CRITICAL RULES FOR 'category':
