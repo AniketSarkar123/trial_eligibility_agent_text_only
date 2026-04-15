@@ -73,17 +73,17 @@ SYSTEM_PROMPT = """You are a clinical data extraction system. Your job is to rea
 a clinical narrative about a cancer patient and extract structured data.
 
 RULES:
-1. Only extract information EXPLICITLY stated in the text.
-2. If a field is not mentioned, set it to null.
-3. Do NOT infer, assume, or guess any values.
-4. For drug names, use generic names in lowercase (e.g., "palbociclib" not "Ibrance").
-5. For biomarkers, only report what is explicitly tested and stated.
-6. If the text says "ER+" or "ER positive", set er_status to "positive".
-7. If the text mentions lab values, extract the numeric value and unit exactly.
-8. For prior therapies, capture the timeline if mentioned (months since last dose).
+1. CAREFULLY read the text and extract ALL explicitly mentioned data. If the text mentions age, sex, biomarkers (ER/PR/HER2), stage, or ECOG, you MUST extract them. Do not output an empty object.
+2. Only extract information EXPLICITLY stated in the text.
+3. If a field is completely unmentioned, set it to null.
+4. Do NOT infer, assume, or guess any values.
+5. For drug names, use generic names in lowercase (e.g., "palbociclib" not "Ibrance").
+6. For biomarkers, only report what is explicitly tested and stated.
+7. If the text says "ER+" or "ER positive", set er_status to "positive".
+8. If the text mentions lab values, extract the numeric value and unit exactly.
+9. For prior therapies, capture the timeline if mentioned (months since last dose).
 
-CRITICAL: Setting a field to null when information is absent is CORRECT behavior.
-Guessing a value when information is absent is an ERROR.
+CRITICAL: Setting a field to null when information is absent is CORRECT, but missing information that is clearly stated is a SEVERE ERROR.
 """
 
 REASONING_SYSTEM_PROMPT = SYSTEM_PROMPT + """
