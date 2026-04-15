@@ -13,7 +13,7 @@ DESIGN RULES:
 from datetime import date
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 
 # --- Sub-models ---
@@ -214,3 +214,16 @@ class PatientProfile(BaseModel):
     ] | None = Field(
         None, description="Brain metastasis status. Null if not mentioned."
     )
+
+    @model_validator(mode='after')
+    def check_not_empty(self) -> 'PatientProfile':
+        # Check a few core fields that should almost always be present in a valid patient narrative
+        core_fields = [self.age, self.sex, self.primary_diagnosis, self.er_status, self.ecog_score]
+        
+        # If absolutely everything is None, reject it so Instructor retries
+        if all(field is None for field in core_fields) and len(self.prior_therapies) == 0:
+            raise ValueError(
+                "Extracted profile is entirely empty. You missed crucial information. "
+                "Please read the text again and populate fields like age, sex, ER/PR status, and ECOG."
+            )
+        return self
