@@ -11,9 +11,9 @@ DESIGN RULES:
 """
 
 from datetime import date
-from typing import Literal
+from typing import Literal, Optional
 
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, model_validator, AliasChoices
 
 
 # --- Sub-models ---
@@ -75,7 +75,8 @@ class Comorbidity(BaseModel):
     )
 
     active: bool = Field(
-        description="True if currently active/being treated"
+        description="True if currently active/being treated",
+        validation_alias=AliasChoices('active', 'is_current')
     )
 
 
@@ -129,6 +130,12 @@ class PatientProfile(BaseModel):
         None, description="Histological type, e.g., 'ductal', 'lobular'"
     )
 
+    tumor_size_cm: float | None = Field(None, description="Size of the primary tumor in centimeters.")
+    nodal_status: Literal["N0", "N1", "N2", "N3", "positive", "negative"] | None = Field(None, description="Lymph node involvement status.")
+    tumor_grade: Literal[1, 2, 3] | None = Field(None, description="Nottingham histological grade of the tumor.")
+    lymphovascular_invasion: bool | None = Field(None, description="Presence of lymphovascular invasion (LVI). True if present, False if absent.")
+    disease_focality: Literal["unifocal", "multifocal", "multicentric", "bilateral"] | None = Field(None, description="Focality of the breast cancer.")
+
     # Biomarkers (breast cancer focused)
     er_status: Literal["positive", "negative"] | None = Field(
         None, description="Estrogen receptor status. Null if not mentioned."
@@ -157,6 +164,26 @@ class PatientProfile(BaseModel):
         None, description="PD-L1 expression status. Null if not mentioned."
     )
 
+    stil_score_percent: float | None = Field(
+        None, 
+        description="Stromal Tumor-Infiltrating Lymphocytes (sTILs or TILs) score as a percentage. Look for terms like 'stromal TILs' or 'sTILs'. Extract only the number."
+    )
+
+    received_neoadjuvant_therapy: bool | None = Field(
+        None, 
+        description="True if the patient received systemic therapy prior to surgery. False if the text explicitly states they did not receive neoadjuvant therapy."
+    )
+    
+    received_adjuvant_therapy: bool | None = Field(
+        None, 
+        description="True if patient received systemic therapy after surgery."
+    )
+
+    has_recurrence: bool | None = Field(
+        None, 
+        description="True if the patient has experienced a recurrence of their cancer. False if the text explicitly states no recurrence."
+    )
+
     # Clinical status
     ecog_score: Literal[0, 1, 2, 3, 4] | None = Field(
         None, description="ECOG performance status (0-4). Null if not mentioned."
@@ -182,6 +209,8 @@ class PatientProfile(BaseModel):
         None,
         description="Whether patient had prior cancer surgery. Null if not mentioned.",
     )
+
+    
 
     # Lab values
     lab_values: list[LabValue] = Field(
@@ -209,10 +238,13 @@ class PatientProfile(BaseModel):
     )
 
     # CNS involvement
-    brain_metastases: Literal[
-        "none", "stable_treated", "active_untreated"
-    ] | None = Field(
-        None, description="Brain metastasis status. Null if not mentioned."
+    brain_metastases: Optional[Literal['none', 'stable_treated', 'active_untreated']] = Field(
+        None, 
+        description=(
+            "Status of brain metastases ONLY. "
+            "MUST be EXACTLY one of: 'none', 'stable_treated', or 'active_untreated'. "
+            "Do NOT put 'oligometastatic' or other general cancer terms here."
+        )
     )
 
     @model_validator(mode='after')
