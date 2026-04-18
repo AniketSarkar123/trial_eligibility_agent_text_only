@@ -20,11 +20,21 @@ def generate_why_not_report(result: EligibilityResult) -> str:
             lines.append(
                 f"  {i}. [{r.criterion.category.value}] {r.criterion.description}"
             )
-            lines.append(f"     Patient value: {r.patient_value}")
-            lines.append(
-                f"     Required: {r.criterion.operator.value} {r.criterion.value}"
-            )
-            lines.append(f"     → {r.reason}")
+            
+            # --- CRITICAL FIX: Safe extraction of operator and value ---
+            op_str = r.criterion.operator.value if r.criterion.operator else "N/A"
+            val_str = r.criterion.value if r.criterion.value is not None else "N/A"
+            
+            # If it's an unmapped rule, it doesn't make sense to print "Patient value: [LLM Evaluated]" 
+            # and "Required: N/A". We just print the fallback reason directly.
+            if r.criterion.field == "unmapped_rule":
+                lines.append("     Field: unmapped_rule")
+                lines.append(f"     → {r.reason}")
+            else:
+                lines.append(f"     Patient value: {r.patient_value}")
+                lines.append(f"     Required: {op_str} {val_str}")
+                lines.append(f"     → {r.reason}")
+            
             lines.append("")
 
     if result.indeterminate_criteria:
@@ -61,7 +71,8 @@ def generate_why_not_json(result: EligibilityResult) -> dict:
                 "category": r.criterion.category.value,
                 "description": r.criterion.description,
                 "patient_value": r.patient_value,
-                "required_operator": r.criterion.operator.value,
+                # --- CRITICAL FIX: Safely access the operator value ---
+                "required_operator": r.criterion.operator.value if r.criterion.operator else None,
                 "required_value": r.criterion.value,
             }
             for r in result.failing_criteria
