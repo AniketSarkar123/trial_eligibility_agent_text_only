@@ -95,8 +95,12 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
 
     - For field mappings other than unmapped_rule, you MUST provide an `operator` and `value`.
     - The `value` field MUST be a primitive type (string, number, boolean, or list). NEVER use a nested JSON object/dictionary.
-    - COMPOSITE DISEASE RULES: If a rule requires a combination of factors (e.g. "Triple Negative Breast Cancer" which requires ER-, PR-, HER2-), you MUST use 'unmapped_rule'. 
-    - COMPLEX RULES: If the rule involves willingness to comply, multifocal disease, timing/intervals, or multiple conditions (e.g., 'Stage I AND tumor size < 2cm AND node negative'), you MUST use 'unmapped_rule'. 
+    
+    WHEN TO USE 'unmapped_rule' (CRITICAL):
+    1. COMPOSITE DISEASE RULES: If a rule requires a combination of factors (e.g. "Triple Negative Breast Cancer" which requires ER-, PR-, HER2-), you MUST use 'unmapped_rule'. 
+    2. CONDITIONAL/STRATIFIED THRESHOLDS: If a requirement changes based on another variable (e.g., "sTILs >= 50% if age > 40, but >= 75% if age < 40"), you MUST use 'unmapped_rule'. Do NOT map it to 'stil_score_percent' because the standard schema cannot handle IF/THEN logic.
+    3. COMPLEX RULES: Willingness to comply, multifocal disease, timing/intervals, or multiple conditions.
+    
     - FOR unmapped_rule: You MUST set both `operator` and `value` to null. Do NOT try to encode logic into the value field.
 
     EXAMPLE OUTPUT FORMAT:
