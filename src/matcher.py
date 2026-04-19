@@ -64,6 +64,7 @@ def evaluate_unmapped_rule_with_llm(
     1. If the patient clearly passes the rule based on the narrative or profile, return "pass".
     2. If the patient clearly fails the rule based on the narrative or profile, return "fail".
     3. If the information is completely missing from both, return "indeterminate".
+    CRITICAL: Do NOT assume that missing information means a negative result. If a specific condition (e.g., lymphovascular invasion, multifocal disease) is not explicitly stated as absent or present, you MUST return 'indeterminate'.
     Provide a brief, 1-sentence reason referencing specific patient facts.
     """
     
@@ -154,7 +155,14 @@ def evaluate_criterion(
 ) -> MatchResult:
     """Evaluate a single criterion against a patient."""
 
-    if criterion.field == "unmapped_rule":
+    # --- CRITICAL FIX: THE DYNAMIC REROUTE ---
+    # Route to LLM if explicitly unmapped OR if the parser failed to extract math operators
+    needs_llm_fallback = (
+        criterion.field == "unmapped_rule" or 
+        (criterion.operator is None and criterion.value is None)
+    )
+
+    if needs_llm_fallback:
         patient_data_str = patient.model_dump_json(exclude_none=True)
         llm_eval = evaluate_unmapped_rule_with_llm(
             patient_json=patient_data_str,
@@ -168,6 +176,7 @@ def evaluate_criterion(
             patient_value="[LLM Evaluated]", reason=f"LLM Fallback: {llm_eval.reason}"
         )
 
+    # --- STANDARD DETERMINISTIC MATCHING ---
     value, found = get_patient_value(patient, criterion.field)
 
     if not found or value is None:
@@ -191,19 +200,14 @@ def evaluate_criterion(
         elif op == Operator.EQ and value is True:
             passed = True
 
-    # TRAP 1 FIX: THE LAZY PARSER SAFETY GUARD
+    # Safety Guard for partial missing operators (e.g., op is None but target exists)
     if op is None and not passed:
-        if target is None and found:
-            # If the LLM just mapped the field (e.g. field="sex") but gave no target,
-            # and the patient HAS a value for that field, default to Pass.
-            passed = True
-        else:
-            return MatchResult(
-                criterion=criterion, 
-                status="indeterminate", 
-                patient_value=value, 
-                reason="Comparison error: Missing mathematical operator in trial criterion extraction."
-            )
+        return MatchResult(
+            criterion=criterion, 
+            status="indeterminate", 
+            patient_value=value, 
+            reason="Comparison error: Missing mathematical operator in trial criterion extraction."
+        )
 
     try:
         if not passed and op is not None:
