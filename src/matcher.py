@@ -64,8 +64,14 @@ def evaluate_unmapped_rule_with_llm(
     1. If the patient clearly passes the rule based on the narrative or profile, return "pass".
     2. If the patient clearly fails the rule based on the narrative or profile, return "fail".
     3. If the information is completely missing from both, return "indeterminate".
-    CRITICAL: Do NOT assume that missing information means a negative result. If a specific condition (e.g., lymphovascular invasion, multifocal disease) is not explicitly stated as absent or present, you MUST return 'indeterminate'.
+
+    CRITICAL SAFETY GUARDS: 
+    - Do NOT assume that missing information means a negative result.
+    - Do NOT estimate or guess quantitative numbers from vague qualitative words.
+    - Do NOT substitute qualitative symptoms for formal clinical tests. If a rule requires a specific assessment score (e.g., TICS-M, MoCA, ECOG) and that exact test score is missing from the patient profile, you MUST return 'indeterminate', regardless of the patient's symptoms.
+
     Provide a brief, 1-sentence reason referencing specific patient facts.
+
     """
     
     try:
@@ -155,11 +161,17 @@ def evaluate_criterion(
 ) -> MatchResult:
     """Evaluate a single criterion against a patient."""
 
-    # --- CRITICAL FIX: THE DYNAMIC REROUTE ---
-    # Route to LLM if explicitly unmapped OR if the parser failed to extract math operators
+    # --- CRITICAL FIX: THE BULLETPROOF INTERCEPTOR ---
+    is_stubborn_parser_error = (
+        criterion.field == "primary_diagnosis" and 
+        criterion.value is not None and 
+        "stage" in str(criterion.value).lower()
+    )
+
     needs_llm_fallback = (
         criterion.field == "unmapped_rule" or 
-        (criterion.operator is None and criterion.value is None)
+        (criterion.operator is None and criterion.value is None) or
+        is_stubborn_parser_error # Forces the reroute
     )
 
     if needs_llm_fallback:
