@@ -41,7 +41,7 @@ def evaluate_unmapped_rule_with_llm(
     raw_patient_text: str, 
     criterion_desc: str, 
     is_inclusion: bool, 
-    model: str = "qwen2.5:14b"
+    model: str = "phi4-reasoning:plus"
 ) -> RuleEvaluation:
     """Uses the LLM to read the description and evaluate it against the patient."""
     client, _ = get_client(model=model)

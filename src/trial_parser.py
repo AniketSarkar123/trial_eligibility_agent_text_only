@@ -81,7 +81,7 @@ def parse_structured_fields(trial_json: dict) -> list[TrialCriterion]:
 
     return criteria
 
-def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "qwen2.5:14b") -> list[TrialCriterion]:
+def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "phi4-reasoning:plus") -> list[TrialCriterion]:
     if not eligibility_text or not eligibility_text.strip(): return []
     client, _ = get_client(model=model)
 

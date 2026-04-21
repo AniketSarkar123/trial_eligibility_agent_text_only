@@ -6,7 +6,7 @@ from src.trial_parser import parse_structured_fields, parse_free_text_criteria, 
 from src.matcher import evaluate_eligibility
 from src.why_not import generate_why_not_report
 
-def run_pipeline(clinical_text: str, trial_json: dict, model: str = "qwen2.5:14b") -> dict:
+def run_pipeline(clinical_text: str, trial_json: dict, model: str = "phi4-reasoning:plus") -> dict:
     """
     Core pipeline logic: maps patient text and trial JSON to an eligibility result.
     No file I/O happens here.

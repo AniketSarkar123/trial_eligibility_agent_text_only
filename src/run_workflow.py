@@ -5,7 +5,7 @@ from pathlib import Path
 from src.pipeline import run_pipeline
 from src.trial_fetcher import fetch_trial, save_trial
 
-def run_automated_workflow(patient_filepath: str | Path, nct_id: str, model: str = "qwen2.5:14b"):
+def run_automated_workflow(patient_filepath: str | Path, nct_id: str, model: str = "phi4-reasoning:plus"):
     """
     Runs the eligibility pipeline for a given patient file and trial,
     saving both JSON and text reports dynamically.
@@ -57,7 +57,7 @@ def main():
     run_automated_workflow(
         patient_filepath="data/narratives/patient_001.txt",
         nct_id="NCT06476119",
-        model="qwen2.5:14b" 
+        model="phi4-reasoning:plus" 
     )
 
 if __name__ == "__main__":
