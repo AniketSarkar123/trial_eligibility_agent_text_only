@@ -41,7 +41,7 @@ def evaluate_unmapped_rule_with_llm(
     raw_patient_text: str, 
     criterion_desc: str, 
     is_inclusion: bool, 
-    model: str = "phi4-reasoning:plus"
+    model: str = "google/gemma-4-31b-it:free"
 ) -> RuleEvaluation:
     """Uses the LLM to read the description and evaluate it against the patient."""
     client, _ = get_client(model=model)
@@ -65,13 +65,19 @@ def evaluate_unmapped_rule_with_llm(
     2. If the patient clearly fails the rule based on the narrative or profile, return "fail".
     3. If the information is completely missing from both, return "indeterminate".
 
-    CRITICAL SAFETY GUARDS: 
-    - Do NOT assume that missing information means a negative result.
+    CRITICAL SAFETY GUARDS, MISSING DATA & SOURCE OF TRUTH:
+    - TUNNEL VISION (CRITICAL): You must evaluate ONLY the specific TRIAL RULE provided. Ignore any statements in the narrative about the patient's OVERALL eligibility for the trial. Do NOT fail a rule about "Cancer Stage" just because the text says they are ineligible due to "Prior Therapy". Evaluate the rule in total isolation.
+    - IGNORE META-COMMENTARY: The clinical narrative may contain "spoilers" written by a human grader (e.g., "this renders the patient ineligible", "she does not fulfill criteria"). You MUST completely ignore these statements. Treat the text as a raw medical record. Do not use the word "ineligible" from the text to fail administrative rules like "consent" or "researcher discretion."
+    - THE NARRATIVE IS KING: If the STRUCTURED PATIENT PROFILE contradicts the RAW CLINICAL NARRATIVE (e.g., the JSON says "Stage IV" but the narrative says "Stage II"), you MUST trust the RAW CLINICAL NARRATIVE. The JSON was auto-extracted and may contain hallucinations.
+    - MISSING = INDETERMINATE: If the data required to answer the rule is missing, you MUST return "indeterminate". Do NOT return "fail" just because data is missing. 
+    - MEDICAL EXCLUSIONS: If the rule excludes patients with specific prior diseases (e.g., HIV, Hepatitis, heart failure, other cancers) and the text is SILENT on these conditions, you MUST return 'indeterminate'. Do NOT assume the patient does not have them just because they aren't mentioned.
+    - ADMINISTRATIVE/SUBJECTIVE RULES: If the rule requires "signed consent," "willingness to comply," or a specific "life expectancy," and the text does not explicitly address it, return 'indeterminate'. Do NOT hallucinate clinical data (like tumor shrinkage) to justify passing an administrative rule.
     - Do NOT estimate or guess quantitative numbers from vague qualitative words.
+    - PREGNANCY: If a rule excludes pregnant/lactating women, and the text does NOT explicitly state "not pregnant", you MUST return 'indeterminate'. Do NOT assume they are not pregnant just because they are consenting to therapy. If stated "not pregnant", they pass the non-pregnant rule.
+    - CONTRACEPTION: If a rule requires contraception, and the text does NOT explicitly state they are using it or plan to use it, you MUST return 'indeterminate'. 
     - Do NOT substitute qualitative symptoms for formal clinical tests. If a rule requires a specific assessment score (e.g., TICS-M, MoCA, ECOG) and that exact test score is missing from the patient profile, you MUST return 'indeterminate', regardless of the patient's symptoms.
 
     Provide a brief, 1-sentence reason referencing specific patient facts.
-
     """
     
     try:
@@ -114,7 +120,7 @@ def get_patient_value(patient: PatientProfile, field: str):
     resolved_field = alias_map.get(resolved_field, resolved_field)
 
     simple_fields = {
-        "age", "sex", "menopausal_status", "primary_diagnosis", "cancer_stage", 
+        "age", "sex", "menopausal_status", "pregnancy_status", "primary_diagnosis", "cancer_stage", 
         "is_metastatic", "histology", "er_status", "pr_status", "her2_status", 
         "brca_status", "ki67_percent", "pdl1_status", "ecog_score", "brain_metastases",
         "lines_of_therapy", "prior_radiation", "prior_surgery",
@@ -130,19 +136,49 @@ def get_patient_value(patient: PatientProfile, field: str):
         return value, value is not None
 
     if resolved_field.startswith("lab:"):
-        test_name = resolved_field.split(":", 1)[1].strip()
+        test_name = resolved_field.split(":", 1)[1].strip().lower()
+        
+        # Clinical synonym mapping for labs
+        lab_aliases = {
+            "plt": "platelets",
+            "hgb": "hemoglobin",
+            "hb": "hemoglobin",
+            "anc": "absolute neutrophil count",
+            "wbc": "white blood cells",
+            "ast": "aspartate aminotransferase",
+            "alt": "alanine aminotransferase",
+            "cr": "creatinine"
+        }
+        
+        # Normalize the target test name
+        target_name = lab_aliases.get(test_name, test_name)
+        
         for lab in patient.lab_values:
-            if lab.test_name.lower() == test_name.lower():
+            # Normalize the extracted test name
+            extracted_name = lab_aliases.get(lab.test_name.lower(), lab.test_name.lower())
+            
+            if extracted_name == target_name:
                 return lab.value, True
         return None, False
 
     if resolved_field.startswith("prior_drug:"):
-        drug = resolved_field.split(":", 1)[1].strip()
+        drug = resolved_field.split(":", 1)[1].strip().lower()
+        
         for therapy in patient.prior_therapies:
-            if therapy.drug_name.lower() == drug.lower():
-                return True, True
+            if therapy.drug_name.lower() == drug:
+                # WASHOUT LOGIC:
+                # If the trial has a washout (e.g. 28 days) and the patient had the drug...
+                if hasattr(criterion, 'timeframe_days') and criterion.timeframe_days:
+                    if therapy.days_since_last_dose is not None:
+                        if therapy.days_since_last_dose <= criterion.timeframe_days:
+                            return True, True # VIOLATION: Had drug within the restricted window
+                        else:
+                            return False, True # SAFE: Had drug, but it was outside the washout period
+                    else:
+                        return None, False # We know they had it, but don't know WHEN -> Indeterminate
+                return True, True # No washout period specified, standard check
         return False, True
-
+    
     if resolved_field.startswith("prior_drug_class:"):
         drug_class = resolved_field.split(":", 1)[1].strip()
         for therapy in patient.prior_therapies:
@@ -223,13 +259,53 @@ def evaluate_criterion(
 
     try:
         if not passed and op is not None:
+            # --- UNIT MISMATCH GUARD ---
+            patient_unit = None
+            resolved_field = criterion.field.lower().strip()
+            if resolved_field.startswith("lab:"):
+                test_name = resolved_field.split(":", 1)[1].strip().lower()
+                lab_aliases = {
+                    "plt": "platelets", "hgb": "hemoglobin", "hb": "hemoglobin",
+                    "anc": "absolute neutrophil count", "wbc": "white blood cells",
+                    "ast": "aspartate aminotransferase", "alt": "alanine aminotransferase",
+                    "cr": "creatinine"
+                }
+                target_name = lab_aliases.get(test_name, test_name)
+                for lab in patient.lab_values:
+                    extracted_name = lab_aliases.get(lab.test_name.lower(), lab.test_name.lower())
+                    if extracted_name == target_name:
+                        patient_unit = lab.unit
+                        break
+                        
+            if patient_unit and criterion.unit and patient_unit.lower().strip() != criterion.unit.lower().strip():
+                # Reroute to the LLM to handle the complex mathematical conversion
+                patient_data_str = patient.model_dump_json(exclude_none=True)
+                llm_eval = evaluate_unmapped_rule_with_llm(
+                    patient_json=patient_data_str,
+                    raw_patient_text=raw_patient_text,
+                    criterion_desc=criterion.description,
+                    is_inclusion=criterion.is_inclusion,
+                    model=model
+                )
+                return MatchResult(
+                    criterion=criterion, status=llm_eval.status,
+                    patient_value=f"{value} {patient_unit}", 
+                    reason=f"Unit Mismatch ({patient_unit} vs {criterion.unit}) → LLM Fallback: {llm_eval.reason}"
+                )
+
+            # --- NUMERIC & STRING COMPARISONS ---
             if op == Operator.EQ: passed = _normalize(value) == _normalize(target)
             elif op == Operator.NEQ: passed = _normalize(value) != _normalize(target)
             elif op == Operator.GTE: passed = float(value) >= float(target)
             elif op == Operator.LTE: passed = float(value) <= float(target)
             elif op == Operator.GT: passed = float(value) > float(target)
             elif op == Operator.LT: passed = float(value) < float(target)
-            elif op == Operator.IN: passed = _normalize(value) in [_normalize(v) for v in target]
+            elif op == Operator.IN: 
+                # SMART INTERCEPTOR: Allow hierarchical staging bypass (e.g. "IIIA" passes an in ["II", "III"] check)
+                if criterion.field == "cancer_stage" and isinstance(value, str) and isinstance(target, list):
+                    passed = any(value.upper().startswith(str(t).upper()) for t in target)
+                else:
+                    passed = _normalize(value) in [_normalize(v) for v in target]
             elif op == Operator.NOT_IN: passed = _normalize(value) not in [_normalize(v) for v in target]
             elif op == Operator.EXISTS: passed = found
             elif op == Operator.NOT_EXISTS: passed = not found
@@ -273,12 +349,65 @@ def evaluate_eligibility(
     criteria: list[TrialCriterion], 
     nct_id: str, 
     raw_patient_text: str, 
-    model: str
+    model: str,
+    exhaustive: bool = True  # <-- ADDED TOGGLE (Defaults to True for detailed study)
 ) -> EligibilityResult:
-    """Evaluate all trial criteria against a patient."""
     
-    results = [evaluate_criterion(patient, c, raw_patient_text, model) for c in criteria]
+    # PASS 1: Purely deterministic "Simple" rules (Python)
+    simple_criteria = [c for c in criteria if c.field != "unmapped_rule"]
+    # PASS 2: Complex rules (LLM)
+    complex_criteria = [c for c in criteria if c.field == "unmapped_rule"]
     
+    results = []
+    has_failed_simple = False
+    
+    # Evaluate Pass 1 (Deterministic)
+    for c in simple_criteria:
+        result = evaluate_criterion(patient, c, raw_patient_text, model)
+        results.append(result)
+        
+        if result.status == "fail":
+            has_failed_simple = True
+            # If we are NOT doing an exhaustive search, abort immediately
+            if not exhaustive:
+                return EligibilityResult(
+                    nct_id=nct_id, eligible=False, has_indeterminate=False, 
+                    results=results, failing_criteria=[result], indeterminate_criteria=[]
+                )
+            
+    # Evaluate Pass 2 (LLM Fallbacks)
+    # If not exhaustive AND we already failed a simple rule, skip these expensive calls!
+    if not (not exhaustive and has_failed_simple):
+        for c in complex_criteria:
+            result = evaluate_criterion(patient, c, raw_patient_text, model)
+            results.append(result)
+            
+            if result.status == "fail" and not exhaustive:
+                # Fail-fast triggered during complex rules
+                failing = [r for r in results if r.status == "fail"]
+                indeterminate = [r for r in results if r.status == "indeterminate"]
+                return EligibilityResult(
+                    nct_id=nct_id, eligible=False, has_indeterminate=len(indeterminate) > 0, 
+                    results=results, failing_criteria=failing, indeterminate_criteria=indeterminate
+                )
+
+    # --- BOOLEAN GROUPING LOGIC (OR) ---
+    grouped_results = {}
+    for r in results:
+        if hasattr(r.criterion, 'group_id') and r.criterion.group_id:
+            if r.criterion.group_id not in grouped_results:
+                grouped_results[r.criterion.group_id] = []
+            grouped_results[r.criterion.group_id].append(r)
+
+    for group_id, group_items in grouped_results.items():
+        operator = group_items[0].criterion.group_operator
+        if operator == "OR":
+            if any(item.status == "pass" for item in group_items):
+                for item in group_items:
+                    item.status = "pass"
+                    item.reason = f"Group {group_id} (OR) condition met by another criterion."
+
+    # Final Compilation
     failing = [r for r in results if r.status == "fail"]
     indeterminate = [r for r in results if r.status == "indeterminate"]
 

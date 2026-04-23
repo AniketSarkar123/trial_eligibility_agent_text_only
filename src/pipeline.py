@@ -1,12 +1,11 @@
 from __future__ import annotations
 
-# Import the actual functions defined in your modules
 from src.extractor import extract_patient
 from src.trial_parser import parse_structured_fields, parse_free_text_criteria, ParsedTrial
 from src.matcher import evaluate_eligibility
 from src.why_not import generate_why_not_report
 
-def run_pipeline(clinical_text: str, trial_json: dict, model: str = "phi4-reasoning:plus") -> dict:
+def run_pipeline(clinical_text: str, trial_json: dict, model: str = "google/gemma-4-31b-it:free") -> dict:
     """
     Core pipeline logic: maps patient text and trial JSON to an eligibility result.
     No file I/O happens here.
@@ -24,9 +23,22 @@ def run_pipeline(clinical_text: str, trial_json: dict, model: str = "phi4-reason
     
     eligibility_text = trial_json.get("protocolSection", {}).get("eligibilityModule", {}).get("eligibilityCriteria", "")
     
-    # Extract both structured and free-text criteria from the trial JSON
-    criteria = parse_structured_fields(trial_json)
-    criteria.extend(parse_free_text_criteria(eligibility_text, nct_id))
+    # Extract structured criteria
+    structured_criteria = parse_structured_fields(trial_json)
+    structured_fields = {c.field for c in structured_criteria}
+    
+    # Extract free-text criteria
+    free_text_criteria = parse_free_text_criteria(eligibility_text, nct_id, model=model)
+    
+    # Deduplicate basic demographic criteria (age, sex) extracted by LLM
+    # if parse_structured_fields already captured them.
+    filtered_free_text = []
+    for c in free_text_criteria:
+        if c.field in ["age", "sex"] and c.field in structured_fields:
+            continue  # Skip LLM-generated age/sex rule to prevent redundancy
+        filtered_free_text.append(c)
+        
+    criteria = structured_criteria + filtered_free_text
     
     parsed_trial = ParsedTrial(
         nct_id=nct_id, 

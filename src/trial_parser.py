@@ -1,7 +1,7 @@
 import re
 from enum import Enum
 from typing import Literal, Optional, Any
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 import instructor
 from openai import OpenAI
 from src.extractor import get_client
@@ -27,7 +27,7 @@ class Operator(str, Enum):
     NOT_EXISTS = "not_exists"
 
 ApprovedFields = Literal[
-    "age", "sex", "menopausal_status", "primary_diagnosis", "cancer_stage", 
+    "age", "sex", "menopausal_status", "pregnancy_status", "primary_diagnosis", "cancer_stage", 
     "is_metastatic", "histology", "er_status", "pr_status", "her2_status", 
     "brca_status", "ki67_percent", "pdl1_status", "ecog_score", "lines_of_therapy", 
     "prior_radiation", "prior_surgery", "adequate_liver_function", 
@@ -40,20 +40,58 @@ ApprovedFields = Literal[
 
 class TrialCriterion(BaseModel):
     criterion_id: str  
-    category: CriterionType
+    category: CriterionType = Field(
+        description="CRITICAL: MUST be exactly one of: 'demographic', 'biomarker', 'clinical', 'lab_value', 'prior_therapy', 'comorbidity'. DO NOT use specific field names here (like 'primary_diagnosis')."
+    )
     description: str  
-    field: ApprovedFields | str = Field(description="MUST be an exact schema match or prefixed with 'lab:', 'prior_drug:', 'prior_drug_class:'")
+    field: ApprovedFields | str = Field(description="MUST be an exact schema match (e.g., 'primary_diagnosis', 'prior_surgery', 'age') or prefixed with 'lab:', 'prior_drug:', 'prior_drug_class:'")
     operator: Optional[Operator] = None
     
-    # CRITICAL FIX: Add a strict description telling the LLM to NEVER use dictionaries here
     value: Optional[str | int | float | bool | list[str] | list[int] | list[float]] = Field(
         None, description="MUST be a primitive type (string, number, boolean, list). NEVER a dictionary/object."
     )
     
     unit: Optional[str] = None
-    is_inclusion: bool = True  
+
+    timeframe_days: Optional[int] = Field(
+        None, description="If a rule specifies a washout period (e.g., 'within 28 days', 'in the last 6 months'), convert it to days. Otherwise null."
+    )
+    group_id: Optional[str] = Field(None, description="Assign a shared ID (e.g., 'BRCA_GROUP') if this criterion is part of an OR statement.")
+    group_operator: Optional[Literal["AND", "OR"]] = Field(None, description="Use 'OR' if passing ANY criterion in this group is sufficient.")
+
+    is_inclusion: bool = True 
+
+    # --- ADD THIS VALIDATOR ---
+    @field_validator("category", mode="before")
+    @classmethod
+    def map_invalid_categories(cls, v):
+        """Silently intercepts and corrects LLM hallucinations for the category field."""
+        valid_categories = ["demographic", "biomarker", "clinical", "lab_value", "prior_therapy", "comorbidity"]
+        
+        # If it's already an enum instance, get its value
+        v_str = str(getattr(v, 'value', v)).lower().strip()
+        
+        if v_str in valid_categories:
+            return v_str
+            
+        # If the LLM hallucinates a specific 'field' name into the 'category' slot, map it correctly
+        if v_str in ["primary_diagnosis", "cancer_stage", "histology", "is_metastatic", "ecog_score"]:
+            return "clinical"
+        if v_str in ["prior_surgery", "prior_radiation", "lines_of_therapy", "received_neoadjuvant_therapy"]:
+            return "prior_therapy"
+        if v_str in ["er_status", "pr_status", "her2_status", "brca_status", "pdl1_status"]:
+            return "biomarker"
+        if v_str in ["age", "sex", "menopausal_status"]:
+            return "demographic"
+            
+        # Ultimate fallback to ensure Pydantic never crashes
+        return "clinical" 
 
 class CriteriaList(BaseModel):
+    analysis: Optional[str] = Field(
+        None, 
+        description="Optional space for you to think or analyze prior errors before outputting the criteria."
+    )
     criteria: list[TrialCriterion]
 
 class ParsedTrial(BaseModel):
@@ -81,13 +119,17 @@ def parse_structured_fields(trial_json: dict) -> list[TrialCriterion]:
 
     return criteria
 
-def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "phi4-reasoning:plus") -> list[TrialCriterion]:
+def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "google/gemma-4-31b-it:free") -> list[TrialCriterion]:
     if not eligibility_text or not eligibility_text.strip(): return []
     client, _ = get_client(model=model)
 
-    # CRITICAL FIX: Fortified system prompt with explicit unmapped_rule instructions
     system_prompt = """You are an expert clinical trial parser. Extract all criteria into a SINGLE list named `criteria`. 
     CRITICAL: DO NOT create separate "inclusion" and "exclusion" lists.
+    CRITICAL: DO NOT include an "analysis", "thought", or reasoning field in your JSON output. Output ONLY the `criteria` array.
+
+    CRITICAL RULES FOR THE 'category' NAME:
+    You MUST map the criterion to EXACTLY ONE of these approved categories:
+    ["demographic", "biomarker", "clinical", "lab_value", "prior_therapy", "comorbidity"]
 
     CRITICAL RULES FOR THE 'field' NAME:
     You MUST map the criterion to EXACTLY ONE of these approved schema fields:
@@ -95,12 +137,27 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "p
 
     - For field mappings other than unmapped_rule, you MUST provide an `operator` and `value`.
     - The `value` field MUST be a primitive type (string, number, boolean, or list). NEVER use a nested JSON object/dictionary.
+
+    BIOMARKERS VS UNMAPPED RULE:
+    - For simple, single biomarker checks (e.g., "Estrogen receptor positive" or "HER2 negative"), you MUST map them to the specific fields (`er_status`, `pr_status`, `her2_status`) with the operator `eq`.
+    - COMPOSITE DISEASE RULES: If a rule requires a combination of factors in a single sentence (e.g., "Triple Negative Breast Cancer" meaning ER-, PR-, HER2-) you MUST use 'unmapped_rule'.
+
+    BOOLEAN GROUPING (OR LOGIC):
+    - If a rule contains an "OR" condition (e.g., "Requires BRCA1 OR BRCA2 mutation"), split them into separate criteria, give them the same group_id (e.g., 'GRP_1'), and set group_operator to 'OR'.
     
+    WASHOUT PERIODS & TIMEFRAMES:
+    - If a criterion specifies a restricted time window, washout period, or expiration (e.g., "within the last 6 months", "prior to 28 days", "in the past year"), you MUST calculate the approximate number of days and map it to the `timeframe_days` field.
+    - Conversion Examples: "6 months" = 180, "4 weeks" = 28, "1 year" = 365, "12 weeks" = 84.
+    - If no timeframe is explicitly mentioned in the rule, you MUST set `timeframe_days` to null. Do not guess.
+
     WHEN TO USE 'unmapped_rule' (CRITICAL):
     1. COMPOSITE DISEASE RULES: If a rule requires a combination of factors (e.g. "Triple Negative Breast Cancer" which requires ER-, PR-, HER2-), you MUST use 'unmapped_rule'. 
+       -> CRITICAL: If a rule combines a disease diagnosis with a specific stage requirement (e.g., "Stage I-III breast cancer" or "Pathological stage I TNBC"), you MUST map it to 'unmapped_rule'.
     2. CONDITIONAL/STRATIFIED THRESHOLDS: If a requirement changes based on another variable (e.g., "sTILs >= 50% if age > 40, but >= 75% if age < 40"), you MUST use 'unmapped_rule'. Do NOT map it to 'stil_score_percent' because the standard schema cannot handle IF/THEN logic.
     3. COMPLEX RULES: Willingness to comply, multifocal disease, timing/intervals, or multiple conditions.
-    
+    4. PREGNANCY & CONTRACEPTION: If a rule relates to pregnancy, lactation, or contraception, you MUST map it to `unmapped_rule`. Do NOT force it into menopausal_status.
+    5. COMPLEX STAGING: If the staging requirement involves complex TNM staging (e.g., T1N1-3) or sub-stages that might fail simple exact matches, use `unmapped_rule`.
+       
     - FOR unmapped_rule: You MUST set both `operator` and `value` to null. Do NOT try to encode logic into the value field.
 
     EXAMPLE OUTPUT FORMAT:

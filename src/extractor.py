@@ -19,16 +19,22 @@ from schemas.patient import PatientProfile
 # ============================================================
 
 
+import os
+
 def get_client(
-    model: str = "phi4-reasoning:plus",
-    base_url: str = "http://localhost:11434/v1",
+    model: str = "google/gemma-4-31b-it:free",
+    base_url: str = "https://openrouter.ai/api/v1",
 ) -> tuple[instructor.Instructor, str]:
     """
-    Create an Instructor-wrapped client for an Ollama-hosted model.
+    Create an Instructor-wrapped client for OpenRouter.
     """
+    api_key = os.environ.get("OPENROUTER_API_KEY")
+    if not api_key:
+        raise ValueError("OPENROUTER_API_KEY environment variable is not set.")
+
     client = instructor.from_openai(
-        OpenAI(base_url=base_url, api_key="ollama"),  # Ollama ignores API key
-        mode=instructor.Mode.JSON,  # JSON mode for compatibility
+        OpenAI(base_url=base_url, api_key=api_key), 
+        mode=instructor.Mode.JSON,  
     )
     return client, model
 
@@ -69,19 +75,19 @@ def strip_reasoning_tokens(raw_output: str) -> tuple[str, str | None]:
 # MAIN EXTRACTION
 # ============================================================
 
-SYSTEM_PROMPT = """You are a clinical data extraction system. Your job is to read
-a clinical narrative about a cancer patient and extract structured data.
+SYSTEM_PROMPT = """You are a highly precise clinical data extraction agent. Your job is to read an unstructured clinical narrative about a cancer patient and extract structured data perfectly matching the provided JSON schema.
 
-RULES:
-1. CAREFULLY read the text and extract ALL explicitly mentioned data. 
-2. You MUST extract standard demographics, stage, and biomarkers (ER/PR/HER2).
-3. NEW BREAST CANCER RULES: You MUST look for and extract:
-   - sTIL scores (stromal tumor-infiltrating lymphocytes) as a percentage.
-   - Neoadjuvant vs Adjuvant therapy sequences.
-   - Recurrence status (has the cancer returned?)
-   - Lymphovascular invasion (LVI).
-4. If a field is completely unmentioned, set it to null. Do NOT infer or guess.
-5. For drug names, use generic names in lowercase.
+CRITICAL WORKFLOW:
+1. THE PRESSURE VALVE: You MUST use the `analysis` field first to think step-by-step. Break down the patient's age, stage, biomarkers, and treatment timeline before populating the rest of the data.
+2. PRESERVE THE SCHEMA: You MUST output EVERY key defined in the expected JSON schema. If information is missing, set the value to `null` or `false`, but DO NOT drop the key entirely.
+
+CLINICAL EXTRACTION RULES:
+1. STRICT SILENCE (NO GUESSING): If a field is completely unmentioned in the text, set it to `null`. Do NOT infer, guess, or assume based on standard medical practices (e.g., do not guess pregnancy status based on age).
+2. TEMPORAL BOUNDARIES: Never extract planned, future, or consented treatments as prior history. If a text says 'planned mastectomy', 'consents to chemotherapy', or 'candidate for neoadjuvant', they have NOT received it yet.
+3. THE "ZERO" RULE: If the text explicitly states the patient has received "no systemic treatment", "no prior therapy", or "never received treatment", you MUST set `lines_of_therapy` to `0`. Do not set it to `null`.
+4. EXHAUSTIVE DRUG CAPTURE: You must extract EVERY specific drug name mentioned into the `prior_therapies` array, even if they are current treatments. Use generic names in lowercase.
+5. PREGNANCY EXTRACTION: If the text explicitly says 'not pregnant', use 'not_pregnant'. If the text is SILENT on pregnancy, you MUST output `null`. 
+6. BREAST CANCER SPECIFICS: Look specifically for and extract sTIL scores (%), Neoadjuvant vs Adjuvant therapy sequences, Recurrence status, and Lymphovascular invasion (LVI).
 """
 
 REASONING_SYSTEM_PROMPT = SYSTEM_PROMPT + """
@@ -92,7 +98,7 @@ producing the JSON output. After reasoning, output ONLY the JSON object.
 
 def extract_patient(
     clinical_text: str,
-    model: str = "phi4-reasoning:plus",
+    model: str = "google/gemma-4-31b-it:free",
     client: instructor.Instructor | None = None,
     temperature: float = 0.0,
 ) -> tuple[PatientProfile, dict]:
