@@ -39,11 +39,18 @@ ApprovedFields = Literal[
 ]
 
 class TrialCriterion(BaseModel):
-    criterion_id: str  
+    # Give it a default so the LLM doesn't have to generate it
+    criterion_id: str = Field(default="TBD") 
+    
     category: CriterionType = Field(
         description="CRITICAL: MUST be exactly one of: 'demographic', 'biomarker', 'clinical', 'lab_value', 'prior_therapy', 'comorbidity'. DO NOT use specific field names here (like 'primary_diagnosis')."
     )
-    description: str  
+    
+    # Enforce the description field natively in the schema
+    description: str = Field(
+        ..., 
+        description="CRITICAL: You MUST include the exact text snippet of the trial rule here. DO NOT OMIT THIS FIELD."
+    )  
     field: ApprovedFields | str = Field(description="MUST be an exact schema match (e.g., 'primary_diagnosis', 'prior_surgery', 'age') or prefixed with 'lab:', 'prior_drug:', 'prior_drug_class:'")
     operator: Optional[Operator] = None
     
@@ -119,13 +126,18 @@ def parse_structured_fields(trial_json: dict) -> list[TrialCriterion]:
 
     return criteria
 
-def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "google/gemma-4-31b-it:free") -> list[TrialCriterion]:
+def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "openai/gpt-oss-20b") -> list[TrialCriterion]:
     if not eligibility_text or not eligibility_text.strip(): return []
     client, _ = get_client(model=model)
 
-    system_prompt = """You are an expert clinical trial parser. Extract all criteria into a SINGLE list named `criteria`. 
+    system_prompt = """You are an expert clinical trial parser. Extract all criteria into a SINGLE list named criteria. 
     CRITICAL: DO NOT create separate "inclusion" and "exclusion" lists.
-    CRITICAL: DO NOT include an "analysis", "thought", or reasoning field in your JSON output. Output ONLY the `criteria` array.
+    CRITICAL: DO NOT include an "analysis", "thought", or reasoning field in your JSON output. Output ONLY the criteria array.
+    
+    CRITICAL TOOL CALLING RULE: The tool name is exactly CriteriaList. Do NOT prefix the tool name with functions.
+
+    CRITICAL RULE FOR REQUIRED FIELDS:
+    You MUST output the description field for EVERY criterion, containing the exact text of the rule. NEVER drop or omit the description field to save space.
 
     CRITICAL RULES FOR THE 'category' NAME:
     You MUST map the criterion to EXACTLY ONE of these approved categories:
@@ -134,6 +146,11 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "g
     CRITICAL RULES FOR THE 'field' NAME:
     You MUST map the criterion to EXACTLY ONE of these approved schema fields:
     [age, sex, menopausal_status, primary_diagnosis, cancer_stage, is_metastatic, histology, er_status, pr_status, her2_status, brca_status, ki67_percent, pdl1_status, ecog_score, lines_of_therapy, prior_radiation, prior_surgery, adequate_liver_function, adequate_renal_function, adequate_bone_marrow, brain_metastases, tumor_size_cm, nodal_status, tumor_grade, lymphovascular_invasion, disease_focality, stil_score_percent, pik3ca_mutation, esr1_mutation, received_neoadjuvant_therapy, received_adjuvant_therapy, disease_free_interval_months, has_recurrence, unmapped_rule]
+
+    CRITICAL RULES FOR THE 'operator' FIELD:
+    If you provide an operator, it MUST be EXACTLY one of these strings:
+    ["eq", "neq", "gte", "lte", "gt", "lt", "in", "not_in", "exists", "not_exists"]
+    DO NOT use abbreviations like "ge" (you must use "gte") or "le" (you must use "lte").
 
     - For field mappings other than unmapped_rule, you MUST provide an `operator` and `value`.
     - The `value` field MUST be a primitive type (string, number, boolean, or list). NEVER use a nested JSON object/dictionary.
@@ -159,6 +176,10 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "g
     5. COMPLEX STAGING: If the staging requirement involves complex TNM staging (e.g., T1N1-3) or sub-stages that might fail simple exact matches, use `unmapped_rule`.
        
     - FOR unmapped_rule: You MUST set both `operator` and `value` to null. Do NOT try to encode logic into the value field.
+    CRITICAL RULES FOR 'is_inclusion':
+    - If a rule is listed under an "Inclusion Criteria" section, you MUST set `is_inclusion` to `true`.
+    - If a rule is listed under an "Exclusion Criteria" section, or explicitly states the patient must NOT have a condition, you MUST set `is_inclusion` to `false`.
+    
 
     EXAMPLE OUTPUT FORMAT:
     {
@@ -174,12 +195,12 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "g
         },
         {
           "criterion_id": "EXAMPLE_2",
-          "category": "clinical",
-          "description": "Triple Negative Breast Cancer (ER-, PR-, HER2-)",
+          "category": "comorbidity",
+          "description": "History of severe diseases or HIV",
           "field": "unmapped_rule",
           "operator": null,
           "value": null,
-          "is_inclusion": true
+          "is_inclusion": false
         }
       ]
     }
@@ -193,7 +214,8 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "g
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": f"Extract the criteria from this text:\n\n{eligibility_text}"}
             ],
-            temperature=0.0, 
+            temperature=0.0,
+            max_tokens=16384,
         )
         for i, c in enumerate(result.criteria):
             c.criterion_id = f"{nct_id}_LLM_{i+1}"
