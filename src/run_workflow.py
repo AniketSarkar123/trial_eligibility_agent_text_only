@@ -5,7 +5,7 @@ from pathlib import Path
 from src.pipeline import run_pipeline
 from src.trial_fetcher import fetch_trial, save_trial
 
-def run_automated_workflow(patient_filepath: str | Path, nct_id: str, model: str = "google/gemma-4-31b-it:free"):
+def run_automated_workflow(patient_filepath: str | Path, nct_id: str, model: str = "openai/gpt-oss-20b"):
     """
     Runs the eligibility pipeline for a given patient file and trial,
     saving both JSON and text reports dynamically.
@@ -55,9 +55,9 @@ def main():
     # Now you can easily loop through directories or pass different files
     # For a single run:
     run_automated_workflow(
-        patient_filepath="data/narratives/patient_001.txt",
-        nct_id="NCT06476119",
-        model="google/gemma-4-31b-it:free" 
+        patient_filepath="data/narratives/patient_003.txt",
+        nct_id="NCT04698252",
+        model="openai/gpt-oss-20b" 
     )
 
 if __name__ == "__main__":
