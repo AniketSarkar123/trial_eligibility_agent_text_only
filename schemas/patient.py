@@ -99,11 +99,11 @@ class PatientProfile(BaseModel):
     - For biomarkers, only report what is explicitly stated in the text.
     """
 
-    # --- ADD THIS PRESSURE VALVE ---
-    analysis: str | None = Field(
-        None, 
-        description="Optional space for you to think or analyze the clinical text step-by-step before extracting the structured data."
-    )
+    # # --- ADD THIS PRESSURE VALVE ---
+    # analysis: str | None = Field(
+    #     None, 
+    #     description="Optional space for you to think or analyze the clinical text step-by-step before extracting the structured data."
+    # )
 
     # Demographics
     age: int | None = Field(description="Patient age in years")
