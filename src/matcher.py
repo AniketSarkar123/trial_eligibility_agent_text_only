@@ -41,7 +41,7 @@ def evaluate_unmapped_rule_with_llm(
     raw_patient_text: str, 
     criterion_desc: str, 
     is_inclusion: bool, 
-    model: str = "openai/gpt-oss-20b"
+    model: str = "qwen3-32b"
 ) -> RuleEvaluation:
     """Uses the LLM to read the description and evaluate it against the patient."""
     client, _ = get_client(model=model)
