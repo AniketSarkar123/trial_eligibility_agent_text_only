@@ -20,7 +20,7 @@ from schemas.patient import PatientProfile
 # ============================================================
 
 def get_client(
-    model: str = "openai/gpt-oss-20b",
+    model: str = "qwen3-32b",
 ) -> tuple[instructor.Instructor, str]:
     """
     Create an Instructor-wrapped client for Groq.
@@ -96,7 +96,7 @@ producing the JSON output. After reasoning, output ONLY the JSON object.
 
 def extract_patient(
     clinical_text: str,
-    model: str = "openai/gpt-oss-20b",
+    model: str = "qwen3-32b",
     client: instructor.Instructor | None = None,
     temperature: float = 0.0,
 ) -> tuple[PatientProfile, dict]:
