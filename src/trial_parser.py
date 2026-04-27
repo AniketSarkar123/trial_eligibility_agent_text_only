@@ -126,7 +126,7 @@ def parse_structured_fields(trial_json: dict) -> list[TrialCriterion]:
 
     return criteria
 
-def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "openai/gpt-oss-20b") -> list[TrialCriterion]:
+def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "qwen3-32b") -> list[TrialCriterion]:
     if not eligibility_text or not eligibility_text.strip(): return []
     client, _ = get_client(model=model)
 
