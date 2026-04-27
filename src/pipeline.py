@@ -5,7 +5,7 @@ from src.trial_parser import parse_structured_fields, parse_free_text_criteria, 
 from src.matcher import evaluate_eligibility
 from src.why_not import generate_why_not_report
 
-def run_pipeline(clinical_text: str, trial_json: dict, model: str = "google/gemma-4-31b-it:free") -> dict:
+def run_pipeline(clinical_text: str, trial_json: dict, model: str = "openai/gpt-oss-20b") -> dict:
     """
     Core pipeline logic: maps patient text and trial JSON to an eligibility result.
     No file I/O happens here.
