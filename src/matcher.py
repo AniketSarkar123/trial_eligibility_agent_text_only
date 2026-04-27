@@ -41,7 +41,7 @@ def evaluate_unmapped_rule_with_llm(
     raw_patient_text: str, 
     criterion_desc: str, 
     is_inclusion: bool, 
-    model: str = "google/gemma-4-31b-it:free"
+    model: str = "openai/gpt-oss-20b"
 ) -> RuleEvaluation:
     """Uses the LLM to read the description and evaluate it against the patient."""
     client, _ = get_client(model=model)
@@ -61,9 +61,10 @@ def evaluate_unmapped_rule_with_llm(
     Rule Type: {rule_type}
     
     INSTRUCTIONS:
-    1. If the patient clearly passes the rule based on the narrative or profile, return "pass".
-    2. If the patient clearly fails the rule based on the narrative or profile, return "fail".
-    3. If the information is completely missing from both, return "indeterminate".
+    CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.
+    1. If the patient clearly passes the rule based on the narrative or profile, set the `status` field to "pass".
+    2. If the patient clearly fails the rule based on the narrative or profile, set the `status` field to "fail".
+    3. If the information is completely missing from both, set the `status` field to "indeterminate".
 
     CRITICAL SAFETY GUARDS, MISSING DATA & SOURCE OF TRUTH:
     - TUNNEL VISION (CRITICAL): You must evaluate ONLY the specific TRIAL RULE provided. Ignore any statements in the narrative about the patient's OVERALL eligibility for the trial. Do NOT fail a rule about "Cancer Stage" just because the text says they are ineligible due to "Prior Therapy". Evaluate the rule in total isolation.
@@ -76,8 +77,9 @@ def evaluate_unmapped_rule_with_llm(
     - PREGNANCY: If a rule excludes pregnant/lactating women, and the text does NOT explicitly state "not pregnant", you MUST return 'indeterminate'. Do NOT assume they are not pregnant just because they are consenting to therapy. If stated "not pregnant", they pass the non-pregnant rule.
     - CONTRACEPTION: If a rule requires contraception, and the text does NOT explicitly state they are using it or plan to use it, you MUST return 'indeterminate'. 
     - Do NOT substitute qualitative symptoms for formal clinical tests. If a rule requires a specific assessment score (e.g., TICS-M, MoCA, ECOG) and that exact test score is missing from the patient profile, you MUST return 'indeterminate', regardless of the patient's symptoms.
+    - TIMEFRAME RANGES (CRITICAL): If a rule provides a range of time (e.g., "3 to 36 months", "between 14 and 28 days"), you MUST map it to `unmapped_rule` and set `timeframe_days` to null. Do NOT try to calculate a single number for a range.
 
-    Provide a brief, 1-sentence reason referencing specific patient facts.
+    For the `reason` field in the JSON, provide a brief, 1-sentence reason referencing specific patient facts.
     """
     
     try:
@@ -86,6 +88,7 @@ def evaluate_unmapped_rule_with_llm(
             response_model=RuleEvaluation,
             messages=[{"role": "user", "content": prompt}],
             temperature=0.0,
+            max_tokens=8192,
             max_retries=3
         )
         return result
