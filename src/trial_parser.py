@@ -141,6 +141,9 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
     If a field is not applicable or empty, you MUST explicitly set its value to `null`. 
     NEVER drop or omit any keys from the JSON object to save space. You must also ALWAYS output the description field containing the exact text of the rule.
 
+    MULTI-COHORT STRATIFICATION (CRITICAL): 
+    Registry trials often accept multiple distinct populations (e.g., "Patients with TNBC" OR "Healthy mutation carriers"). You MUST NOT extract these as separate, mandatory inclusion rules. If you detect alternative populations, you must assign them the exact same group_id (e.g., "COHORT_1") and set their group_operator to "OR". This ensures the downstream matcher knows the patient only needs to satisfy ONE of the cohort profiles, not all of them. Do NOT extract advisory guidelines (e.g., "Testing is recommended") as criteria.
+
     CRITICAL RULES FOR THE 'category' NAME:
     You MUST map the criterion to EXACTLY ONE of these approved categories:
     ["demographic", "biomarker", "clinical", "lab_value", "prior_therapy", "comorbidity"]
@@ -160,6 +163,7 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
     - NEVER use the "exists" operator for numeric or boolean fields (like lines_of_therapy, prior_surgery, received_neoadjuvant_therapy). 
     - For boolean fields, you MUST use the "eq" operator with a boolean value (true or false). 
     - If checking for any prior therapy as an exclusion, use the "gt" operator with a value of 0 (e.g., field: lines_of_therapy, operator: gt, value: 0).
+    - NO INVERSE EXCLUSIONS (CRITICAL): Protocol authors frequently write redundant criteria (e.g., Inclusion: "Must be within 5 years of diagnosis." -> Exclusion: "Not within 5 years of diagnosis."). If you encounter an exclusion criterion that is simply the exact logical opposite of an inclusion criterion you have already extracted, DO NOT EXTRACT THE EXCLUSION CRITERION. Ignore it completely. Rely only on the positive inclusion rule to prevent double-negative logic errors in the downstream matcher.
 
     - For field mappings other than unmapped_rule, you MUST provide an `operator` and `value`.
     - The `value` field MUST be a primitive type (string, number, boolean, or list). NEVER use a nested JSON object/dictionary.
@@ -186,7 +190,7 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
     5. COMPLEX STAGING: If the staging requirement involves complex TNM staging (e.g., T1N1-3) or sub-stages that might fail simple exact matches, use `unmapped_rule`.
     6. NUANCED CLINICAL EXCLUSIONS: If an exclusion rule involves specific complications or contexts (e.g., "surgery *unrelated* to cancer", "adverse immune events from immunotherapy", "second primary cancer"), you MUST use 'unmapped_rule'. Do NOT force these into simple numeric or boolean fields like 'prior_surgery' or 'lines_of_therapy'.
     7. TIMEFRAME RANGES (CRITICAL): If a rule provides a range of time (e.g., "3 to 36 months", "between 14 and 28 days"), you MUST map it to 'unmapped_rule' and set `timeframe_days` to null. Do NOT try to calculate a single number for a range.
-       
+
     - FOR unmapped_rule: You MUST set both `operator` and `value` to null. Do NOT try to encode logic into the value field.
     
     CRITICAL RULES FOR 'is_inclusion':
