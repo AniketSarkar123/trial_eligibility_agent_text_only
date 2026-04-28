@@ -35,7 +35,7 @@ ApprovedFields = Literal[
     "tumor_size_cm", "nodal_status", "tumor_grade", "lymphovascular_invasion", 
     "disease_focality", "stil_score_percent", "pik3ca_mutation", "esr1_mutation",
     "received_neoadjuvant_therapy", "received_adjuvant_therapy", 
-    "disease_free_interval_months", "has_recurrence", "unmapped_rule"
+    "disease_free_interval_months", "has_recurrence", "has_prior_malignancy", "unmapped_rule"
 ]
 
 class TrialCriterion(BaseModel):
@@ -126,7 +126,7 @@ def parse_structured_fields(trial_json: dict) -> list[TrialCriterion]:
 
     return criteria
 
-def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "qwen3-32b") -> list[TrialCriterion]:
+def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "qwen/qwen3-32b") -> list[TrialCriterion]:
     if not eligibility_text or not eligibility_text.strip(): return []
     client, _ = get_client(model=model)
 
@@ -136,12 +136,16 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
     
     CRITICAL TOOL CALLING RULE: The tool name is exactly CriteriaList. Do NOT prefix the tool name with functions.
 
-    CRITICAL RULE FOR REQUIRED FIELDS:
-    You MUST output the description field for EVERY criterion, containing the exact text of the rule. NEVER drop or omit the description field to save space.
+    CRITICAL RULE FOR REQUIRED FIELDS (SCHEMA PRESERVATION):
+    You MUST output EVERY field defined in the expected JSON schema for EVERY criterion (including `timeframe_days`, `group_id`, `group_operator`, `unit`, `operator`, `value`, etc.). 
+    If a field is not applicable or empty, you MUST explicitly set its value to `null`. 
+    NEVER drop or omit any keys from the JSON object to save space. You must also ALWAYS output the description field containing the exact text of the rule.
 
     CRITICAL RULES FOR THE 'category' NAME:
     You MUST map the criterion to EXACTLY ONE of these approved categories:
     ["demographic", "biomarker", "clinical", "lab_value", "prior_therapy", "comorbidity"]
+    - NEVER use "unmapped_rule" as a category! "unmapped_rule" is strictly a value for the 'field' key. 
+    - If a rule (like informed consent) does not perfectly fit a specific category, you MUST default to "clinical". Do NOT invent new categories.
 
     CRITICAL RULES FOR THE 'field' NAME:
     You MUST map the criterion to EXACTLY ONE of these approved schema fields:
@@ -151,6 +155,11 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
     If you provide an operator, it MUST be EXACTLY one of these strings:
     ["eq", "neq", "gte", "lte", "gt", "lt", "in", "not_in", "exists", "not_exists"]
     DO NOT use abbreviations like "ge" (you must use "gte") or "le" (you must use "lte").
+    
+    - DOUBLE NEGATIVE PREVENTION (CRITICAL): If a rule is an exclusion criterion (is_inclusion: false), you MUST extract the condition being excluded using positive operators (eq, in, gt, etc.). NEVER use neq or not_in for an exclusion criterion, as the system will automatically invert the logic downstream.
+    - NEVER use the "exists" operator for numeric or boolean fields (like lines_of_therapy, prior_surgery, received_neoadjuvant_therapy). 
+    - For boolean fields, you MUST use the "eq" operator with a boolean value (true or false). 
+    - If checking for any prior therapy as an exclusion, use the "gt" operator with a value of 0 (e.g., field: lines_of_therapy, operator: gt, value: 0).
 
     - For field mappings other than unmapped_rule, you MUST provide an `operator` and `value`.
     - The `value` field MUST be a primitive type (string, number, boolean, or list). NEVER use a nested JSON object/dictionary.
@@ -158,6 +167,7 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
     BIOMARKERS VS UNMAPPED RULE:
     - For simple, single biomarker checks (e.g., "Estrogen receptor positive" or "HER2 negative"), you MUST map them to the specific fields (`er_status`, `pr_status`, `her2_status`) with the operator `eq`.
     - COMPOSITE DISEASE RULES: If a rule requires a combination of factors in a single sentence (e.g., "Triple Negative Breast Cancer" meaning ER-, PR-, HER2-) you MUST use 'unmapped_rule'.
+    - BIOMARKER RANGES: If a biomarker rule specifies a numerical percentage range (e.g., "ER expression 0-9%" or "Ki67 < 20%"), you MUST map it to unmapped_rule. Do NOT try to encode percentage ranges into literal string lists (e.g., ["0", "9%"]) for categorical fields like er_status.
 
     BOOLEAN GROUPING (OR LOGIC):
     - If a rule contains an "OR" condition (e.g., "Requires BRCA1 OR BRCA2 mutation"), split them into separate criteria, give them the same group_id (e.g., 'GRP_1'), and set group_operator to 'OR'.
@@ -174,8 +184,11 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
     3. COMPLEX RULES: Willingness to comply, multifocal disease, timing/intervals, or multiple conditions.
     4. PREGNANCY & CONTRACEPTION: If a rule relates to pregnancy, lactation, or contraception, you MUST map it to `unmapped_rule`. Do NOT force it into menopausal_status.
     5. COMPLEX STAGING: If the staging requirement involves complex TNM staging (e.g., T1N1-3) or sub-stages that might fail simple exact matches, use `unmapped_rule`.
+    6. NUANCED CLINICAL EXCLUSIONS: If an exclusion rule involves specific complications or contexts (e.g., "surgery *unrelated* to cancer", "adverse immune events from immunotherapy", "second primary cancer"), you MUST use 'unmapped_rule'. Do NOT force these into simple numeric or boolean fields like 'prior_surgery' or 'lines_of_therapy'.
+    7. TIMEFRAME RANGES (CRITICAL): If a rule provides a range of time (e.g., "3 to 36 months", "between 14 and 28 days"), you MUST map it to 'unmapped_rule' and set `timeframe_days` to null. Do NOT try to calculate a single number for a range.
        
     - FOR unmapped_rule: You MUST set both `operator` and `value` to null. Do NOT try to encode logic into the value field.
+    
     CRITICAL RULES FOR 'is_inclusion':
     - If a rule is listed under an "Inclusion Criteria" section, you MUST set `is_inclusion` to `true`.
     - If a rule is listed under an "Exclusion Criteria" section, or explicitly states the patient must NOT have a condition, you MUST set `is_inclusion` to `false`.
