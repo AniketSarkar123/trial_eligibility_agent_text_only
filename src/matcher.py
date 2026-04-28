@@ -68,6 +68,10 @@ def evaluate_unmapped_rule_with_llm(
     1. If the patient clearly passes the rule based on the narrative or profile, set the `status` field to "pass".
     2. If the patient clearly fails the rule based on the narrative or profile, set the `status` field to "fail".
     3. If the information is completely missing from both, set the `status` field to "indeterminate".
+    4. DOUBLE NEGATIVE DECONSTRUCTION: Be extremely careful with Exclusion rules (is_inclusion: false) that contain negative phrases (e.g., "Patient is NOT within 5 years").
+        Step 1: Does the patient have the negative trait? (e.g., Are they NOT within 5 years?)
+        Step 2: If the patient is within 5 years, they do NOT have the exclusionary trait. Therefore, you must output "pass" for this exclusion rule, because they successfully avoided the exclusion.
+        Do not invert the logic.
 
     CRITICAL SAFETY GUARDS, MISSING DATA & SOURCE OF TRUTH:
     - THE ISOLATION RULE (CRITICAL): You MUST evaluate the requested TRIAL RULE in complete isolation. Do NOT fail a patient on an administrative rule (e.g., consent, psychological compliance) or an unrelated clinical rule just because the patient has a disqualifying medical condition elsewhere in their text. Never use a patient's overall ineligibility to fail an unrelated rule.
