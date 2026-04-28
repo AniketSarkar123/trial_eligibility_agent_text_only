@@ -5,7 +5,7 @@ Uses pure Python logic for structured data, and LLM fallback for unmapped rules.
 
 import json
 from typing import Literal
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from schemas.patient import PatientProfile
 from src.trial_parser import TrialCriterion, Operator
@@ -32,6 +32,9 @@ class EligibilityResult(BaseModel):
 
 class RuleEvaluation(BaseModel):
     """How the LLM responds when evaluating an unmapped rule."""
+    analysis: str = Field(
+        description="Step 1: State what the rule specifically asks for. Step 2: State what the patient data says ONLY about that specific metric. Step 3: Explicitly declare that you are ignoring all other clinical conditions (like node status) for this specific evaluation."
+    )
     status: Literal["pass", "fail", "indeterminate"]
     reason: str
 
@@ -41,14 +44,14 @@ def evaluate_unmapped_rule_with_llm(
     raw_patient_text: str, 
     criterion_desc: str, 
     is_inclusion: bool, 
-    model: str = "google/gemma-4-31b-it:free"
+    model: str = "qwen/qwen3-32b"
 ) -> RuleEvaluation:
     """Uses the LLM to read the description and evaluate it against the patient."""
     client, _ = get_client(model=model)
     
     rule_type = "Inclusion Criterion (Patient MUST meet this)" if is_inclusion else "Exclusion Criterion (Patient MUST NOT meet this)"
     
-    prompt = f"""You are an expert oncologist. Determine if the patient meets this complex clinical trial rule.
+    prompt = f"""You are an expert oncologist. Determine if the patient meets this complex clinical trial rule. Your ONLY job is to evaluate ONE specific rule in complete isolation.
     
     RAW CLINICAL NARRATIVE:
     {raw_patient_text}
@@ -61,23 +64,27 @@ def evaluate_unmapped_rule_with_llm(
     Rule Type: {rule_type}
     
     INSTRUCTIONS:
-    1. If the patient clearly passes the rule based on the narrative or profile, return "pass".
-    2. If the patient clearly fails the rule based on the narrative or profile, return "fail".
-    3. If the information is completely missing from both, return "indeterminate".
+    CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.
+    1. If the patient clearly passes the rule based on the narrative or profile, set the `status` field to "pass".
+    2. If the patient clearly fails the rule based on the narrative or profile, set the `status` field to "fail".
+    3. If the information is completely missing from both, set the `status` field to "indeterminate".
+    4. DOUBLE NEGATIVE DECONSTRUCTION: Be extremely careful with Exclusion rules (is_inclusion: false) that contain negative phrases (e.g., "Patient is NOT within 5 years").
+        Step 1: Does the patient have the negative trait? (e.g., Are they NOT within 5 years?)
+        Step 2: If the patient is within 5 years, they do NOT have the exclusionary trait. Therefore, you must output "pass" for this exclusion rule, because they successfully avoided the exclusion.
+        Do not invert the logic.
 
     CRITICAL SAFETY GUARDS, MISSING DATA & SOURCE OF TRUTH:
-    - TUNNEL VISION (CRITICAL): You must evaluate ONLY the specific TRIAL RULE provided. Ignore any statements in the narrative about the patient's OVERALL eligibility for the trial. Do NOT fail a rule about "Cancer Stage" just because the text says they are ineligible due to "Prior Therapy". Evaluate the rule in total isolation.
-    - IGNORE META-COMMENTARY: The clinical narrative may contain "spoilers" written by a human grader (e.g., "this renders the patient ineligible", "she does not fulfill criteria"). You MUST completely ignore these statements. Treat the text as a raw medical record. Do not use the word "ineligible" from the text to fail administrative rules like "consent" or "researcher discretion."
+    - THE ISOLATION RULE (CRITICAL): You MUST evaluate the requested TRIAL RULE in complete isolation. Do NOT fail a patient on an administrative rule (e.g., consent, psychological compliance) or an unrelated clinical rule just because the patient has a disqualifying medical condition elsewhere in their text. Never use a patient's overall ineligibility to fail an unrelated rule.
+    - IGNORE META-COMMENTARY: The clinical narrative may contain "spoilers" written by a human grader (e.g., "this renders the patient ineligible", "she does not qualify"). You MUST completely ignore these statements. Treat the text as a raw medical record.
     - THE NARRATIVE IS KING: If the STRUCTURED PATIENT PROFILE contradicts the RAW CLINICAL NARRATIVE (e.g., the JSON says "Stage IV" but the narrative says "Stage II"), you MUST trust the RAW CLINICAL NARRATIVE. The JSON was auto-extracted and may contain hallucinations.
     - MISSING = INDETERMINATE: If the data required to answer the rule is missing, you MUST return "indeterminate". Do NOT return "fail" just because data is missing. 
     - MEDICAL EXCLUSIONS: If the rule excludes patients with specific prior diseases (e.g., HIV, Hepatitis, heart failure, other cancers) and the text is SILENT on these conditions, you MUST return 'indeterminate'. Do NOT assume the patient does not have them just because they aren't mentioned.
-    - ADMINISTRATIVE/SUBJECTIVE RULES: If the rule requires "signed consent," "willingness to comply," or a specific "life expectancy," and the text does not explicitly address it, return 'indeterminate'. Do NOT hallucinate clinical data (like tumor shrinkage) to justify passing an administrative rule.
+    - ADMINISTRATIVE/SUBJECTIVE RULES: If the rule requires "signed consent," "willingness to comply," or a specific "life expectancy," and the text does not explicitly address it, return 'indeterminate'. Do NOT hallucinate clinical data to justify passing an administrative rule.
     - Do NOT estimate or guess quantitative numbers from vague qualitative words.
-    - PREGNANCY: If a rule excludes pregnant/lactating women, and the text does NOT explicitly state "not pregnant", you MUST return 'indeterminate'. Do NOT assume they are not pregnant just because they are consenting to therapy. If stated "not pregnant", they pass the non-pregnant rule.
-    - CONTRACEPTION: If a rule requires contraception, and the text does NOT explicitly state they are using it or plan to use it, you MUST return 'indeterminate'. 
-    - Do NOT substitute qualitative symptoms for formal clinical tests. If a rule requires a specific assessment score (e.g., TICS-M, MoCA, ECOG) and that exact test score is missing from the patient profile, you MUST return 'indeterminate', regardless of the patient's symptoms.
+    - PREGNANCY & CONTRACEPTION: If a rule excludes pregnant/lactating women, and the text does NOT explicitly state "not pregnant", you MUST return 'indeterminate'. If a rule requires contraception, and the text does NOT explicitly state they use it, return 'indeterminate'.
+    - STRICT TEST ADHERENCE: If a rule explicitly requires a specific diagnostic test, imaging modality (e.g., MRI, PET/CT), or formal guideline (e.g., RECIST, ASCO/CAP), you MUST NOT accept clinical proxies or surgical results as substitutes. If the specific test is not explicitly named in the patient's record, you MUST output 'indeterminate'. Do not assume a test was performed just because the clinical outcome is known.
 
-    Provide a brief, 1-sentence reason referencing specific patient facts.
+    For the `reason` field in the JSON, provide a brief, 1-sentence reason referencing specific patient facts.
     """
     
     try:
@@ -86,6 +93,7 @@ def evaluate_unmapped_rule_with_llm(
             response_model=RuleEvaluation,
             messages=[{"role": "user", "content": prompt}],
             temperature=0.0,
+            max_tokens=8192,
             max_retries=3
         )
         return result
@@ -128,7 +136,7 @@ def get_patient_value(patient: PatientProfile, field: str):
         "tumor_size_cm", "nodal_status", "tumor_grade", "lymphovascular_invasion", 
         "disease_focality", "stil_score_percent", "pik3ca_mutation", "esr1_mutation",
         "received_neoadjuvant_therapy", "received_adjuvant_therapy", 
-        "disease_free_interval_months", "has_recurrence"
+        "disease_free_interval_months", "has_recurrence", "has_prior_malignancy"
     }
 
     if resolved_field in simple_fields:
