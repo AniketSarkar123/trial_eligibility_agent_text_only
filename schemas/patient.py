@@ -127,8 +127,8 @@ class PatientProfile(BaseModel):
     )
 
     cancer_stage: Literal[
-        "I", "IA", "IB", "II", "IIA", "IIB",
-        "III", "IIIA", "IIIB", "IIIC", "IV"
+        "I", "IA", "IB", "II", "IIA", "IIB", "IIC",
+        "III", "IIIA", "IIIB", "IIIC", "IV", "IVA", "IVB", "IVC"
     ] | None = Field(description="AJCC cancer stage. Null if not mentioned."
     )
 
@@ -142,8 +142,12 @@ class PatientProfile(BaseModel):
     nodal_status: Literal["N0", "N1", "N2", "N3", "positive", "negative"] | None = Field(None, description="Lymph node involvement status.")
     tumor_grade: Literal[1, 2, 3] | None = Field(description="Nottingham histological grade of the tumor.")
     lymphovascular_invasion: bool | None = Field(description="Presence of lymphovascular invasion (LVI). True if present, False if absent.")
-    disease_focality: Literal["unifocal", "multifocal", "multicentric", "bilateral"] | None = Field(description="Focality of the breast cancer.")
-
+    disease_focality: Literal[
+        "unifocal", "multifocal", "multicentric", "bilateral", "unicentric"
+    ] | None = Field(
+        None, 
+        description="Focality of the disease (e.g., unifocal, multifocal, multicentric, bilateral, unicentric)."
+    )
     # Biomarkers (breast cancer focused)
     er_status: Literal["positive", "negative"] | None = Field(description="Estrogen receptor status. Null if not mentioned."
     )
@@ -180,6 +184,10 @@ class PatientProfile(BaseModel):
 
     has_recurrence: bool | None = Field( 
         description="True if the patient has experienced a recurrence of their cancer. False if the text explicitly states no recurrence."
+    )
+
+    has_prior_malignancy: bool | None = Field(
+        None, description="Whether the patient had a prior, separate cancer/malignancy in their history. True if they had a second primary cancer, False if this is their 'first cancer diagnosis'."
     )
 
     # Clinical status
