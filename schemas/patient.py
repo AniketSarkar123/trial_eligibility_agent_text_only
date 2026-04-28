@@ -22,8 +22,9 @@ from pydantic import BaseModel, Field, model_validator, AliasChoices
 class PriorTherapy(BaseModel):
     """A single prior treatment the patient received."""
 
-    drug_name: str = Field(description="Generic drug name, lowercase")
-
+    drug_name: str = Field(
+        description="Generic drug name only, lowercase. CRITICAL: Strip out all brand names, dosages, and frequencies (e.g., if text says 'paclitaxel 80mg/m2', extract ONLY 'paclitaxel')."
+    )
     drug_class: str | None = Field(
         None,
         description=(
@@ -42,12 +43,11 @@ class PriorTherapy(BaseModel):
         None, description="Convert '2 years ago' to 730, '4 weeks ago' to 28. Null if not specified."
     )
 
-    discontinued_reason: str | None = Field(
+    discontinued_reason: Literal[
+        "progression", "toxicity", "completed", "patient choice"
+    ] | None = Field(
         None,
-        description=(
-            "Reason stopped: 'progression', 'toxicity', 'completed', "
-            "'patient choice', or null"
-        ),
+        description="Exact reason therapy was stopped. Must be exactly one of these options, or null if not specified."
     )
 
     months_since_last_dose: float | None = Field(
@@ -99,11 +99,11 @@ class PatientProfile(BaseModel):
     - For biomarkers, only report what is explicitly stated in the text.
     """
 
-    # --- ADD THIS PRESSURE VALVE ---
-    analysis: str | None = Field(
-        None, 
-        description="Optional space for you to think or analyze the clinical text step-by-step before extracting the structured data."
-    )
+    # # --- ADD THIS PRESSURE VALVE ---
+    # analysis: str | None = Field(
+    #     None, 
+    #     description="Optional space for you to think or analyze the clinical text step-by-step before extracting the structured data."
+    # )
 
     # Demographics
     age: int | None = Field(description="Patient age in years")
@@ -121,29 +121,39 @@ class PatientProfile(BaseModel):
 
     # Diagnosis
     primary_diagnosis: str | None = Field(
-        description=(
-            "Primary cancer diagnosis, e.g., 'invasive ductal carcinoma of the breast'"
-        ),
+        None,
+        description="The core histological diagnosis of the patient. CRITICAL: You MUST extract ONLY the core diagnosis name (e.g., 'invasive ductal carcinoma', 'DCIS', 'triple-negative breast cancer'). Do NOT include anatomical locations (e.g., 'of the breast', 'right breast') or tumor sizes."
     )
 
     cancer_stage: Literal[
-        "I", "IA", "IB", "II", "IIA", "IIB",
-        "III", "IIIA", "IIIB", "IIIC", "IV"
+        "I", "IA", "IB", "II", "IIA", "IIB", "IIC",
+        "III", "IIIA", "IIIB", "IIIC", "IV", "IVA", "IVB", "IVC"
     ] | None = Field(description="AJCC cancer stage. Null if not mentioned."
     )
 
     is_metastatic: bool | None = Field(description="True if metastatic disease. Null if not stated."
     )
 
-    histology: str | None = Field(description="Histological type, e.g., 'ductal', 'lobular'"
+    histology: Literal[
+        "ductal", "lobular", "mixed", "medullary", "mucinous", "tubular", "papillary", "triple-negative"
+    ] | None = Field(
+        None,
+        description="Core histological type. Normalize to strict base terms like 'ductal' or 'lobular'. Do not include words like 'invasive' or 'carcinoma'."
     )
 
     tumor_size_cm: float | None = Field(description="Size of the primary tumor in centimeters.")
-    nodal_status: Literal["N0", "N1", "N2", "N3", "positive", "negative"] | None = Field(None, description="Lymph node involvement status.")
+    nodal_status: Literal["positive", "negative"] | None = Field(
+        None, 
+        description="Nodal status. If the text says 'N0' or 'pN0', you MUST output 'negative'. If it says 'N1', 'N2', 'positive', or indicates involved nodes, output 'positive'."
+    )
     tumor_grade: Literal[1, 2, 3] | None = Field(description="Nottingham histological grade of the tumor.")
     lymphovascular_invasion: bool | None = Field(description="Presence of lymphovascular invasion (LVI). True if present, False if absent.")
-    disease_focality: Literal["unifocal", "multifocal", "multicentric", "bilateral"] | None = Field(description="Focality of the breast cancer.")
-
+    disease_focality: Literal[
+        "unifocal", "multifocal", "multicentric", "bilateral", "unicentric"
+    ] | None = Field(
+        None, 
+        description="Focality of the disease (e.g., unifocal, multifocal, multicentric, bilateral, unicentric)."
+    )
     # Biomarkers (breast cancer focused)
     er_status: Literal["positive", "negative"] | None = Field(description="Estrogen receptor status. Null if not mentioned."
     )
@@ -180,6 +190,10 @@ class PatientProfile(BaseModel):
 
     has_recurrence: bool | None = Field( 
         description="True if the patient has experienced a recurrence of their cancer. False if the text explicitly states no recurrence."
+    )
+
+    has_prior_malignancy: bool | None = Field(
+        None, description="Whether the patient had a prior, separate cancer/malignancy in their history. True if they had a second primary cancer, False if this is their 'first cancer diagnosis'."
     )
 
     # Clinical status
