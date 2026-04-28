@@ -20,7 +20,7 @@ from schemas.patient import PatientProfile
 # ============================================================
 
 def get_client(
-    model: str = "qwen3-32b",
+    model: str = "qwen/qwen3-32b",
 ) -> tuple[instructor.Instructor, str]:
     """
     Create an Instructor-wrapped client for Groq.
@@ -86,6 +86,8 @@ CLINICAL EXTRACTION RULES:
 4. EXHAUSTIVE DRUG CAPTURE: You must extract EVERY specific drug name mentioned and add it as an object to the `prior_therapies` array (e.g., [{"drug_name": "letrozole"}]), even if they are current treatments. Use generic names in lowercase.
 5. PREGNANCY EXTRACTION: If the text explicitly says 'not pregnant', use 'not_pregnant'. If the text is SILENT on pregnancy, you MUST output `null`. 
 6. BREAST CANCER SPECIFICS: Look specifically for and extract sTIL scores (%), Neoadjuvant vs Adjuvant therapy sequences, Recurrence status, and Lymphovascular invasion (LVI).
+7. METASTATIC DEFINITION (CRITICAL): In breast cancer, "contralateral axillary involvement", "supraclavicular node involvement", or any distant organ lesions (e.g., liver, lung, brain, bone) strictly indicate metastatic disease (M1). If these are present, you MUST set `is_metastatic` to `true` even if the word "metastatic" is not explicitly used.
+8. PRIOR MALIGNANCY: Do not confuse a 'recurrence' of the current cancer with a 'prior malignancy' (a completely different cancer in the past). If this is their first cancer, set `has_prior_malignancy` to `false`.
 """
 
 REASONING_SYSTEM_PROMPT = SYSTEM_PROMPT + """
@@ -96,7 +98,7 @@ producing the JSON output. After reasoning, output ONLY the JSON object.
 
 def extract_patient(
     clinical_text: str,
-    model: str = "qwen3-32b",
+    model: str = "qwen/qwen3-32b",
     client: instructor.Instructor | None = None,
     temperature: float = 0.0,
 ) -> tuple[PatientProfile, dict]:
