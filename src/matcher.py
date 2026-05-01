@@ -25,6 +25,7 @@ class EligibilityResult(BaseModel):
     nct_id: str
     eligible: bool  # True only if ALL criteria pass
     has_indeterminate: bool
+    risk_score: float = 0.0  # <-- ADDED FOR RISK RANKING
     results: list[MatchResult]
     failing_criteria: list[MatchResult]
     indeterminate_criteria: list[MatchResult]
@@ -37,6 +38,40 @@ class RuleEvaluation(BaseModel):
     )
     status: Literal["pass", "fail", "indeterminate"]
     reason: str
+
+
+def calculate_indeterminate_risk(indeterminate_criteria: list[MatchResult]) -> float:
+    """
+    Calculates a risk penalty score. Lower score = higher priority for manual screening.
+    """
+    risk_score = 0.0
+    
+    for match_result in indeterminate_criteria:
+        crit = match_result.criterion
+        
+        # 1. Base Penalty by Inclusion vs Exclusion
+        if crit.is_inclusion:
+            # Missing an inclusion rule is highly risky (e.g., missing ER+ status)
+            base_penalty = 20.0 
+        else:
+            # Missing an exclusion rule is low risk (e.g., text doesn't mention HIV)
+            base_penalty = 2.0  
+            
+        # 2. Multiplier by Clinical Category
+        category_multipliers = {
+            "biomarker": 3.0,     # Extremely high risk if missing
+            "demographic": 2.5,   # High risk
+            "clinical": 2.0,      # Medium risk
+            "prior_therapy": 1.5, # Medium risk 
+            "lab_value": 0.5,     # Low risk 
+            "comorbidity": 0.2    # Very low risk 
+        }
+        
+        cat_val = crit.category.value if hasattr(crit.category, 'value') else str(crit.category)
+        multiplier = category_multipliers.get(cat_val, 1.0)
+        risk_score += (base_penalty * multiplier)
+        
+    return risk_score
 
 
 def evaluate_unmapped_rule_with_llm(
@@ -380,7 +415,7 @@ def evaluate_eligibility(
             if not exhaustive:
                 return EligibilityResult(
                     nct_id=nct_id, eligible=False, has_indeterminate=False, 
-                    results=results, failing_criteria=[result], indeterminate_criteria=[]
+                    risk_score=0.0, results=results, failing_criteria=[result], indeterminate_criteria=[]
                 )
             
     # Evaluate Pass 2 (LLM Fallbacks)
@@ -394,9 +429,10 @@ def evaluate_eligibility(
                 # Fail-fast triggered during complex rules
                 failing = [r for r in results if r.status == "fail"]
                 indeterminate = [r for r in results if r.status == "indeterminate"]
+                risk_val = calculate_indeterminate_risk(indeterminate)
                 return EligibilityResult(
                     nct_id=nct_id, eligible=False, has_indeterminate=len(indeterminate) > 0, 
-                    results=results, failing_criteria=failing, indeterminate_criteria=indeterminate
+                    risk_score=risk_val, results=results, failing_criteria=failing, indeterminate_criteria=indeterminate
                 )
 
     # --- BOOLEAN GROUPING LOGIC (OR) ---
@@ -418,11 +454,15 @@ def evaluate_eligibility(
     # Final Compilation
     failing = [r for r in results if r.status == "fail"]
     indeterminate = [r for r in results if r.status == "indeterminate"]
+    
+    # Calculate Risk Score for ranking
+    risk_val = calculate_indeterminate_risk(indeterminate)
 
     return EligibilityResult(
         nct_id=nct_id, 
         eligible=len(failing) == 0 and len(indeterminate) == 0,
         has_indeterminate=len(indeterminate) > 0, 
+        risk_score=risk_val,
         results=results,
         failing_criteria=failing, 
         indeterminate_criteria=indeterminate,
