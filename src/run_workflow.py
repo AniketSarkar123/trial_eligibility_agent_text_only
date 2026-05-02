@@ -13,7 +13,7 @@ from src.why_not import generate_why_not_report
 MODE = "SCREEN" 
 
 # Which trial are we working with?
-NCT_ID = "NCT04698252"
+NCT_ID = "NCT07351487"
 
 # Which model should we use?
 MODEL = "qwen/qwen3-32b"
@@ -64,19 +64,35 @@ def main():
             patient_id = patient_file.stem
             print(f"Processing {patient_id}...")
             
-            result = screen_patient_against_golden(
+            # The output is now a dictionary containing patient and result
+            screen_data = screen_patient_against_golden(
                 patient_text=patient_file.read_text(encoding="utf-8"),
                 golden_trial_path=str(golden_trial_path),
                 model=MODEL
             )
             
+            # Extract the EligibilityResult object for the ranking function
+            result = screen_data["result"]
+            
             batch_results.append({"patient_id": patient_id, "result": result})
             
+            # Save the full composite JSON report (Patient + Result)
+            full_report = {
+                "patient": screen_data["patient"],
+                "nct_id": result.nct_id,
+                "eligible": result.eligible,
+                "has_indeterminate": result.has_indeterminate,
+                "risk_score": result.risk_score,
+                "results": [r.model_dump() for r in result.results],
+                "failing_criteria": [r.model_dump() for r in result.failing_criteria],
+                "indeterminate_criteria": [r.model_dump() for r in result.indeterminate_criteria]
+            }
+
             # Save JSON report
             with open(out_dir / f"{patient_id}_{NCT_ID}_report.json", "w", encoding="utf-8") as f:
-                json.dump(result.model_dump(), f, indent=2)
+                json.dump(full_report, f, indent=2)
                 
-            # Save Text report
+            # Save Text report (Pass only the result object to why_not)
             with open(out_dir / f"{patient_id}_{NCT_ID}_whynot.txt", "w", encoding="utf-8") as f:
                 f.write(generate_why_not_report(result))
 
