@@ -4,7 +4,7 @@ from src.extractor import extract_patient
 from src.matcher import evaluate_eligibility, EligibilityResult
 from src.trial_parser import ParsedTrial
 
-def screen_patient_against_golden(patient_text: str, golden_trial_path: str, model: str) -> EligibilityResult:
+def screen_patient_against_golden(patient_text: str, golden_trial_path: str, model: str) -> dict:
     # 1. Load the human-verified Golden Trial
     with open(golden_trial_path, "r") as f:
         golden_data = json.load(f)
@@ -22,7 +22,11 @@ def screen_patient_against_golden(patient_text: str, golden_trial_path: str, mod
         model=model
     )
     
-    return result
+    # Return the composite payload including the patient details
+    return {
+        "patient": patient.model_dump(),
+        "result": result
+    }
 
 def rank_cohort(batch_results: list[dict]) -> dict:
     """
