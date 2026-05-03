@@ -9,10 +9,11 @@ from src.extractor import get_client
 class CriterionType(str, Enum):
     DEMOGRAPHIC = "demographic"
     BIOMARKER = "biomarker"
-    CLINICAL = "clinical"
+    CLINICAL_DIAGNOSIS = "clinical_diagnosis"
     LAB_VALUE = "lab_value"
     PRIOR_THERAPY = "prior_therapy"
     COMORBIDITY = "comorbidity"
+    ADMINISTRATIVE = "administrative"
 
 class Operator(str, Enum):
     EQ = "eq"  
@@ -43,13 +44,13 @@ class TrialCriterion(BaseModel):
     criterion_id: str = Field(default="TBD") 
     
     category: CriterionType = Field(
-        description="CRITICAL: MUST be exactly one of: 'demographic', 'biomarker', 'clinical', 'lab_value', 'prior_therapy', 'comorbidity'. DO NOT use specific field names here (like 'primary_diagnosis')."
+        description="CRITICAL: MUST be exactly one of: 'demographic', 'biomarker', 'clinical_diagnosis', 'lab_value', 'prior_therapy', 'comorbidity', 'administrative'. DO NOT use specific field names here."
     )
     
     # Enforce the description field natively in the schema
     description: str = Field(
         ..., 
-        description="CRITICAL: You MUST include the exact text snippet of the trial rule here. DO NOT OMIT THIS FIELD."
+        description="CRITICAL: You MUST include the FULL, EXACT, UNTRUNCATED text snippet of the trial rule here. DO NOT truncate long lists of comorbidities or conditions. DO NOT OMIT THIS FIELD."
     )  
     field: ApprovedFields | str = Field(description="MUST be an exact schema match (e.g., 'primary_diagnosis', 'prior_surgery', 'age') or prefixed with 'lab:', 'prior_drug:', 'prior_drug_class:'")
     operator: Optional[Operator] = None
@@ -73,17 +74,21 @@ class TrialCriterion(BaseModel):
     @classmethod
     def map_invalid_categories(cls, v):
         """Silently intercepts and corrects LLM hallucinations for the category field."""
-        valid_categories = ["demographic", "biomarker", "clinical", "lab_value", "prior_therapy", "comorbidity"]
+        valid_categories = ["demographic", "biomarker", "clinical_diagnosis", "lab_value", "prior_therapy", "comorbidity", "administrative"]
         
         # If it's already an enum instance, get its value
         v_str = str(getattr(v, 'value', v)).lower().strip()
         
+        # Handle the legacy 'clinical' category gracefully if the LLM slips up
+        if v_str == "clinical":
+            return "clinical_diagnosis"
+
         if v_str in valid_categories:
             return v_str
             
         # If the LLM hallucinates a specific 'field' name into the 'category' slot, map it correctly
         if v_str in ["primary_diagnosis", "cancer_stage", "histology", "is_metastatic", "ecog_score"]:
-            return "clinical"
+            return "clinical_diagnosis"
         if v_str in ["prior_surgery", "prior_radiation", "lines_of_therapy", "received_neoadjuvant_therapy"]:
             return "prior_therapy"
         if v_str in ["er_status", "pr_status", "her2_status", "brca_status", "pdl1_status"]:
@@ -92,7 +97,7 @@ class TrialCriterion(BaseModel):
             return "demographic"
             
         # Ultimate fallback to ensure Pydantic never crashes
-        return "clinical" 
+        return "clinical_diagnosis" 
 
 class CriteriaList(BaseModel):
     analysis: Optional[str] = Field(
@@ -146,25 +151,32 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
 
     CRITICAL RULES FOR THE 'category' NAME:
     You MUST map the criterion to EXACTLY ONE of these approved categories:
-    ["demographic", "biomarker", "clinical", "lab_value", "prior_therapy", "comorbidity"]
+    ["demographic", "biomarker", "clinical_diagnosis", "lab_value", "prior_therapy", "comorbidity", "administrative"]
+    
+    - "clinical_diagnosis": Use this for strict medical facts (e.g., Cancer stage, metastatic status, life expectancy, ECOG score, specific symptoms).
+    - "administrative" (SOFT CRITERIA): You MUST use this for logistical, technical, or compliance requirements that do not reflect the patient's actual bodily health. Examples include: 
+        * Willingness to sign consent or complete questionnaires.
+        * Ability to travel, read English, or return for follow-up.
+        * Ownership of a smartphone, email address, or internet access.
+        * Willingness to wear an activity tracker.
+        * Being enrolled in another conflicting study or program.
+
     - NEVER use "unmapped_rule" as a category! "unmapped_rule" is strictly a value for the 'field' key. 
-    - If a rule (like informed consent) does not perfectly fit a specific category, you MUST default to "clinical". Do NOT invent new categories.
 
     CRITICAL RULES FOR THE 'field' NAME:
     You MUST map the criterion to EXACTLY ONE of these approved schema fields:
     [age, sex, menopausal_status, primary_diagnosis, cancer_stage, is_metastatic, histology, er_status, pr_status, her2_status, brca_status, ki67_percent, pdl1_status, ecog_score, lines_of_therapy, prior_radiation, prior_surgery, adequate_liver_function, adequate_renal_function, adequate_bone_marrow, brain_metastases, tumor_size_cm, nodal_status, tumor_grade, lymphovascular_invasion, disease_focality, stil_score_percent, pik3ca_mutation, esr1_mutation, received_neoadjuvant_therapy, received_adjuvant_therapy, disease_free_interval_months, has_recurrence, unmapped_rule]
 
-    CRITICAL RULES FOR THE 'operator' FIELD:
+    CRITICAL RULES FOR THE 'operator' AND 'value' FIELDS:
     If you provide an operator, it MUST be EXACTLY one of these strings:
     ["eq", "neq", "gte", "lte", "gt", "lt", "in", "not_in", "exists", "not_exists"]
     DO NOT use abbreviations like "ge" (you must use "gte") or "le" (you must use "lte").
-    
     - DOUBLE NEGATIVE PREVENTION (CRITICAL): If a rule is an exclusion criterion (is_inclusion: false), you MUST extract the condition being excluded using positive operators (eq, in, gt, etc.). NEVER use neq or not_in for an exclusion criterion, as the system will automatically invert the logic downstream.
     - NEVER use the "exists" operator for numeric or boolean fields (like lines_of_therapy, prior_surgery, received_neoadjuvant_therapy). 
+    - If using "exists" or "not_exists" for a field, the `value` field MUST be a boolean (true or false), NOT null.
     - For boolean fields, you MUST use the "eq" operator with a boolean value (true or false). 
     - If checking for any prior therapy as an exclusion, use the "gt" operator with a value of 0 (e.g., field: lines_of_therapy, operator: gt, value: 0).
     - NO INVERSE EXCLUSIONS (CRITICAL): Protocol authors frequently write redundant criteria (e.g., Inclusion: "Must be within 5 years of diagnosis." -> Exclusion: "Not within 5 years of diagnosis."). If you encounter an exclusion criterion that is simply the exact logical opposite of an inclusion criterion you have already extracted, DO NOT EXTRACT THE EXCLUSION CRITERION. Ignore it completely. Rely only on the positive inclusion rule to prevent double-negative logic errors in the downstream matcher.
-
     - For field mappings other than unmapped_rule, you MUST provide an `operator` and `value`.
     - The `value` field MUST be a primitive type (string, number, boolean, or list). NEVER use a nested JSON object/dictionary.
 
@@ -190,7 +202,7 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
     5. COMPLEX STAGING: If the staging requirement involves complex TNM staging (e.g., T1N1-3) or sub-stages that might fail simple exact matches, use `unmapped_rule`.
     6. NUANCED CLINICAL EXCLUSIONS: If an exclusion rule involves specific complications or contexts (e.g., "surgery *unrelated* to cancer", "adverse immune events from immunotherapy", "second primary cancer"), you MUST use 'unmapped_rule'. Do NOT force these into simple numeric or boolean fields like 'prior_surgery' or 'lines_of_therapy'.
     7. TIMEFRAME RANGES (CRITICAL): If a rule provides a range of time (e.g., "3 to 36 months", "between 14 and 28 days"), you MUST map it to 'unmapped_rule' and set `timeframe_days` to null. Do NOT try to calculate a single number for a range.
-
+    8. STRICT DEFINITION FOR 'lines_of_therapy': This field ONLY applies to systemic therapy in the METASTATIC setting. For any generic "prior anti-tumor treatment", "any prior chemotherapy", or neoadjuvant/adjuvant exclusions, use 'unmapped_rule'.
     - FOR unmapped_rule: You MUST set both `operator` and `value` to null. Do NOT try to encode logic into the value field.
     
     CRITICAL RULES FOR 'is_inclusion':
@@ -203,7 +215,7 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
       "criteria": [
         {
           "criterion_id": "EXAMPLE_1",
-          "category": "clinical",
+          "category": "clinical_diagnosis",
           "description": "Patient must have stage I or II cancer",
           "field": "cancer_stage",
           "operator": "in",
@@ -218,6 +230,15 @@ def parse_free_text_criteria(eligibility_text: str, nct_id: str, model: str = "q
           "operator": null,
           "value": null,
           "is_inclusion": false
+        },
+        {
+          "criterion_id": "EXAMPLE_3",
+          "category": "administrative",
+          "description": "Willing to provide informed consent",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "is_inclusion": true
         }
       ]
     }
