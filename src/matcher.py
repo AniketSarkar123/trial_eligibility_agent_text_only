@@ -23,7 +23,9 @@ class MatchResult(BaseModel):
 class EligibilityResult(BaseModel):
     """Full eligibility result for a patient-trial pair."""
     nct_id: str
-    eligible: bool  # True only if ALL criteria pass
+    eligible: bool  # True if there are zero FAILS (allows indeterminate)
+    triage_status: str  # <-- ADDED FOR TRIAGE
+    is_metastatic: bool | None = None
     has_indeterminate: bool
     risk_score: float = 0.0  # <-- ADDED FOR RISK RANKING
     results: list[MatchResult]
@@ -40,38 +42,56 @@ class RuleEvaluation(BaseModel):
     reason: str
 
 
-def calculate_indeterminate_risk(indeterminate_criteria: list[MatchResult]) -> float:
+def calculate_indeterminate_risk_breakdown(indeterminate_criteria: list['MatchResult']) -> tuple[float, list[dict]]:
     """
-    Calculates a risk penalty score. Lower score = higher priority for manual screening.
+    Calculates a risk penalty score and returns the detailed breakdown.
+    Lower score = higher priority for manual screening.
     """
     risk_score = 0.0
+    breakdown = []
     
     for match_result in indeterminate_criteria:
         crit = match_result.criterion
         
         # 1. Base Penalty by Inclusion vs Exclusion
         if crit.is_inclusion:
-            # Missing an inclusion rule is highly risky (e.g., missing ER+ status)
-            base_penalty = 20.0 
+            base_penalty = 10.0 
         else:
-            # Missing an exclusion rule is low risk (e.g., text doesn't mention HIV)
-            base_penalty = 2.0  
+            base_penalty = 5.0  
             
         # 2. Multiplier by Clinical Category
         category_multipliers = {
-            "biomarker": 3.0,     # Extremely high risk if missing
-            "demographic": 2.5,   # High risk
-            "clinical": 2.0,      # Medium risk
-            "prior_therapy": 1.5, # Medium risk 
-            "lab_value": 0.5,     # Low risk 
-            "comorbidity": 0.2    # Very low risk 
+            "biomarker": 3.0,          
+            "demographic": 2.5,        
+            "clinical_diagnosis": 2.0, 
+            "prior_therapy": 1.5,      
+            "lab_value": 1.0,           
+            "comorbidity": 0.5,         
+            "administrative": 0.0      
         }
         
         cat_val = crit.category.value if hasattr(crit.category, 'value') else str(crit.category)
         multiplier = category_multipliers.get(cat_val, 1.0)
-        risk_score += (base_penalty * multiplier)
         
-    return risk_score
+        calculated_score = base_penalty * multiplier
+        risk_score += calculated_score
+        
+        breakdown.append({
+            "criterion_id": crit.criterion_id,
+            "category": cat_val,
+            "rule_type": "Inclusion" if crit.is_inclusion else "Exclusion",
+            "base_penalty": base_penalty,
+            "multiplier": multiplier,
+            "calculated_score": calculated_score
+        })
+        
+    return risk_score, breakdown
+
+
+def calculate_indeterminate_risk(indeterminate_criteria: list['MatchResult']) -> float:
+    """Legacy wrapper for calculating risk score."""
+    score, _ = calculate_indeterminate_risk_breakdown(indeterminate_criteria)
+    return score
 
 
 def evaluate_unmapped_rule_with_llm(
@@ -393,7 +413,7 @@ def evaluate_eligibility(
     nct_id: str, 
     raw_patient_text: str, 
     model: str,
-    exhaustive: bool = True  # <-- ADDED TOGGLE (Defaults to True for detailed study)
+    exhaustive: bool = True
 ) -> EligibilityResult:
     
     # PASS 1: Purely deterministic "Simple" rules (Python)
@@ -414,7 +434,7 @@ def evaluate_eligibility(
             # If we are NOT doing an exhaustive search, abort immediately
             if not exhaustive:
                 return EligibilityResult(
-                    nct_id=nct_id, eligible=False, has_indeterminate=False, 
+                    nct_id=nct_id, eligible=False, triage_status="INELIGIBLE", has_indeterminate=False, 
                     risk_score=0.0, results=results, failing_criteria=[result], indeterminate_criteria=[]
                 )
             
@@ -429,9 +449,12 @@ def evaluate_eligibility(
                 # Fail-fast triggered during complex rules
                 failing = [r for r in results if r.status == "fail"]
                 indeterminate = [r for r in results if r.status == "indeterminate"]
-                risk_val = calculate_indeterminate_risk(indeterminate)
+                
+                # --- UPDATE 1: Use breakdown function and extract index [0] ---
+                risk_val = calculate_indeterminate_risk_breakdown(indeterminate)[0]
+                
                 return EligibilityResult(
-                    nct_id=nct_id, eligible=False, has_indeterminate=len(indeterminate) > 0, 
+                    nct_id=nct_id, eligible=False, triage_status="INELIGIBLE",is_metastatic=patient.is_metastatic, has_indeterminate=len(indeterminate) > 0, 
                     risk_score=risk_val, results=results, failing_criteria=failing, indeterminate_criteria=indeterminate
                 )
 
@@ -455,12 +478,36 @@ def evaluate_eligibility(
     failing = [r for r in results if r.status == "fail"]
     indeterminate = [r for r in results if r.status == "indeterminate"]
     
+    # --- UPDATE 2: Use breakdown function and extract index [0] ---
     # Calculate Risk Score for ranking
-    risk_val = calculate_indeterminate_risk(indeterminate)
+    risk_val = calculate_indeterminate_risk_breakdown(indeterminate)[0]
+
+    # --- THE NEW TRIAGE CLASSIFICATION LOGIC ---
+    total_fails = len(failing)
+    hard_indeterminates = 0
+    soft_indeterminates = 0
+    
+    for r in indeterminate:
+        cat_val = r.criterion.category.value if hasattr(r.criterion.category, 'value') else str(r.criterion.category)
+        if cat_val == "administrative":
+            soft_indeterminates += 1
+        else:
+            hard_indeterminates += 1
+
+    if total_fails > 0:
+        triage_status = "INELIGIBLE"
+    elif hard_indeterminates > 0:
+        triage_status = "POTENTIALLY ELIGIBLE (Needs Chart Review)"
+    elif soft_indeterminates > 0:
+        triage_status = "ELIGIBLE (Pending Administrative Verification)"
+    else:
+        triage_status = "FULLY ELIGIBLE"
 
     return EligibilityResult(
         nct_id=nct_id, 
-        eligible=len(failing) == 0 and len(indeterminate) == 0,
+        eligible=(total_fails == 0),
+        triage_status=triage_status,
+        is_metastatic=patient.is_metastatic,
         has_indeterminate=len(indeterminate) > 0, 
         risk_score=risk_val,
         results=results,
