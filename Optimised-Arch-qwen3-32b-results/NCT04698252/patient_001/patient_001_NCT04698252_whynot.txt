@@ -1,0 +1,44 @@
+Trial: NCT04698252
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 4 | Soft: 2]
+  1. [clinical_diagnosis] [Inclusion] Measurable or non-measuble disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1
+     Field: unmapped_rule
+     → LLM Fallback: The patient's disease status is described as stable, but there is no explicit documentation of RECIST 1.1 assessment in the clinical narrative or structured profile.
+
+  2. [clinical_diagnosis] [Inclusion] Life expectancy of at least 12 weeks
+     Field: unmapped_rule
+     → LLM Fallback: The patient's life expectancy is not explicitly documented in the provided data.
+
+  3. [administrative] [Inclusion] Signed informed consent form
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about a signed informed consent form.
+
+  4. [administrative] [Inclusion] Disposition and aptitude to fulfill the study protocol during the study duration
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ECOG score suggests physical capability, but there is no explicit information about her willingness or aptitude to adhere to the study protocol.
+
+  5. [comorbidity] [Exclusion] Current or previous history of severe diseases, such as clinically relevant heart failure, acute myocardium infarction in the last six months, chronic obstructive lung disease, HIV infection, chronic active hepatitis B or C infection, current serious uncontrolled infections or other severe diseases that may impact patients' expected survival
+     Field: unmapped_rule
+     → LLM Fallback: No evidence of excluded severe diseases in medical history or structured profile
+
+  6. [comorbidity] [Exclusion] Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer
+     Field: unmapped_rule
+     → LLM Fallback: The patient's medical record contains no mention of other invasive malignancies within the specified timeframe.
+
+PASSING CRITERIA: 12 of 18
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04698252_LLM_9         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_10        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_12        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04698252_LLM_13        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04698252_LLM_17        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT04698252_LLM_18        | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 45.0

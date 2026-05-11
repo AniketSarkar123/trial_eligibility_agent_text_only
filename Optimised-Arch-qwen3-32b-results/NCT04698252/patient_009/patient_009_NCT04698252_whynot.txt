@@ -1,0 +1,55 @@
+Trial: NCT04698252
+Eligible: NO
+Triage Status: INELIGIBLE
+THE PATIENT IS METASTATIC!
+
+FAILING CRITERIA:
+  1. [biomarker] [Inclusion] Estrogen receptor-positive and/ or progesterone receptor-positive breast cancer
+     Patient value: negative
+     Required: eq positive
+     → FAIL: er_status = negative (required: eq positive)
+
+  2. [biomarker] [Inclusion] Estrogen receptor-positive and/ or progesterone receptor-positive breast cancer
+     Patient value: negative
+     Required: eq positive
+     → FAIL: pr_status = negative (required: eq positive)
+
+INDETERMINATE (missing patient data): [Hard: 4 | Soft: 2]
+  1. [clinical_diagnosis] [Inclusion] Measurable or non-measuble disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1
+     Field: unmapped_rule
+     → LLM Fallback: The patient's lung nodules are described, but their RECIST 1.1 status (measurable/non-measurable) is not explicitly documented in the narrative or structured profile.
+
+  2. [clinical_diagnosis] [Inclusion] Life expectancy of at least 12 weeks
+     Field: unmapped_rule
+     → LLM Fallback: The patient's life expectancy is not explicitly documented in the clinical narrative or structured profile.
+
+  3. [clinical_diagnosis] [Inclusion] For women in childbearing age, negative pregnancy test until 21 days before the date of study enrollment
+     Field: unmapped_rule
+     → LLM Fallback: The patient's records do not contain information about a pregnancy test or status, which is required to evaluate this rule.
+
+  4. [administrative] [Inclusion] Signed informed consent form
+     Field: unmapped_rule
+     → LLM Fallback: The patient's clinical narrative and structured profile do not mention a signed informed consent form.
+
+  5. [administrative] [Inclusion] Disposition and aptitude to fulfill the study protocol during the study duration
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ECOG score of 0 and active status suggest physical aptitude, but the rule requires explicit confirmation of disposition/eligibility factors not addressed in the record.
+
+  6. [prior_therapy] [Exclusion] Previous local therapy for distant metastasis
+     Field: unmapped_rule
+     → LLM Fallback: No prior local therapy for distant metastasis is documented in the patient's record.
+
+PASSING CRITERIA: 10 of 18
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04698252_LLM_9         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_10        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_11        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_12        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04698252_LLM_13        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04698252_LLM_16        | prior_therapy        | 5.0             | 1.5        | 7.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 67.5

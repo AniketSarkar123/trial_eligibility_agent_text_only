@@ -1,0 +1,34 @@
+Trial: NCT04698252
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 2 | Soft: 2]
+  1. [clinical_diagnosis] [Inclusion] Life expectancy of at least 12 weeks
+     Field: unmapped_rule
+     → LLM Fallback: Life expectancy of at least 12 weeks is not explicitly documented in the patient's record.
+
+  2. [administrative] [Inclusion] Signed informed consent form
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about whether a signed informed consent form was obtained.
+
+  3. [administrative] [Inclusion] Disposition and aptitude to fulfill the study protocol during the study duration
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ECOG score suggests physical capability, but there is no explicit information about her willingness or aptitude to comply with the study protocol.
+
+  4. [comorbidity] [Exclusion] Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about prior invasive malignancies other than breast cancer.
+
+PASSING CRITERIA: 14 of 18
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04698252_LLM_10        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_12        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04698252_LLM_13        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04698252_LLM_18        | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 22.5

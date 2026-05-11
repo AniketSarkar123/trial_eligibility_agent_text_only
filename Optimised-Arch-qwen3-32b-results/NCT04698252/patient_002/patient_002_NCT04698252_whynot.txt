@@ -1,0 +1,39 @@
+Trial: NCT04698252
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 3 | Soft: 2]
+  1. [clinical_diagnosis] [Inclusion] Life expectancy of at least 12 weeks
+     Field: unmapped_rule
+     → LLM Fallback: The patient's life expectancy is not explicitly documented in the clinical narrative or structured profile.
+
+  2. [clinical_diagnosis] [Inclusion] For women in childbearing age, negative pregnancy test until 21 days before the date of study enrollment
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not explicitly state whether a pregnancy test was performed or its results.
+
+  3. [administrative] [Inclusion] Signed informed consent form
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not explicitly state whether a signed informed consent form was provided.
+
+  4. [administrative] [Inclusion] Disposition and aptitude to fulfill the study protocol during the study duration
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ECOG PS of 1 and full ambulatory status suggest she is physically capable, but there is no explicit information about her willingness or ability to adhere to the study protocol.
+
+  5. [comorbidity] [Exclusion] Current or previous history of severe diseases, such as clinically relevant heart failure, acute myocardium infarction in the last six months, chronic obstructive lung disease, HIV infection, chronic active hepatitis B or C infection, current serious uncontrolled infections or other severe diseases that may impact patients' expected survival
+     Field: unmapped_rule
+     → LLM Fallback: No evidence of excluded severe diseases in medical history or current status.
+
+PASSING CRITERIA: 13 of 18
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04698252_LLM_10        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_11        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_12        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04698252_LLM_13        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04698252_LLM_17        | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 42.5
