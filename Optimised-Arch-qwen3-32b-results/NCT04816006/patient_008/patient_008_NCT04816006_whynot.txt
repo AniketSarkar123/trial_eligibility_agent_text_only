@@ -1,0 +1,86 @@
+Trial: NCT04816006
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [clinical_diagnosis] [Inclusion] PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination
+     Field: unmapped_rule
+     → LLM Fallback: Patient completed primary treatment only 2 months ago, which is less than the required 3-month minimum per the rule.
+
+  2. [clinical_diagnosis] [Inclusion] REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to pre-registration as confirmed via clinical determination
+     Field: unmapped_rule
+     → LLM Fallback: Patient completed primary treatment 2 months ago, which is less than the required 3-month minimum.
+
+  3. [prior_therapy] [Exclusion] PRE-REGISTRATION: Currently receiving or <3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment
+     Field: unmapped_rule
+     → LLM Fallback: Patient is within 3 months of completing radiation therapy.
+
+INDETERMINATE (missing patient data): [Hard: 4 | Soft: 8]
+  1. [administrative] [Inclusion] PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months
+     Field: unmapped_rule
+     → LLM Fallback: The patient's exercise history in the past 6 months is not explicitly mentioned in the clinical narrative or structured profile.
+
+  2. [administrative] [Inclusion] PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to complete assessments is not explicitly stated in the narrative or structured profile.
+
+  3. [administrative] [Inclusion] REGISTRATION: Able to provide medical record release to confirm eligibility
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to provide medical record release is not mentioned in the clinical narrative or structured profile.
+
+  4. [lab_value] [Inclusion] REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21)
+     Field: unmapped_rule
+     → LLM Fallback: The patient has self-reported cognitive complaints, but the required TICS-M score is not documented in the clinical record.
+
+  5. [administrative] [Inclusion] REGISTRATION: Receive physician's clearance to participate in an exercise program
+     Field: unmapped_rule
+     → LLM Fallback: The patient's records do not mention whether she has received physician's clearance for an exercise program.
+
+  6. [administrative] [Exclusion] PRE-REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to travel is not explicitly addressed in the clinical narrative.
+
+  7. [lab_value] [Exclusion] REGISTRATION: Clinically significant TICS-M score (< 21) during baseline procedures
+     Field: unmapped_rule
+     → LLM Fallback: The patient's TICS-M score is not documented in the narrative or structured profile.
+
+  8. [administrative] [Exclusion] REGISTRATION: Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about a baseline exercise test, ECG, or blood pressure monitoring required to evaluate this rule.
+
+  9. [comorbidity] [Exclusion] REGISTRATION: Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about the presence or absence of fMRI contraindications in the patient's medical history.
+
+  10. [comorbidity] [Exclusion] REGISTRATION: Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up
+     Field: unmapped_rule
+     → LLM Fallback: No MRI scan or radiologist overread findings are mentioned in the patient's record.
+
+  11. [administrative] [Exclusion] REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to travel is not explicitly documented in the clinical narrative or structured profile.
+
+  12. [administrative] [Exclusion] REGISTRATION: Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to return for follow-up is not explicitly stated in the clinical narrative or structured profile.
+
+PASSING CRITERIA: 15 of 30
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04816006_LLM_4         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_5         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_7         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_10        | lab_value            | 10.0            | 1.0        | 10.0      
+NCT04816006_LLM_11        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_16        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_20        | lab_value            | 5.0             | 1.0        | 5.0       
+NCT04816006_LLM_21        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_22        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT04816006_LLM_23        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT04816006_LLM_29        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_30        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 20.0

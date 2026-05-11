@@ -1,0 +1,103 @@
+Trial: NCT04816006
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 4 | Soft: 14]
+  1. [demographic] [Inclusion] Sex: FEMALE
+     Field: sex
+     → Data not available in patient record
+
+  2. [administrative] [Inclusion] PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months
+     Field: unmapped_rule
+     → LLM Fallback: The patient's exercise habits are not documented in the clinical narrative or structured profile.
+
+  3. [administrative] [Inclusion] PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to self-report assessments is not explicitly documented in the clinical narrative or structured profile.
+
+  4. [administrative] [Inclusion] REGISTRATION: Able to provide medical record release to confirm eligibility
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to provide medical record release is not addressed in the clinical narrative or structured profile.
+
+  5. [lab_value] [Inclusion] REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21)
+     Field: unmapped_rule
+     → LLM Fallback: The patient has moderate Alzheimer's dementia, but the required TICS-M score is not documented in the clinical record.
+
+  6. [administrative] [Inclusion] REGISTRATION: Receive physician's clearance to participate in an exercise program
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not mention receiving physician clearance for an exercise program.
+
+  7. [administrative] [Exclusion] PRE-REGISTRATION: Planned surgery during the intervention period
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about planned surgery during the intervention period.
+
+  8. [administrative] [Exclusion] PRE-REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection
+     Field: unmapped_rule
+     → LLM Fallback: The narrative does not explicitly state whether the patient is unable to travel regularly, despite noting no physical limitations.
+
+  9. [administrative] [Exclusion] PRE-REGISTRATION: Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to return for follow-up is not addressed in the clinical narrative or structured profile.
+
+  10. [lab_value] [Exclusion] REGISTRATION: Clinically significant TICS-M score (< 21) during baseline procedures
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about TICS-M scores required to evaluate this rule.
+
+  11. [administrative] [Exclusion] REGISTRATION: Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about baseline exercise tests, ECG, or blood pressure monitoring required to evaluate this rule.
+
+  12. [comorbidity] [Exclusion] REGISTRATION: Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about an MRI scan or abnormal brain imaging as required by the rule.
+
+  13. [administrative] [Exclusion] REGISTRATION: Enrolled in another physical activity program
+     Field: unmapped_rule
+     → LLM Fallback: The patient's enrollment status in another physical activity program is not mentioned in the provided data.
+
+  14. [administrative] [Exclusion] REGISTRATION: Unwilling to complete study requirements
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to complete study requirements is not explicitly documented in the clinical record.
+
+  15. [administrative] [Exclusion] REGISTRATION: Unwilling to be randomized to the exercise group or health education group
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to be randomized is not addressed in the provided clinical data.
+
+  16. [administrative] [Exclusion] REGISTRATION: Unable to continuously wear and regularly sync/charge an activity tracker during the study period
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to continuously wear and sync an activity tracker is not explicitly documented in the clinical narrative or structured profile.
+
+  17. [administrative] [Exclusion] REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to travel regularly is not explicitly addressed in the clinical narrative or structured profile.
+
+  18. [administrative] [Exclusion] REGISTRATION: Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about the patient's willingness to return to the enrolling institution for follow-up.
+
+PASSING CRITERIA: 12 of 30
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+STRUCT_SEX                | demographic          | 10.0            | 2.5        | 25.0      
+NCT04816006_LLM_4         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_5         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_7         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_10        | lab_value            | 10.0            | 1.0        | 10.0      
+NCT04816006_LLM_11        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_14        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_16        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_17        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_20        | lab_value            | 5.0             | 1.0        | 5.0       
+NCT04816006_LLM_21        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_23        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT04816006_LLM_24        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_26        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_27        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_28        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_29        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_30        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 42.5
