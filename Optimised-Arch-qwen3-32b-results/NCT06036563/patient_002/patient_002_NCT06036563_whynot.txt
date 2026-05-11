@@ -1,0 +1,33 @@
+Trial: NCT06036563
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 4 | Soft: 0]
+  1. [comorbidity] [Exclusion] Individuals who have undergone organ or bone marrow transplantation.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's medical record does not mention any organ or bone marrow transplantation.
+
+  2. [clinical_diagnosis] [Exclusion] Participants during pregnancy or lactation.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's sex is male, but the narrative does not explicitly state 'not pregnant' or address lactation status.
+
+  3. [comorbidity] [Exclusion] Individuals with malnutrition, severe mental illness, or genetic diseases.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no explicit information about malnutrition, severe mental illness, or genetic diseases.
+
+  4. [comorbidity] [Exclusion] Other diseases or conditions deemed by the physician as unsuitable for participation in this study.
+     Field: unmapped_rule
+     → LLM Fallback: No other diseases or conditions were mentioned in the narrative or profile that would be deemed unsuitable by a physician.
+
+PASSING CRITERIA: 9 of 13
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06036563_LLM_9         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_10        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT06036563_LLM_11        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_12        | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 17.5

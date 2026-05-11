@@ -1,0 +1,281 @@
+{
+  "patient": {
+    "age": 55,
+    "sex": "male",
+    "menopausal_status": null,
+    "pregnancy_status": null,
+    "primary_diagnosis": null,
+    "cancer_stage": null,
+    "is_metastatic": null,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": null,
+    "pr_status": null,
+    "her2_status": null,
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": false,
+    "received_adjuvant_therapy": false,
+    "has_recurrence": false,
+    "has_prior_malignancy": false,
+    "ecog_score": null,
+    "prior_therapies": [],
+    "lines_of_therapy": 0,
+    "prior_radiation": false,
+    "prior_surgery": false,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": true,
+    "adequate_renal_function": true,
+    "adequate_bone_marrow": true,
+    "brain_metastases": "none"
+  },
+  "nct_id": "NCT06036563",
+  "eligible": true,
+  "has_indeterminate": false,
+  "risk_score": 0.0,
+  "results": [
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 20 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 20,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": 55,
+      "reason": "PASS: age = 55 (required: gte 20)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_AGE_MAX",
+        "category": "demographic",
+        "description": "Maximum age: 80 Years",
+        "field": "age",
+        "operator": "lte",
+        "value": 80,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": 55,
+      "reason": "PASS: age = 55 (required: lte 80)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT06036563_LLM_4",
+        "category": "clinical_diagnosis",
+        "description": "Individuals who have not been diagnosed with cancer during routine physical examinations and one-year follow-up.",
+        "field": "has_prior_malignancy",
+        "operator": "eq",
+        "value": false,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_GROUP",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": false,
+      "reason": "Group COHORT_GROUP (OR) condition met by another criterion."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT06036563_LLM_3",
+        "category": "clinical_diagnosis",
+        "description": "Newly diagnosed cancer patients with a confirmed pathological diagnosis within 90 days before blood collection or within 30 days after blood collection, including lung cancer, esophageal cancer, breast cancer, stomach cancer, colorectal cancer, liver cancer, and pancreatic cancer.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_GROUP",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "Group COHORT_GROUP (OR) condition met by another criterion."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT06036563_LLM_5",
+        "category": "comorbidity",
+        "description": "Uncontrolled or active systemic diseases, such as autoimmune diseases, tuberculosis, AIDS, etc.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly lacks uncontrolled/active systemic diseases per clinical narrative"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT06036563_LLM_6",
+        "category": "comorbidity",
+        "description": "New onset, recurrence, or exacerbation of various inflammations within 2 weeks before blood collection, or the presence of fever, use of corticosteroids.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 14,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has no new inflammations, fever, or corticosteroid use within 2 weeks prior to blood collection."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT06036563_LLM_7",
+        "category": "comorbidity",
+        "description": "New onset or exacerbation of thromboembolic diseases, hemorrhagic diseases, or those who have received allogeneic blood transfusion within 1 month before blood collection.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 30,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has no new onset or exacerbation of thromboembolic/hemorrhagic diseases and no recent allogeneic blood transfusion."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT06036563_LLM_8",
+        "category": "prior_therapy",
+        "description": "Any cancer treatment performed within the past 3 years.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 1095,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient explicitly states no cancer treatment in the past 3 years as required by the exclusion criterion."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT06036563_LLM_9",
+        "category": "comorbidity",
+        "description": "Individuals who have undergone organ or bone marrow transplantation.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient has not undergone organ or bone marrow transplantation, as explicitly stated in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT06036563_LLM_10",
+        "category": "clinical_diagnosis",
+        "description": "Participants during pregnancy or lactation.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient is explicitly stated to be neither pregnant nor lactating in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT06036563_LLM_11",
+        "category": "comorbidity",
+        "description": "Individuals with malnutrition, severe mental illness, or genetic diseases.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient explicitly lacks all three excluded conditions (malnutrition, severe mental illness, genetic diseases) per the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT06036563_LLM_12",
+        "category": "comorbidity",
+        "description": "Other diseases or conditions deemed by the physician as unsuitable for participation in this study.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient explicitly lacks other diseases/conditions deemed unsuitable by the physician as required by the rule."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT06036563_LLM_13",
+        "category": "administrative",
+        "description": "Individuals who are unable to sign an informed consent form.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient is explicitly stated to be able to sign an informed consent form and has done so."
+    }
+  ],
+  "failing_criteria": [],
+  "indeterminate_criteria": []
+}
