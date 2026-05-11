@@ -1,0 +1,44 @@
+Trial: NCT05108298
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [clinical_diagnosis] [Exclusion] Patient must not have a recurrence or second primary cancer.
+     Patient value: True
+     Required: eq True
+     → FAIL: has_prior_malignancy = True (required: eq True)
+
+INDETERMINATE (missing patient data): [Hard: 4 | Soft: 1]
+  1. [clinical_diagnosis] [Inclusion] Patient must have an ECOG performance status 0-3.
+     Field: ecog_score
+     → Data not available in patient record
+
+  2. [clinical_diagnosis] [Exclusion] Patient must not have a recurrence or second primary cancer.
+     Field: has_recurrence
+     → Data not available in patient record
+
+  3. [clinical_diagnosis] [Inclusion] Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not specify whether he has received, is receiving, or plans to receive treatment for his newly diagnosed diffuse large B-cell lymphoma.
+
+  4. [clinical_diagnosis] [Inclusion] Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact).
+     Field: unmapped_rule
+     → LLM Fallback: The patient's cognitive function status is not explicitly stated in the clinical narrative or structured profile.
+
+  5. [administrative] [Inclusion] Patient must be able to provide informed consent.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to provide informed consent is not explicitly documented in the narrative or structured profile.
+
+PASSING CRITERIA: 9 of 15
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT05108298_LLM_5         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT05108298_LLM_13        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT05108298_LLM_4         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT05108298_LLM_11        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT05108298_LLM_12        | administrative       | 10.0            | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 70.0

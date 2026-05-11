@@ -1,0 +1,34 @@
+Trial: NCT05108298
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [demographic] [Inclusion] Maximum age: 39 Years
+     Patient value: 42
+     Required: lte 39
+     → FAIL: age = 42 (required: lte 39)
+
+INDETERMINATE (missing patient data): [Hard: 2 | Soft: 1]
+  1. [clinical_diagnosis] [Inclusion] Patient must have an ECOG performance status 0-3.
+     Field: ecog_score
+     → Data not available in patient record
+
+  2. [clinical_diagnosis] [Inclusion] Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy.
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about the patient having received, currently receiving, or planning to receive cancer treatment.
+
+  3. [administrative] [Inclusion] Patient must be able to provide informed consent.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to provide informed consent is not explicitly documented in the clinical narrative or structured profile.
+
+PASSING CRITERIA: 11 of 15
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT05108298_LLM_5         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT05108298_LLM_4         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT05108298_LLM_12        | administrative       | 10.0            | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 40.0

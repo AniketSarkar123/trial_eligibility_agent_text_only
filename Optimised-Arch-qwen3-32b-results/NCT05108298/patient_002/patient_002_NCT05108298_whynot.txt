@@ -1,0 +1,18 @@
+Trial: NCT05108298
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 1 | Soft: 0]
+  1. [clinical_diagnosis] [Exclusion] Patients must not have basal cell skin carcinoma.
+     Field: primary_diagnosis
+     → Data not available in patient record
+
+PASSING CRITERIA: 14 of 15
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT05108298_LLM_15        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 10.0

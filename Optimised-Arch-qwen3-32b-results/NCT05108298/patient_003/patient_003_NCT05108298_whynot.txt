@@ -1,0 +1,33 @@
+Trial: NCT05108298
+Eligible: YES
+Triage Status: ELIGIBLE (Pending Administrative Verification)
+
+INDETERMINATE (missing patient data): [Hard: 0 | Soft: 4]
+  1. [administrative] [Inclusion] Patient must be able to complete questionnaires in English.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to complete questionnaires in English is not explicitly stated in the narrative or structured profile.
+
+  2. [administrative] [Inclusion] Patient must have internet access through computer, tablet, or smartphone.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about internet access or device ownership.
+
+  3. [administrative] [Inclusion] Patient must have an email address.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's email address status is not mentioned in the clinical narrative or structured profile.
+
+  4. [administrative] [Inclusion] Patient must have a mobile phone able with text messaging capabilities.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about mobile phone ownership or text messaging capabilities.
+
+PASSING CRITERIA: 11 of 15
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT05108298_LLM_7         | administrative       | 10.0            | 0.0        | 0.0       
+NCT05108298_LLM_8         | administrative       | 10.0            | 0.0        | 0.0       
+NCT05108298_LLM_9         | administrative       | 10.0            | 0.0        | 0.0       
+NCT05108298_LLM_10        | administrative       | 10.0            | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 0.0

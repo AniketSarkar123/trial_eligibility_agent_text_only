@@ -1,0 +1,33 @@
+Trial: NCT05108298
+Eligible: NO
+Triage Status: INELIGIBLE
+THE PATIENT IS METASTATIC!
+
+FAILING CRITERIA:
+  1. [clinical_diagnosis] [Inclusion] Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy.
+     Field: unmapped_rule
+     → LLM Fallback: Patient has not received any cancer treatment and no current/planned treatment is mentioned in the narrative or structured data.
+
+  2. [clinical_diagnosis] [Inclusion] Patient must have a life expectancy >24 months.
+     Field: unmapped_rule
+     → LLM Fallback: Patient's estimated life expectancy (6-9 months) is less than the required 24 months.
+
+INDETERMINATE (missing patient data): [Hard: 2 | Soft: 0]
+  1. [clinical_diagnosis] [Inclusion] Patient must have an ECOG performance status 0-3.
+     Field: ecog_score
+     → Data not available in patient record
+
+  2. [clinical_diagnosis] [Inclusion] Patient must have a histologically confirmed diagnosis of primary cancer of any stage within 12 weeks (84 days) at registration.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's diagnosis occurred within the required 12-week window (4 weeks), but histological confirmation is not explicitly documented in the narrative or profile.
+
+PASSING CRITERIA: 11 of 15
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT05108298_LLM_5         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT05108298_LLM_3         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 40.0
