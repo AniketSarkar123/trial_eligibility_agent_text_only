@@ -1,0 +1,59 @@
+Trial: NCT02102165
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 6 | Soft: 3]
+  1. [administrative] [Inclusion] Written informed consent prior to registration into the program
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not explicitly state that written informed consent was obtained prior to registration.
+
+  2. [administrative] [Inclusion] Biopsies obtained during routine clinical practice are accepted if both formalin-fixed paraffin-embedded (FFPE) and Frozen Tissue (FT) blocks were collected concurrently from the same metastatic lesion and if collected at the pre-specified timelines for AURORA
+     Field: unmapped_rule
+     → LLM Fallback: The patient's biopsy was performed at disease progression but FFPE/Frozen Tissue collection details are not explicitly mentioned.
+
+  3. [administrative] [Inclusion] Availability of a whole blood, serum and plasma samples collected at the time of screening
+     Field: unmapped_rule
+     → LLM Fallback: The patient's agreement to provide blood samples does not confirm actual sample availability at screening; no explicit confirmation of sample collection at screening is present.
+
+  4. [prior_therapy] [Exclusion] Received prior palliative radiotherapy to the only site that is accessible to biopsy
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not mention prior palliative radiotherapy to the biopsy site.
+
+  5. [comorbidity] [Exclusion] Presence of severe hematopoietic, renal, and/or hepatic dysfunction, including but not restricted to albumin < 3 g/dl
+     Field: unmapped_rule
+     → LLM Fallback: No data provided about hematopoietic, renal, or hepatic function to determine eligibility for this exclusion criterion.
+
+  6. [comorbidity] [Exclusion] Known increased risk of hemorrhage during biopsy procedure, as evaluated by the treating physician
+     Field: unmapped_rule
+     → LLM Fallback: No explicit documentation of hemorrhage risk evaluation by the treating physician in the clinical narrative or structured profile
+
+  7. [comorbidity] [Exclusion] Previous or current malignancies of other histologies within the last 5 years, with the exception of in situ carcinoma of the cervix, and adequately treated basal cell or squamous cell carcinoma of the skin
+     Field: unmapped_rule
+     → LLM Fallback: No evidence of other malignancies within 5 years in the provided data
+
+  8. [prior_therapy] [Exclusion] Anti-VEGF or anti-VEGFR treatment within 4 weeks prior to planned biopsy without appropriate washout
+     Field: unmapped_rule
+     → LLM Fallback: The patient's treatment history does not explicitly mention Anti-VEGF or anti-VEGFR therapy, and no information is provided about timing relative to biopsy.
+
+  9. [comorbidity] [Exclusion] Inappropriate anticoagulation status for biopsy procedure
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about the patient's anticoagulation status in either the narrative or structured profile.
+
+PASSING CRITERIA: 14 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT02102165_LLM_6         | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_14        | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_15        | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_18        | prior_therapy        | 5.0             | 1.5        | 7.5       
+NCT02102165_LLM_19        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT02102165_LLM_20        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT02102165_LLM_21        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT02102165_MANUAL_EX1    | prior_therapy        | 5.0             | 1.5        | 7.5       
+NCT02102165_MANUAL_EX2    | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 25.0

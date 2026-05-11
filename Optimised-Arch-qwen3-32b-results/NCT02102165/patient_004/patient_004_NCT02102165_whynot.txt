@@ -1,0 +1,19 @@
+Trial: NCT02102165
+Eligible: YES
+Triage Status: ELIGIBLE (Pending Administrative Verification)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 0 | Soft: 1]
+  1. [administrative] [Inclusion] Biopsies obtained during routine clinical practice are accepted if both formalin-fixed paraffin-embedded (FFPE) and Frozen Tissue (FT) blocks were collected concurrently from the same metastatic lesion and if collected at the pre-specified timelines for AURORA
+     Field: unmapped_rule
+     → LLM Fallback: The patient's records confirm concurrent FFPE and FT collection but do not specify adherence to AURORA's pre-specified timelines.
+
+PASSING CRITERIA: 22 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT02102165_LLM_14        | administrative       | 10.0            | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 0.0

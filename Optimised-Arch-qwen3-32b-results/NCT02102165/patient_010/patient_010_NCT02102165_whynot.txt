@@ -1,0 +1,68 @@
+Trial: NCT02102165
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [clinical_diagnosis] [Inclusion] Late relapse BC (any subtype). Late relapse is defined as a patient with a radiologic or histologic confirmation of advanced or MBC relapse > 10 years from the primary BC diagnosis
+     Field: unmapped_rule
+     → LLM Fallback: Patient is newly diagnosed with early-stage breast cancer and has no evidence of relapse, let alone a late relapse >10 years from primary diagnosis.
+
+  2. [administrative] [Inclusion] Patient must have a metastatic lesion accessible for biopsy and must agree with the biopsy procedure
+     Field: unmapped_rule
+     → LLM Fallback: Patient has no metastatic lesions as confirmed by imaging and structured data.
+
+  3. [administrative] [Inclusion] Up until protocol 3.0, up to 100 patients with bone-only metastasis have been included without a metastatic biopsy, if plasma samples have been collected at screening, and if the patient met all other eligibility criteria
+     Field: unmapped_rule
+     → LLM Fallback: Patient has no metastatic spread, failing the bone-only metastasis requirement.
+
+  4. [administrative] [Inclusion] In protocol 4.0, metastatic tumor biopsies from bone lesions will be accepted provided that the chosen site of biopsy was not previously irradiated
+     Field: unmapped_rule
+     → LLM Fallback: Patient has early-stage, localized invasive breast cancer with no metastatic spread, thus no metastatic tumor biopsies from bone lesions are available.
+
+  5. [administrative] [Inclusion] The biopsy of the metastatic lesion must be conducted either at the initial diagnosis of the BC relapse before the initiation of 1st line systemic therapy or at the 1st disease progression before initiation of a second line systemic treatment
+     Field: unmapped_rule
+     → LLM Fallback: The patient lacks metastatic disease, so a metastatic lesion biopsy cannot be performed.
+
+  6. [administrative] [Inclusion] Biopsies obtained during routine clinical practice are accepted if both formalin-fixed paraffin-embedded (FFPE) and Frozen Tissue (FT) blocks were collected concurrently from the same metastatic lesion and if collected at the pre-specified timelines for AURORA
+     Field: unmapped_rule
+     → LLM Fallback: The patient does not have a metastatic lesion, which is required for the biopsy criteria.
+
+INDETERMINATE (missing patient data): [Hard: 4 | Soft: 2]
+  1. [clinical_diagnosis] [Inclusion] Histopathology-confirmed TNBC as defined by ER <1% and HER2 negative following ASCO-CAP guidelines
+     Field: unmapped_rule
+     → LLM Fallback: Patient has archival tissue available but ER/HER2 status is not explicitly documented in clinical narrative or structured profile.
+
+  2. [clinical_diagnosis] [Inclusion] ILC (either based on ILC morphology or negative E-cadherin expression confirmed by IHC). Mixed ILC/invasive ductal carcinoma are not eligible for the ILC cohort
+     Field: unmapped_rule
+     → LLM Fallback: Patient's tumor subtype is unspecified and no E-cadherin/IHC testing is documented.
+
+  3. [administrative] [Inclusion] Written informed consent prior to registration into the program
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about informed consent in the patient record.
+
+  4. [administrative] [Inclusion] Brain tissue is accepted if it is obtained through surgical excision not planned for AURORA, but as part of the routine clinical practice
+     Field: unmapped_rule
+     → LLM Fallback: The patient's clinical narrative and structured profile contain no information about brain tissue acquisition or surgical excision, making the requirement indeterminate.
+
+  5. [comorbidity] [Exclusion] Known increased risk of hemorrhage during biopsy procedure, as evaluated by the treating physician
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about the treating physician's assessment of hemorrhage risk during biopsy.
+
+  6. [comorbidity] [Exclusion] Inappropriate anticoagulation status for biopsy procedure
+     Field: unmapped_rule
+     → LLM Fallback: Anticoagulation status is not mentioned in the clinical narrative or structured profile
+
+PASSING CRITERIA: 11 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT02102165_LLM_3         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT02102165_LLM_4         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT02102165_LLM_6         | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_12        | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_20        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT02102165_MANUAL_EX2    | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 45.0
