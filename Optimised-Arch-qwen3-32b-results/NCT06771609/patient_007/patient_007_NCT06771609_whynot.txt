@@ -1,0 +1,29 @@
+Trial: NCT06771609
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 3 | Soft: 0]
+  1. [clinical_diagnosis] [Inclusion] Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the "American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines."
+     Field: unmapped_rule
+     → LLM Fallback: Patient has metastatic triple-negative breast cancer but there is no explicit reference to ASCO/CAP guidelines in the clinical data provided.
+
+  2. [clinical_diagnosis] [Inclusion] Subjects must have at least one measurable lesion present; specific reference to the "Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)" guidelines;
+     Field: unmapped_rule
+     → LLM Fallback: The patient has measurable disease in lymph nodes, but the narrative does not explicitly confirm RECIST v1.1 was used to define this.
+
+  3. [clinical_diagnosis] [Inclusion] Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.
+     Field: unmapped_rule
+     → LLM Fallback: Patient is not pregnant but lactation status and contraceptive agreement are unconfirmed.
+
+PASSING CRITERIA: 8 of 11
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06771609_LLM_2         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT06771609_LLM_5         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT06771609_LLM_9         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 60.0

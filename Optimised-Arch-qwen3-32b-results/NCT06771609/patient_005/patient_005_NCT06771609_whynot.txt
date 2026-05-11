@@ -1,0 +1,29 @@
+Trial: NCT06771609
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 3 | Soft: 0]
+  1. [clinical_diagnosis] [Inclusion] Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the "American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines."
+     Field: unmapped_rule
+     → LLM Fallback: The patient has metastatic triple-negative breast cancer but there is no explicit documentation of ASCO/CAP guideline adherence in the clinical records.
+
+  2. [clinical_diagnosis] [Inclusion] Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.
+     Field: unmapped_rule
+     → LLM Fallback: Patient meets pregnancy/lactation criteria but contraceptive agreement status is unmentioned in narrative and absent from structured data.
+
+  3. [lab_value] [Inclusion] Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.
+     Field: unmapped_rule
+     → LLM Fallback: Patient has adequate organ function, but timing of lab tests (within 10 days) is unspecified.
+
+PASSING CRITERIA: 8 of 11
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06771609_LLM_2         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT06771609_LLM_9         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT06771609_LLM_11        | lab_value            | 10.0            | 1.0        | 10.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 50.0

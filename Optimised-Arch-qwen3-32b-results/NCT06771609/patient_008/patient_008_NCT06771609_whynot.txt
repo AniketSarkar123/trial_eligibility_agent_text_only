@@ -1,0 +1,12 @@
+Trial: NCT06771609
+Eligible: NO
+Triage Status: INELIGIBLE
+THE PATIENT IS METASTATIC!
+
+FAILING CRITERIA:
+  1. [prior_therapy] [Inclusion] Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer;
+     Patient value: 3
+     Required: lte 1
+     → FAIL: lines_of_therapy = 3 (required: lte 1)
+
+PASSING CRITERIA: 10 of 11
