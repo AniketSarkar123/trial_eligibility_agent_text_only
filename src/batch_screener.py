@@ -31,17 +31,26 @@ def screen_patient_against_golden(patient_text: str, golden_trial_path: str, mod
 def rank_cohort(batch_results: list[dict]) -> dict:
     """
     Takes a list of dictionaries with {"patient_id": str, "result": EligibilityResult}
-    and sorts them into actionable clinical priority tiers based on risk scores.
+    and sorts them into actionable clinical priority tiers based on triage status and risk scores.
     """
-    # Tier 1: Perfect Passes
-    eligible = [r for r in batch_results if r["result"].eligible]
+    # Tier 1: Ready to Screen (Fully Eligible OR purely missing Administrative data)
+    eligible = [
+        r for r in batch_results 
+        if r["result"].triage_status in ["FULLY ELIGIBLE", "ELIGIBLE (Pending Administrative Verification)"]
+    ]
     
-    # Tier 2: The Indeterminates (0 Fails), sorted by lowest risk score first
-    indeterminates = [r for r in batch_results if not r["result"].eligible and len(r["result"].failing_criteria) == 0]
+    # Tier 2: The Indeterminates (Missing clinical data), sorted by lowest clinical risk score first
+    indeterminates = [
+        r for r in batch_results 
+        if r["result"].triage_status == "POTENTIALLY ELIGIBLE (Needs Chart Review)"
+    ]
     indeterminates.sort(key=lambda x: x["result"].risk_score)
     
-    # Tier 3: Hard Fails
-    ineligible = [r for r in batch_results if len(r["result"].failing_criteria) > 0]
+    # Tier 3: Hard Fails (Has at least one clinical exclusion/failure)
+    ineligible = [
+        r for r in batch_results 
+        if r["result"].triage_status == "INELIGIBLE"
+    ]
     
     return {
         "Priority 1 (Ready to Screen)": eligible,
