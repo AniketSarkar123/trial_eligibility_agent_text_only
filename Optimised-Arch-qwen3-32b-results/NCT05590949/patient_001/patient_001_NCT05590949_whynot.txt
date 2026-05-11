@@ -1,0 +1,5 @@
+Trial: NCT05590949
+Eligible: YES
+Triage Status: FULLY ELIGIBLE
+
+PASSING CRITERIA: 10 of 10

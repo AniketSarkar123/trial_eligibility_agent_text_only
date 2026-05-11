@@ -1,0 +1,10 @@
+Trial: NCT05590949
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [prior_therapy] [Exclusion] Patients who continue treatment with a different bone modifying agent (i.e oral or intravenous bisphosphonates) after discontinuation of denosumab
+     Field: unmapped_rule
+     → LLM Fallback: The patient continues treatment with zoledronic acid (a bisphosphonate) after discontinuation of denosumab.
+
+PASSING CRITERIA: 9 of 10

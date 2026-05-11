@@ -1,0 +1,28 @@
+Trial: NCT05590949
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 3 | Soft: 0]
+  1. [comorbidity] [Exclusion] Patients with history of osteoporosis prior to starting denosumab
+     Field: unmapped_rule
+     → LLM Fallback: The patient's records do not mention a prior osteoporosis diagnosis before denosumab treatment.
+
+  2. [comorbidity] [Exclusion] Patients with history of insufficiency fracture
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about insufficiency fractures in the patient's medical record.
+
+  3. [prior_therapy] [Exclusion] Patients who continue treatment with a different bone modifying agent (i.e oral or intravenous bisphosphonates) after discontinuation of denosumab
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not mention any bone modifying agents being used after denosumab discontinuation.
+
+PASSING CRITERIA: 7 of 10
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT05590949_LLM_6         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT05590949_LLM_7         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT05590949_LLM_8         | prior_therapy        | 5.0             | 1.5        | 7.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 12.5

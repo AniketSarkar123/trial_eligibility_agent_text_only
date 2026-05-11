@@ -1,0 +1,10 @@
+Trial: NCT05590949
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [comorbidity] [Exclusion] Patients with history of osteoporosis prior to starting denosumab
+     Field: unmapped_rule
+     → LLM Fallback: Patient has a confirmed history of osteoporosis prior to starting denosumab as documented in the baseline DEXA scan.
+
+PASSING CRITERIA: 9 of 10

@@ -1,0 +1,14 @@
+Trial: NCT05590949
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [comorbidity] [Exclusion] Patients with history of insufficiency fracture
+     Field: unmapped_rule
+     → LLM Fallback: Patient has a documented history of insufficiency fracture in the lumbar spine, which directly meets the exclusion criterion.
+
+  2. [comorbidity] [Exclusion] Patients on chronic low-dose glucosteroids
+     Field: unmapped_rule
+     → LLM Fallback: Patient is currently on chronic low-dose glucocorticoids as stated in the clinical narrative.
+
+PASSING CRITERIA: 8 of 10

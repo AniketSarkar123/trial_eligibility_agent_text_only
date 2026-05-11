@@ -1,0 +1,236 @@
+{
+  "patient": {
+    "age": 65,
+    "sex": "female",
+    "menopausal_status": "postmenopausal",
+    "pregnancy_status": "not_pregnant",
+    "primary_diagnosis": "breast cancer",
+    "cancer_stage": null,
+    "is_metastatic": null,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": null,
+    "pr_status": null,
+    "her2_status": null,
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": null,
+    "received_adjuvant_therapy": null,
+    "has_recurrence": null,
+    "has_prior_malignancy": null,
+    "ecog_score": null,
+    "prior_therapies": [
+      {
+        "drug_name": "denosumab",
+        "drug_class": "bone modifying agent",
+        "is_current": false,
+        "days_since_last_dose": null,
+        "discontinued_reason": "completed",
+        "months_since_last_dose": null
+      }
+    ],
+    "lines_of_therapy": null,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": "none"
+  },
+  "nct_id": "NCT05590949",
+  "eligible": true,
+  "has_indeterminate": false,
+  "risk_score": 0.0,
+  "results": [
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": 65,
+      "reason": "PASS: age = 65 (required: gte 18)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_SEX",
+        "category": "demographic",
+        "description": "Sex: FEMALE",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "female",
+      "reason": "PASS: sex = female (required: eq female)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT05590949_LLM_2",
+        "category": "demographic",
+        "description": "Participant must be post-menopausal, defined as last menstrual cycle at least 12 months prior to enrollment",
+        "field": "menopausal_status",
+        "operator": "eq",
+        "value": "postmenopausal",
+        "unit": "months",
+        "timeframe_days": 365,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "postmenopausal",
+      "reason": "PASS: menopausal_status = postmenopausal (required: eq postmenopausal)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT05590949_LLM_1",
+        "category": "clinical_diagnosis",
+        "description": "Women with confirmed diagnosis of breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has a confirmed diagnosis of breast cancer as stated in both the clinical narrative and structured profile."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT05590949_LLM_3",
+        "category": "prior_therapy",
+        "description": "Received at least 2 doses of denosumab and then discontinued therapy",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient received 4 doses of denosumab and discontinued therapy, satisfying the rule."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT05590949_LLM_4",
+        "category": "prior_therapy",
+        "description": "Discontinued AI prior to or within 6 months of last denosumab injection",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": "months",
+        "timeframe_days": 180,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient discontinued AI therapy 2 months prior to last denosumab injection, which satisfies the 6-month window requirement."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT05590949_LLM_6",
+        "category": "comorbidity",
+        "description": "Patients with history of osteoporosis prior to starting denosumab",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has no history of osteoporosis prior to denosumab initiation as explicitly stated in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT05590949_LLM_7",
+        "category": "comorbidity",
+        "description": "Patients with history of insufficiency fracture",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly has no history of insufficiency fracture as stated in the clinical narrative"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT05590949_LLM_8",
+        "category": "prior_therapy",
+        "description": "Patients who continue treatment with a different bone modifying agent (i.e oral or intravenous bisphosphonates) after discontinuation of denosumab",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient did not continue treatment with a different bone modifying agent after discontinuation of denosumab."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT05590949_LLM_9",
+        "category": "comorbidity",
+        "description": "Patients on chronic low-dose glucosteroids",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient is not on chronic low-dose glucocorticoids as explicitly stated in the clinical narrative."
+    }
+  ],
+  "failing_criteria": [],
+  "indeterminate_criteria": []
+}
