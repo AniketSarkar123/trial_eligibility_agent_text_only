@@ -1,0 +1,58 @@
+Trial: NCT07351487
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 6 | Soft: 3]
+  1. [clinical_diagnosis] [Inclusion] Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: Patient has stage II invasive breast cancer but specific T/N classification required by the rule is missing from the record
+
+  2. [administrative] [Inclusion] Effective contraceptive methods for at least 6 months after a single administration
+     Field: unmapped_rule
+     → LLM Fallback: The patient agrees to use contraception for 6 months, but the specific method's effectiveness duration is not specified.
+
+  3. [administrative] [Inclusion] Voluntarily join this study, sign informed consent, have good compliance
+     Field: unmapped_rule
+     → LLM Fallback: The patient has signed the informed consent form, but there is no explicit mention of 'good compliance' in the narrative or structured profile.
+
+  4. [administrative] [Exclusion] Simultaneously undergoing anti-tumor treatment in other clinical trials
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about participation in other clinical trials.
+
+  5. [comorbidity] [Exclusion] Serious heart disease or discomfort (including heart failure, arrhythmias, etc.)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's medical record contains no information about heart disease or cardiac symptoms.
+
+  6. [comorbidity] [Exclusion] Uncontrolled active infections or immunodeficiency (HIV, etc.)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about uncontrolled infections or immunodeficiency status.
+
+  7. [comorbidity] [Exclusion] Chronic active hepatitis B or active hepatitis C
+     Field: unmapped_rule
+     → LLM Fallback: The patient's comorbidities section is silent on hepatitis B/C status in both narrative and structured data
+
+  8. [comorbidity] [Exclusion] Immunotherapy adverse events (pneumonia, myocarditis) affecting safety
+     Field: unmapped_rule
+     → LLM Fallback: No evidence of immunotherapy-related adverse events (pneumonia/myocarditis) in medical record
+
+  9. [comorbidity] [Exclusion] Allergies to medication components
+     Field: unmapped_rule
+     → LLM Fallback: No information about allergies to medication components is present in the clinical narrative or structured profile.
+
+PASSING CRITERIA: 14 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT07351487_LLM_3         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT07351487_LLM_8         | administrative       | 10.0            | 0.0        | 0.0       
+NCT07351487_LLM_9         | administrative       | 10.0            | 0.0        | 0.0       
+NCT07351487_LLM_13        | administrative       | 5.0             | 0.0        | 0.0       
+NCT07351487_LLM_15        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_16        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_17        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_18        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_19        | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 32.5

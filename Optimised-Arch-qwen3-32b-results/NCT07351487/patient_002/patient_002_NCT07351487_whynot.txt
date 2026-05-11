@@ -1,0 +1,18 @@
+Trial: NCT07351487
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 1 | Soft: 0]
+  1. [biomarker] [Inclusion] Pathological examination of PD-L1 expression: Combined Positive Score (CPS) using 22C3 antibody
+     Field: pdl1_status
+     → Data not available in patient record
+
+PASSING CRITERIA: 22 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT07351487_LLM_6         | biomarker            | 10.0            | 3.0        | 30.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 30.0

@@ -1,0 +1,58 @@
+Trial: NCT07351487
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 6 | Soft: 3]
+  1. [administrative] [Inclusion] Effective contraceptive methods for at least 6 months after a single administration
+     Field: unmapped_rule
+     → LLM Fallback: The patient profile contains no information about contraceptive use or methods, making compliance with this rule indeterminate.
+
+  2. [administrative] [Inclusion] Voluntarily join this study, sign informed consent, have good compliance
+     Field: unmapped_rule
+     → LLM Fallback: Patient signed informed consent but compliance status is unaddressed in the record
+
+  3. [comorbidity] [Exclusion] Major surgical procedures unrelated to breast cancer within 4 weeks before first administration
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about major surgical procedures unrelated to breast cancer within the required timeframe.
+
+  4. [comorbidity] [Exclusion] Serious heart disease or discomfort (including heart failure, arrhythmias, etc.)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's medical record contains no information about heart disease or cardiac discomfort.
+
+  5. [comorbidity] [Exclusion] Uncontrolled active infections or immunodeficiency (HIV, etc.)
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about active infections or immunodeficiency status.
+
+  6. [comorbidity] [Exclusion] Chronic active hepatitis B or active hepatitis C
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about hepatitis B or C status in the patient's records.
+
+  7. [comorbidity] [Exclusion] Immunotherapy adverse events (pneumonia, myocarditis) affecting safety
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about immunotherapy adverse events, pneumonia, or myocarditis in the patient's record.
+
+  8. [comorbidity] [Exclusion] Allergies to medication components
+     Field: unmapped_rule
+     → LLM Fallback: No data provided about the patient's allergies to medication components.
+
+  9. [administrative] [Exclusion] Pregnant, lactating, or unwilling to use contraception
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about pregnancy, lactation, or contraception use.
+
+PASSING CRITERIA: 14 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT07351487_LLM_8         | administrative       | 10.0            | 0.0        | 0.0       
+NCT07351487_LLM_9         | administrative       | 10.0            | 0.0        | 0.0       
+NCT07351487_LLM_14        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_15        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_16        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_17        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_18        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_19        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_20        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 15.0

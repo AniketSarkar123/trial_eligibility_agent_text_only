@@ -1,0 +1,39 @@
+Trial: NCT07351487
+Eligible: NO
+Triage Status: INELIGIBLE
+THE PATIENT IS METASTATIC!
+
+FAILING CRITERIA:
+  1. [clinical_diagnosis] [Exclusion] Stage IV breast cancer
+     Patient value: IV
+     Required: eq IV
+     → FAIL: cancer_stage = IV (required: eq IV)
+
+  2. [clinical_diagnosis] [Inclusion] Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: Patient has stage IV breast cancer with metastases, which exceeds the stage II-III requirement specified in the rule.
+
+INDETERMINATE (missing patient data): [Hard: 2 | Soft: 1]
+  1. [administrative] [Exclusion] Simultaneously undergoing anti-tumor treatment in other clinical trials
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not provide information about participation in other clinical trials.
+
+  2. [comorbidity] [Exclusion] Immunotherapy adverse events (pneumonia, myocarditis) affecting safety
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about immunotherapy adverse events (pneumonia, myocarditis) in the patient's record.
+
+  3. [comorbidity] [Exclusion] Allergies to medication components
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about allergies to medication components
+
+PASSING CRITERIA: 18 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT07351487_LLM_13        | administrative       | 5.0             | 0.0        | 0.0       
+NCT07351487_LLM_18        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_19        | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 5.0
