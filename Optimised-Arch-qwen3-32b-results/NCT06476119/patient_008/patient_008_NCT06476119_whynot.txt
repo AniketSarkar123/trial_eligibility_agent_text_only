@@ -1,0 +1,43 @@
+Trial: NCT06476119
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [clinical_diagnosis] [Inclusion] Pathological stage I TNBC (pT1a/b/c [<=2 cm], pN0 [no malignant cells in lymph nodes])
+     Field: unmapped_rule
+     → LLM Fallback: Patient has a 2.5 cm tumor (exceeding pT1's 2 cm limit) despite pN0 status.
+
+INDETERMINATE (missing patient data): [Hard: 3 | Soft: 2]
+  1. [clinical_diagnosis] [Exclusion] Presence of lymphovascular invasion on diagnostic biopsy and/or surgical specimen
+     Field: lymphovascular_invasion
+     → Data not available in patient record
+
+  2. [administrative] [Inclusion] Written informed consent
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not explicitly state whether written informed consent was obtained.
+
+  3. [clinical_diagnosis] [Inclusion] Has undergone curative breast surgery (breast-conserving surgery or mastectomy and surgical axillary staging)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's surgical details are insufficient to confirm whether breast-conserving surgery/mastectomy and axillary staging were performed.
+
+  4. [comorbidity] [Exclusion] Uncontrolled severe illness or medical condition
+     Field: unmapped_rule
+     → LLM Fallback: No evidence of uncontrolled severe illness or medical condition beyond breast cancer is present in the record.
+
+  5. [administrative] [Exclusion] Psychological, familial, sociological or geographical conditions hampering compliance with study protocol
+     Field: unmapped_rule
+     → LLM Fallback: No data provided about psychological, familial, sociological, or geographical factors affecting compliance.
+
+PASSING CRITERIA: 13 of 19
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06476119_LLM_14        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT06476119_LLM_3         | administrative       | 10.0            | 0.0        | 0.0       
+NCT06476119_LLM_8         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT06476119_LLM_16        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06476119_LLM_17        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 32.5

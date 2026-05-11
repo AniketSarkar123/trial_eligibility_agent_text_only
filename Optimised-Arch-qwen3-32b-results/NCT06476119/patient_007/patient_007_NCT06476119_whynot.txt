@@ -1,0 +1,18 @@
+Trial: NCT06476119
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 1 | Soft: 0]
+  1. [clinical_diagnosis] [Inclusion] Has undergone curative breast surgery (breast-conserving surgery or mastectomy and surgical axillary staging)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's narrative confirms curative breast surgery, but the specific type (breast-conserving or mastectomy with axillary staging) is not explicitly stated.
+
+PASSING CRITERIA: 18 of 19
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06476119_LLM_8         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 20.0
