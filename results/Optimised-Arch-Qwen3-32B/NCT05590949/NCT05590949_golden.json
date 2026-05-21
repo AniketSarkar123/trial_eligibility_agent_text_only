@@ -1,0 +1,139 @@
+{
+  "nct_id": "NCT05590949",
+  "title": "Post-menopausal Breast Cancer Patients Treated With Aromatase Inhibitors and Denosumab: An Observational Study to Assess Rebound Bone Loss and Insufficiency Fractures After Denosumab Discontinuation",
+  "conditions": [
+    "Breast Cancer"
+  ],
+  "criteria": [
+    {
+      "criterion_id": "STRUCT_AGE_MIN",
+      "category": "demographic",
+      "description": "Minimum age: 18 Years",
+      "field": "age",
+      "operator": "gte",
+      "value": 18,
+      "unit": "years",
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "STRUCT_SEX",
+      "category": "demographic",
+      "description": "Sex: FEMALE",
+      "field": "sex",
+      "operator": "eq",
+      "value": "female",
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT05590949_LLM_1",
+      "category": "clinical_diagnosis",
+      "description": "Women with confirmed diagnosis of breast cancer",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT05590949_LLM_2",
+      "category": "demographic",
+      "description": "Participant must be post-menopausal, defined as last menstrual cycle at least 12 months prior to enrollment",
+      "field": "menopausal_status",
+      "operator": "eq",
+      "value": "postmenopausal",
+      "unit": "months",
+      "timeframe_days": 365,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT05590949_LLM_3",
+      "category": "prior_therapy",
+      "description": "Received at least 2 doses of denosumab and then discontinued therapy",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT05590949_LLM_4",
+      "category": "prior_therapy",
+      "description": "Discontinued AI prior to or within 6 months of last denosumab injection",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": "months",
+      "timeframe_days": 180,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT05590949_LLM_6",
+      "category": "comorbidity",
+      "description": "Patients with history of osteoporosis prior to starting denosumab",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": false
+    },
+    {
+      "criterion_id": "NCT05590949_LLM_7",
+      "category": "comorbidity",
+      "description": "Patients with history of insufficiency fracture",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": false
+    },
+    {
+      "criterion_id": "NCT05590949_LLM_8",
+      "category": "prior_therapy",
+      "description": "Patients who continue treatment with a different bone modifying agent (i.e oral or intravenous bisphosphonates) after discontinuation of denosumab",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": false
+    },
+    {
+      "criterion_id": "NCT05590949_LLM_9",
+      "category": "comorbidity",
+      "description": "Patients on chronic low-dose glucosteroids",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": false
+    }
+  ]
+}
