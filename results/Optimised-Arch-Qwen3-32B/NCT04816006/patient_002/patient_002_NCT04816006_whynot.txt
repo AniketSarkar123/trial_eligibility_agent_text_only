@@ -1,0 +1,73 @@
+Trial: NCT04816006
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 4 | Soft: 8]
+  1. [administrative] [Inclusion] PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to complete assessments is not explicitly documented in the narrative or structured profile.
+
+  2. [administrative] [Inclusion] REGISTRATION: Able to provide medical record release to confirm eligibility
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to provide medical record release is not mentioned in the clinical narrative or structured profile.
+
+  3. [lab_value] [Inclusion] REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about TICS-M testing or cognitive status assessment.
+
+  4. [administrative] [Inclusion] REGISTRATION: Receive physician's clearance to participate in an exercise program
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about physician clearance for an exercise program.
+
+  5. [administrative] [Exclusion] PRE-REGISTRATION: Planned surgery during the intervention period
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about planned surgery during the intervention period.
+
+  6. [lab_value] [Exclusion] REGISTRATION: Clinically significant TICS-M score (< 21) during baseline procedures
+     Field: unmapped_rule
+     → LLM Fallback: The patient's clinical record contains no information about a TICS-M score or cognitive function assessment.
+
+  7. [administrative] [Exclusion] REGISTRATION: Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about baseline exercise testing, ECG, or blood pressure monitoring required to evaluate this rule.
+
+  8. [comorbidity] [Exclusion] REGISTRATION: Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about fMRI contraindications beyond absence of neurological disorders and brain metastases.
+
+  9. [comorbidity] [Exclusion] REGISTRATION: Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up
+     Field: unmapped_rule
+     → LLM Fallback: No MRI scan data is present in the record to confirm or refute the requirement.
+
+  10. [administrative] [Exclusion] REGISTRATION: Enrolled in another physical activity program
+     Field: unmapped_rule
+     → LLM Fallback: The patient's narrative and profile do not mention enrollment in another physical activity program.
+
+  11. [administrative] [Exclusion] REGISTRATION: Unwilling to be randomized to the exercise group or health education group
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to be randomized to specific groups is not explicitly stated in the narrative or structured profile.
+
+  12. [administrative] [Exclusion] REGISTRATION: Unable to continuously wear and regularly sync/charge an activity tracker during the study period
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to wear and regularly sync/charge an activity tracker is not mentioned in the clinical narrative or structured profile.
+
+PASSING CRITERIA: 18 of 30
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04816006_LLM_5         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_7         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_10        | lab_value            | 10.0            | 1.0        | 10.0      
+NCT04816006_LLM_11        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_14        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_20        | lab_value            | 5.0             | 1.0        | 5.0       
+NCT04816006_LLM_21        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_22        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT04816006_LLM_23        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT04816006_LLM_24        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_27        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_28        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 20.0

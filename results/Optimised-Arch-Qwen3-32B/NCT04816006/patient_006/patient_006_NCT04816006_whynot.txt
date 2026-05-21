@@ -1,0 +1,53 @@
+Trial: NCT04816006
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 1 | Soft: 7]
+  1. [administrative] [Inclusion] PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to complete assessments is not explicitly mentioned in the narrative or structured profile.
+
+  2. [administrative] [Exclusion] PRE-REGISTRATION: Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to return for follow-up is not explicitly mentioned in the narrative or structured profile.
+
+  3. [comorbidity] [Exclusion] REGISTRATION: Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no explicit information about fMRI contraindications.
+
+  4. [administrative] [Exclusion] REGISTRATION: Enrolled in another physical activity program
+     Field: unmapped_rule
+     → LLM Fallback: The patient's enrollment status in another physical activity program is not mentioned in the narrative or structured profile.
+
+  5. [administrative] [Exclusion] REGISTRATION: Unwilling to complete study requirements
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to complete study requirements is not mentioned in the clinical narrative or structured profile.
+
+  6. [administrative] [Exclusion] REGISTRATION: Unwilling to be randomized to the exercise group or health education group
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to be randomized is not explicitly stated in the clinical narrative or structured profile.
+
+  7. [administrative] [Exclusion] REGISTRATION: Unable to continuously wear and regularly sync/charge an activity tracker during the study period
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to wear and sync an activity tracker is not addressed in the clinical narrative or structured profile.
+
+  8. [administrative] [Exclusion] REGISTRATION: Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to return for follow-up is not explicitly documented in the clinical narrative or structured profile.
+
+PASSING CRITERIA: 22 of 30
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04816006_LLM_5         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_17        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_22        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT04816006_LLM_24        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_26        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_27        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_28        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_30        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 2.5

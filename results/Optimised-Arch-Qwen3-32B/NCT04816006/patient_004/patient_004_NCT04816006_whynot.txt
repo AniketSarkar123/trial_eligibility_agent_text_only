@@ -1,0 +1,78 @@
+Trial: NCT04816006
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 2 | Soft: 11]
+  1. [administrative] [Inclusion] PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months
+     Field: unmapped_rule
+     → LLM Fallback: The patient's exercise history within the specified timeframe is not explicitly documented in the clinical narrative or structured profile.
+
+  2. [administrative] [Inclusion] PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no explicit information about their ability to complete assessments by themselves or with assistance.
+
+  3. [administrative] [Inclusion] REGISTRATION: Able to provide medical record release to confirm eligibility
+     Field: unmapped_rule
+     → LLM Fallback: The patient's capability to provide medical record release is not addressed in the provided information.
+
+  4. [administrative] [Inclusion] REGISTRATION: Receive physician's clearance to participate in an exercise program
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about receiving physician clearance for an exercise program.
+
+  5. [prior_therapy] [Exclusion] PRE-REGISTRATION: Currently receiving or <3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment
+     Field: unmapped_rule
+     → LLM Fallback: The time since completing chemotherapy or radiation therapy is not explicitly stated in the narrative or structured data, making it impossible to determine eligibility for this exclusion criterion.
+
+  6. [administrative] [Exclusion] PRE-REGISTRATION: Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to return for follow-up is not addressed in the clinical record
+
+  7. [administrative] [Exclusion] REGISTRATION: Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about a baseline exercise test, ECG, or blood pressure monitoring required for this rule.
+
+  8. [comorbidity] [Exclusion] REGISTRATION: Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up
+     Field: unmapped_rule
+     → LLM Fallback: No evidence of an MRI scan or radiologist-confirmed abnormal brain imaging in the patient's record
+
+  9. [administrative] [Exclusion] REGISTRATION: Unwilling to complete study requirements
+     Field: unmapped_rule
+     → LLM Fallback: Patient's willingness to complete study requirements is not mentioned in clinical records
+
+  10. [administrative] [Exclusion] REGISTRATION: Unwilling to be randomized to the exercise group or health education group
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to be randomized is not mentioned in the clinical narrative or structured profile.
+
+  11. [administrative] [Exclusion] REGISTRATION: Unable to continuously wear and regularly sync/charge an activity tracker during the study period
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to use an activity tracker is not explicitly mentioned in the clinical narrative or structured profile.
+
+  12. [administrative] [Exclusion] REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to travel regularly is not addressed in the clinical record
+
+  13. [administrative] [Exclusion] REGISTRATION: Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → LLM Fallback: The patient's willingness to return for follow-up is not mentioned in the clinical narrative or structured profile.
+
+PASSING CRITERIA: 17 of 30
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04816006_LLM_4         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_5         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_7         | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_11        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04816006_LLM_13        | prior_therapy        | 5.0             | 1.5        | 7.5       
+NCT04816006_LLM_17        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_21        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_23        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT04816006_LLM_26        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_27        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_28        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_29        | administrative       | 5.0             | 0.0        | 0.0       
+NCT04816006_LLM_30        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 10.0

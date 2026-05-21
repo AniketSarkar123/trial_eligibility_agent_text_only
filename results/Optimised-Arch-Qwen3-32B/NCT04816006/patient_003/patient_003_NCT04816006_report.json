@@ -1,0 +1,587 @@
+{
+  "patient": {
+    "age": 58,
+    "sex": "female",
+    "menopausal_status": null,
+    "pregnancy_status": null,
+    "primary_diagnosis": "breast cancer",
+    "cancer_stage": "I",
+    "is_metastatic": false,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": null,
+    "pr_status": null,
+    "her2_status": null,
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": false,
+    "received_adjuvant_therapy": true,
+    "has_recurrence": false,
+    "has_prior_malignancy": false,
+    "ecog_score": null,
+    "prior_therapies": [],
+    "lines_of_therapy": null,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": "none"
+  },
+  "nct_id": "NCT04816006",
+  "eligible": true,
+  "has_indeterminate": false,
+  "risk_score": 0.0,
+  "results": [
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 50 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 50,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": 58,
+      "reason": "PASS: age = 58 (required: gte 50)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_SEX",
+        "category": "demographic",
+        "description": "Sex: FEMALE",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "female",
+      "reason": "PASS: sex = female (required: eq female)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_2",
+        "category": "clinical_diagnosis",
+        "description": "PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has a first, primary diagnosis of stage I breast cancer per clinical determination."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_3",
+        "category": "clinical_diagnosis",
+        "description": "PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient completed primary treatment 18 months prior, which falls within the required 3-36 month window."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_4",
+        "category": "administrative",
+        "description": "PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 180,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient reports no more than 90 minutes/week of moderate-intensity aerobic exercise in the last 6 months as required."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_5",
+        "category": "administrative",
+        "description": "PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient self-reported ability to complete assessments independently"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_7",
+        "category": "administrative",
+        "description": "REGISTRATION: Able to provide medical record release to confirm eligibility",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly stated as 'able to provide medical record release to confirm eligibility' in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_8",
+        "category": "clinical_diagnosis",
+        "description": "REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has a first, primary diagnosis of stage I breast cancer confirmed via clinical determination as required by the rule."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_9",
+        "category": "clinical_diagnosis",
+        "description": "REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to pre-registration as confirmed via clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient completed primary treatment 18 months prior, which falls within the 3-36 month window required by the rule."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_10",
+        "category": "lab_value",
+        "description": "REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient's TICS-M score is >21, meeting the cognitive status requirement."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_11",
+        "category": "administrative",
+        "description": "REGISTRATION: Receive physician's clearance to participate in an exercise program",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has received physician's clearance to participate in an exercise program as stated in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_12",
+        "category": "clinical_diagnosis",
+        "description": "PRE-REGISTRATION: Stage 0 breast cancer diagnosis OR metastatic disease",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has stage I breast cancer and no metastatic disease, explicitly meeting the exclusionary criteria' negative requirement."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_13",
+        "category": "prior_therapy",
+        "description": "PRE-REGISTRATION: Currently receiving or <3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient is 18 months post-primary treatment and not within 3 months of therapy, satisfying the exclusion criterion's negative condition."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_14",
+        "category": "administrative",
+        "description": "PRE-REGISTRATION: Planned surgery during the intervention period",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly states no planned surgery during the intervention period."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_15",
+        "category": "comorbidity",
+        "description": "PRE-REGISTRATION: Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has no second cancer diagnosis as explicitly stated in the clinical narrative and confirmed in the structured profile."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_16",
+        "category": "administrative",
+        "description": "PRE-REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly states ability to travel regularly to study locations."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_17",
+        "category": "administrative",
+        "description": "PRE-REGISTRATION: Unwilling to return to enrolling institution for follow-up",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly states willingness to return to enrolling institution for follow-up."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_18",
+        "category": "clinical_diagnosis",
+        "description": "PRE-REGISTRATION: Self-reported inability to walk without assistance or devices",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient self-reported ability to walk without assistance or devices"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_19",
+        "category": "comorbidity",
+        "description": "REGISTRATION: History of stroke, transient ischemic attack, other neurological disorders, or brain surgery involving tissue removal as confirmed via clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient's clinical narrative explicitly states absence of stroke, TIA, neurological disorders, and brain surgery."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_20",
+        "category": "lab_value",
+        "description": "REGISTRATION: Clinically significant TICS-M score (< 21) during baseline procedures",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has a TICS-M score >21, which does not meet the exclusion criterion of <21."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_21",
+        "category": "administrative",
+        "description": "REGISTRATION: Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient has physician clearance for exercise and is able to provide re-clearance, indicating no clinically significant baseline exercise test was identified."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_22",
+        "category": "comorbidity",
+        "description": "REGISTRATION: Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly has no fMRI contraindications as stated in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_23",
+        "category": "comorbidity",
+        "description": "REGISTRATION: Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient does not have a clinically significant MRI scan per structured profile."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_24",
+        "category": "administrative",
+        "description": "REGISTRATION: Enrolled in another physical activity program",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly states she is not enrolled in another physical activity program."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_25",
+        "category": "clinical_diagnosis",
+        "description": "REGISTRATION: Unable to walk without assistance or devices",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient self-reported ability to walk without assistance or devices"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_26",
+        "category": "administrative",
+        "description": "REGISTRATION: Unwilling to complete study requirements",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly states willingness to complete study requirements as documented in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_27",
+        "category": "administrative",
+        "description": "REGISTRATION: Unwilling to be randomized to the exercise group or health education group",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly states willingness to be randomized, directly contradicting the exclusion criterion."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_28",
+        "category": "administrative",
+        "description": "REGISTRATION: Unable to continuously wear and regularly sync/charge an activity tracker during the study period",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient explicitly states she is able to continuously wear and sync/charge an activity tracker."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_29",
+        "category": "administrative",
+        "description": "REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly stated as able to travel regularly to study locations per clinical narrative"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04816006_LLM_30",
+        "category": "administrative",
+        "description": "REGISTRATION: Unwilling to return to enrolling institution for follow-up",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly states willingness to return to enrolling institution as required by the rule."
+    }
+  ],
+  "failing_criteria": [],
+  "indeterminate_criteria": []
+}
