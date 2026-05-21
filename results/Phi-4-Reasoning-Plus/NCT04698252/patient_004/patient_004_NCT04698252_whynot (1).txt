@@ -1,0 +1,43 @@
+Trial: NCT04698252
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Histologically confirmed invasive breast cancer with oligometastatic disease defined as one of the following criteria: 1) One to four bone lesions; 2) One to four lung and/or hepatic lesions; 3) Distant metastasis limited to ipsilateral cervical lymph nodes; 4) Distant metastasis limited to contralateral axillary lymph nodes
+     Field: unmapped_rule
+     → LLM Fallback: The patient has triple-negative metastatic breast cancer and is excluded by the trial rule requiring ER/PR-positive status.
+
+  2. [clinical] Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation
+     Field: unmapped_rule
+     → LLM Fallback: The patient has triple-negative metastatic breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for the ER/PR-positive oligometastatic trial.
+
+  3. [biomarker] Estrogen receptor-positive and/or progesterone receptor-positive breast cancer
+     Patient value: negative
+     Required: in ['positive']
+     → FAIL: er_status = negative (required: in ['positive'])
+
+  4. [clinical] Partial response or stable disease after at least six months of systemic therapy for breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial.
+
+  5. [clinical] Measurable or non-measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1
+     Field: unmapped_rule
+     → LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial.
+
+  6. [clinical] Signed informed consent form
+     Field: unmapped_rule
+     → LLM Fallback: The patient fails because she has triple-negative metastatic breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for the ER/PR-positive oligometastatic trial.
+
+  7. [clinical] Disposition and aptitude to fulfill the study protocol during the study duration
+     Field: unmapped_rule
+     → LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial.
+
+  8. [prior_therapy] Previous local therapy for distant metastasis
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior local therapy for distant metastasis (carboplatin plus gemcitabine) and is excluded due to triple-negative status.
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1
+     Field: ecog_score
+     → Data not available in patient record
+
+PASSING CRITERIA: 10 of 19

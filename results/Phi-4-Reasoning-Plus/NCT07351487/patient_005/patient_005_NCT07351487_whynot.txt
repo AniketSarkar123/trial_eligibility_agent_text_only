@@ -1,0 +1,70 @@
+Trial: NCT07351487
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: The patient fails because she has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  2. [biomarker] ER-negative, PR-negative, and HER2 receptor-negative. Alternatively, if ER and PR expression is less than 10% and HER2 receptor is negative, it is also classified as TNBC
+     Field: unmapped_rule
+     → LLM Fallback: The patient has prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  3. [clinical] The functional level of major organs must meet requirements
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  4. [demographic] For female patients who have not yet reached menopause or undergone surgical sterilization: during the treatment period and in the study treatment, the final use effective contraceptive methods for at least 6 months after a single administration.
+     Field: unmapped_rule
+     → LLM Fallback: The patient fails due to prior anti-PD-1 immunotherapy (pembrolizumab) exposure, which is an exclusion criterion for the trial.
+
+  5. [clinical] Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  6. [prior_therapy] Previously received anti-tumor treatment or radiation therapy for any malignant tumor, excluding those that have been cured Malignant tumors such as cervical carcinoma in situ, basal cell carcinoma, or squamous cell carcinoma.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  7. [prior_therapy] Simultaneously undergoing anti-tumor treatment in other clinical trials, including but not limited to chemotherapy and endocrine therapy. Treatment, biological therapy, bone improvement drug therapy, or immune checkpoint inhibitor therapy, etc.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  8. [comorbidity] Serious heart disease or discomfort, including but not limited to the following diseases: Diagnosed history of heart failure or systolic dysfunction (LVEF less than 50%), high risk uncontrolled arrhythmias such as atrial tachycardia, resting heart rate greater than 100bpm, significant ventricular arrhythmias (such as ventricular tachycardia), or higher-level atrioventricular block (i.e. Mobitz II second or third degree atrioventricular block), angina requiring medication for treatment, heart valve disease with clinical significance, ECG shows transmural myocardial infarction, poor control of hypertension (systolic blood pressure greater than 180mmHg and/or diastolic blood pressure greater than 180mmHg after drug treatment) 100mmHg.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  9. [comorbidity] Uncontrolled active infections that require treatment; History of immunodeficiency, including HIV testing positive Sexual, or suffering from other acquired or congenital immunodeficiency diseases, or having a history of organ transplantation.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  10. [comorbidity] Patients with chronic active hepatitis B or active hepatitis C (excluding hepatitis B virus carriers, stable hepatitis B after drug treatment [HBV-DNA test negative or <50IU/ml] and cured hepatitis C patients [HCV RNA test negative]).
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  11. [comorbidity] Have received immunotherapy and experienced adverse immune events such as immune related pneumonia and myocarditis, which have been determined by researchers to potentially affect the safety of the experimental medication.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  12. [comorbidity] Individuals with a known history of allergies to the components of this medication regimen.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  13. [demographic] Pregnant and lactating female patients, female patients with fertility and positive baseline pregnancy test results, or reproductive age patients who are unwilling to take effective contraceptive measures during the entire trial period and within 6 months after the last study medication.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  14. [comorbidity] Suffering from serious accompanying diseases or other comorbidities that may interfere with the planned treatment, or any other circumstances that the researcher deems unsuitable for the patient to participate in this study.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+INDETERMINATE (missing patient data):
+  1. [lab_value] ECOG score is 0-1 points
+     Field: ecog_score
+     → Data not available in patient record
+
+  2. [lab_value] Pathological examination of PD-L1 expression: The Combined Positive Score (CPS) refers to the percentage of PD-L1 positive cells (including tumor cells, lymphocytes, macrophages) in all tumor cells. Our center detected the PD-L1 antibody site as 22C3.
+     Field: pdl1_status
+     → Data not available in patient record
+
+PASSING CRITERIA: 6 of 22

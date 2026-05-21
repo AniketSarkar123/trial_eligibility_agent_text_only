@@ -1,0 +1,698 @@
+{
+  "patient": {
+    "age": 49,
+    "sex": "female",
+    "menopausal_status": null,
+    "primary_diagnosis": "triple-negative metastatic breast cancer",
+    "cancer_stage": null,
+    "is_metastatic": true,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": "negative",
+    "pr_status": "negative",
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": null,
+    "received_adjuvant_therapy": null,
+    "has_recurrence": null,
+    "ecog_score": null,
+    "prior_therapies": [
+      {
+        "drug_name": "carboplatin",
+        "drug_class": null,
+        "is_current": true,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      },
+      {
+        "drug_name": "gemcitabine",
+        "drug_class": null,
+        "is_current": true,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      }
+    ],
+    "lines_of_therapy": null,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT04698252",
+    "title": "Local Therapy for Hormone Receptor-positive Oligometastatic Breast Cancer - a Phase II Randomized Trial",
+    "conditions": [
+      "Breast Cancer"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_SEX",
+        "category": "demographic",
+        "description": "Sex: FEMALE",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_1",
+        "category": "demographic",
+        "description": "Female sex",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_2",
+        "category": "demographic",
+        "description": "Age at least 18 years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_3",
+        "category": "clinical",
+        "description": "Histologically confirmed invasive breast cancer with oligometastatic disease defined as one of the following criteria: 1) One to four bone lesions; 2) One to four lung and/or hepatic lesions; 3) Distant metastasis limited to ipsilateral cervical lymph nodes; 4) Distant metastasis limited to contralateral axillary lymph nodes",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_4",
+        "category": "clinical",
+        "description": "Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_5",
+        "category": "biomarker",
+        "description": "Estrogen receptor-positive and/or progesterone receptor-positive breast cancer",
+        "field": "er_status",
+        "operator": "in",
+        "value": [
+          "positive"
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_6",
+        "category": "clinical",
+        "description": "Partial response or stable disease after at least six months of systemic therapy for breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_7",
+        "category": "clinical",
+        "description": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_8",
+        "category": "clinical",
+        "description": "Measurable or non-measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_9",
+        "category": "clinical",
+        "description": "Life expectancy of at least 12 weeks",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_10",
+        "category": "demographic",
+        "description": "For women in childbearing age, negative pregnancy test until 21 days before the date of study enrollment",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_11",
+        "category": "clinical",
+        "description": "Signed informed consent form",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_12",
+        "category": "clinical",
+        "description": "Disposition and aptitude to fulfill the study protocol during the study duration",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_13",
+        "category": "biomarker",
+        "description": "HER2-positive breast cancer",
+        "field": "her2_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_14",
+        "category": "clinical",
+        "description": "Progressive disease during the last systemic treatment received for metastatic disease",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_15",
+        "category": "prior_therapy",
+        "description": "Previous local therapy for distant metastasis",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_16",
+        "category": "comorbidity",
+        "description": "Current or previous history of severe diseases, such as clinically relevant heart failure, acute myocardium infarction in the last six months, chronic obstructive lung disease, HIV infection, chronic active hepatitis B or C infection, current serious uncontrolled infections or other severe diseases that may impact patients' expected survival",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_17",
+        "category": "prior_therapy",
+        "description": "Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT04698252",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 49,
+        "reason": "PASS: age = 49 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_SEX",
+          "category": "demographic",
+          "description": "Sex: FEMALE",
+          "field": "sex",
+          "operator": "eq",
+          "value": "female",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "female",
+        "reason": "PASS: sex = female (required: eq female)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_1",
+          "category": "demographic",
+          "description": "Female sex",
+          "field": "sex",
+          "operator": "eq",
+          "value": "female",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "female",
+        "reason": "PASS: sex = female (required: eq female)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_2",
+          "category": "demographic",
+          "description": "Age at least 18 years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 49,
+        "reason": "PASS: age = 49 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_3",
+          "category": "clinical",
+          "description": "Histologically confirmed invasive breast cancer with oligometastatic disease defined as one of the following criteria: 1) One to four bone lesions; 2) One to four lung and/or hepatic lesions; 3) Distant metastasis limited to ipsilateral cervical lymph nodes; 4) Distant metastasis limited to contralateral axillary lymph nodes",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has triple-negative metastatic breast cancer and is excluded by the trial rule requiring ER/PR-positive status."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_4",
+          "category": "clinical",
+          "description": "Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has triple-negative metastatic breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for the ER/PR-positive oligometastatic trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_5",
+          "category": "biomarker",
+          "description": "Estrogen receptor-positive and/or progesterone receptor-positive breast cancer",
+          "field": "er_status",
+          "operator": "in",
+          "value": [
+            "positive"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "negative",
+        "reason": "FAIL: er_status = negative (required: in ['positive'])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_6",
+          "category": "clinical",
+          "description": "Partial response or stable disease after at least six months of systemic therapy for breast cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_7",
+          "category": "clinical",
+          "description": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'ecog_score'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_8",
+          "category": "clinical",
+          "description": "Measurable or non-measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_9",
+          "category": "clinical",
+          "description": "Life expectancy of at least 12 weeks",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has been on treatment for 6 months with partial response and no evidence of life expectancy less than 12 weeks, so she meets the trial's inclusion criterion."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_10",
+          "category": "demographic",
+          "description": "For women in childbearing age, negative pregnancy test until 21 days before the date of study enrollment",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient is female and in childbearing age with no mention of pregnancy test results; however, since the rule requires negative pregnancy test until 21 days before enrollment and there's no information provided about a pregnancy test, we must return 'indeterminate'."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_11",
+          "category": "clinical",
+          "description": "Signed informed consent form",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient fails because she has triple-negative metastatic breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for the ER/PR-positive oligometastatic trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_12",
+          "category": "clinical",
+          "description": "Disposition and aptitude to fulfill the study protocol during the study duration",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_13",
+          "category": "biomarker",
+          "description": "HER2-positive breast cancer",
+          "field": "her2_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "negative",
+        "reason": "PASS: her2_status = negative (required: eq positive)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_14",
+          "category": "clinical",
+          "description": "Progressive disease during the last systemic treatment received for metastatic disease",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient did not have progressive disease during her last systemic treatment as she had a partial response on carboplatin plus gemcitabine."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_15",
+          "category": "prior_therapy",
+          "description": "Previous local therapy for distant metastasis",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has received prior local therapy for distant metastasis (carboplatin plus gemcitabine) and is excluded due to triple-negative status."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_16",
+          "category": "comorbidity",
+          "description": "Current or previous history of severe diseases, such as clinically relevant heart failure, acute myocardium infarction in the last six months, chronic obstructive lung disease, HIV infection, chronic active hepatitis B or C infection, current serious uncontrolled infections or other severe diseases that may impact patients' expected survival",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient does not have any severe diseases as described in the trial rule; her profile and narrative indicate only metastatic triple-negative breast cancer with no mention of heart failure, myocardial infarction, COPD, HIV, hepatitis B/C, or serious uncontrolled infections."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_17",
+          "category": "prior_therapy",
+          "description": "Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient does not have any history of other invasive malignancy within the last five years as per the provided narrative and structured profile."
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_3",
+          "category": "clinical",
+          "description": "Histologically confirmed invasive breast cancer with oligometastatic disease defined as one of the following criteria: 1) One to four bone lesions; 2) One to four lung and/or hepatic lesions; 3) Distant metastasis limited to ipsilateral cervical lymph nodes; 4) Distant metastasis limited to contralateral axillary lymph nodes",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has triple-negative metastatic breast cancer and is excluded by the trial rule requiring ER/PR-positive status."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_4",
+          "category": "clinical",
+          "description": "Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has triple-negative metastatic breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for the ER/PR-positive oligometastatic trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_5",
+          "category": "biomarker",
+          "description": "Estrogen receptor-positive and/or progesterone receptor-positive breast cancer",
+          "field": "er_status",
+          "operator": "in",
+          "value": [
+            "positive"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "negative",
+        "reason": "FAIL: er_status = negative (required: in ['positive'])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_6",
+          "category": "clinical",
+          "description": "Partial response or stable disease after at least six months of systemic therapy for breast cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_8",
+          "category": "clinical",
+          "description": "Measurable or non-measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_11",
+          "category": "clinical",
+          "description": "Signed informed consent form",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient fails because she has triple-negative metastatic breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for the ER/PR-positive oligometastatic trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_12",
+          "category": "clinical",
+          "description": "Disposition and aptitude to fulfill the study protocol during the study duration",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_15",
+          "category": "prior_therapy",
+          "description": "Previous local therapy for distant metastasis",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has received prior local therapy for distant metastasis (carboplatin plus gemcitabine) and is excluded due to triple-negative status."
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_7",
+          "category": "clinical",
+          "description": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'ecog_score'"
+      }
+    ]
+  },
+  "report_text": "Trial: NCT04698252\nEligible: NO\n\nFAILING CRITERIA:\n  1. [clinical] Histologically confirmed invasive breast cancer with oligometastatic disease defined as one of the following criteria: 1) One to four bone lesions; 2) One to four lung and/or hepatic lesions; 3) Distant metastasis limited to ipsilateral cervical lymph nodes; 4) Distant metastasis limited to contralateral axillary lymph nodes\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient has triple-negative metastatic breast cancer and is excluded by the trial rule requiring ER/PR-positive status.\n\n  2. [clinical] Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient has triple-negative metastatic breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for the ER/PR-positive oligometastatic trial.\n\n  3. [biomarker] Estrogen receptor-positive and/or progesterone receptor-positive breast cancer\n     Patient value: negative\n     Required: in ['positive']\n     \u2192 FAIL: er_status = negative (required: in ['positive'])\n\n  4. [clinical] Partial response or stable disease after at least six months of systemic therapy for breast cancer\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial.\n\n  5. [clinical] Measurable or non-measurable disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial.\n\n  6. [clinical] Signed informed consent form\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient fails because she has triple-negative metastatic breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for the ER/PR-positive oligometastatic trial.\n\n  7. [clinical] Disposition and aptitude to fulfill the study protocol during the study duration\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient has triple-negative breast cancer (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial.\n\n  8. [prior_therapy] Previous local therapy for distant metastasis\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient has received prior local therapy for distant metastasis (carboplatin plus gemcitabine) and is excluded due to triple-negative status.\n\nINDETERMINATE (missing patient data):\n  1. [clinical] Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1\n     Field: ecog_score\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 10 of 19"
+}

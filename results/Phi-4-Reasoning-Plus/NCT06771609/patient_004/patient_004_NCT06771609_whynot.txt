@@ -1,0 +1,10 @@
+Trial: NCT06771609
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [prior_therapy] Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer.
+     Patient value: 2
+     Required: lte 1
+     → FAIL: lines_of_therapy = 2 (required: lte 1)
+
+PASSING CRITERIA: 1 of 2

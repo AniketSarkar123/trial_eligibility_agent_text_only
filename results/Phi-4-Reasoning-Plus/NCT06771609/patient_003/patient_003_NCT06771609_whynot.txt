@@ -1,0 +1,10 @@
+Trial: NCT06771609
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment.
+     Patient value: 2
+     Required: in [0, 1]
+     → FAIL: ecog_score = 2 (required: in [0, 1])
+
+PASSING CRITERIA: 2 of 3

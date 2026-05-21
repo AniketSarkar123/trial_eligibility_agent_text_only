@@ -1,0 +1,399 @@
+{
+  "patient": {
+    "analysis": "The patient is a 68-year-old woman with locally advanced unresectable TNBC that relapsed 18 months after neoadjuvant therapy and mastectomy. The text indicates she has chest wall recurrence and contralateral axillary involvement, which are measurable lesions per RECIST 1.1. She has not received any systemic therapy for her recurrent disease, and ECOG PS is 1. She completed palliative chest wall radiotherapy 6 weeks ago. Her liver enzymes, creatinine, and CBC are within acceptable ranges, indicating adequate liver, renal, and bone marrow function. The patient is not on any other anti-tumor agents. TNBC typically implies estrogen receptor negative, progesterone receptor negative, and HER2 negative status. However, the text does not explicitly mention ER/PR/HER2 statuses, but given that it's TNBC, we assume they are negative. Menopausal status and pregnancy status are not mentioned, so they remain null. Tumor size, tumor grade, lymphovascular invasion, disease focality, Ki67 percent, PD-L1 status, and BRCA status are not provided in the text.",
+    "age": 68,
+    "sex": "female",
+    "menopausal_status": null,
+    "pregnancy_status": null,
+    "primary_diagnosis": "locally advanced unresectable TNBC relapsing 18 months after completing neoadjuvant capecitabine (post-residual disease protocol) and mastectomy",
+    "cancer_stage": null,
+    "is_metastatic": false,
+    "histology": "TNBC",
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": "negative",
+    "pr_status": "negative",
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": true,
+    "received_adjuvant_therapy": false,
+    "has_recurrence": true,
+    "ecog_score": 1,
+    "prior_therapies": [],
+    "lines_of_therapy": null,
+    "prior_radiation": true,
+    "prior_surgery": true,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": true,
+    "adequate_renal_function": true,
+    "adequate_bone_marrow": true,
+    "brain_metastases": "none"
+  },
+  "trial": {
+    "nct_id": "NCT06771609",
+    "title": "Evaluate the Efficacy and Safety of PD-L1 Monoclonal Antibody Combined with VEX Metronomic Chemotherapy with or Without Radiotherapy in Advanced Triple-negative Breast Cancer: a Prospective, Multicenter, Randomized Controlled Phase II Clinical Trial.",
+    "conditions": [
+      "Advanced Triple-negative Breast Cancer"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_2",
+        "category": "clinical",
+        "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the ASCO/CAP guidelines.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_3",
+        "category": "prior_therapy",
+        "description": "Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer.",
+        "field": "lines_of_therapy",
+        "operator": "lte",
+        "value": 1,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_4",
+        "category": "clinical",
+        "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment.",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ],
+        "unit": null,
+        "timeframe_days": 10,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_5",
+        "category": "clinical",
+        "description": "Subjects must have at least one measurable lesion present; specific reference to the RECIST v1.1 guidelines.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_6",
+        "category": "prior_therapy",
+        "description": "Subjects may have previously received treatment with anthracyclines and/or taxanes as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_7",
+        "category": "demographic",
+        "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_8",
+        "category": "demographic",
+        "description": "Subjects are able to sign an informed consent form to participate in the study.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_9",
+        "category": "clinical",
+        "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 10,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT06771609",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 68,
+        "reason": "PASS: age = 68 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_3",
+          "category": "prior_therapy",
+          "description": "Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer.",
+          "field": "lines_of_therapy",
+          "operator": "lte",
+          "value": 1,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lines_of_therapy'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_4",
+          "category": "clinical",
+          "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment.",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "timeframe_days": 10,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 1,
+        "reason": "PASS: ecog_score = 1 (required: in [0, 1])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_2",
+          "category": "clinical",
+          "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the ASCO/CAP guidelines.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The trial rule requires metastatic TNBC, but the narrative and structured profile indicate locally advanced unresectable TNBC with no mention of metastasis."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_5",
+          "category": "clinical",
+          "description": "Subjects must have at least one measurable lesion present; specific reference to the RECIST v1.1 guidelines.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative confirms measurable lesions per RECIST v1.1 (chest wall recurrence and contralateral axillary involvement) meeting the inclusion criterion."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_6",
+          "category": "prior_therapy",
+          "description": "Subjects may have previously received treatment with anthracyclines and/or taxanes as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has received neoadjuvant therapy with capecitabine (which is not anthracyclines or taxanes) and no systemic therapy for recurrence, so she does not meet any of the criteria that would exclude her from receiving anthracycline/taxane-based chemotherapy as a first-line treatment."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_7",
+          "category": "demographic",
+          "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative does not explicitly state that the patient is not pregnant or lactating nor that she agrees to use contraceptive measures as required by the trial rule."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_8",
+          "category": "demographic",
+          "description": "Subjects are able to sign an informed consent form to participate in the study.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative confirms that Mrs. Vidal can sign an informed consent form as she is capable (oral medications, no neuropathy, etc.), and there's no contradictory data regarding her ability to provide consent."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_9",
+          "category": "clinical",
+          "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 10,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has adequate organ function (liver, renal, bone marrow) and completed screening labs within acceptable time frames as indicated by the narrative and structured profile."
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_2",
+          "category": "clinical",
+          "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the ASCO/CAP guidelines.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The trial rule requires metastatic TNBC, but the narrative and structured profile indicate locally advanced unresectable TNBC with no mention of metastasis."
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_3",
+          "category": "prior_therapy",
+          "description": "Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer.",
+          "field": "lines_of_therapy",
+          "operator": "lte",
+          "value": 1,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lines_of_therapy'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_7",
+          "category": "demographic",
+          "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative does not explicitly state that the patient is not pregnant or lactating nor that she agrees to use contraceptive measures as required by the trial rule."
+      }
+    ]
+  },
+  "report_text": "Trial: NCT06771609\nEligible: NO\n\nFAILING CRITERIA:\n  1. [clinical] Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the ASCO/CAP guidelines.\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The trial rule requires metastatic TNBC, but the narrative and structured profile indicate locally advanced unresectable TNBC with no mention of metastasis.\n\nINDETERMINATE (missing patient data):\n  1. [prior_therapy] Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer.\n     Field: lines_of_therapy\n     \u2192 Data not available in patient record\n\n  2. [demographic] Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 6 of 9"
+}

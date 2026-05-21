@@ -1,0 +1,18 @@
+Trial: NCT06771609
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the ASCO/CAP guidelines.
+     Field: unmapped_rule
+     → LLM Fallback: The trial rule requires metastatic TNBC, but the narrative and structured profile indicate locally advanced unresectable TNBC with no mention of metastasis.
+
+INDETERMINATE (missing patient data):
+  1. [prior_therapy] Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer.
+     Field: lines_of_therapy
+     → Data not available in patient record
+
+  2. [demographic] Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 6 of 9

@@ -1,0 +1,4 @@
+Trial: NCT04698252
+Eligible: YES
+
+PASSING CRITERIA: 19 of 19

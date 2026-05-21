@@ -1,0 +1,13 @@
+Trial: NCT07351487
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [lab_value] Pathological examination of PD-L1 expression: The Combined Positive Score (CPS) refers to the percentage of PD-L1 positive cells (including tumor cells, lymphocytes, macrophages) in all tumor cells. Our center detected the PD-L1 antibody site as 22C3.
+     Field: pdl1_status
+     → Data not available in patient record
+
+  2. [clinical] Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 20 of 22

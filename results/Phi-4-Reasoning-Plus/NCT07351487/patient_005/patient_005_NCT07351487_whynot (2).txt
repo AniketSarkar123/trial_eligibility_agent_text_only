@@ -1,0 +1,38 @@
+Trial: NCT07351487
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  2. [clinical] Previously received anti-tumor treatment or radiation therapy for any malignant tumor, excluding those that have been cured Malignant tumors such as cervical carcinoma in situ, basal cell carcinoma, or squamous cell carcinoma.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  3. [clinical] Simultaneously undergoing anti-tumor treatment in other clinical trials, including but not limited to chemotherapy and endocrine therapy. Treatment, biological therapy, bone improvement drug therapy, or immune checkpoint inhibitor therapy, etc.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  4. [clinical] Have received immunotherapy and experienced adverse immune events such as immune related pneumonia and myocarditis, which have been determined by researchers to potentially affect the safety of the experimental medication.
+     Field: unmapped_rule
+     → LLM Fallback: The narrative indicates she received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  5. [clinical] Suffering from serious accompanying diseases or other comorbidities that may interfere with the planned treatment, or any other circumstances that the researcher deems unsuitable for the patient to participate in this study.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+INDETERMINATE (missing patient data):
+  1. [lab_value] ECOG score is 0-1 points
+     Field: ecog_score
+     → Data not available in patient record
+
+  2. [lab_value] Pathological examination of PD-L1 expression: The Combined Positive Score (CPS) refers to the percentage of PD-L1 positive cells (including tumor cells, lymphocytes, macrophages) in all tumor cells. Our center detected the PD-L1 antibody site as 22C3.
+     Field: pdl1_status
+     → Data not available in patient record
+
+  3. [demographic] For female patients who have not yet reached menopause or undergone surgical sterilization: during the treatment period and in the study treatment, the final use effective contraceptive methods for at least 6 months after a single administration.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 14 of 22
