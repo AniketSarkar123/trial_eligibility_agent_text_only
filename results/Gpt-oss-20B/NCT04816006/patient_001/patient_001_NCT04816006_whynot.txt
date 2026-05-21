@@ -1,0 +1,89 @@
+Trial: NCT04816006
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [prior_therapy] PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination
+     Field: prior_therapy
+     → Data not available in patient record
+
+  2. [prior_therapy] REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to pre-registration as confirmed via clinical determination
+     Field: prior_therapy
+     → Data not available in patient record
+
+  3. [clinical] PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [clinical] PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [clinical] PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  6. [clinical] REGISTRATION: Able to provide medical record release to confirm eligibility
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  7. [clinical] REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  8. [clinical] REGISTRATION: Receive physician's clearance to participate in an exercise program
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  9. [comorbidity] NOTE: Individuals with conditions/diagnoses deemed important by the primary investigator will be required to provide clearance for exercise from their cardiologist. Example conditions include: History of major multiple myocardial infarctions (MI), Recent electrocardiogram (ECG) changes or recent MI, Resting or unstable angina, Significant multivessel coronary occlusion (≥ 70%) on angiography, Uncontrolled and/or serious arrhythmias, 3rd degree heart block, Acute congestive heart failure or ejection fraction < 30%
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  10. [clinical] PRE-REGISTRATION: Planned surgery during the intervention period
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  11. [clinical] PRE-REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  12. [clinical] PRE-REGISTRATION: Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  13. [clinical] PRE-REGISTRATION: Self-reported inability to walk without assistance or devices
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  14. [clinical] REGISTRATION: Clinically significant TICS-M score (< 21) during baseline procedures
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  15. [clinical] REGISTRATION: Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  16. [clinical] REGISTRATION: Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  17. [clinical] REGISTRATION: Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  18. [clinical] REGISTRATION: Enrolled in another physical activity program
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  19. [clinical] REGISTRATION: Unwilling to complete study requirements
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  20. [clinical] REGISTRATION: Unwilling to be randomized to the exercise group or health education group
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  21. [clinical] REGISTRATION: Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 11 of 32

@@ -1,0 +1,1463 @@
+{
+  "patient": {
+    "analysis": null,
+    "age": 56,
+    "sex": "female",
+    "menopausal_status": null,
+    "pregnancy_status": null,
+    "primary_diagnosis": "breast cancer",
+    "cancer_stage": "II",
+    "is_metastatic": false,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": null,
+    "pr_status": null,
+    "her2_status": null,
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": false,
+    "received_adjuvant_therapy": true,
+    "has_recurrence": null,
+    "ecog_score": null,
+    "prior_therapies": [],
+    "lines_of_therapy": 1,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT04816006",
+    "title": "Enhancing Cognitive Function in Breast Cancer Survivors Through Community-based Exercise Training",
+    "conditions": [
+      "Breast Cancer",
+      "Breast Neoplasms",
+      "Anatomic Stage I Breast Cancer AJCC v8",
+      "Anatomic Stage II Breast Cancer AJCC v8",
+      "Anatomic Stage IIIA Breast Cancer AJCC v8",
+      "Cancer-related Cognitive Dysfunction"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 50 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 50,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_SEX",
+        "category": "demographic",
+        "description": "Sex: FEMALE",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_2",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_3",
+        "category": "prior_therapy",
+        "description": "PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_4",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 180,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_5",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_7",
+        "category": "clinical",
+        "description": "REGISTRATION: Able to provide medical record release to confirm eligibility",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_8",
+        "category": "clinical",
+        "description": "REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_9",
+        "category": "prior_therapy",
+        "description": "REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to pre-registration as confirmed via clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_10",
+        "category": "clinical",
+        "description": "REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21) NOTE: Only individuals who pass the TICS-M during pre-registration will be invited to participate in the urine substudy",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_11",
+        "category": "clinical",
+        "description": "REGISTRATION: Receive physician's clearance to participate in an exercise program",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_12",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: Stage 0 breast cancer diagnosis OR metastatic disease",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_13",
+        "category": "prior_therapy",
+        "description": "PRE-REGISTRATION: Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_14",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: Planned surgery during the intervention period",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_15",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_16",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_17",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: Unwilling to return to enrolling institution for follow-up",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_18",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: Self-reported inability to walk without assistance or devices",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_19",
+        "category": "comorbidity",
+        "description": "REGISTRATION: History of stroke, transient ischemic attack, other neurological disorders, or brain surgery involving tissue removal as confirmed via clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_20",
+        "category": "clinical",
+        "description": "REGISTRATION: Clinically significant TICS-M score (< 21) during baseline procedures",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_21",
+        "category": "clinical",
+        "description": "REGISTRATION: Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_22",
+        "category": "clinical",
+        "description": "REGISTRATION: Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_23",
+        "category": "clinical",
+        "description": "REGISTRATION: Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_24",
+        "category": "clinical",
+        "description": "REGISTRATION: Enrolled in another physical activity program",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_25",
+        "category": "clinical",
+        "description": "REGISTRATION: Unable to walk without assistance or devices",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_26",
+        "category": "clinical",
+        "description": "REGISTRATION: Unwilling to complete study requirements",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_27",
+        "category": "clinical",
+        "description": "REGISTRATION: Unwilling to be randomized to the exercise group or health education group",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_28",
+        "category": "clinical",
+        "description": "REGISTRATION: Unable or unwilling to continuously wear and regularly sync/charge an activity tracker during the study period",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_29",
+        "category": "clinical",
+        "description": "REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_30",
+        "category": "clinical",
+        "description": "REGISTRATION: Unwilling to return to enrolling institution for follow-up",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT04816006",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 50 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 50,
+          "unit": "years",
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 56,
+        "reason": "PASS: age = 56 (required: gte 50)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_SEX",
+          "category": "demographic",
+          "description": "Sex: FEMALE",
+          "field": "sex",
+          "operator": "eq",
+          "value": "female",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "female",
+        "reason": "PASS: sex = female (required: eq female)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_2",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-431f0f4d-3aef-4dd2-a8bf-8b048791776f', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination\" Inclusion criterion. Must meet this.\\n\\nWe have raw narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So she meets the rule. Structured profile also says stage II. So pass.\\n\\nWe must output JSON with status \"pass\" and reason referencing facts: e.g., \"She has stage II breast cancer per narrative.\" Provide reason.\\n\\nWe must use the provided JSON tool schema. The schema is not explicitly given but we can infer: likely something like { \"status\": \"...\", \"reason\": \"...\" }. The instructions: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output JSON. The tool schema is not provided but we can guess: maybe { \"status\": \"pass\", \"reason\": \"...\" }. We\\'ll output that.\\n\\nThus final answer: JSON with status pass and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_200db9f1-6b0a-42c1-8844-1caa8fb46893', function=Function(arguments='{\"reason\":\"The narrative states she completed chemotherapy for stage II breast cancer, which falls within the required stage I-IIIa.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130975, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_3023a70d60', usage=CompletionUsage(completion_tokens=279, prompt_tokens=1127, total_tokens=1406, completion_time=0.395342743, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.065925718, prompt_tokens_details=None, queue_time=0.031947144, total_time=0.461268461), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5c34evfaygms8x0bym3q', debug=None, seed=2081077430, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-5a4ca63f-e744-4299-a199-2054e8bacded', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination\" Inclusion criterion. Must meet this.\\n\\nWe have raw narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So she meets the rule. Structured profile also says stage II. So pass.\\n\\nWe must output JSON with status \"pass\" and reason referencing facts: e.g., \"She has stage II breast cancer per narrative.\" Provide reason.\\n\\nWe must use the provided JSON tool schema. The schema is not explicitly given but we can infer: likely something like { \"status\": \"...\", \"reason\": \"...\" }. The instructions: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output JSON. The tool schema is not provided but we can guess: maybe { \"status\": \"pass\", \"reason\": \"...\" }. We\\'ll output that.\\n\\nThus final answer: JSON with status pass and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_e1979860-1634-472c-ac19-1d5a050be419', function=Function(arguments='{\"reason\":\"The narrative states she completed chemotherapy for stage II breast cancer, which falls within the required stage I-IIIa.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130976, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_996f667773', usage=CompletionUsage(completion_tokens=279, prompt_tokens=1127, total_tokens=1406, completion_time=0.321441469, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.060730454, prompt_tokens_details=None, queue_time=0.033487074, total_time=0.382171923), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5cmcfhd8gm5t98nkafs0', debug=None, seed=798838491, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-ed6e22b0-5a9d-4d70-9852-08f1715ef974', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination\" Inclusion criterion. Must meet this.\\n\\nWe have raw narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So she meets the rule. Structured profile also says stage II. So pass.\\n\\nWe must output JSON with status \"pass\" and reason referencing facts: e.g., \"She has stage II breast cancer per narrative.\" Provide reason.\\n\\nWe must use the provided JSON tool schema. The schema is not explicitly given but we can infer: likely something like { \"status\": \"...\", \"reason\": \"...\" }. The instructions: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output JSON. The tool schema is not provided but we can guess: maybe { \"status\": \"pass\", \"reason\": \"...\" }. We\\'ll output that.\\n\\nThus final answer: JSON with status pass and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_5ea162e6-96c4-46a3-be03-6b29486a97b4', function=Function(arguments='{\"reason\":\"The narrative states she completed chemotherapy for stage II breast cancer, which falls within the required stage I-IIIa.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130976, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_3023a70d60', usage=CompletionUsage(completion_tokens=279, prompt_tokens=1127, total_tokens=1406, completion_time=0.375324207, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.009028112, prompt_tokens_details=PromptTokensDetails(cached_tokens=1024), queue_time=0.032547297, total_time=0.384352319), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5d2yfhfts72x5vrae8qb', debug=None, seed=508789612, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_3",
+          "category": "prior_therapy",
+          "description": "PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative confirms chemotherapy completion 18 months ago but does not state whether surgery was performed."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_4",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 180,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on exercise activity provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_5",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-f0bff60b-c316-4dff-918e-e704d2cf828d', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance\" Inclusion criterion. So we need to determine if patient meets this rule. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" The rule is about self-reported ability to complete assessments by themselves or with assistance. Does the narrative mention that? It says she reports cognitive complaints, but does she have ability to complete assessments? The neuropsychological evaluation reveals moderate-to-severe dementia. That suggests she may have difficulty. But the rule says \"self-reported ability to complete assessments by themselves or with assistance.\" The narrative does not explicitly state that she can complete assessments. It says she reports cognitive complaints. It doesn\\'t say she can complete assessments. The structured profile has no info. So we have missing data. According to guidelines: If data required to answer rule is missing, return indeterminate. So status: indeterminate. Reason: \"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_dda3786f-3a86-4e9a-8adf-ab4e43fc6afe', function=Function(arguments='{\"reason\":\"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130978, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_d6de37e6be', usage=CompletionUsage(completion_tokens=311, prompt_tokens=1119, total_tokens=1430, completion_time=0.319508367, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=273), prompt_time=0.059218159, prompt_tokens_details=None, queue_time=0.032603777, total_time=0.378726526), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5f1cezvrcnzc5dcxeekm', debug=None, seed=802694416, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-b9c0f8e5-1bd6-4344-8b60-49bdc449d6fb', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance\" Inclusion criterion. So we need to determine if patient meets this rule. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" The rule is about self-reported ability to complete assessments by themselves or with assistance. Does the narrative mention that? It says she reports cognitive complaints, but does she have ability to complete assessments? The neuropsychological evaluation reveals moderate-to-severe dementia. That suggests she may have difficulty. But the rule says \"self-reported ability to complete assessments by themselves or with assistance.\" The narrative does not explicitly state that she can complete assessments. It says she reports cognitive complaints. It doesn\\'t say she can complete assessments. The structured profile has no info. So we have missing data. According to guidelines: If data required to answer rule is missing, return indeterminate. So status: indeterminate. Reason: \"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_a45db8eb-c949-477a-8a25-7d79c7e0712c', function=Function(arguments='{\"reason\":\"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130979, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_d6de37e6be', usage=CompletionUsage(completion_tokens=311, prompt_tokens=1119, total_tokens=1430, completion_time=0.336701379, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=273), prompt_time=0.01911997, prompt_tokens_details=PromptTokensDetails(cached_tokens=1024), queue_time=0.032415909, total_time=0.355821349), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5ffwea3v8kqa15jb4nea', debug=None, seed=1275385179, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-595286e7-0ebb-42e1-ae7e-bfbca9d0d4e9', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance\" Inclusion criterion. So we need to determine if patient meets this rule. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" The rule is about self-reported ability to complete assessments by themselves or with assistance. Does the narrative mention that? It says she reports cognitive complaints, but does she have ability to complete assessments? The neuropsychological evaluation reveals moderate-to-severe dementia. That suggests she may have difficulty. But the rule says \"self-reported ability to complete assessments by themselves or with assistance.\" The narrative does not explicitly state that she can complete assessments. It says she reports cognitive complaints. It doesn\\'t say she can complete assessments. The structured profile has no info. So we have missing data. According to guidelines: If data required to answer rule is missing, return indeterminate. So status: indeterminate. Reason: \"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_e2aae1d3-1483-4ede-a3f2-9df3b7d2f740', function=Function(arguments='{\"reason\":\"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130979, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_92d51d08e5', usage=CompletionUsage(completion_tokens=311, prompt_tokens=1119, total_tokens=1430, completion_time=0.327371624, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=273), prompt_time=0.060103302, prompt_tokens_details=None, queue_time=0.003045406, total_time=0.387474926), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5fy0estsvt3rc4889m0h', debug=None, seed=1066737322, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_7",
+          "category": "clinical",
+          "description": "REGISTRATION: Able to provide medical record release to confirm eligibility",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information provided about medical record release ability"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_8",
+          "category": "clinical",
+          "description": "REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-b0116535-c1ae-48ca-8b6b-7e60073be7d5', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination\" Inclusion criterion. Must meet this. We need to check if patient meets: primary diagnosis of stage I-IIIa breast cancer. The narrative says: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So passes. Structured profile says \"cancer_stage\":\"II\". So consistent. So status \"pass\". Provide reason: \"Patient has stage II breast cancer, which is within the I-IIIa range.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_0d4b976d-0fd2-42a9-a538-664e96359a71', function=Function(arguments='{\"reason\":\"Patient has stage II breast cancer, which is within the I-IIIa range.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130980, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_976a85d17a', usage=CompletionUsage(completion_tokens=177, prompt_tokens=1122, total_tokens=1299, completion_time=0.206672124, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=139), prompt_time=0.090239127, prompt_tokens_details=None, queue_time=0.044536655, total_time=0.296911251), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5gzrew8958dpwatg22sk', debug=None, seed=2133404045, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-836dadd8-bf95-4fe8-ba46-40ecf7f0fd34', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination\" Inclusion criterion. Must meet this. We need to check if patient meets: primary diagnosis of stage I-IIIa breast cancer. The narrative says: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So passes. Structured profile says \"cancer_stage\":\"II\". So consistent. So status \"pass\". Reason: \"Patient has stage II breast cancer, which is within the I-IIIa range.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_f0cfdc75-4e0e-45ea-829f-292defbf9cbe', function=Function(arguments='{\"reason\":\"Patient has stage II breast cancer, which is within the I-IIIa range.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130981, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_92d51d08e5', usage=CompletionUsage(completion_tokens=176, prompt_tokens=1122, total_tokens=1298, completion_time=0.188221107, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=138), prompt_time=0.286874468, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.033107553, total_time=0.475095575), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5hc1ew99e2kbrp1cd7kp', debug=None, seed=479550861, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-1fd2f897-6ea1-4ff5-8ca2-4ace264097a7', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination\" Inclusion criterion. Must meet this. We need to check if patient meets: primary diagnosis of stage I-IIIa breast cancer. The narrative says: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So passes. Structured profile says \"cancer_stage\":\"II\". So consistent. So status \"pass\". Provide reason: \"Patient has stage II breast cancer, which is within the I-IIIa range.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_72260d89-1688-4e28-aa18-a6e24d93d228', function=Function(arguments='{\"reason\":\"Patient has stage II breast cancer, which is within the I\u2011IIIa range.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130981, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_3023a70d60', usage=CompletionUsage(completion_tokens=177, prompt_tokens=1122, total_tokens=1299, completion_time=0.188053016, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=139), prompt_time=0.06902267, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.032848819, total_time=0.257075686), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5hxnefzse1tgcrrc3rjn', debug=None, seed=1514449404, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_9",
+          "category": "prior_therapy",
+          "description": "REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to pre-registration as confirmed via clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Completed chemotherapy 18 months ago, within the 3\u201136 month window, and had adjuvant therapy indicating post\u2011surgery treatment"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_10",
+          "category": "clinical",
+          "description": "REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21) NOTE: Only individuals who pass the TICS-M during pre-registration will be invited to participate in the urine substudy",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: TICS-M score not reported in the record."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_11",
+          "category": "clinical",
+          "description": "REGISTRATION: Receive physician's clearance to participate in an exercise program",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documentation of physician clearance for exercise program"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_12",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Stage 0 breast cancer diagnosis OR metastatic disease",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient has stage II breast cancer, not stage 0 or metastatic."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_13",
+          "category": "prior_therapy",
+          "description": "PRE-REGISTRATION: Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-3e11c2c5-0bb0-4335-97b7-75ecdd7018fd', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment. Exclusion criterion: Patient MUST NOT meet this. So if patient meets rule, they are excluded. We need to determine if patient meets rule. The rule says: \"Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment.\" So if patient is currently receiving or within 3 months of receiving chemo/radiation, or if they are >36 months post primary treatment, they are excluded. The patient: 56-year-old woman, completed chemotherapy for stage II breast cancer 18 months ago. So 18 months post primary treatment. That is less than 36 months. Also not currently receiving. So they do NOT meet the rule. So they pass the rule. So status \"pass\". Reason: She completed chemotherapy 18 months ago, which is less than 36 months post primary treatment and not within 3 months of therapy. So she does not meet the exclusion criterion. Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_323e6b88-0ff2-4ffc-9813-e1b6d68c7b68', function=Function(arguments='{\"reason\":\"She completed chemotherapy 18 months ago, which is less than 36 months post\u2011treatment and not within 3 months of therapy, so she does not meet the exclusion criterion.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130985, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_34cb00738d', usage=CompletionUsage(completion_tokens=292, prompt_tokens=1134, total_tokens=1426, completion_time=0.314382695, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.055410445, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.032381532, total_time=0.36979314), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5nzwet8aa1s4yyht19tq', debug=None, seed=835996513, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-2f45d0ca-d07d-413b-a454-4d184a4c1333', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment. Exclusion criterion: Patient MUST NOT meet this. So if patient meets rule, they are excluded. We need to determine if patient meets rule. The rule says: \"Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment.\" So if patient is currently receiving or within 3 months of receiving chemo/radiation, or if they are >36 months post primary treatment, they are excluded. The patient: 56-year-old woman, completed chemotherapy for stage II breast cancer 18 months ago. So 18 months post primary treatment. That is less than 36 months. Also not currently receiving. So they do NOT meet the rule. So they pass the rule. So status \"pass\". Reason: She completed chemotherapy 18 months ago, which is less than 36 months post primary treatment and not within 3 months of therapy. So she does not meet the exclusion criterion. Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_5255723e-2034-4a68-8ee1-f02341357567', function=Function(arguments='{\"reason\":\"She completed chemotherapy 18 months ago, which is less than 36 months post\u2011treatment and not within 3 months of therapy, so she does not meet the exclusion criterion.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130986, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_34cb00738d', usage=CompletionUsage(completion_tokens=292, prompt_tokens=1134, total_tokens=1426, completion_time=0.31744966, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.009417521, prompt_tokens_details=PromptTokensDetails(cached_tokens=1024), queue_time=0.032686582, total_time=0.326867181), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5pe0eaht8mrneanjd7g9', debug=None, seed=1493294295, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-3fad2945-50a2-4729-8c10-452accdb45a9', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment. Exclusion criterion: Patient MUST NOT meet this. So if patient meets rule, they are excluded. We need to determine if patient meets rule. The rule says: \"Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment.\" So if patient is currently receiving or within 3 months of receiving chemo/radiation, or if they are >36 months post primary treatment, they are excluded. So we need to see if patient meets either condition.\\n\\nPatient: 56-year-old woman, completed chemotherapy for stage II breast cancer 18 months ago. So 18 months post primary treatment. That is less than 36 months. She is not currently receiving chemo. So she does not meet the rule. So she passes the rule. So status \"pass\". Reason: She completed chemotherapy 18 months ago, which is less than 36 months post primary treatment and not within 3 months of therapy. So she does not meet the exclusion criterion. Provide reason referencing facts. So JSON: status: \"pass\", reason: \"She completed chemotherapy 18 months ago, which is less than 36 months post primary treatment and not within 3 months of therapy.\"', tool_calls=[ChatCompletionMessageToolCall(id='fc_d3143fe5-55dc-4ce2-92c4-5e0575c058ff', function=Function(arguments='{\"reason\":\"She completed chemotherapy 18 months ago, which is less than 36 months post primary treatment and not within 3 months of therapy.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130986, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_35b6cecc66', usage=CompletionUsage(completion_tokens=334, prompt_tokens=1134, total_tokens=1468, completion_time=0.371225246, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=286), prompt_time=0.060408615, prompt_tokens_details=None, queue_time=0.003085473, total_time=0.431633861), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5ptvf05t525kgvj6m3h5', debug=None, seed=1082864771, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_14",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Planned surgery during the intervention period",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about planned surgery during intervention period"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_15",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-cc7e295b-52a1-4d06-a79d-3053f4b07284', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer). Rule type: Exclusion Criterion (Patient MUST NOT meet this). So if patient has a second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ), they fail. We need to determine if patient has a second cancer diagnosis. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" No mention of a second cancer. Structured profile: primary_diagnosis \"breast cancer\". No other cancers. So no second cancer. So patient passes the rule. So status \"pass\". Reason: \"Patient has only breast cancer, no second cancer diagnosis.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_106740e0-de15-47c1-b3d7-294982194acd', function=Function(arguments='{\"reason\":\"Patient has only breast cancer, no second cancer diagnosis.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130988, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_1074f9ce08', usage=CompletionUsage(completion_tokens=238, prompt_tokens=1126, total_tokens=1364, completion_time=0.259872082, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=206), prompt_time=0.067570879, prompt_tokens_details=None, queue_time=0.07219739, total_time=0.327442961), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5r2tfk5vfd3fqam6wc3a', debug=None, seed=1034662357, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-0b9bd257-78a6-4642-aafa-682b99fecaa0', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer). Rule type: Exclusion Criterion (Patient MUST NOT meet this). So if patient has a second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ), they fail. We need to determine if patient has a second cancer diagnosis. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" So only cancer diagnosis is breast cancer. No mention of second cancer. Structured profile: primary_diagnosis \"breast cancer\". No other cancers. So no second cancer. So patient passes the rule. So status \"pass\". Reason: \"Patient has only one cancer diagnosis (breast cancer) and no second cancer.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_72410b75-2f83-4cee-9672-2f29d1fb4d82', function=Function(arguments='{\"reason\":\"Patient has only one cancer diagnosis (breast cancer) and no second cancer.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130988, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_2b688e7cc3', usage=CompletionUsage(completion_tokens=255, prompt_tokens=1126, total_tokens=1381, completion_time=0.261678629, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=218), prompt_time=0.060340464, prompt_tokens_details=None, queue_time=0.033242639, total_time=0.322019093), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5rh5fk7tynzwx9jcpkqw', debug=None, seed=1466549286, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-03cb2336-0c6d-4958-84dc-9d67d90794cd', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer). Rule type: Exclusion Criterion (Patient MUST NOT meet this). So if patient has a second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ), they fail. We need to determine if patient has a second cancer diagnosis. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" So only cancer diagnosis is breast cancer. No mention of second cancer. Structured profile: primary_diagnosis \"breast cancer\". No other cancers. So no second cancer. So patient passes the rule. So status \"pass\". Reason: \"Patient has only one cancer diagnosis (breast cancer) and no second cancer.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_14066385-831b-4f7d-a67b-547699e73d06', function=Function(arguments='{\"reason\":\"Patient has only one cancer diagnosis (breast cancer) and no second cancer.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130988, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_e2cb7a84ec', usage=CompletionUsage(completion_tokens=255, prompt_tokens=1126, total_tokens=1381, completion_time=0.287333759, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=218), prompt_time=0.064813861, prompt_tokens_details=None, queue_time=0.031616045, total_time=0.35214762), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5rxqexab39nzcv5ag6dg', debug=None, seed=902187451, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_16",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about travel ability provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_17",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Unwilling to return to enrolling institution for follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about willingness to return for follow-up"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_18",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Self-reported inability to walk without assistance or devices",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on walking ability provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_19",
+          "category": "comorbidity",
+          "description": "REGISTRATION: History of stroke, transient ischemic attack, other neurological disorders, or brain surgery involving tissue removal as confirmed via clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient has a documented diagnosis of early Alzheimer\u2019s disease, an other neurological disorder, which meets the exclusion criterion."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_20",
+          "category": "clinical",
+          "description": "REGISTRATION: Clinically significant TICS-M score (< 21) during baseline procedures",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: TICS-M score not reported in the narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_21",
+          "category": "clinical",
+          "description": "REGISTRATION: Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on exercise test or physician re-clearance provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_22",
+          "category": "clinical",
+          "description": "REGISTRATION: Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on fMRI contraindications provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_23",
+          "category": "clinical",
+          "description": "REGISTRATION: Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No MRI information provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_24",
+          "category": "clinical",
+          "description": "REGISTRATION: Enrolled in another physical activity program",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about enrollment in another physical activity program"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_25",
+          "category": "clinical",
+          "description": "REGISTRATION: Unable to walk without assistance or devices",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on walking ability provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_26",
+          "category": "clinical",
+          "description": "REGISTRATION: Unwilling to complete study requirements",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on willingness to complete study requirements"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_27",
+          "category": "clinical",
+          "description": "REGISTRATION: Unwilling to be randomized to the exercise group or health education group",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on willingness to be randomized to exercise or health education group"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_28",
+          "category": "clinical",
+          "description": "REGISTRATION: Unable or unwilling to continuously wear and regularly sync/charge an activity tracker during the study period",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about activity tracker usage or willingness provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_29",
+          "category": "clinical",
+          "description": "REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Travel ability not documented in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_30",
+          "category": "clinical",
+          "description": "REGISTRATION: Unwilling to return to enrolling institution for follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about willingness to return for follow-up"
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_19",
+          "category": "comorbidity",
+          "description": "REGISTRATION: History of stroke, transient ischemic attack, other neurological disorders, or brain surgery involving tissue removal as confirmed via clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient has a documented diagnosis of early Alzheimer\u2019s disease, an other neurological disorder, which meets the exclusion criterion."
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_2",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-431f0f4d-3aef-4dd2-a8bf-8b048791776f', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination\" Inclusion criterion. Must meet this.\\n\\nWe have raw narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So she meets the rule. Structured profile also says stage II. So pass.\\n\\nWe must output JSON with status \"pass\" and reason referencing facts: e.g., \"She has stage II breast cancer per narrative.\" Provide reason.\\n\\nWe must use the provided JSON tool schema. The schema is not explicitly given but we can infer: likely something like { \"status\": \"...\", \"reason\": \"...\" }. The instructions: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output JSON. The tool schema is not provided but we can guess: maybe { \"status\": \"pass\", \"reason\": \"...\" }. We\\'ll output that.\\n\\nThus final answer: JSON with status pass and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_200db9f1-6b0a-42c1-8844-1caa8fb46893', function=Function(arguments='{\"reason\":\"The narrative states she completed chemotherapy for stage II breast cancer, which falls within the required stage I-IIIa.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130975, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_3023a70d60', usage=CompletionUsage(completion_tokens=279, prompt_tokens=1127, total_tokens=1406, completion_time=0.395342743, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.065925718, prompt_tokens_details=None, queue_time=0.031947144, total_time=0.461268461), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5c34evfaygms8x0bym3q', debug=None, seed=2081077430, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-5a4ca63f-e744-4299-a199-2054e8bacded', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination\" Inclusion criterion. Must meet this.\\n\\nWe have raw narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So she meets the rule. Structured profile also says stage II. So pass.\\n\\nWe must output JSON with status \"pass\" and reason referencing facts: e.g., \"She has stage II breast cancer per narrative.\" Provide reason.\\n\\nWe must use the provided JSON tool schema. The schema is not explicitly given but we can infer: likely something like { \"status\": \"...\", \"reason\": \"...\" }. The instructions: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output JSON. The tool schema is not provided but we can guess: maybe { \"status\": \"pass\", \"reason\": \"...\" }. We\\'ll output that.\\n\\nThus final answer: JSON with status pass and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_e1979860-1634-472c-ac19-1d5a050be419', function=Function(arguments='{\"reason\":\"The narrative states she completed chemotherapy for stage II breast cancer, which falls within the required stage I-IIIa.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130976, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_996f667773', usage=CompletionUsage(completion_tokens=279, prompt_tokens=1127, total_tokens=1406, completion_time=0.321441469, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.060730454, prompt_tokens_details=None, queue_time=0.033487074, total_time=0.382171923), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5cmcfhd8gm5t98nkafs0', debug=None, seed=798838491, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-ed6e22b0-5a9d-4d70-9852-08f1715ef974', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination\" Inclusion criterion. Must meet this.\\n\\nWe have raw narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So she meets the rule. Structured profile also says stage II. So pass.\\n\\nWe must output JSON with status \"pass\" and reason referencing facts: e.g., \"She has stage II breast cancer per narrative.\" Provide reason.\\n\\nWe must use the provided JSON tool schema. The schema is not explicitly given but we can infer: likely something like { \"status\": \"...\", \"reason\": \"...\" }. The instructions: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output JSON. The tool schema is not provided but we can guess: maybe { \"status\": \"pass\", \"reason\": \"...\" }. We\\'ll output that.\\n\\nThus final answer: JSON with status pass and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_5ea162e6-96c4-46a3-be03-6b29486a97b4', function=Function(arguments='{\"reason\":\"The narrative states she completed chemotherapy for stage II breast cancer, which falls within the required stage I-IIIa.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130976, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_3023a70d60', usage=CompletionUsage(completion_tokens=279, prompt_tokens=1127, total_tokens=1406, completion_time=0.375324207, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.009028112, prompt_tokens_details=PromptTokensDetails(cached_tokens=1024), queue_time=0.032547297, total_time=0.384352319), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5d2yfhfts72x5vrae8qb', debug=None, seed=508789612, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_3",
+          "category": "prior_therapy",
+          "description": "PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative confirms chemotherapy completion 18 months ago but does not state whether surgery was performed."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_4",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 180,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on exercise activity provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_5",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-f0bff60b-c316-4dff-918e-e704d2cf828d', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance\" Inclusion criterion. So we need to determine if patient meets this rule. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" The rule is about self-reported ability to complete assessments by themselves or with assistance. Does the narrative mention that? It says she reports cognitive complaints, but does she have ability to complete assessments? The neuropsychological evaluation reveals moderate-to-severe dementia. That suggests she may have difficulty. But the rule says \"self-reported ability to complete assessments by themselves or with assistance.\" The narrative does not explicitly state that she can complete assessments. It says she reports cognitive complaints. It doesn\\'t say she can complete assessments. The structured profile has no info. So we have missing data. According to guidelines: If data required to answer rule is missing, return indeterminate. So status: indeterminate. Reason: \"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_dda3786f-3a86-4e9a-8adf-ab4e43fc6afe', function=Function(arguments='{\"reason\":\"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130978, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_d6de37e6be', usage=CompletionUsage(completion_tokens=311, prompt_tokens=1119, total_tokens=1430, completion_time=0.319508367, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=273), prompt_time=0.059218159, prompt_tokens_details=None, queue_time=0.032603777, total_time=0.378726526), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5f1cezvrcnzc5dcxeekm', debug=None, seed=802694416, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-b9c0f8e5-1bd6-4344-8b60-49bdc449d6fb', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance\" Inclusion criterion. So we need to determine if patient meets this rule. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" The rule is about self-reported ability to complete assessments by themselves or with assistance. Does the narrative mention that? It says she reports cognitive complaints, but does she have ability to complete assessments? The neuropsychological evaluation reveals moderate-to-severe dementia. That suggests she may have difficulty. But the rule says \"self-reported ability to complete assessments by themselves or with assistance.\" The narrative does not explicitly state that she can complete assessments. It says she reports cognitive complaints. It doesn\\'t say she can complete assessments. The structured profile has no info. So we have missing data. According to guidelines: If data required to answer rule is missing, return indeterminate. So status: indeterminate. Reason: \"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_a45db8eb-c949-477a-8a25-7d79c7e0712c', function=Function(arguments='{\"reason\":\"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130979, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_d6de37e6be', usage=CompletionUsage(completion_tokens=311, prompt_tokens=1119, total_tokens=1430, completion_time=0.336701379, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=273), prompt_time=0.01911997, prompt_tokens_details=PromptTokensDetails(cached_tokens=1024), queue_time=0.032415909, total_time=0.355821349), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5ffwea3v8kqa15jb4nea', debug=None, seed=1275385179, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-595286e7-0ebb-42e1-ae7e-bfbca9d0d4e9', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance\" Inclusion criterion. So we need to determine if patient meets this rule. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" The rule is about self-reported ability to complete assessments by themselves or with assistance. Does the narrative mention that? It says she reports cognitive complaints, but does she have ability to complete assessments? The neuropsychological evaluation reveals moderate-to-severe dementia. That suggests she may have difficulty. But the rule says \"self-reported ability to complete assessments by themselves or with assistance.\" The narrative does not explicitly state that she can complete assessments. It says she reports cognitive complaints. It doesn\\'t say she can complete assessments. The structured profile has no info. So we have missing data. According to guidelines: If data required to answer rule is missing, return indeterminate. So status: indeterminate. Reason: \"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_e2aae1d3-1483-4ede-a3f2-9df3b7d2f740', function=Function(arguments='{\"reason\":\"No explicit statement that Mrs. Bernstein can complete assessments by herself or with assistance.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130979, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_92d51d08e5', usage=CompletionUsage(completion_tokens=311, prompt_tokens=1119, total_tokens=1430, completion_time=0.327371624, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=273), prompt_time=0.060103302, prompt_tokens_details=None, queue_time=0.003045406, total_time=0.387474926), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5fy0estsvt3rc4889m0h', debug=None, seed=1066737322, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_7",
+          "category": "clinical",
+          "description": "REGISTRATION: Able to provide medical record release to confirm eligibility",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information provided about medical record release ability"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_8",
+          "category": "clinical",
+          "description": "REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-b0116535-c1ae-48ca-8b6b-7e60073be7d5', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination\" Inclusion criterion. Must meet this. We need to check if patient meets: primary diagnosis of stage I-IIIa breast cancer. The narrative says: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So passes. Structured profile says \"cancer_stage\":\"II\". So consistent. So status \"pass\". Provide reason: \"Patient has stage II breast cancer, which is within the I-IIIa range.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_0d4b976d-0fd2-42a9-a538-664e96359a71', function=Function(arguments='{\"reason\":\"Patient has stage II breast cancer, which is within the I-IIIa range.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130980, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_976a85d17a', usage=CompletionUsage(completion_tokens=177, prompt_tokens=1122, total_tokens=1299, completion_time=0.206672124, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=139), prompt_time=0.090239127, prompt_tokens_details=None, queue_time=0.044536655, total_time=0.296911251), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5gzrew8958dpwatg22sk', debug=None, seed=2133404045, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-836dadd8-bf95-4fe8-ba46-40ecf7f0fd34', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination\" Inclusion criterion. Must meet this. We need to check if patient meets: primary diagnosis of stage I-IIIa breast cancer. The narrative says: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So passes. Structured profile says \"cancer_stage\":\"II\". So consistent. So status \"pass\". Reason: \"Patient has stage II breast cancer, which is within the I-IIIa range.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_f0cfdc75-4e0e-45ea-829f-292defbf9cbe', function=Function(arguments='{\"reason\":\"Patient has stage II breast cancer, which is within the I-IIIa range.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130981, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_92d51d08e5', usage=CompletionUsage(completion_tokens=176, prompt_tokens=1122, total_tokens=1298, completion_time=0.188221107, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=138), prompt_time=0.286874468, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.033107553, total_time=0.475095575), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5hc1ew99e2kbrp1cd7kp', debug=None, seed=479550861, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-1fd2f897-6ea1-4ff5-8ca2-4ace264097a7', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination\" Inclusion criterion. Must meet this. We need to check if patient meets: primary diagnosis of stage I-IIIa breast cancer. The narrative says: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago\". So stage II is within I-IIIa. So passes. Structured profile says \"cancer_stage\":\"II\". So consistent. So status \"pass\". Provide reason: \"Patient has stage II breast cancer, which is within the I-IIIa range.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_72260d89-1688-4e28-aa18-a6e24d93d228', function=Function(arguments='{\"reason\":\"Patient has stage II breast cancer, which is within the I\u2011IIIa range.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130981, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_3023a70d60', usage=CompletionUsage(completion_tokens=177, prompt_tokens=1122, total_tokens=1299, completion_time=0.188053016, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=139), prompt_time=0.06902267, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.032848819, total_time=0.257075686), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5hxnefzse1tgcrrc3rjn', debug=None, seed=1514449404, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_10",
+          "category": "clinical",
+          "description": "REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21) NOTE: Only individuals who pass the TICS-M during pre-registration will be invited to participate in the urine substudy",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: TICS-M score not reported in the record."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_11",
+          "category": "clinical",
+          "description": "REGISTRATION: Receive physician's clearance to participate in an exercise program",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documentation of physician clearance for exercise program"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_13",
+          "category": "prior_therapy",
+          "description": "PRE-REGISTRATION: Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-3e11c2c5-0bb0-4335-97b7-75ecdd7018fd', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment. Exclusion criterion: Patient MUST NOT meet this. So if patient meets rule, they are excluded. We need to determine if patient meets rule. The rule says: \"Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment.\" So if patient is currently receiving or within 3 months of receiving chemo/radiation, or if they are >36 months post primary treatment, they are excluded. The patient: 56-year-old woman, completed chemotherapy for stage II breast cancer 18 months ago. So 18 months post primary treatment. That is less than 36 months. Also not currently receiving. So they do NOT meet the rule. So they pass the rule. So status \"pass\". Reason: She completed chemotherapy 18 months ago, which is less than 36 months post primary treatment and not within 3 months of therapy. So she does not meet the exclusion criterion. Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_323e6b88-0ff2-4ffc-9813-e1b6d68c7b68', function=Function(arguments='{\"reason\":\"She completed chemotherapy 18 months ago, which is less than 36 months post\u2011treatment and not within 3 months of therapy, so she does not meet the exclusion criterion.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130985, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_34cb00738d', usage=CompletionUsage(completion_tokens=292, prompt_tokens=1134, total_tokens=1426, completion_time=0.314382695, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.055410445, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.032381532, total_time=0.36979314), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5nzwet8aa1s4yyht19tq', debug=None, seed=835996513, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-2f45d0ca-d07d-413b-a454-4d184a4c1333', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment. Exclusion criterion: Patient MUST NOT meet this. So if patient meets rule, they are excluded. We need to determine if patient meets rule. The rule says: \"Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment.\" So if patient is currently receiving or within 3 months of receiving chemo/radiation, or if they are >36 months post primary treatment, they are excluded. The patient: 56-year-old woman, completed chemotherapy for stage II breast cancer 18 months ago. So 18 months post primary treatment. That is less than 36 months. Also not currently receiving. So they do NOT meet the rule. So they pass the rule. So status \"pass\". Reason: She completed chemotherapy 18 months ago, which is less than 36 months post primary treatment and not within 3 months of therapy. So she does not meet the exclusion criterion. Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_5255723e-2034-4a68-8ee1-f02341357567', function=Function(arguments='{\"reason\":\"She completed chemotherapy 18 months ago, which is less than 36 months post\u2011treatment and not within 3 months of therapy, so she does not meet the exclusion criterion.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130986, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_34cb00738d', usage=CompletionUsage(completion_tokens=292, prompt_tokens=1134, total_tokens=1426, completion_time=0.31744966, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.009417521, prompt_tokens_details=PromptTokensDetails(cached_tokens=1024), queue_time=0.032686582, total_time=0.326867181), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5pe0eaht8mrneanjd7g9', debug=None, seed=1493294295, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-3fad2945-50a2-4729-8c10-452accdb45a9', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment. Exclusion criterion: Patient MUST NOT meet this. So if patient meets rule, they are excluded. We need to determine if patient meets rule. The rule says: \"Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment.\" So if patient is currently receiving or within 3 months of receiving chemo/radiation, or if they are >36 months post primary treatment, they are excluded. So we need to see if patient meets either condition.\\n\\nPatient: 56-year-old woman, completed chemotherapy for stage II breast cancer 18 months ago. So 18 months post primary treatment. That is less than 36 months. She is not currently receiving chemo. So she does not meet the rule. So she passes the rule. So status \"pass\". Reason: She completed chemotherapy 18 months ago, which is less than 36 months post primary treatment and not within 3 months of therapy. So she does not meet the exclusion criterion. Provide reason referencing facts. So JSON: status: \"pass\", reason: \"She completed chemotherapy 18 months ago, which is less than 36 months post primary treatment and not within 3 months of therapy.\"', tool_calls=[ChatCompletionMessageToolCall(id='fc_d3143fe5-55dc-4ce2-92c4-5e0575c058ff', function=Function(arguments='{\"reason\":\"She completed chemotherapy 18 months ago, which is less than 36 months post primary treatment and not within 3 months of therapy.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130986, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_35b6cecc66', usage=CompletionUsage(completion_tokens=334, prompt_tokens=1134, total_tokens=1468, completion_time=0.371225246, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=286), prompt_time=0.060408615, prompt_tokens_details=None, queue_time=0.003085473, total_time=0.431633861), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5ptvf05t525kgvj6m3h5', debug=None, seed=1082864771, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_14",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Planned surgery during the intervention period",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about planned surgery during intervention period"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_15",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-cc7e295b-52a1-4d06-a79d-3053f4b07284', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer). Rule type: Exclusion Criterion (Patient MUST NOT meet this). So if patient has a second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ), they fail. We need to determine if patient has a second cancer diagnosis. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" No mention of a second cancer. Structured profile: primary_diagnosis \"breast cancer\". No other cancers. So no second cancer. So patient passes the rule. So status \"pass\". Reason: \"Patient has only breast cancer, no second cancer diagnosis.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_106740e0-de15-47c1-b3d7-294982194acd', function=Function(arguments='{\"reason\":\"Patient has only breast cancer, no second cancer diagnosis.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130988, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_1074f9ce08', usage=CompletionUsage(completion_tokens=238, prompt_tokens=1126, total_tokens=1364, completion_time=0.259872082, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=206), prompt_time=0.067570879, prompt_tokens_details=None, queue_time=0.07219739, total_time=0.327442961), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5r2tfk5vfd3fqam6wc3a', debug=None, seed=1034662357, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-0b9bd257-78a6-4642-aafa-682b99fecaa0', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer). Rule type: Exclusion Criterion (Patient MUST NOT meet this). So if patient has a second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ), they fail. We need to determine if patient has a second cancer diagnosis. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" So only cancer diagnosis is breast cancer. No mention of second cancer. Structured profile: primary_diagnosis \"breast cancer\". No other cancers. So no second cancer. So patient passes the rule. So status \"pass\". Reason: \"Patient has only one cancer diagnosis (breast cancer) and no second cancer.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_72410b75-2f83-4cee-9672-2f29d1fb4d82', function=Function(arguments='{\"reason\":\"Patient has only one cancer diagnosis (breast cancer) and no second cancer.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130988, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_2b688e7cc3', usage=CompletionUsage(completion_tokens=255, prompt_tokens=1126, total_tokens=1381, completion_time=0.261678629, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=218), prompt_time=0.060340464, prompt_tokens_details=None, queue_time=0.033242639, total_time=0.322019093), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5rh5fk7tynzwx9jcpkqw', debug=None, seed=1466549286, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-03cb2336-0c6d-4958-84dc-9d67d90794cd', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: PRE-REGISTRATION: Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer). Rule type: Exclusion Criterion (Patient MUST NOT meet this). So if patient has a second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ), they fail. We need to determine if patient has a second cancer diagnosis. The narrative: \"Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer\\'s disease predating her cancer diagnosis.\" So only cancer diagnosis is breast cancer. No mention of second cancer. Structured profile: primary_diagnosis \"breast cancer\". No other cancers. So no second cancer. So patient passes the rule. So status \"pass\". Reason: \"Patient has only one cancer diagnosis (breast cancer) and no second cancer.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_14066385-831b-4f7d-a67b-547699e73d06', function=Function(arguments='{\"reason\":\"Patient has only one cancer diagnosis (breast cancer) and no second cancer.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777130988, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_e2cb7a84ec', usage=CompletionUsage(completion_tokens=255, prompt_tokens=1126, total_tokens=1381, completion_time=0.287333759, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=218), prompt_time=0.064813861, prompt_tokens_details=None, queue_time=0.031616045, total_time=0.35214762), usage_breakdown=None, x_groq=XGroq(id='req_01kq2m5rxqexab39nzcv5ag6dg', debug=None, seed=902187451, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_16",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about travel ability provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_17",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Unwilling to return to enrolling institution for follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about willingness to return for follow-up"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_18",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Self-reported inability to walk without assistance or devices",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on walking ability provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_20",
+          "category": "clinical",
+          "description": "REGISTRATION: Clinically significant TICS-M score (< 21) during baseline procedures",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: TICS-M score not reported in the narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_21",
+          "category": "clinical",
+          "description": "REGISTRATION: Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on exercise test or physician re-clearance provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_22",
+          "category": "clinical",
+          "description": "REGISTRATION: Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on fMRI contraindications provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_23",
+          "category": "clinical",
+          "description": "REGISTRATION: Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No MRI information provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_24",
+          "category": "clinical",
+          "description": "REGISTRATION: Enrolled in another physical activity program",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about enrollment in another physical activity program"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_25",
+          "category": "clinical",
+          "description": "REGISTRATION: Unable to walk without assistance or devices",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on walking ability provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_26",
+          "category": "clinical",
+          "description": "REGISTRATION: Unwilling to complete study requirements",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on willingness to complete study requirements"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_27",
+          "category": "clinical",
+          "description": "REGISTRATION: Unwilling to be randomized to the exercise group or health education group",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on willingness to be randomized to exercise or health education group"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_28",
+          "category": "clinical",
+          "description": "REGISTRATION: Unable or unwilling to continuously wear and regularly sync/charge an activity tracker during the study period",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about activity tracker usage or willingness provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_29",
+          "category": "clinical",
+          "description": "REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Travel ability not documented in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_30",
+          "category": "clinical",
+          "description": "REGISTRATION: Unwilling to return to enrolling institution for follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about willingness to return for follow-up"
+      }
+    ]
+  },
+  "report_text": "Trial: NCT04816006\nEligible: NO\n\nFAILING CRITERIA:\n  1. [comorbidity] REGISTRATION: History of stroke, transient ischemic attack, other neurological disorders, or brain surgery involving tissue removal as confirmed via clinical determination\n     Field: unmapped_rule\n     \u2192 LLM Fallback: Patient has a documented diagnosis of early Alzheimer\u2019s disease, an other neurological disorder, which meets the exclusion criterion.\n\nINDETERMINATE (missing patient data):\n  1. [clinical] PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  2. [prior_therapy] PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  3. [clinical] PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  4. [clinical] PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  5. [clinical] REGISTRATION: Able to provide medical record release to confirm eligibility\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  6. [clinical] REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  7. [clinical] REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21) NOTE: Only individuals who pass the TICS-M during pre-registration will be invited to participate in the urine substudy\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  8. [clinical] REGISTRATION: Receive physician's clearance to participate in an exercise program\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  9. [prior_therapy] PRE-REGISTRATION: Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer, or greater than 36 months post primary treatment\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  10. [clinical] PRE-REGISTRATION: Planned surgery during the intervention period\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  11. [clinical] PRE-REGISTRATION: Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer)\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  12. [clinical] PRE-REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  13. [clinical] PRE-REGISTRATION: Unwilling to return to enrolling institution for follow-up\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  14. [clinical] PRE-REGISTRATION: Self-reported inability to walk without assistance or devices\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  15. [clinical] REGISTRATION: Clinically significant TICS-M score (< 21) during baseline procedures\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  16. [clinical] REGISTRATION: Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  17. [clinical] REGISTRATION: Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  18. [clinical] REGISTRATION: Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  19. [clinical] REGISTRATION: Enrolled in another physical activity program\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  20. [clinical] REGISTRATION: Unable to walk without assistance or devices\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  21. [clinical] REGISTRATION: Unwilling to complete study requirements\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  22. [clinical] REGISTRATION: Unwilling to be randomized to the exercise group or health education group\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  23. [clinical] REGISTRATION: Unable or unwilling to continuously wear and regularly sync/charge an activity tracker during the study period\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  24. [clinical] REGISTRATION: Unable to travel regularly to the study locations for intervention sessions and data collection\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  25. [clinical] REGISTRATION: Unwilling to return to enrolling institution for follow-up\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 4 of 30"
+}

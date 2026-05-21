@@ -1,0 +1,37 @@
+Trial: NCT06771609
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [prior_therapy] Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer;
+     Field: lines_of_therapy
+     → Data not available in patient record
+
+  2. [clinical] Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;
+     Field: ecog_score
+     → Data not available in patient record
+
+  3. [clinical] Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the 'American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.'
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [clinical] Subjects must have at least one measurable lesion present; specific reference to the 'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)' guidelines;
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [prior_therapy] Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  6. [clinical] Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  7. [clinical] Subjects are able to sign an informed consent form to participate in the study.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  8. [clinical] Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 1 of 9

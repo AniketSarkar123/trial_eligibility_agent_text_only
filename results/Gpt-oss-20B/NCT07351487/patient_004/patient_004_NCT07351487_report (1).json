@@ -1,0 +1,1051 @@
+{
+  "patient": {
+    "age": 47,
+    "sex": "female",
+    "menopausal_status": null,
+    "pregnancy_status": null,
+    "primary_diagnosis": "triple-negative breast cancer",
+    "cancer_stage": "IV",
+    "is_metastatic": true,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": "negative",
+    "pr_status": "negative",
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": null,
+    "received_adjuvant_therapy": null,
+    "has_recurrence": null,
+    "ecog_score": null,
+    "prior_therapies": [],
+    "lines_of_therapy": 0,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT07351487",
+    "title": "Neoadjuvant Chemotherapy Combined With Sintilimab and Bevacizumab for Triple Negative Breast Cancer:A Prospective, Single-Arm, Multicenter Clinical Study (NEOTORCII-BREASTO7)",
+    "conditions": [
+      "TNBC - Triple-Negative Breast Cancer"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_AGE_MAX",
+        "category": "demographic",
+        "description": "Maximum age: 75 Years",
+        "field": "age",
+        "operator": "lte",
+        "value": 75,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_SEX",
+        "category": "demographic",
+        "description": "Sex: FEMALE",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_3",
+        "category": "clinical",
+        "description": "ECOG score is 0-1 points",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ],
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_4",
+        "category": "clinical",
+        "description": "Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_5",
+        "category": "clinical",
+        "description": "ER-negative, PR-negative, and HER2 receptor-negative. Alternatively, if ER and PR expression is less than 10% and HER2 receptor is negative, it is also classified as TNBC",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_6",
+        "category": "clinical",
+        "description": "The functional level of major organs must meet requirements",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_7",
+        "category": "demographic",
+        "description": "Female patients who have not yet reached menopause",
+        "field": "menopausal_status",
+        "operator": "eq",
+        "value": "pre-menopausal",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_1",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_8",
+        "category": "clinical",
+        "description": "Female patients who have undergone surgical sterilization",
+        "field": "prior_surgery",
+        "operator": "eq",
+        "value": "sterilization",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_1",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_9",
+        "category": "clinical",
+        "description": "Use effective contraceptive methods for at least 6 months after a single administration",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 180,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_10",
+        "category": "clinical",
+        "description": "Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_11",
+        "category": "clinical",
+        "description": "Stage IV breast cancer",
+        "field": "cancer_stage",
+        "operator": "eq",
+        "value": "IV",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_12",
+        "category": "clinical",
+        "description": "Inflammatory breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_13",
+        "category": "clinical",
+        "description": "Previously received anti-tumor treatment or radiation therapy for any malignant tumor, excluding those that have been cured malignant tumors such as cervical carcinoma in situ, basal cell carcinoma, or squamous cell carcinoma",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_14",
+        "category": "clinical",
+        "description": "Simultaneously undergoing anti-tumor treatment in other clinical trials, including but not limited to chemotherapy and endocrine therapy. Treatment, biological therapy, bone improvement drug therapy, or immune checkpoint inhibitor therapy, etc.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_15",
+        "category": "clinical",
+        "description": "The patient had undergone major surgical procedures unrelated to breast cancer within 4 weeks before the first administration of the study drug, or the patient has not fully recovered from such surgical procedures.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 28,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_16",
+        "category": "clinical",
+        "description": "Serious heart disease or discomfort, including but not limited to the following diseases: Diagnosed history of heart failure or systolic dysfunction (LVEF less than 50%). High risk uncontrolled arrhythmias, such as atrial tachycardia, resting heart rate greater than 100bpm, significant ventricular arrhythmias (such as ventricular tachycardia), or higher-level atrioventricular block (i.e. Mobitz II second or third degree atrioventricular block). Angina requiring medication for treatment. Heart valve disease with clinical significance. ECG shows transmural myocardial infarction. Poor control of hypertension (systolic blood pressure greater than 180mmHg and/or diastolic blood pressure greater than 180mmHg after drug treatment).",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_17",
+        "category": "clinical",
+        "description": "Uncontrolled active infections that require treatment; History of immunodeficiency, including HIV testing positive Sexual, or suffering from other acquired or congenital immunodeficiency diseases, or having a history of organ transplantation.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_18",
+        "category": "clinical",
+        "description": "Patients with chronic active hepatitis B or active hepatitis C (excluding hepatitis B virus carriers, stable hepatitis B after drug treatment [HBV-DNA test negative or <50IU/ml] and cured hepatitis C patients [HCV RNA test negative]).",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_19",
+        "category": "clinical",
+        "description": "Have received immunotherapy and experienced adverse immune events such as immune related pneumonia and myocarditis, which have been determined by researchers to potentially affect the safety of the experimental medication.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_20",
+        "category": "clinical",
+        "description": "Individuals with a known history of allergies to the components of this medication regimen.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_21",
+        "category": "clinical",
+        "description": "Pregnant and lactating female patients, female patients with fertility and positive baseline pregnancy test results, or reproductive age patients who are unwilling to take effective contraceptive measures during the entire trial period and within 6 months after the last study medication.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 180,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_22",
+        "category": "clinical",
+        "description": "Suffering from serious accompanying diseases or other comorbidities that may interfere with the planned treatment, or any other circumstances that the researcher deems unsuitable for the patient to participate in this study.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT07351487",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 47,
+        "reason": "PASS: age = 47 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MAX",
+          "category": "demographic",
+          "description": "Maximum age: 75 Years",
+          "field": "age",
+          "operator": "lte",
+          "value": 75,
+          "unit": "years",
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 47,
+        "reason": "PASS: age = 47 (required: lte 75)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_SEX",
+          "category": "demographic",
+          "description": "Sex: FEMALE",
+          "field": "sex",
+          "operator": "eq",
+          "value": "female",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "female",
+        "reason": "PASS: sex = female (required: eq female)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_3",
+          "category": "clinical",
+          "description": "ECOG score is 0-1 points",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'ecog_score'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_7",
+          "category": "demographic",
+          "description": "Female patients who have not yet reached menopause",
+          "field": "menopausal_status",
+          "operator": "eq",
+          "value": "pre-menopausal",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_1",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'menopausal_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_8",
+          "category": "clinical",
+          "description": "Female patients who have undergone surgical sterilization",
+          "field": "prior_surgery",
+          "operator": "eq",
+          "value": "sterilization",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_1",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'prior_surgery'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_11",
+          "category": "clinical",
+          "description": "Stage IV breast cancer",
+          "field": "cancer_stage",
+          "operator": "eq",
+          "value": "IV",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "IV",
+        "reason": "FAIL: cancer_stage = IV (required: eq IV)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_4",
+          "category": "clinical",
+          "description": "Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient is stage IV, not stage II-III."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_5",
+          "category": "clinical",
+          "description": "ER-negative, PR-negative, and HER2 receptor-negative. Alternatively, if ER and PR expression is less than 10% and HER2 receptor is negative, it is also classified as TNBC",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient is ER-, PR-, HER2- as stated in the narrative and profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_6",
+          "category": "clinical",
+          "description": "The functional level of major organs must meet requirements",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on major organ function provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_9",
+          "category": "clinical",
+          "description": "Use effective contraceptive methods for at least 6 months after a single administration",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 180,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about contraceptive use provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_10",
+          "category": "clinical",
+          "description": "Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-2e6f342c-0038-4f8d-a38c-c8ed159c1f3f', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up\". It\\'s an inclusion criterion. We need to see if the patient meets this rule. The narrative: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC... Despite being triple-negative... the presence of distant metastatic disease (M1 classification) is a strict exclusion criterion for this neoadjuvant study, which targets non-metastatic early-stage disease. She is referred to first-line metastatic TNBC protocols.\" The narrative also says: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC at initial presentation...\". There\\'s no mention of consent, willingness, compliance, follow-up. The structured profile: no info about consent or compliance. So data missing. According to guidelines: For administrative rules like signed consent, willingness, etc., if text does not explicitly address it, return \\'indeterminate\\'. So status: indeterminate. Reason: \"No explicit mention of consent or willingness to comply.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_0d843682-e869-41db-b345-8e6ed1d185cc', function=Function(arguments='{\"reason\":\"No explicit mention of consent, compliance, or willingness to cooperate with follow-up.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777123834, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_d6de37e6be', usage=CompletionUsage(completion_tokens=265, prompt_tokens=1130, total_tokens=1395, completion_time=0.331568302, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=227), prompt_time=0.056724396, prompt_tokens_details=None, queue_time=0.033661846, total_time=0.388292698), usage_breakdown=None, x_groq=XGroq(id='req_01kq2dbe0rechrrfecszxjsx7m', debug=None, seed=168415688, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-a449bb36-db1e-4837-87b7-3accea0843bc', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up\". It\\'s an inclusion criterion. We need to see if the patient meets this rule. The narrative: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC... Despite being triple-negative... the presence of distant metastatic disease (M1 classification) is a strict exclusion criterion for this neoadjuvant study, which targets non-metastatic early-stage disease. She is referred to first-line metastatic TNBC protocols.\" The narrative also says: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC at initial presentation...\". There\\'s no mention of consent, willingness, compliance, follow-up. The structured profile: no info about consent or compliance. So data missing. According to guidelines: For administrative rules like signed consent, willingness, etc., if text does not explicitly address it, return \\'indeterminate\\'. So status: indeterminate. Reason: \"No explicit mention of consent or willingness to comply.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_7f73d090-864f-4241-b02a-b4fccf715012', function=Function(arguments='{\"reason\":\"No explicit mention of consent, compliance, or willingness to cooperate with follow-up.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777123834, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_1c0f5282a2', usage=CompletionUsage(completion_tokens=265, prompt_tokens=1130, total_tokens=1395, completion_time=0.305818677, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=227), prompt_time=0.065159883, prompt_tokens_details=None, queue_time=0.003390328, total_time=0.37097856), usage_breakdown=None, x_groq=XGroq(id='req_01kq2dbef7emh8h0b03h06pz1t', debug=None, seed=595242066, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-b91f2a27-28fa-4258-afa9-d24a4e2a068d', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up\". It\\'s an inclusion criterion. We need to see if the patient meets this rule. The narrative: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC... Despite being triple-negative... the presence of distant metastatic disease (M1 classification) is a strict exclusion criterion for this neoadjuvant study, which targets non-metastatic early-stage disease. She is referred to first-line metastatic TNBC protocols.\" The narrative also says: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC at initial presentation...\". There\\'s no mention of consent, willingness, compliance, follow-up. The structured profile: no info about consent or compliance. So data missing. According to guidelines: For administrative rules like signed consent, willingness, etc., if text does not explicitly address it, return \\'indeterminate\\'. So status: indeterminate. Reason: \"No explicit mention of consent or willingness to comply.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_fa3d0eb4-1560-49c6-8d69-7c390b283e88', function=Function(arguments='{\"reason\":\"No explicit mention of consent, compliance, or willingness to cooperate with follow-up.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777123835, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_35b6cecc66', usage=CompletionUsage(completion_tokens=265, prompt_tokens=1130, total_tokens=1395, completion_time=0.34498468, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=227), prompt_time=0.081460454, prompt_tokens_details=None, queue_time=0.004203278, total_time=0.426445134), usage_breakdown=None, x_groq=XGroq(id='req_01kq2dbew5ecpa0n90ammz3vte', debug=None, seed=1489146644, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_12",
+          "category": "clinical",
+          "description": "Inflammatory breast cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No evidence of inflammatory breast cancer in the narrative or structured profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_13",
+          "category": "clinical",
+          "description": "Previously received anti-tumor treatment or radiation therapy for any malignant tumor, excluding those that have been cured malignant tumors such as cervical carcinoma in situ, basal cell carcinoma, or squamous cell carcinoma",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient is treatment-naive with no prior anti\u2011tumor therapy or radiation therapy."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_14",
+          "category": "clinical",
+          "description": "Simultaneously undergoing anti-tumor treatment in other clinical trials, including but not limited to chemotherapy and endocrine therapy. Treatment, biological therapy, bone improvement drug therapy, or immune checkpoint inhibitor therapy, etc.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient is treatment-naive and not undergoing anti-tumor therapy in other trials"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_15",
+          "category": "clinical",
+          "description": "The patient had undergone major surgical procedures unrelated to breast cancer within 4 weeks before the first administration of the study drug, or the patient has not fully recovered from such surgical procedures.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 28,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about recent unrelated major surgery or recovery status"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_16",
+          "category": "clinical",
+          "description": "Serious heart disease or discomfort, including but not limited to the following diseases: Diagnosed history of heart failure or systolic dysfunction (LVEF less than 50%). High risk uncontrolled arrhythmias, such as atrial tachycardia, resting heart rate greater than 100bpm, significant ventricular arrhythmias (such as ventricular tachycardia), or higher-level atrioventricular block (i.e. Mobitz II second or third degree atrioventricular block). Angina requiring medication for treatment. Heart valve disease with clinical significance. ECG shows transmural myocardial infarction. Poor control of hypertension (systolic blood pressure greater than 180mmHg and/or diastolic blood pressure greater than 180mmHg after drug treatment).",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on heart disease, arrhythmias, hypertension, or related conditions is provided in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_17",
+          "category": "clinical",
+          "description": "Uncontrolled active infections that require treatment; History of immunodeficiency, including HIV testing positive Sexual, or suffering from other acquired or congenital immunodeficiency diseases, or having a history of organ transplantation.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No mention of uncontrolled infections, immunodeficiency, HIV, or organ transplantation in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_18",
+          "category": "clinical",
+          "description": "Patients with chronic active hepatitis B or active hepatitis C (excluding hepatitis B virus carriers, stable hepatitis B after drug treatment [HBV-DNA test negative or <50IU/ml] and cured hepatitis C patients [HCV RNA test negative]).",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative and profile do not mention hepatitis B or C status."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_19",
+          "category": "clinical",
+          "description": "Have received immunotherapy and experienced adverse immune events such as immune related pneumonia and myocarditis, which have been determined by researchers to potentially affect the safety of the experimental medication.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient has no record of receiving immunotherapy or experiencing immune-related pneumonia or myocarditis."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_20",
+          "category": "clinical",
+          "description": "Individuals with a known history of allergies to the components of this medication regimen.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on allergies to medication components provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_21",
+          "category": "clinical",
+          "description": "Pregnant and lactating female patients, female patients with fertility and positive baseline pregnancy test results, or reproductive age patients who are unwilling to take effective contraceptive measures during the entire trial period and within 6 months after the last study medication.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 180,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Pregnancy status and contraception use are not documented in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_22",
+          "category": "clinical",
+          "description": "Suffering from serious accompanying diseases or other comorbidities that may interfere with the planned treatment, or any other circumstances that the researcher deems unsuitable for the patient to participate in this study.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documented serious comorbidities or contraindications in the record."
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_11",
+          "category": "clinical",
+          "description": "Stage IV breast cancer",
+          "field": "cancer_stage",
+          "operator": "eq",
+          "value": "IV",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "IV",
+        "reason": "FAIL: cancer_stage = IV (required: eq IV)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_4",
+          "category": "clinical",
+          "description": "Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient is stage IV, not stage II-III."
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_3",
+          "category": "clinical",
+          "description": "ECOG score is 0-1 points",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'ecog_score'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_7",
+          "category": "demographic",
+          "description": "Female patients who have not yet reached menopause",
+          "field": "menopausal_status",
+          "operator": "eq",
+          "value": "pre-menopausal",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_1",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'menopausal_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_8",
+          "category": "clinical",
+          "description": "Female patients who have undergone surgical sterilization",
+          "field": "prior_surgery",
+          "operator": "eq",
+          "value": "sterilization",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_1",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'prior_surgery'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_6",
+          "category": "clinical",
+          "description": "The functional level of major organs must meet requirements",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on major organ function provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_9",
+          "category": "clinical",
+          "description": "Use effective contraceptive methods for at least 6 months after a single administration",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 180,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about contraceptive use provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_10",
+          "category": "clinical",
+          "description": "Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-2e6f342c-0038-4f8d-a38c-c8ed159c1f3f', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up\". It\\'s an inclusion criterion. We need to see if the patient meets this rule. The narrative: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC... Despite being triple-negative... the presence of distant metastatic disease (M1 classification) is a strict exclusion criterion for this neoadjuvant study, which targets non-metastatic early-stage disease. She is referred to first-line metastatic TNBC protocols.\" The narrative also says: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC at initial presentation...\". There\\'s no mention of consent, willingness, compliance, follow-up. The structured profile: no info about consent or compliance. So data missing. According to guidelines: For administrative rules like signed consent, willingness, etc., if text does not explicitly address it, return \\'indeterminate\\'. So status: indeterminate. Reason: \"No explicit mention of consent or willingness to comply.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_0d843682-e869-41db-b345-8e6ed1d185cc', function=Function(arguments='{\"reason\":\"No explicit mention of consent, compliance, or willingness to cooperate with follow-up.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777123834, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_d6de37e6be', usage=CompletionUsage(completion_tokens=265, prompt_tokens=1130, total_tokens=1395, completion_time=0.331568302, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=227), prompt_time=0.056724396, prompt_tokens_details=None, queue_time=0.033661846, total_time=0.388292698), usage_breakdown=None, x_groq=XGroq(id='req_01kq2dbe0rechrrfecszxjsx7m', debug=None, seed=168415688, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-a449bb36-db1e-4837-87b7-3accea0843bc', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up\". It\\'s an inclusion criterion. We need to see if the patient meets this rule. The narrative: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC... Despite being triple-negative... the presence of distant metastatic disease (M1 classification) is a strict exclusion criterion for this neoadjuvant study, which targets non-metastatic early-stage disease. She is referred to first-line metastatic TNBC protocols.\" The narrative also says: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC at initial presentation...\". There\\'s no mention of consent, willingness, compliance, follow-up. The structured profile: no info about consent or compliance. So data missing. According to guidelines: For administrative rules like signed consent, willingness, etc., if text does not explicitly address it, return \\'indeterminate\\'. So status: indeterminate. Reason: \"No explicit mention of consent or willingness to comply.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_7f73d090-864f-4241-b02a-b4fccf715012', function=Function(arguments='{\"reason\":\"No explicit mention of consent, compliance, or willingness to cooperate with follow-up.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777123834, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_1c0f5282a2', usage=CompletionUsage(completion_tokens=265, prompt_tokens=1130, total_tokens=1395, completion_time=0.305818677, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=227), prompt_time=0.065159883, prompt_tokens_details=None, queue_time=0.003390328, total_time=0.37097856), usage_breakdown=None, x_groq=XGroq(id='req_01kq2dbef7emh8h0b03h06pz1t', debug=None, seed=595242066, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-b91f2a27-28fa-4258-afa9-d24a4e2a068d', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up\". It\\'s an inclusion criterion. We need to see if the patient meets this rule. The narrative: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC... Despite being triple-negative... the presence of distant metastatic disease (M1 classification) is a strict exclusion criterion for this neoadjuvant study, which targets non-metastatic early-stage disease. She is referred to first-line metastatic TNBC protocols.\" The narrative also says: \"Ms. Ibarra is a 47-year-old woman with stage IV TNBC at initial presentation...\". There\\'s no mention of consent, willingness, compliance, follow-up. The structured profile: no info about consent or compliance. So data missing. According to guidelines: For administrative rules like signed consent, willingness, etc., if text does not explicitly address it, return \\'indeterminate\\'. So status: indeterminate. Reason: \"No explicit mention of consent or willingness to comply.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_fa3d0eb4-1560-49c6-8d69-7c390b283e88', function=Function(arguments='{\"reason\":\"No explicit mention of consent, compliance, or willingness to cooperate with follow-up.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777123835, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_35b6cecc66', usage=CompletionUsage(completion_tokens=265, prompt_tokens=1130, total_tokens=1395, completion_time=0.34498468, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=227), prompt_time=0.081460454, prompt_tokens_details=None, queue_time=0.004203278, total_time=0.426445134), usage_breakdown=None, x_groq=XGroq(id='req_01kq2dbew5ecpa0n90ammz3vte', debug=None, seed=1489146644, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_15",
+          "category": "clinical",
+          "description": "The patient had undergone major surgical procedures unrelated to breast cancer within 4 weeks before the first administration of the study drug, or the patient has not fully recovered from such surgical procedures.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 28,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about recent unrelated major surgery or recovery status"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_16",
+          "category": "clinical",
+          "description": "Serious heart disease or discomfort, including but not limited to the following diseases: Diagnosed history of heart failure or systolic dysfunction (LVEF less than 50%). High risk uncontrolled arrhythmias, such as atrial tachycardia, resting heart rate greater than 100bpm, significant ventricular arrhythmias (such as ventricular tachycardia), or higher-level atrioventricular block (i.e. Mobitz II second or third degree atrioventricular block). Angina requiring medication for treatment. Heart valve disease with clinical significance. ECG shows transmural myocardial infarction. Poor control of hypertension (systolic blood pressure greater than 180mmHg and/or diastolic blood pressure greater than 180mmHg after drug treatment).",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on heart disease, arrhythmias, hypertension, or related conditions is provided in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_17",
+          "category": "clinical",
+          "description": "Uncontrolled active infections that require treatment; History of immunodeficiency, including HIV testing positive Sexual, or suffering from other acquired or congenital immunodeficiency diseases, or having a history of organ transplantation.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No mention of uncontrolled infections, immunodeficiency, HIV, or organ transplantation in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_18",
+          "category": "clinical",
+          "description": "Patients with chronic active hepatitis B or active hepatitis C (excluding hepatitis B virus carriers, stable hepatitis B after drug treatment [HBV-DNA test negative or <50IU/ml] and cured hepatitis C patients [HCV RNA test negative]).",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative and profile do not mention hepatitis B or C status."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_20",
+          "category": "clinical",
+          "description": "Individuals with a known history of allergies to the components of this medication regimen.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on allergies to medication components provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_21",
+          "category": "clinical",
+          "description": "Pregnant and lactating female patients, female patients with fertility and positive baseline pregnancy test results, or reproductive age patients who are unwilling to take effective contraceptive measures during the entire trial period and within 6 months after the last study medication.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 180,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Pregnancy status and contraception use are not documented in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_22",
+          "category": "clinical",
+          "description": "Suffering from serious accompanying diseases or other comorbidities that may interfere with the planned treatment, or any other circumstances that the researcher deems unsuitable for the patient to participate in this study.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documented serious comorbidities or contraindications in the record."
+      }
+    ]
+  },
+  "report_text": "Trial: NCT07351487\nEligible: NO\n\nFAILING CRITERIA:\n  1. [clinical] Stage IV breast cancer\n     Patient value: IV\n     Required: eq IV\n     \u2192 FAIL: cancer_stage = IV (required: eq IV)\n\n  2. [clinical] Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer\n     Field: unmapped_rule\n     \u2192 LLM Fallback: Patient is stage IV, not stage II-III.\n\nINDETERMINATE (missing patient data):\n  1. [clinical] ECOG score is 0-1 points\n     Field: ecog_score\n     \u2192 Data not available in patient record\n\n  2. [demographic] Female patients who have not yet reached menopause\n     Field: menopausal_status\n     \u2192 Data not available in patient record\n\n  3. [clinical] Female patients who have undergone surgical sterilization\n     Field: prior_surgery\n     \u2192 Data not available in patient record\n\n  4. [clinical] The functional level of major organs must meet requirements\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  5. [clinical] Use effective contraceptive methods for at least 6 months after a single administration\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  6. [clinical] Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  7. [clinical] The patient had undergone major surgical procedures unrelated to breast cancer within 4 weeks before the first administration of the study drug, or the patient has not fully recovered from such surgical procedures.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  8. [clinical] Serious heart disease or discomfort, including but not limited to the following diseases: Diagnosed history of heart failure or systolic dysfunction (LVEF less than 50%). High risk uncontrolled arrhythmias, such as atrial tachycardia, resting heart rate greater than 100bpm, significant ventricular arrhythmias (such as ventricular tachycardia), or higher-level atrioventricular block (i.e. Mobitz II second or third degree atrioventricular block). Angina requiring medication for treatment. Heart valve disease with clinical significance. ECG shows transmural myocardial infarction. Poor control of hypertension (systolic blood pressure greater than 180mmHg and/or diastolic blood pressure greater than 180mmHg after drug treatment).\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  9. [clinical] Uncontrolled active infections that require treatment; History of immunodeficiency, including HIV testing positive Sexual, or suffering from other acquired or congenital immunodeficiency diseases, or having a history of organ transplantation.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  10. [clinical] Patients with chronic active hepatitis B or active hepatitis C (excluding hepatitis B virus carriers, stable hepatitis B after drug treatment [HBV-DNA test negative or <50IU/ml] and cured hepatitis C patients [HCV RNA test negative]).\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  11. [clinical] Individuals with a known history of allergies to the components of this medication regimen.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  12. [clinical] Pregnant and lactating female patients, female patients with fertility and positive baseline pregnancy test results, or reproductive age patients who are unwilling to take effective contraceptive measures during the entire trial period and within 6 months after the last study medication.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  13. [clinical] Suffering from serious accompanying diseases or other comorbidities that may interfere with the planned treatment, or any other circumstances that the researcher deems unsuitable for the patient to participate in this study.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 8 of 23"
+}

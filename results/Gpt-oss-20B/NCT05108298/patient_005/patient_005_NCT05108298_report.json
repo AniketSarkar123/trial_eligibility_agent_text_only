@@ -1,0 +1,734 @@
+{
+  "patient": {
+    "age": 29,
+    "sex": "male",
+    "menopausal_status": null,
+    "pregnancy_status": null,
+    "primary_diagnosis": "diffuse large B-cell lymphoma",
+    "cancer_stage": null,
+    "is_metastatic": null,
+    "histology": "diffuse large B-cell lymphoma",
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": null,
+    "pr_status": null,
+    "her2_status": null,
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": null,
+    "received_adjuvant_therapy": null,
+    "has_recurrence": null,
+    "ecog_score": null,
+    "prior_therapies": [],
+    "lines_of_therapy": null,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT05108298",
+    "title": "Improving Adolescent and Young Adult Self-Reported Data in ECOG-ACRIN Trials",
+    "conditions": [
+      "Breast Cancer, NOS",
+      "CNS Primary Tumor, NOS",
+      "Cervical Cancer, NOS",
+      "Colorectal Cancer, NOS",
+      "Leukemia, NOS",
+      "Lymphoma, NOS",
+      "Miscellaneous Neoplasm, NOS",
+      "Non-Rhabdomyosarcoma Soft Tissue Sarcoma, NOS",
+      "Testicular Nonseminomatous Germ Cell Tumor, NOS",
+      "Thyroid Cancer, NOS",
+      "Melanoma",
+      "Bone Cancer, NOS"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_AGE_MAX",
+        "category": "demographic",
+        "description": "Maximum age: 39 Years",
+        "field": "age",
+        "operator": "lte",
+        "value": 39,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_3",
+        "category": "clinical",
+        "description": "Patient must have a histologically confirmed diagnosis of primary cancer of any stage within 12 weeks (84 days) at registration",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 84,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_4",
+        "category": "clinical",
+        "description": "Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_5",
+        "category": "clinical",
+        "description": "Patient must have an ECOG performance status 0-3",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_6",
+        "category": "clinical",
+        "description": "Patient must have a life expectancy >24 months",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_7",
+        "category": "clinical",
+        "description": "Patient must be able to complete questionnaires in English",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_8",
+        "category": "clinical",
+        "description": "Patient must have internet access through computer, tablet, or smartphone",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_9",
+        "category": "clinical",
+        "description": "Patient must have an email address",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_10",
+        "category": "clinical",
+        "description": "Patient must have a mobile phone able with text messaging capabilities",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_11",
+        "category": "clinical",
+        "description": "Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_12",
+        "category": "clinical",
+        "description": "Patient must be able to provide informed consent",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_13",
+        "category": "clinical",
+        "description": "Patient must not have a recurrence or second primary cancer",
+        "field": "has_recurrence",
+        "operator": "eq",
+        "value": false,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_14",
+        "category": "clinical",
+        "description": "Patient must not have basal cell skin carcinoma",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT05108298",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 29,
+        "reason": "PASS: age = 29 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MAX",
+          "category": "demographic",
+          "description": "Maximum age: 39 Years",
+          "field": "age",
+          "operator": "lte",
+          "value": 39,
+          "unit": "years",
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 29,
+        "reason": "PASS: age = 29 (required: lte 39)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_5",
+          "category": "clinical",
+          "description": "Patient must have an ECOG performance status 0-3",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'ecog_score'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_13",
+          "category": "clinical",
+          "description": "Patient must not have a recurrence or second primary cancer",
+          "field": "has_recurrence",
+          "operator": "eq",
+          "value": false,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'has_recurrence'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_3",
+          "category": "clinical",
+          "description": "Patient must have a histologically confirmed diagnosis of primary cancer of any stage within 12 weeks (84 days) at registration",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 84,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Histology confirmed but timing of diagnosis relative to registration is not specified."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_4",
+          "category": "clinical",
+          "description": "Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No evidence that the patient has received or is planning to receive cancer treatment."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_6",
+          "category": "clinical",
+          "description": "Patient must have a life expectancy >24 months",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Life expectancy >24 months not documented in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_7",
+          "category": "clinical",
+          "description": "Patient must be able to complete questionnaires in English",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about English language proficiency provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_8",
+          "category": "clinical",
+          "description": "Patient must have internet access through computer, tablet, or smartphone",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about internet access provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_9",
+          "category": "clinical",
+          "description": "Patient must have an email address",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No email address provided in narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_10",
+          "category": "clinical",
+          "description": "Patient must have a mobile phone able with text messaging capabilities",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about mobile phone availability"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_11",
+          "category": "clinical",
+          "description": "Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on cognitive function or self-report ability provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_12",
+          "category": "clinical",
+          "description": "Patient must be able to provide informed consent",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No explicit mention of the patient\u2019s ability to provide informed consent."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_14",
+          "category": "clinical",
+          "description": "Patient must not have basal cell skin carcinoma",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about basal cell skin carcinoma present."
+      }
+    ],
+    "failing_criteria": [],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_5",
+          "category": "clinical",
+          "description": "Patient must have an ECOG performance status 0-3",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'ecog_score'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_13",
+          "category": "clinical",
+          "description": "Patient must not have a recurrence or second primary cancer",
+          "field": "has_recurrence",
+          "operator": "eq",
+          "value": false,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'has_recurrence'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_3",
+          "category": "clinical",
+          "description": "Patient must have a histologically confirmed diagnosis of primary cancer of any stage within 12 weeks (84 days) at registration",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 84,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Histology confirmed but timing of diagnosis relative to registration is not specified."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_4",
+          "category": "clinical",
+          "description": "Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No evidence that the patient has received or is planning to receive cancer treatment."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_6",
+          "category": "clinical",
+          "description": "Patient must have a life expectancy >24 months",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Life expectancy >24 months not documented in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_7",
+          "category": "clinical",
+          "description": "Patient must be able to complete questionnaires in English",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about English language proficiency provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_8",
+          "category": "clinical",
+          "description": "Patient must have internet access through computer, tablet, or smartphone",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about internet access provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_9",
+          "category": "clinical",
+          "description": "Patient must have an email address",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No email address provided in narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_10",
+          "category": "clinical",
+          "description": "Patient must have a mobile phone able with text messaging capabilities",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about mobile phone availability"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_11",
+          "category": "clinical",
+          "description": "Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on cognitive function or self-report ability provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_12",
+          "category": "clinical",
+          "description": "Patient must be able to provide informed consent",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No explicit mention of the patient\u2019s ability to provide informed consent."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_14",
+          "category": "clinical",
+          "description": "Patient must not have basal cell skin carcinoma",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about basal cell skin carcinoma present."
+      }
+    ]
+  },
+  "report_text": "Trial: NCT05108298\nEligible: NO\n\nINDETERMINATE (missing patient data):\n  1. [clinical] Patient must have an ECOG performance status 0-3\n     Field: ecog_score\n     \u2192 Data not available in patient record\n\n  2. [clinical] Patient must not have a recurrence or second primary cancer\n     Field: has_recurrence\n     \u2192 Data not available in patient record\n\n  3. [clinical] Patient must have a histologically confirmed diagnosis of primary cancer of any stage within 12 weeks (84 days) at registration\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  4. [clinical] Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  5. [clinical] Patient must have a life expectancy >24 months\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  6. [clinical] Patient must be able to complete questionnaires in English\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  7. [clinical] Patient must have internet access through computer, tablet, or smartphone\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  8. [clinical] Patient must have an email address\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  9. [clinical] Patient must have a mobile phone able with text messaging capabilities\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  10. [clinical] Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact)\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  11. [clinical] Patient must be able to provide informed consent\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  12. [clinical] Patient must not have basal cell skin carcinoma\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 2 of 14"
+}

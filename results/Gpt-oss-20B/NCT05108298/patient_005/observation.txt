@@ -1,0 +1,12 @@
+Patient 5 (Mr. Santos) is the most mechanically interesting case in this batch. It exposes a minor vulnerability in how a "Hybrid" (Deterministic + LLM) pipeline works.
+
+The Clinical Reality: He has a "second primary malignancy," which strictly disqualifies him.
+
+The Pipeline Result: INDETERMINATE. (It failed to generate a hard FAIL).
+
+Why did this happen? 1. The Extractor's Miss: The Extractor read "second primary malignancy" but failed to map that complex phrase to the strict boolean field "has_recurrence". It output "has_recurrence": null.
+2. The Python Short-Circuit: The Python Matcher is programmed to look at mapped fields first. It looked at "has_recurrence": null. Because the value was null, the Python engine immediately marked the rule as INDETERMINATE due to "missing data."
+3. The LLM gets Bypassed: Because the Python engine already made a ruling, the unmapped LLM Fallback (which has the semantic intelligence to know that "second primary" = "recurrence") was never triggered!
+
+Is this a fatal flaw?
+No. In healthcare AI, a "False Pass" is dangerous, but an INDETERMINATE is safe. The system essentially said, "I don't have clear data on recurrence, human please check." The human will check the chart, see the second primary, and reject him.

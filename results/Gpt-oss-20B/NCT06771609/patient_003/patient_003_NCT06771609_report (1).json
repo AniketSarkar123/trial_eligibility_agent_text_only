@@ -1,0 +1,490 @@
+{
+  "patient": {
+    "age": 55,
+    "sex": "female",
+    "menopausal_status": null,
+    "pregnancy_status": null,
+    "primary_diagnosis": "metastatic breast cancer",
+    "cancer_stage": "IV",
+    "is_metastatic": true,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": "negative",
+    "pr_status": "negative",
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": null,
+    "received_adjuvant_therapy": null,
+    "has_recurrence": true,
+    "ecog_score": 2,
+    "prior_therapies": [
+      {
+        "drug_name": "carboplatin",
+        "drug_class": null,
+        "is_current": false,
+        "days_since_last_dose": null,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      },
+      {
+        "drug_name": "nab-paclitaxel",
+        "drug_class": null,
+        "is_current": false,
+        "days_since_last_dose": null,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      }
+    ],
+    "lines_of_therapy": 1,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": "none"
+  },
+  "trial": {
+    "nct_id": "NCT06771609",
+    "title": "Evaluate the Efficacy and Safety of PD-L1 Monoclonal Antibody Combined with VEX Metronomic Chemotherapy with or Without Radiotherapy in Advanced Triple-negative Breast Cancer: a Prospective, Multicenter, Randomized Controlled Phase II Clinical Trial.",
+    "conditions": [
+      "Advanced Triple-negative Breast Cancer"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_2",
+        "category": "clinical",
+        "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the \"American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.\"",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_3",
+        "category": "prior_therapy",
+        "description": "Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer;",
+        "field": "lines_of_therapy",
+        "operator": "lte",
+        "value": 1,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_4",
+        "category": "clinical",
+        "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ],
+        "unit": null,
+        "timeframe_days": 10,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_5",
+        "category": "clinical",
+        "description": "Subjects must have at least one measurable lesion present; specific reference to the \"Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\" guidelines;",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_6",
+        "category": "prior_therapy",
+        "description": "Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_7",
+        "category": "clinical",
+        "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_8",
+        "category": "clinical",
+        "description": "Subjects are able to sign an informed consent form to participate in the study.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_9",
+        "category": "clinical",
+        "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 10,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT06771609",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 55,
+        "reason": "PASS: age = 55 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_3",
+          "category": "prior_therapy",
+          "description": "Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer;",
+          "field": "lines_of_therapy",
+          "operator": "lte",
+          "value": 1,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 1,
+        "reason": "PASS: lines_of_therapy = 1 (required: lte 1)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_4",
+          "category": "clinical",
+          "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "timeframe_days": 10,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": 2,
+        "reason": "FAIL: ecog_score = 2 (required: in [0, 1])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_2",
+          "category": "clinical",
+          "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the \"American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.\"",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative does not mention a specific reference to ASCO/CAP guidelines, so it is unclear if the clinical data records meet that requirement."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_5",
+          "category": "clinical",
+          "description": "Subjects must have at least one measurable lesion present; specific reference to the \"Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\" guidelines;",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-a8a4d8f7-829d-4354-89b4-94cc30df0671', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The rule requires at least one measurable lesion present. The narrative says: \"Restaging CT shows enlarging liver lesions (largest 3.0 cm) and new bilateral pulmonary nodules.\" So there is at least one measurable lesion: liver lesion 3.0 cm. That meets RECIST v1.1 criteria for measurable lesion (\u226510 mm longest diameter). So patient passes.\\n\\nWe must output JSON with status \"pass\" and reason referencing specific patient facts: e.g., \"Patient has a measurable liver lesion of 3.0 cm per CT, satisfying RECIST v1.1 criteria.\"\\n\\nWe must use the provided JSON tool schema. The tool is functions.RuleEvaluation. We need to call that function with reason and status. So we need to produce a JSON object with fields reason and status. The tool expects a JSON object with reason string and status string. So we produce:\\n\\n{\\n  \"reason\": \"Patient has a measurable liver lesion of 3.0 cm on CT, meeting RECIST v1.1 criteria.\",\\n  \"status\": \"pass\"\\n}\\n\\nWe must output using the tool. So we need to call the function. In the conversation, we need to output the JSON. The instruction: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output the JSON. The tool is functions.RuleEvaluation. So we need to output something like:\\n\\n{\\n  \"reason\": \"...\",\\n  \"status\": \"pass\"\\n}\\n\\nBut we need to call the function. In the system, we can output the JSON directly. The tool is defined but we just output the JSON. So final answer: JSON with reason and status.', tool_calls=[ChatCompletionMessageToolCall(id='fc_b0d5b5fe-6dd7-49f5-b95a-b9ac4d39c3e6', function=Function(arguments='{\"reason\":\"Patient has a measurable liver lesion of 3.0\\u202fcm on CT, satisfying RECIST\\u202fv1.1 criteria.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129499, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_228717f27c', usage=CompletionUsage(completion_tokens=462, prompt_tokens=1238, total_tokens=1700, completion_time=0.500184833, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=415), prompt_time=0.076376365, prompt_tokens_details=None, queue_time=0.003204366, total_time=0.576561198), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jra6pfpc9tx2bcj4p4h0z', debug=None, seed=1522431251, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-c1b061e1-7ff5-4f95-b567-4ebe29ef197f', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The rule requires at least one measurable lesion present. The narrative says: \"Restaging CT shows enlarging liver lesions (largest 3.0 cm) and new bilateral pulmonary nodules.\" So there is at least one measurable lesion: liver lesion 3.0 cm. That meets RECIST v1.1 criteria for measurable lesion (\u226510 mm longest diameter). So patient passes.\\n\\nWe must output JSON with status \"pass\" and reason referencing specific patient facts: e.g., \"Patient has a measurable liver lesion of 3.0 cm per CT, satisfying RECIST v1.1 criteria.\"\\n\\nWe must use the provided JSON tool schema. The tool is functions.RuleEvaluation. We need to call that function with reason and status. So we need to produce a JSON object with fields reason and status. The tool expects a JSON object with reason string and status string. So we produce:\\n\\n{\\n  \"reason\": \"Patient has a measurable liver lesion of 3.0 cm on CT, meeting RECIST v1.1 criteria.\",\\n  \"status\": \"pass\"\\n}\\n\\nWe must output using the tool. So we need to call the function. In the conversation, we need to output the JSON. The instruction: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output the JSON. The tool is functions.RuleEvaluation. So we need to output something like:\\n\\n{\\n  \"reason\": \"...\",\\n  \"status\": \"pass\"\\n}\\n\\nBut we need to call the function. In the system, we can output the JSON directly. The tool is defined but we just output the JSON. So final answer: JSON with reason and status.', tool_calls=[ChatCompletionMessageToolCall(id='fc_5b4d8f96-bc29-4a39-b6ff-533faac97abd', function=Function(arguments='{\"reason\":\"Patient has a measurable liver lesion of 3.0\\u202fcm on CT, satisfying RECIST\\u202fv1.1 criteria.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129500, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_34cb00738d', usage=CompletionUsage(completion_tokens=462, prompt_tokens=1238, total_tokens=1700, completion_time=0.517625882, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=415), prompt_time=0.074567408, prompt_tokens_details=None, queue_time=0.032221072, total_time=0.59219329), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jrat2egtb2s023c0x29g5', debug=None, seed=1964141041, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-c0aecb21-0c80-4067-a20f-57b9a78cf144', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The rule requires at least one measurable lesion present. The narrative says: \"Restaging CT shows enlarging liver lesions (largest 3.0 cm) and new bilateral pulmonary nodules.\" So there is at least one measurable lesion: liver lesion 3.0 cm. That meets RECIST v1.1 criteria for measurable lesion (\u226510 mm longest diameter). So patient passes.\\n\\nWe must output JSON with status \"pass\" and reason referencing specific patient facts: e.g., \"Patient has a measurable liver lesion of 3.0 cm per CT, satisfying RECIST v1.1 criteria.\"\\n\\nWe must use the provided JSON tool schema. The tool is functions.RuleEvaluation. We need to call that function with reason and status. So we need to produce a JSON object with fields reason and status. The tool expects a JSON object with reason string and status string. So we produce:\\n\\n{\\n  \"reason\": \"Patient has a measurable liver lesion of 3.0 cm on CT, meeting RECIST v1.1 criteria.\",\\n  \"status\": \"pass\"\\n}\\n\\nWe must output using the tool. So we need to call the function. In the conversation, we need to output the JSON. The instruction: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output the JSON. The tool is functions.RuleEvaluation. So we need to output something like:\\n\\n{\\n  \"reason\": \"...\",\\n  \"status\": \"pass\"\\n}\\n\\nBut we need to call the function. In the system, we can output the JSON directly. The tool is defined but we just output the JSON. So final answer: JSON with reason and status.', tool_calls=[ChatCompletionMessageToolCall(id='fc_08fb376e-b079-43bf-8c91-650e6caee4d1', function=Function(arguments='{\"reason\":\"Patient has a measurable liver lesion of 3.0\\u202fcm on CT, satisfying RECIST\\u202fv1.1 criteria.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129500, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_3023a70d60', usage=CompletionUsage(completion_tokens=462, prompt_tokens=1238, total_tokens=1700, completion_time=0.510158088, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=415), prompt_time=0.066965932, prompt_tokens_details=None, queue_time=0.002996337, total_time=0.57712402), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jrbere599p8wz1f3pbf0n', debug=None, seed=2145515418, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_6",
+          "category": "prior_therapy",
+          "description": "Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documented prior adjuvant/neoadjuvant anthracycline or taxane therapy before recurrence."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_7",
+          "category": "clinical",
+          "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documentation of pregnancy status, lactation, or contraceptive use."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_8",
+          "category": "clinical",
+          "description": "Subjects are able to sign an informed consent form to participate in the study.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No explicit mention of ability to sign informed consent"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_9",
+          "category": "clinical",
+          "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 10,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No laboratory values or organ function data provided to confirm compliance with Table 1 criteria."
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_4",
+          "category": "clinical",
+          "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "timeframe_days": 10,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": 2,
+        "reason": "FAIL: ecog_score = 2 (required: in [0, 1])"
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_2",
+          "category": "clinical",
+          "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the \"American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.\"",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative does not mention a specific reference to ASCO/CAP guidelines, so it is unclear if the clinical data records meet that requirement."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_5",
+          "category": "clinical",
+          "description": "Subjects must have at least one measurable lesion present; specific reference to the \"Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\" guidelines;",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-a8a4d8f7-829d-4354-89b4-94cc30df0671', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The rule requires at least one measurable lesion present. The narrative says: \"Restaging CT shows enlarging liver lesions (largest 3.0 cm) and new bilateral pulmonary nodules.\" So there is at least one measurable lesion: liver lesion 3.0 cm. That meets RECIST v1.1 criteria for measurable lesion (\u226510 mm longest diameter). So patient passes.\\n\\nWe must output JSON with status \"pass\" and reason referencing specific patient facts: e.g., \"Patient has a measurable liver lesion of 3.0 cm per CT, satisfying RECIST v1.1 criteria.\"\\n\\nWe must use the provided JSON tool schema. The tool is functions.RuleEvaluation. We need to call that function with reason and status. So we need to produce a JSON object with fields reason and status. The tool expects a JSON object with reason string and status string. So we produce:\\n\\n{\\n  \"reason\": \"Patient has a measurable liver lesion of 3.0 cm on CT, meeting RECIST v1.1 criteria.\",\\n  \"status\": \"pass\"\\n}\\n\\nWe must output using the tool. So we need to call the function. In the conversation, we need to output the JSON. The instruction: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output the JSON. The tool is functions.RuleEvaluation. So we need to output something like:\\n\\n{\\n  \"reason\": \"...\",\\n  \"status\": \"pass\"\\n}\\n\\nBut we need to call the function. In the system, we can output the JSON directly. The tool is defined but we just output the JSON. So final answer: JSON with reason and status.', tool_calls=[ChatCompletionMessageToolCall(id='fc_b0d5b5fe-6dd7-49f5-b95a-b9ac4d39c3e6', function=Function(arguments='{\"reason\":\"Patient has a measurable liver lesion of 3.0\\u202fcm on CT, satisfying RECIST\\u202fv1.1 criteria.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129499, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_228717f27c', usage=CompletionUsage(completion_tokens=462, prompt_tokens=1238, total_tokens=1700, completion_time=0.500184833, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=415), prompt_time=0.076376365, prompt_tokens_details=None, queue_time=0.003204366, total_time=0.576561198), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jra6pfpc9tx2bcj4p4h0z', debug=None, seed=1522431251, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-c1b061e1-7ff5-4f95-b567-4ebe29ef197f', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The rule requires at least one measurable lesion present. The narrative says: \"Restaging CT shows enlarging liver lesions (largest 3.0 cm) and new bilateral pulmonary nodules.\" So there is at least one measurable lesion: liver lesion 3.0 cm. That meets RECIST v1.1 criteria for measurable lesion (\u226510 mm longest diameter). So patient passes.\\n\\nWe must output JSON with status \"pass\" and reason referencing specific patient facts: e.g., \"Patient has a measurable liver lesion of 3.0 cm per CT, satisfying RECIST v1.1 criteria.\"\\n\\nWe must use the provided JSON tool schema. The tool is functions.RuleEvaluation. We need to call that function with reason and status. So we need to produce a JSON object with fields reason and status. The tool expects a JSON object with reason string and status string. So we produce:\\n\\n{\\n  \"reason\": \"Patient has a measurable liver lesion of 3.0 cm on CT, meeting RECIST v1.1 criteria.\",\\n  \"status\": \"pass\"\\n}\\n\\nWe must output using the tool. So we need to call the function. In the conversation, we need to output the JSON. The instruction: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output the JSON. The tool is functions.RuleEvaluation. So we need to output something like:\\n\\n{\\n  \"reason\": \"...\",\\n  \"status\": \"pass\"\\n}\\n\\nBut we need to call the function. In the system, we can output the JSON directly. The tool is defined but we just output the JSON. So final answer: JSON with reason and status.', tool_calls=[ChatCompletionMessageToolCall(id='fc_5b4d8f96-bc29-4a39-b6ff-533faac97abd', function=Function(arguments='{\"reason\":\"Patient has a measurable liver lesion of 3.0\\u202fcm on CT, satisfying RECIST\\u202fv1.1 criteria.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129500, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_34cb00738d', usage=CompletionUsage(completion_tokens=462, prompt_tokens=1238, total_tokens=1700, completion_time=0.517625882, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=415), prompt_time=0.074567408, prompt_tokens_details=None, queue_time=0.032221072, total_time=0.59219329), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jrat2egtb2s023c0x29g5', debug=None, seed=1964141041, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-c0aecb21-0c80-4067-a20f-57b9a78cf144', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The rule requires at least one measurable lesion present. The narrative says: \"Restaging CT shows enlarging liver lesions (largest 3.0 cm) and new bilateral pulmonary nodules.\" So there is at least one measurable lesion: liver lesion 3.0 cm. That meets RECIST v1.1 criteria for measurable lesion (\u226510 mm longest diameter). So patient passes.\\n\\nWe must output JSON with status \"pass\" and reason referencing specific patient facts: e.g., \"Patient has a measurable liver lesion of 3.0 cm per CT, satisfying RECIST v1.1 criteria.\"\\n\\nWe must use the provided JSON tool schema. The tool is functions.RuleEvaluation. We need to call that function with reason and status. So we need to produce a JSON object with fields reason and status. The tool expects a JSON object with reason string and status string. So we produce:\\n\\n{\\n  \"reason\": \"Patient has a measurable liver lesion of 3.0 cm on CT, meeting RECIST v1.1 criteria.\",\\n  \"status\": \"pass\"\\n}\\n\\nWe must output using the tool. So we need to call the function. In the conversation, we need to output the JSON. The instruction: \"CRITICAL: You MUST output your response using the provided JSON tool schema. Do NOT output plain text.\" So we need to output the JSON. The tool is functions.RuleEvaluation. So we need to output something like:\\n\\n{\\n  \"reason\": \"...\",\\n  \"status\": \"pass\"\\n}\\n\\nBut we need to call the function. In the system, we can output the JSON directly. The tool is defined but we just output the JSON. So final answer: JSON with reason and status.', tool_calls=[ChatCompletionMessageToolCall(id='fc_08fb376e-b079-43bf-8c91-650e6caee4d1', function=Function(arguments='{\"reason\":\"Patient has a measurable liver lesion of 3.0\\u202fcm on CT, satisfying RECIST\\u202fv1.1 criteria.\",\"status\":\"pass\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129500, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_3023a70d60', usage=CompletionUsage(completion_tokens=462, prompt_tokens=1238, total_tokens=1700, completion_time=0.510158088, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=415), prompt_time=0.066965932, prompt_tokens_details=None, queue_time=0.002996337, total_time=0.57712402), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jrbere599p8wz1f3pbf0n', debug=None, seed=2145515418, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_6",
+          "category": "prior_therapy",
+          "description": "Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documented prior adjuvant/neoadjuvant anthracycline or taxane therapy before recurrence."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_7",
+          "category": "clinical",
+          "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documentation of pregnancy status, lactation, or contraceptive use."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_8",
+          "category": "clinical",
+          "description": "Subjects are able to sign an informed consent form to participate in the study.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No explicit mention of ability to sign informed consent"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_9",
+          "category": "clinical",
+          "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 10,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No laboratory values or organ function data provided to confirm compliance with Table 1 criteria."
+      }
+    ]
+  },
+  "report_text": "Trial: NCT06771609\nEligible: NO\n\nFAILING CRITERIA:\n  1. [clinical] Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;\n     Patient value: 2\n     Required: in [0, 1]\n     \u2192 FAIL: ecog_score = 2 (required: in [0, 1])\n\nINDETERMINATE (missing patient data):\n  1. [clinical] Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the \"American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.\"\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  2. [clinical] Subjects must have at least one measurable lesion present; specific reference to the \"Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\" guidelines;\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  3. [prior_therapy] Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  4. [clinical] Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  5. [clinical] Subjects are able to sign an informed consent form to participate in the study.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  6. [clinical] Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 2 of 9"
+}

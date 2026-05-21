@@ -1,0 +1,9 @@
+Trial: NCT05108298
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Patient must have an email address.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 13 of 14

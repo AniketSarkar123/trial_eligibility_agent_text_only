@@ -1,0 +1,50 @@
+Trial: NCT06476119
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: Patient had prior invasive breast cancer (TNBC) and underwent neoadjuvant therapy.
+
+  2. [prior_therapy] Administration of neoadjuvant systemic therapy
+     Field: unmapped_rule
+     → LLM Fallback: Patient received neoadjuvant systemic therapy.
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Written informed consent
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  2. [clinical] No evidence of nodal or distant metastases (cN0M0) on pre- and/or postoperative imaging including 18F-FDG-PET/CT or CT
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  3. [clinical] Has undergone curative breast surgery (breast-conserving or mastectomy with surgical axillary staging including sentinel lymph node procedure)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [clinical] Absence of recurrence between curative breast surgery and expression of patient preference
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [clinical] Multifocal, multicentric or bilateral breast cancer at the time of screening
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  6. [clinical] Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  7. [clinical] Other invasive malignancy within 5 years prior to inclusion, except adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason ≤6 prostate cancer
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  8. [comorbidity] Uncontrolled severe illness or medical condition
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  9. [clinical] Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 6 of 17

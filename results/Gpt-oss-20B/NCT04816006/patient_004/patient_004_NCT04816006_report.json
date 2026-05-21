@@ -1,0 +1,2030 @@
+{
+  "patient": {
+    "analysis": null,
+    "age": 48,
+    "sex": "female",
+    "menopausal_status": null,
+    "pregnancy_status": null,
+    "primary_diagnosis": "metastatic breast cancer",
+    "cancer_stage": "IV",
+    "is_metastatic": true,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": "positive",
+    "pr_status": null,
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": null,
+    "received_adjuvant_therapy": null,
+    "has_recurrence": null,
+    "ecog_score": null,
+    "prior_therapies": [
+      {
+        "drug_name": "palbociclib",
+        "drug_class": null,
+        "is_current": false,
+        "days_since_last_dose": null,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      },
+      {
+        "drug_name": "fulvestrant",
+        "drug_class": null,
+        "is_current": false,
+        "days_since_last_dose": null,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      }
+    ],
+    "lines_of_therapy": null,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT04816006",
+    "title": "Enhancing Cognitive Function in Breast Cancer Survivors Through Community-based Exercise Training",
+    "conditions": [
+      "Breast Cancer",
+      "Breast Neoplasms",
+      "Anatomic Stage I Breast Cancer AJCC v8",
+      "Anatomic Stage II Breast Cancer AJCC v8",
+      "Anatomic Stage IIIA Breast Cancer AJCC v8",
+      "Cancer-related Cognitive Dysfunction"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 50 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 50,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_SEX",
+        "category": "demographic",
+        "description": "Sex: FEMALE",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_2",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination",
+        "field": "cancer_stage",
+        "operator": "in",
+        "value": [
+          "I",
+          "II",
+          "IIIa"
+        ],
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_3",
+        "category": "prior_therapy",
+        "description": "PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_4",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 180,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_5",
+        "category": "clinical",
+        "description": "PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_7",
+        "category": "clinical",
+        "description": "REGISTRATION: Able to provide medical record release to confirm eligibility",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_8",
+        "category": "clinical",
+        "description": "REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination",
+        "field": "cancer_stage",
+        "operator": "in",
+        "value": [
+          "I",
+          "II",
+          "IIIa"
+        ],
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_9",
+        "category": "prior_therapy",
+        "description": "REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to pre-registration as confirmed via clinical determination",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_10",
+        "category": "clinical",
+        "description": "REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_11",
+        "category": "clinical",
+        "description": "REGISTRATION: Receive physician's clearance to participate in an exercise program",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_12",
+        "category": "comorbidity",
+        "description": "History of major multiple myocardial infarctions (MI)",
+        "field": "comorbidity",
+        "operator": "eq",
+        "value": "History of major multiple myocardial infarctions (MI)",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_13",
+        "category": "comorbidity",
+        "description": "Recent electrocardiogram (ECG) changes or recent MI",
+        "field": "comorbidity",
+        "operator": "eq",
+        "value": "Recent electrocardiogram (ECG) changes or recent MI",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_14",
+        "category": "comorbidity",
+        "description": "Resting or unstable angina",
+        "field": "comorbidity",
+        "operator": "eq",
+        "value": "Resting or unstable angina",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_15",
+        "category": "comorbidity",
+        "description": "Significant multivessel coronary occlusion (\u2265 70%) on angiography",
+        "field": "comorbidity",
+        "operator": "eq",
+        "value": "Significant multivessel coronary occlusion (\u2265 70%) on angiography",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_16",
+        "category": "comorbidity",
+        "description": "Uncontrolled and/or serious arrhythmias",
+        "field": "comorbidity",
+        "operator": "eq",
+        "value": "Uncontrolled and/or serious arrhythmias",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_17",
+        "category": "comorbidity",
+        "description": "3rd degree heart block",
+        "field": "comorbidity",
+        "operator": "eq",
+        "value": "3rd degree heart block",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_18",
+        "category": "comorbidity",
+        "description": "Acute congestive heart failure or ejection fraction < 30%",
+        "field": "comorbidity",
+        "operator": "eq",
+        "value": "Acute congestive heart failure or ejection fraction < 30%",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_19",
+        "category": "clinical",
+        "description": "Stage 0 breast cancer diagnosis",
+        "field": "cancer_stage",
+        "operator": "eq",
+        "value": "0",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_3",
+        "group_operator": "OR",
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_20",
+        "category": "clinical",
+        "description": "Metastatic disease",
+        "field": "is_metastatic",
+        "operator": "eq",
+        "value": true,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_3",
+        "group_operator": "OR",
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_21",
+        "category": "prior_therapy",
+        "description": "Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 90,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_22",
+        "category": "prior_therapy",
+        "description": "Greater than 36 months post primary treatment",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 1080,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_23",
+        "category": "clinical",
+        "description": "Planned surgery during the intervention period",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_24",
+        "category": "prior_therapy",
+        "description": "Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_25",
+        "category": "clinical",
+        "description": "Unable to travel regularly to the study locations for intervention sessions and data collection",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_26",
+        "category": "clinical",
+        "description": "Unwilling to return to enrolling institution for follow-up",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_27",
+        "category": "clinical",
+        "description": "Self-reported inability to walk without assistance or devices",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_28",
+        "category": "comorbidity",
+        "description": "History of stroke",
+        "field": "comorbidity",
+        "operator": "eq",
+        "value": "History of stroke",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_4",
+        "group_operator": "OR",
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_29",
+        "category": "comorbidity",
+        "description": "Transient ischemic attack",
+        "field": "comorbidity",
+        "operator": "eq",
+        "value": "Transient ischemic attack",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_4",
+        "group_operator": "OR",
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_30",
+        "category": "comorbidity",
+        "description": "Other neurological disorders",
+        "field": "comorbidity",
+        "operator": "eq",
+        "value": "Other neurological disorders",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_4",
+        "group_operator": "OR",
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_31",
+        "category": "comorbidity",
+        "description": "Brain surgery involving tissue removal",
+        "field": "comorbidity",
+        "operator": "eq",
+        "value": "Brain surgery involving tissue removal",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "GRP_4",
+        "group_operator": "OR",
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_32",
+        "category": "clinical",
+        "description": "Clinically significant TICS-M score (<21) during baseline procedures",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_33",
+        "category": "clinical",
+        "description": "Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_34",
+        "category": "clinical",
+        "description": "Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_35",
+        "category": "clinical",
+        "description": "Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_36",
+        "category": "clinical",
+        "description": "Enrolled in another physical activity program",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_37",
+        "category": "clinical",
+        "description": "Unable to walk without assistance or devices",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_38",
+        "category": "clinical",
+        "description": "Unwilling to complete study requirements",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_39",
+        "category": "clinical",
+        "description": "Unwilling to be randomized to the exercise group or health education group",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_40",
+        "category": "clinical",
+        "description": "Unable or unwilling to continuously wear and regularly sync/charge an activity tracker during the study period",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_41",
+        "category": "clinical",
+        "description": "Unable to travel regularly to the study locations for intervention sessions and data collection",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04816006_LLM_42",
+        "category": "clinical",
+        "description": "Unwilling to return to enrolling institution for follow-up",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT04816006",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 50 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 50,
+          "unit": "years",
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": 48,
+        "reason": "FAIL: age = 48 (required: gte 50)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_SEX",
+          "category": "demographic",
+          "description": "Sex: FEMALE",
+          "field": "sex",
+          "operator": "eq",
+          "value": "female",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "female",
+        "reason": "PASS: sex = female (required: eq female)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_2",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination",
+          "field": "cancer_stage",
+          "operator": "in",
+          "value": [
+            "I",
+            "II",
+            "IIIa"
+          ],
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "IV",
+        "reason": "PASS: cancer_stage = IV (required: in ['I', 'II', 'IIIa'])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_8",
+          "category": "clinical",
+          "description": "REGISTRATION: First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination",
+          "field": "cancer_stage",
+          "operator": "in",
+          "value": [
+            "I",
+            "II",
+            "IIIa"
+          ],
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "IV",
+        "reason": "PASS: cancer_stage = IV (required: in ['I', 'II', 'IIIa'])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_12",
+          "category": "comorbidity",
+          "description": "History of major multiple myocardial infarctions (MI)",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "History of major multiple myocardial infarctions (MI)",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_13",
+          "category": "comorbidity",
+          "description": "Recent electrocardiogram (ECG) changes or recent MI",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Recent electrocardiogram (ECG) changes or recent MI",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_14",
+          "category": "comorbidity",
+          "description": "Resting or unstable angina",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Resting or unstable angina",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_15",
+          "category": "comorbidity",
+          "description": "Significant multivessel coronary occlusion (\u2265 70%) on angiography",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Significant multivessel coronary occlusion (\u2265 70%) on angiography",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_16",
+          "category": "comorbidity",
+          "description": "Uncontrolled and/or serious arrhythmias",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Uncontrolled and/or serious arrhythmias",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_17",
+          "category": "comorbidity",
+          "description": "3rd degree heart block",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "3rd degree heart block",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_18",
+          "category": "comorbidity",
+          "description": "Acute congestive heart failure or ejection fraction < 30%",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Acute congestive heart failure or ejection fraction < 30%",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_19",
+          "category": "clinical",
+          "description": "Stage 0 breast cancer diagnosis",
+          "field": "cancer_stage",
+          "operator": "eq",
+          "value": "0",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_3",
+          "group_operator": "OR",
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "IV",
+        "reason": "Group GRP_3 (OR) condition met by another criterion."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_20",
+          "category": "clinical",
+          "description": "Metastatic disease",
+          "field": "is_metastatic",
+          "operator": "eq",
+          "value": true,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_3",
+          "group_operator": "OR",
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": true,
+        "reason": "Group GRP_3 (OR) condition met by another criterion."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_28",
+          "category": "comorbidity",
+          "description": "History of stroke",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "History of stroke",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_4",
+          "group_operator": "OR",
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_29",
+          "category": "comorbidity",
+          "description": "Transient ischemic attack",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Transient ischemic attack",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_4",
+          "group_operator": "OR",
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_30",
+          "category": "comorbidity",
+          "description": "Other neurological disorders",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Other neurological disorders",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_4",
+          "group_operator": "OR",
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_31",
+          "category": "comorbidity",
+          "description": "Brain surgery involving tissue removal",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Brain surgery involving tissue removal",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_4",
+          "group_operator": "OR",
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_3",
+          "category": "prior_therapy",
+          "description": "PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on surgery or completion of primary treatment within 3-36 months"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_4",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 180,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on exercise activity provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_5",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information provided about her ability to complete assessments"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_7",
+          "category": "clinical",
+          "description": "REGISTRATION: Able to provide medical record release to confirm eligibility",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-cfb3e2fe-192d-412e-b540-18cc2497aba0', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the trial rule: \"REGISTRATION: Able to provide medical record release to confirm eligibility\". It\\'s an inclusion criterion: patient must be able to provide medical record release to confirm eligibility. We need to determine if patient meets this rule based on narrative or profile. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" The narrative does not mention anything about medical record release. The structured profile: no mention of consent or ability to provide medical record release. So data missing. According to guidelines: If data required to answer rule is missing, return \"indeterminate\". So status: \"indeterminate\". Reason: \"No information about medical record release provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_167eb883-3e20-4823-83a0-8338f825be81', function=Function(arguments='{\"reason\":\"No information about medical record release provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129871, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_d6de37e6be', usage=CompletionUsage(completion_tokens=267, prompt_tokens=1136, total_tokens=1403, completion_time=0.284546692, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=237), prompt_time=0.048407187, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.006222715, total_time=0.332953879), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3nt6eqttwg29mwm2jk4t', debug=None, seed=1828677477, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-53aec428-ea0e-4996-b0b1-3d511a186994', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the trial rule: \"REGISTRATION: Able to provide medical record release to confirm eligibility\". It\\'s an inclusion criterion: patient must be able to provide medical record release to confirm eligibility. We need to determine if patient meets this rule based on narrative or profile. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" The narrative does not mention medical record release. The structured profile: no mention of consent or ability to provide medical record release. So data missing. According to guidelines: If data required to answer rule is missing, return \"indeterminate\". So status \"indeterminate\". Reason: \"No information about medical record release provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_112d6879-5b0e-4bc7-80ff-2cdfd41655c6', function=Function(arguments='{\"reason\":\"No information about medical record release provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129872, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_3023a70d60', usage=CompletionUsage(completion_tokens=264, prompt_tokens=1136, total_tokens=1400, completion_time=0.336961894, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.099354508, prompt_tokens_details=None, queue_time=0.047917225, total_time=0.436316402), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3p6metrbs3c2xfjywkxk', debug=None, seed=1660801544, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-ce36114a-72ac-4d69-8e76-6a4b76eaac28', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the trial rule: \"REGISTRATION: Able to provide medical record release to confirm eligibility\". It\\'s an inclusion criterion: patient must be able to provide medical record release to confirm eligibility. We need to determine if patient meets this rule based on narrative or profile. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" The narrative does not mention medical record release. The structured profile: no mention of consent or ability to provide medical record release. So data missing. According to guidelines: If data required to answer rule is missing, return \"indeterminate\". So status \"indeterminate\". Reason: \"No information about medical record release provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_acc14c3f-68cb-4027-80ad-93c679c0498a', function=Function(arguments='{\"reason\":\"No information about medical record release provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129872, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_e1634aab79', usage=CompletionUsage(completion_tokens=264, prompt_tokens=1136, total_tokens=1400, completion_time=0.275476043, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.047395676, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.032560174, total_time=0.322871719), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3pqheqwsgnefte9rtjg4', debug=None, seed=1131397065, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_9",
+          "category": "prior_therapy",
+          "description": "REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to pre-registration as confirmed via clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documented evidence of completed primary treatment 3-36 months prior"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_10",
+          "category": "clinical",
+          "description": "REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: TICS-M score not reported in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_11",
+          "category": "clinical",
+          "description": "REGISTRATION: Receive physician's clearance to participate in an exercise program",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-a6fea9a1-c8df-4926-b4c3-43167321c8c1', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: Receive physician\\'s clearance to participate in an exercise program\" Inclusion criterion. So patient must have physician clearance to participate in an exercise program. We need to see if narrative or profile indicates that. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" There\\'s no mention of physician clearance to exercise program. The structured profile: no mention of physician clearance. So data missing. According to guidelines: missing data => indeterminate. So status \"indeterminate\". Provide reason: \"No evidence of physician clearance to participate in an exercise program.\"', tool_calls=[ChatCompletionMessageToolCall(id='fc_7fa1c09a-6d45-4e4f-850f-5a3197cd6f6d', function=Function(arguments='{\"reason\":\"No evidence of physician clearance to participate in an exercise program.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129874, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_8e23cedc90', usage=CompletionUsage(completion_tokens=251, prompt_tokens=1137, total_tokens=1388, completion_time=0.267835325, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=217), prompt_time=0.070898581, prompt_tokens_details=None, queue_time=0.033165534, total_time=0.338733906), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3rb9ev29yv3vft27gpjr', debug=None, seed=151806441, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-0e1a04e9-3d98-4587-9570-630005d61c48', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: Receive physician\\'s clearance to participate in an exercise program\" Inclusion criterion. So patient must have physician clearance to participate in an exercise program. We need to see if narrative or profile indicates that. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" There\\'s no mention of physician clearance to exercise program. The structured profile: no mention of physician clearance. So data missing. According to guidelines: missing data => indeterminate. So status \"indeterminate\". Reason: \"No evidence of physician clearance to exercise program in the narrative or profile.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_4e83371e-13d7-4154-899e-532a2190d8a7', function=Function(arguments='{\"reason\":\"No evidence of physician clearance to participate in an exercise program in the narrative or profile.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129874, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_996f667773', usage=CompletionUsage(completion_tokens=260, prompt_tokens=1137, total_tokens=1397, completion_time=0.273370174, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=221), prompt_time=0.171959694, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.033163975, total_time=0.445329868), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3rs4er0rcg7vs4hpy47y', debug=None, seed=858175524, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-9e87fdd1-ca43-430c-a85d-eb107bb8ab52', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: Receive physician\\'s clearance to participate in an exercise program\" Inclusion criterion. So patient must have physician clearance to participate in an exercise program. We need to see if narrative or profile indicates that. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" There\\'s no mention of physician clearance to exercise program. The structured profile: no mention of physician clearance. So data missing. According to guidelines: missing data => indeterminate. So status \"indeterminate\". Provide reason: \"No evidence of physician clearance to participate in an exercise program.\"', tool_calls=[ChatCompletionMessageToolCall(id='fc_a8825e7a-1d69-4072-b11b-c40c00050c94', function=Function(arguments='{\"reason\":\"No evidence of physician clearance to participate in an exercise program.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129875, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_996f667773', usage=CompletionUsage(completion_tokens=251, prompt_tokens=1137, total_tokens=1388, completion_time=0.283610025, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=217), prompt_time=0.01040159, prompt_tokens_details=PromptTokensDetails(cached_tokens=1024), queue_time=0.035460976, total_time=0.294011615), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3s9xer28jpxfgtxj1c7v', debug=None, seed=688456830, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_21",
+          "category": "prior_therapy",
+          "description": "Currently receiving or < 3 months since receiving chemotherapy or radiation therapy for cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 90,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient is not currently receiving or within 3 months of chemotherapy or radiation therapy."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_22",
+          "category": "prior_therapy",
+          "description": "Greater than 36 months post primary treatment",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 1080,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Time since primary treatment is not specified in the record."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_23",
+          "category": "clinical",
+          "description": "Planned surgery during the intervention period",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about planned surgery during intervention period"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_24",
+          "category": "prior_therapy",
+          "description": "Second cancer diagnosis (excluding non-invasive skin cancers or carcinoma-in-situ for any cancer)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient has only one cancer diagnosis (metastatic breast cancer) and no evidence of a second cancer."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_25",
+          "category": "clinical",
+          "description": "Unable to travel regularly to the study locations for intervention sessions and data collection",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Travel ability not documented in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_26",
+          "category": "clinical",
+          "description": "Unwilling to return to enrolling institution for follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about willingness to return to enrolling institution"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_27",
+          "category": "clinical",
+          "description": "Self-reported inability to walk without assistance or devices",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on walking ability provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_32",
+          "category": "clinical",
+          "description": "Clinically significant TICS-M score (<21) during baseline procedures",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: TICS-M score not reported in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_33",
+          "category": "clinical",
+          "description": "Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-ff416a3a-643a-4adb-b15c-b71f01e37127', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)\". This is an exclusion criterion: Patient MUST NOT meet this. So if patient cannot provide physician re-clearance for exercise if required based on baseline exercise test, they fail the rule. We need to determine if patient meets this rule. The rule is about ability to provide physician re-clearance for exercise if required based on baseline exercise test. We need to see if the narrative or profile indicates that the patient cannot provide physician re-clearance for exercise if required based on baseline exercise test. The narrative: Ms. Okoro is 48-year-old woman with stage IV metastatic breast cancer, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program. There\\'s no mention of exercise test, ECG, blood pressure monitoring, or physician re-clearance. The structured profile: age 48, female, metastatic breast cancer, stage IV, is metastatic true, er positive, her2 negative, prior therapies palbociclib and fulvestrant, no lab values, no comorbidities. No mention of exercise test or clearance. So data missing. According to guidelines: If data required to answer rule is missing, return \"indeterminate\". So status: indeterminate. Reason: \"No information on exercise test or physician re-clearance provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_ed9eea33-c777-434c-b951-62c66f514f80', function=Function(arguments='{\"reason\":\"No information on exercise test or physician re\u2011clearance provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129879, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_8e23cedc90', usage=CompletionUsage(completion_tokens=387, prompt_tokens=1154, total_tokens=1541, completion_time=0.413992364, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=352), prompt_time=0.053803708, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.033501443, total_time=0.467796072), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3xksevmty18ezm8ddass', debug=None, seed=134408234, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-f43c2606-930b-4474-b148-4083f23c90aa', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)\". This is an exclusion criterion: Patient MUST NOT meet this. So if patient cannot provide physician re-clearance for exercise if required based on baseline exercise test, they fail the rule. We need to determine if patient meets this rule. The rule is about ability to provide physician re-clearance for exercise if required based on baseline exercise test. We need to see if the patient is able to provide physician re-clearance. The narrative: Ms. Okoro is 48-year-old woman with stage IV metastatic breast cancer, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\\n\\nThe rule is about exercise test and physician re-clearance. There\\'s no mention of baseline exercise test, ECG, blood pressure monitoring, or physician re-clearance. The narrative does not mention any exercise test or clearance. The structured profile also doesn\\'t mention any exercise test or clearance. So data missing. According to guidelines: If data required to answer the rule is missing, return \"indeterminate\". So status: indeterminate. Reason: \"No information on baseline exercise test or physician re-clearance provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_2de917db-f03d-423d-8338-dfb83a7fc35f', function=Function(arguments='{\"reason\":\"No information on baseline exercise test or physician re\u2011clearance provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129880, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_976a85d17a', usage=CompletionUsage(completion_tokens=353, prompt_tokens=1154, total_tokens=1507, completion_time=0.372726599, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=317), prompt_time=0.056464817, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.031527204, total_time=0.429191416), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3y4yfbb83x7p2at847g3', debug=None, seed=1703163549, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-8bb68afd-4668-4bb4-bb98-416e2b22cf09', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)\". This is an exclusion criterion: Patient MUST NOT meet this. So if patient cannot provide physician re-clearance for exercise if required based on baseline exercise test, they fail the rule. We need to determine if patient meets this rule. The rule is about ability to provide physician re-clearance for exercise if required based on baseline exercise test. We need to see if the narrative or profile indicates that the patient cannot provide physician re-clearance for exercise if required based on baseline exercise test. The narrative: Ms. Okoro is 48-year-old woman with stage IV metastatic breast cancer, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program. There\\'s no mention of exercise test, ECG, blood pressure monitoring, or physician re-clearance. The structured profile: age 48, female, metastatic breast cancer, stage IV, is metastatic true, er positive, her2 negative, prior therapies palbociclib, fulvestrant, no lab values, no comorbidities. No mention of exercise test or clearance. So data missing. According to guidelines: If data required to answer rule is missing, return \"indeterminate\". So status: indeterminate. Reason: \"No information on exercise test or physician re-clearance provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_3035afb5-6f0d-419c-88e4-9d5ebe4b0301', function=Function(arguments='{\"reason\":\"No information on exercise test or physician re\u2011clearance provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129880, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_1c0f5282a2', usage=CompletionUsage(completion_tokens=386, prompt_tokens=1154, total_tokens=1540, completion_time=0.424595267, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=351), prompt_time=0.070812354, prompt_tokens_details=None, queue_time=0.031744644, total_time=0.495407621), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3ynaevp9xvrj8dyjgqv8', debug=None, seed=654438334, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_34",
+          "category": "clinical",
+          "description": "Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on fMRI contraindications provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_35",
+          "category": "clinical",
+          "description": "Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No MRI brain scan information provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_36",
+          "category": "clinical",
+          "description": "Enrolled in another physical activity program",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about enrollment in another physical activity program"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_37",
+          "category": "clinical",
+          "description": "Unable to walk without assistance or devices",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about walking ability provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_38",
+          "category": "clinical",
+          "description": "Unwilling to complete study requirements",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-9b9713d5-2bb2-4719-ad47-d6a00b33ee91', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Unwilling to complete study requirements\" - Exclusion Criterion. So patient must NOT meet this rule. We need to determine if patient is unwilling to complete study requirements. The narrative: Ms. Okoro reports cognitive symptoms attributed to treatment effects. She is on palbociclib plus fulvestrant with stable disease. She is referred to a separate palliative support program. There\\'s no mention of unwillingness to complete study requirements. There\\'s no mention of consent or willingness. So the data is missing. According to guidelines: For administrative/s subjective rule, if text does not explicitly address it, return \\'indeterminate\\'. So status: indeterminate. Reason: \"No explicit statement about willingness to complete study requirements.\"', tool_calls=[ChatCompletionMessageToolCall(id='fc_2eb30fbb-246d-41f8-b063-d19bdf522154', function=Function(arguments='{\"reason\":\"No explicit statement about willingness to complete study requirements.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129883, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_976a85d17a', usage=CompletionUsage(completion_tokens=185, prompt_tokens=1133, total_tokens=1318, completion_time=0.195565273, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=153), prompt_time=0.075554954, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.032947, total_time=0.271120227), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k41mtevy9es41hb87s06r', debug=None, seed=1741733286, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-5cc5f4e5-179e-4120-9bcd-abe7be0e579c', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Unwilling to complete study requirements\" - Exclusion Criterion. So patient must NOT meet this rule. We need to determine if patient is unwilling to complete study requirements. The narrative: Ms. Okoro reports cognitive symptoms attributed to treatment effects. She is on palbociclib plus fulvestrant with stable disease. She is referred to a separate palliative support program. There\\'s no mention of unwillingness. There\\'s no mention of consent or willingness. So we cannot determine. According to guidelines: If the rule requires \"willingness to comply\" and text does not explicitly address it, return \\'indeterminate\\'. So status = indeterminate. Reason: \"No explicit statement of willingness or unwillingness to complete study requirements.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_cb68d71a-012b-4d9c-8ac0-96594073427b', function=Function(arguments='{\"reason\":\"No explicit statement of willingness or unwillingness to complete study requirements.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129883, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_35b6cecc66', usage=CompletionUsage(completion_tokens=194, prompt_tokens=1133, total_tokens=1327, completion_time=0.20578924, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=159), prompt_time=0.054906669, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.032697994, total_time=0.260695909), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k41zwevysq3m3sryk7tbw', debug=None, seed=1788253535, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-c5f83a0c-e3c2-46d9-9c45-a85479856a41', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Unwilling to complete study requirements\" - Exclusion Criterion. So patient must NOT meet this rule. We need to determine if patient is unwilling to complete study requirements. The narrative: Ms. Okoro reports cognitive symptoms attributed to treatment effects. She is referred to separate palliative support program. No mention of willingness or unwillingness. No mention of refusal. So we cannot determine. According to guidelines: If data missing, return indeterminate. So status \"indeterminate\". Provide reason: \"No information about willingness to complete study requirements.\" Use JSON schema.', tool_calls=[ChatCompletionMessageToolCall(id='fc_0f5dce65-d7e9-45b6-8998-85e1a8fc1ed9', function=Function(arguments='{\"reason\":\"No information about willingness to complete study requirements.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129884, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_228717f27c', usage=CompletionUsage(completion_tokens=152, prompt_tokens=1133, total_tokens=1285, completion_time=0.159115816, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=121), prompt_time=0.062341499, prompt_tokens_details=None, queue_time=0.032416546, total_time=0.221457315), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k42aperjstw7nkwh3150q', debug=None, seed=1527808841, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_39",
+          "category": "clinical",
+          "description": "Unwilling to be randomized to the exercise group or health education group",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about willingness to be randomized to exercise or health education group"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_40",
+          "category": "clinical",
+          "description": "Unable or unwilling to continuously wear and regularly sync/charge an activity tracker during the study period",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about activity tracker usage or willingness is provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_41",
+          "category": "clinical",
+          "description": "Unable to travel regularly to the study locations for intervention sessions and data collection",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Travel ability not documented in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_42",
+          "category": "clinical",
+          "description": "Unwilling to return to enrolling institution for follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about willingness to return for follow-up"
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 50 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 50,
+          "unit": "years",
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": 48,
+        "reason": "FAIL: age = 48 (required: gte 50)"
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_12",
+          "category": "comorbidity",
+          "description": "History of major multiple myocardial infarctions (MI)",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "History of major multiple myocardial infarctions (MI)",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_13",
+          "category": "comorbidity",
+          "description": "Recent electrocardiogram (ECG) changes or recent MI",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Recent electrocardiogram (ECG) changes or recent MI",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_14",
+          "category": "comorbidity",
+          "description": "Resting or unstable angina",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Resting or unstable angina",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_15",
+          "category": "comorbidity",
+          "description": "Significant multivessel coronary occlusion (\u2265 70%) on angiography",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Significant multivessel coronary occlusion (\u2265 70%) on angiography",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_16",
+          "category": "comorbidity",
+          "description": "Uncontrolled and/or serious arrhythmias",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Uncontrolled and/or serious arrhythmias",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_17",
+          "category": "comorbidity",
+          "description": "3rd degree heart block",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "3rd degree heart block",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_18",
+          "category": "comorbidity",
+          "description": "Acute congestive heart failure or ejection fraction < 30%",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Acute congestive heart failure or ejection fraction < 30%",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_2",
+          "group_operator": "OR",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_28",
+          "category": "comorbidity",
+          "description": "History of stroke",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "History of stroke",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_4",
+          "group_operator": "OR",
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_29",
+          "category": "comorbidity",
+          "description": "Transient ischemic attack",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Transient ischemic attack",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_4",
+          "group_operator": "OR",
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_30",
+          "category": "comorbidity",
+          "description": "Other neurological disorders",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Other neurological disorders",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_4",
+          "group_operator": "OR",
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_31",
+          "category": "comorbidity",
+          "description": "Brain surgery involving tissue removal",
+          "field": "comorbidity",
+          "operator": "eq",
+          "value": "Brain surgery involving tissue removal",
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": "GRP_4",
+          "group_operator": "OR",
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'comorbidity'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_3",
+          "category": "prior_therapy",
+          "description": "PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on surgery or completion of primary treatment within 3-36 months"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_4",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 180,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on exercise activity provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_5",
+          "category": "clinical",
+          "description": "PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information provided about her ability to complete assessments"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_7",
+          "category": "clinical",
+          "description": "REGISTRATION: Able to provide medical record release to confirm eligibility",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-cfb3e2fe-192d-412e-b540-18cc2497aba0', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the trial rule: \"REGISTRATION: Able to provide medical record release to confirm eligibility\". It\\'s an inclusion criterion: patient must be able to provide medical record release to confirm eligibility. We need to determine if patient meets this rule based on narrative or profile. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" The narrative does not mention anything about medical record release. The structured profile: no mention of consent or ability to provide medical record release. So data missing. According to guidelines: If data required to answer rule is missing, return \"indeterminate\". So status: \"indeterminate\". Reason: \"No information about medical record release provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_167eb883-3e20-4823-83a0-8338f825be81', function=Function(arguments='{\"reason\":\"No information about medical record release provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129871, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_d6de37e6be', usage=CompletionUsage(completion_tokens=267, prompt_tokens=1136, total_tokens=1403, completion_time=0.284546692, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=237), prompt_time=0.048407187, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.006222715, total_time=0.332953879), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3nt6eqttwg29mwm2jk4t', debug=None, seed=1828677477, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-53aec428-ea0e-4996-b0b1-3d511a186994', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the trial rule: \"REGISTRATION: Able to provide medical record release to confirm eligibility\". It\\'s an inclusion criterion: patient must be able to provide medical record release to confirm eligibility. We need to determine if patient meets this rule based on narrative or profile. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" The narrative does not mention medical record release. The structured profile: no mention of consent or ability to provide medical record release. So data missing. According to guidelines: If data required to answer rule is missing, return \"indeterminate\". So status \"indeterminate\". Reason: \"No information about medical record release provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_112d6879-5b0e-4bc7-80ff-2cdfd41655c6', function=Function(arguments='{\"reason\":\"No information about medical record release provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129872, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_3023a70d60', usage=CompletionUsage(completion_tokens=264, prompt_tokens=1136, total_tokens=1400, completion_time=0.336961894, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.099354508, prompt_tokens_details=None, queue_time=0.047917225, total_time=0.436316402), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3p6metrbs3c2xfjywkxk', debug=None, seed=1660801544, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-ce36114a-72ac-4d69-8e76-6a4b76eaac28', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the trial rule: \"REGISTRATION: Able to provide medical record release to confirm eligibility\". It\\'s an inclusion criterion: patient must be able to provide medical record release to confirm eligibility. We need to determine if patient meets this rule based on narrative or profile. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" The narrative does not mention medical record release. The structured profile: no mention of consent or ability to provide medical record release. So data missing. According to guidelines: If data required to answer rule is missing, return \"indeterminate\". So status \"indeterminate\". Reason: \"No information about medical record release provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_acc14c3f-68cb-4027-80ad-93c679c0498a', function=Function(arguments='{\"reason\":\"No information about medical record release provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129872, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_e1634aab79', usage=CompletionUsage(completion_tokens=264, prompt_tokens=1136, total_tokens=1400, completion_time=0.275476043, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=234), prompt_time=0.047395676, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.032560174, total_time=0.322871719), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3pqheqwsgnefte9rtjg4', debug=None, seed=1131397065, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_9",
+          "category": "prior_therapy",
+          "description": "REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to pre-registration as confirmed via clinical determination",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documented evidence of completed primary treatment 3-36 months prior"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_10",
+          "category": "clinical",
+          "description": "REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: TICS-M score not reported in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_11",
+          "category": "clinical",
+          "description": "REGISTRATION: Receive physician's clearance to participate in an exercise program",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-a6fea9a1-c8df-4926-b4c3-43167321c8c1', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: Receive physician\\'s clearance to participate in an exercise program\" Inclusion criterion. So patient must have physician clearance to participate in an exercise program. We need to see if narrative or profile indicates that. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" There\\'s no mention of physician clearance to exercise program. The structured profile: no mention of physician clearance. So data missing. According to guidelines: missing data => indeterminate. So status \"indeterminate\". Provide reason: \"No evidence of physician clearance to participate in an exercise program.\"', tool_calls=[ChatCompletionMessageToolCall(id='fc_7fa1c09a-6d45-4e4f-850f-5a3197cd6f6d', function=Function(arguments='{\"reason\":\"No evidence of physician clearance to participate in an exercise program.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129874, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_8e23cedc90', usage=CompletionUsage(completion_tokens=251, prompt_tokens=1137, total_tokens=1388, completion_time=0.267835325, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=217), prompt_time=0.070898581, prompt_tokens_details=None, queue_time=0.033165534, total_time=0.338733906), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3rb9ev29yv3vft27gpjr', debug=None, seed=151806441, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-0e1a04e9-3d98-4587-9570-630005d61c48', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: Receive physician\\'s clearance to participate in an exercise program\" Inclusion criterion. So patient must have physician clearance to participate in an exercise program. We need to see if narrative or profile indicates that. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" There\\'s no mention of physician clearance to exercise program. The structured profile: no mention of physician clearance. So data missing. According to guidelines: missing data => indeterminate. So status \"indeterminate\". Reason: \"No evidence of physician clearance to exercise program in the narrative or profile.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_4e83371e-13d7-4154-899e-532a2190d8a7', function=Function(arguments='{\"reason\":\"No evidence of physician clearance to participate in an exercise program in the narrative or profile.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129874, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_996f667773', usage=CompletionUsage(completion_tokens=260, prompt_tokens=1137, total_tokens=1397, completion_time=0.273370174, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=221), prompt_time=0.171959694, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.033163975, total_time=0.445329868), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3rs4er0rcg7vs4hpy47y', debug=None, seed=858175524, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-9e87fdd1-ca43-430c-a85d-eb107bb8ab52', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"REGISTRATION: Receive physician\\'s clearance to participate in an exercise program\" Inclusion criterion. So patient must have physician clearance to participate in an exercise program. We need to see if narrative or profile indicates that. The narrative: \"Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\" There\\'s no mention of physician clearance to exercise program. The structured profile: no mention of physician clearance. So data missing. According to guidelines: missing data => indeterminate. So status \"indeterminate\". Provide reason: \"No evidence of physician clearance to participate in an exercise program.\"', tool_calls=[ChatCompletionMessageToolCall(id='fc_a8825e7a-1d69-4072-b11b-c40c00050c94', function=Function(arguments='{\"reason\":\"No evidence of physician clearance to participate in an exercise program.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129875, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_996f667773', usage=CompletionUsage(completion_tokens=251, prompt_tokens=1137, total_tokens=1388, completion_time=0.283610025, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=217), prompt_time=0.01040159, prompt_tokens_details=PromptTokensDetails(cached_tokens=1024), queue_time=0.035460976, total_time=0.294011615), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3s9xer28jpxfgtxj1c7v', debug=None, seed=688456830, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_22",
+          "category": "prior_therapy",
+          "description": "Greater than 36 months post primary treatment",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 1080,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Time since primary treatment is not specified in the record."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_23",
+          "category": "clinical",
+          "description": "Planned surgery during the intervention period",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about planned surgery during intervention period"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_25",
+          "category": "clinical",
+          "description": "Unable to travel regularly to the study locations for intervention sessions and data collection",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Travel ability not documented in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_26",
+          "category": "clinical",
+          "description": "Unwilling to return to enrolling institution for follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about willingness to return to enrolling institution"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_27",
+          "category": "clinical",
+          "description": "Self-reported inability to walk without assistance or devices",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on walking ability provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_32",
+          "category": "clinical",
+          "description": "Clinically significant TICS-M score (<21) during baseline procedures",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: TICS-M score not reported in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_33",
+          "category": "clinical",
+          "description": "Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-ff416a3a-643a-4adb-b15c-b71f01e37127', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)\". This is an exclusion criterion: Patient MUST NOT meet this. So if patient cannot provide physician re-clearance for exercise if required based on baseline exercise test, they fail the rule. We need to determine if patient meets this rule. The rule is about ability to provide physician re-clearance for exercise if required based on baseline exercise test. We need to see if the narrative or profile indicates that the patient cannot provide physician re-clearance for exercise if required based on baseline exercise test. The narrative: Ms. Okoro is 48-year-old woman with stage IV metastatic breast cancer, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program. There\\'s no mention of exercise test, ECG, blood pressure monitoring, or physician re-clearance. The structured profile: age 48, female, metastatic breast cancer, stage IV, is metastatic true, er positive, her2 negative, prior therapies palbociclib and fulvestrant, no lab values, no comorbidities. No mention of exercise test or clearance. So data missing. According to guidelines: If data required to answer rule is missing, return \"indeterminate\". So status: indeterminate. Reason: \"No information on exercise test or physician re-clearance provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_ed9eea33-c777-434c-b951-62c66f514f80', function=Function(arguments='{\"reason\":\"No information on exercise test or physician re\u2011clearance provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129879, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_8e23cedc90', usage=CompletionUsage(completion_tokens=387, prompt_tokens=1154, total_tokens=1541, completion_time=0.413992364, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=352), prompt_time=0.053803708, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.033501443, total_time=0.467796072), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3xksevmty18ezm8ddass', debug=None, seed=134408234, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-f43c2606-930b-4474-b148-4083f23c90aa', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)\". This is an exclusion criterion: Patient MUST NOT meet this. So if patient cannot provide physician re-clearance for exercise if required based on baseline exercise test, they fail the rule. We need to determine if patient meets this rule. The rule is about ability to provide physician re-clearance for exercise if required based on baseline exercise test. We need to see if the patient is able to provide physician re-clearance. The narrative: Ms. Okoro is 48-year-old woman with stage IV metastatic breast cancer, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program.\\n\\nThe rule is about exercise test and physician re-clearance. There\\'s no mention of baseline exercise test, ECG, blood pressure monitoring, or physician re-clearance. The narrative does not mention any exercise test or clearance. The structured profile also doesn\\'t mention any exercise test or clearance. So data missing. According to guidelines: If data required to answer the rule is missing, return \"indeterminate\". So status: indeterminate. Reason: \"No information on baseline exercise test or physician re-clearance provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_2de917db-f03d-423d-8338-dfb83a7fc35f', function=Function(arguments='{\"reason\":\"No information on baseline exercise test or physician re\u2011clearance provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129880, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_976a85d17a', usage=CompletionUsage(completion_tokens=353, prompt_tokens=1154, total_tokens=1507, completion_time=0.372726599, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=317), prompt_time=0.056464817, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.031527204, total_time=0.429191416), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3y4yfbb83x7p2at847g3', debug=None, seed=1703163549, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-8bb68afd-4668-4bb4-bb98-416e2b22cf09', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)\". This is an exclusion criterion: Patient MUST NOT meet this. So if patient cannot provide physician re-clearance for exercise if required based on baseline exercise test, they fail the rule. We need to determine if patient meets this rule. The rule is about ability to provide physician re-clearance for exercise if required based on baseline exercise test. We need to see if the narrative or profile indicates that the patient cannot provide physician re-clearance for exercise if required based on baseline exercise test. The narrative: Ms. Okoro is 48-year-old woman with stage IV metastatic breast cancer, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program. There\\'s no mention of exercise test, ECG, blood pressure monitoring, or physician re-clearance. The structured profile: age 48, female, metastatic breast cancer, stage IV, is metastatic true, er positive, her2 negative, prior therapies palbociclib, fulvestrant, no lab values, no comorbidities. No mention of exercise test or clearance. So data missing. According to guidelines: If data required to answer rule is missing, return \"indeterminate\". So status: indeterminate. Reason: \"No information on exercise test or physician re-clearance provided.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_3035afb5-6f0d-419c-88e4-9d5ebe4b0301', function=Function(arguments='{\"reason\":\"No information on exercise test or physician re\u2011clearance provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129880, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_1c0f5282a2', usage=CompletionUsage(completion_tokens=386, prompt_tokens=1154, total_tokens=1540, completion_time=0.424595267, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=351), prompt_time=0.070812354, prompt_tokens_details=None, queue_time=0.031744644, total_time=0.495407621), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k3ynaevp9xvrj8dyjgqv8', debug=None, seed=654438334, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_34",
+          "category": "clinical",
+          "description": "Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on fMRI contraindications provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_35",
+          "category": "clinical",
+          "description": "Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No MRI brain scan information provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_36",
+          "category": "clinical",
+          "description": "Enrolled in another physical activity program",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about enrollment in another physical activity program"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_37",
+          "category": "clinical",
+          "description": "Unable to walk without assistance or devices",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about walking ability provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_38",
+          "category": "clinical",
+          "description": "Unwilling to complete study requirements",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-9b9713d5-2bb2-4719-ad47-d6a00b33ee91', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Unwilling to complete study requirements\" - Exclusion Criterion. So patient must NOT meet this rule. We need to determine if patient is unwilling to complete study requirements. The narrative: Ms. Okoro reports cognitive symptoms attributed to treatment effects. She is on palbociclib plus fulvestrant with stable disease. She is referred to a separate palliative support program. There\\'s no mention of unwillingness to complete study requirements. There\\'s no mention of consent or willingness. So the data is missing. According to guidelines: For administrative/s subjective rule, if text does not explicitly address it, return \\'indeterminate\\'. So status: indeterminate. Reason: \"No explicit statement about willingness to complete study requirements.\"', tool_calls=[ChatCompletionMessageToolCall(id='fc_2eb30fbb-246d-41f8-b063-d19bdf522154', function=Function(arguments='{\"reason\":\"No explicit statement about willingness to complete study requirements.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129883, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_976a85d17a', usage=CompletionUsage(completion_tokens=185, prompt_tokens=1133, total_tokens=1318, completion_time=0.195565273, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=153), prompt_time=0.075554954, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.032947, total_time=0.271120227), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k41mtevy9es41hb87s06r', debug=None, seed=1741733286, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-5cc5f4e5-179e-4120-9bcd-abe7be0e579c', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Unwilling to complete study requirements\" - Exclusion Criterion. So patient must NOT meet this rule. We need to determine if patient is unwilling to complete study requirements. The narrative: Ms. Okoro reports cognitive symptoms attributed to treatment effects. She is on palbociclib plus fulvestrant with stable disease. She is referred to a separate palliative support program. There\\'s no mention of unwillingness. There\\'s no mention of consent or willingness. So we cannot determine. According to guidelines: If the rule requires \"willingness to comply\" and text does not explicitly address it, return \\'indeterminate\\'. So status = indeterminate. Reason: \"No explicit statement of willingness or unwillingness to complete study requirements.\" Provide JSON.', tool_calls=[ChatCompletionMessageToolCall(id='fc_cb68d71a-012b-4d9c-8ac0-96594073427b', function=Function(arguments='{\"reason\":\"No explicit statement of willingness or unwillingness to complete study requirements.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129883, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_35b6cecc66', usage=CompletionUsage(completion_tokens=194, prompt_tokens=1133, total_tokens=1327, completion_time=0.20578924, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=159), prompt_time=0.054906669, prompt_tokens_details=PromptTokensDetails(cached_tokens=256), queue_time=0.032697994, total_time=0.260695909), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k41zwevysq3m3sryk7tbw', debug=None, seed=1788253535, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-c5f83a0c-e3c2-46d9-9c45-a85479856a41', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Unwilling to complete study requirements\" - Exclusion Criterion. So patient must NOT meet this rule. We need to determine if patient is unwilling to complete study requirements. The narrative: Ms. Okoro reports cognitive symptoms attributed to treatment effects. She is referred to separate palliative support program. No mention of willingness or unwillingness. No mention of refusal. So we cannot determine. According to guidelines: If data missing, return indeterminate. So status \"indeterminate\". Provide reason: \"No information about willingness to complete study requirements.\" Use JSON schema.', tool_calls=[ChatCompletionMessageToolCall(id='fc_0f5dce65-d7e9-45b6-8998-85e1a8fc1ed9', function=Function(arguments='{\"reason\":\"No information about willingness to complete study requirements.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129884, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_228717f27c', usage=CompletionUsage(completion_tokens=152, prompt_tokens=1133, total_tokens=1285, completion_time=0.159115816, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=121), prompt_time=0.062341499, prompt_tokens_details=None, queue_time=0.032416546, total_time=0.221457315), usage_breakdown=None, x_groq=XGroq(id='req_01kq2k42aperjstw7nkwh3150q', debug=None, seed=1527808841, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_39",
+          "category": "clinical",
+          "description": "Unwilling to be randomized to the exercise group or health education group",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about willingness to be randomized to exercise or health education group"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_40",
+          "category": "clinical",
+          "description": "Unable or unwilling to continuously wear and regularly sync/charge an activity tracker during the study period",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about activity tracker usage or willingness is provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_41",
+          "category": "clinical",
+          "description": "Unable to travel regularly to the study locations for intervention sessions and data collection",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Travel ability not documented in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04816006_LLM_42",
+          "category": "clinical",
+          "description": "Unwilling to return to enrolling institution for follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information about willingness to return for follow-up"
+      }
+    ]
+  },
+  "report_text": "Trial: NCT04816006\nEligible: NO\n\nFAILING CRITERIA:\n  1. [demographic] Minimum age: 50 Years\n     Patient value: 48\n     Required: gte 50\n     \u2192 FAIL: age = 48 (required: gte 50)\n\nINDETERMINATE (missing patient data):\n  1. [comorbidity] History of major multiple myocardial infarctions (MI)\n     Field: comorbidity\n     \u2192 Data not available in patient record\n\n  2. [comorbidity] Recent electrocardiogram (ECG) changes or recent MI\n     Field: comorbidity\n     \u2192 Data not available in patient record\n\n  3. [comorbidity] Resting or unstable angina\n     Field: comorbidity\n     \u2192 Data not available in patient record\n\n  4. [comorbidity] Significant multivessel coronary occlusion (\u2265 70%) on angiography\n     Field: comorbidity\n     \u2192 Data not available in patient record\n\n  5. [comorbidity] Uncontrolled and/or serious arrhythmias\n     Field: comorbidity\n     \u2192 Data not available in patient record\n\n  6. [comorbidity] 3rd degree heart block\n     Field: comorbidity\n     \u2192 Data not available in patient record\n\n  7. [comorbidity] Acute congestive heart failure or ejection fraction < 30%\n     Field: comorbidity\n     \u2192 Data not available in patient record\n\n  8. [comorbidity] History of stroke\n     Field: comorbidity\n     \u2192 Data not available in patient record\n\n  9. [comorbidity] Transient ischemic attack\n     Field: comorbidity\n     \u2192 Data not available in patient record\n\n  10. [comorbidity] Other neurological disorders\n     Field: comorbidity\n     \u2192 Data not available in patient record\n\n  11. [comorbidity] Brain surgery involving tissue removal\n     Field: comorbidity\n     \u2192 Data not available in patient record\n\n  12. [prior_therapy] PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  13. [clinical] PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  14. [clinical] PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  15. [clinical] REGISTRATION: Able to provide medical record release to confirm eligibility\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  16. [prior_therapy] REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to pre-registration as confirmed via clinical determination\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  17. [clinical] REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21)\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  18. [clinical] REGISTRATION: Receive physician's clearance to participate in an exercise program\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  19. [prior_therapy] Greater than 36 months post primary treatment\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  20. [clinical] Planned surgery during the intervention period\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  21. [clinical] Unable to travel regularly to the study locations for intervention sessions and data collection\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  22. [clinical] Unwilling to return to enrolling institution for follow-up\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  23. [clinical] Self-reported inability to walk without assistance or devices\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  24. [clinical] Clinically significant TICS-M score (<21) during baseline procedures\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  25. [clinical] Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  26. [clinical] Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  27. [clinical] Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  28. [clinical] Enrolled in another physical activity program\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  29. [clinical] Unable to walk without assistance or devices\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  30. [clinical] Unwilling to complete study requirements\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  31. [clinical] Unwilling to be randomized to the exercise group or health education group\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  32. [clinical] Unable or unwilling to continuously wear and regularly sync/charge an activity tracker during the study period\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  33. [clinical] Unable to travel regularly to the study locations for intervention sessions and data collection\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  34. [clinical] Unwilling to return to enrolling institution for follow-up\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 7 of 42"
+}

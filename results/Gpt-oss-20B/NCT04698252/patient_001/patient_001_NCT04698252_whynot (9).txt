@@ -1,0 +1,25 @@
+Trial: NCT04698252
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Life expectancy of at least 12 weeks
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  2. [clinical] Signed informed consent form
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  3. [clinical] Disposition and aptitude to fulfill the study protocol during the study duration
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [comorbidity] Current or previous history of severe diseases, such as clinically relevant heart failure, acute myocardium infarction in the last six months, chronic obstructive lung disease, HIV infection, chronic active hepatitis B or C infection, current serious uncontrolled infections or other severe diseases that may impact patients' expected survival)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [comorbidity] Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 13 of 18

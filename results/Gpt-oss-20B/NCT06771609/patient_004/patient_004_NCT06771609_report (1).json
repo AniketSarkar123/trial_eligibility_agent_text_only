@@ -1,0 +1,516 @@
+{
+  "patient": {
+    "age": 57,
+    "sex": "female",
+    "menopausal_status": null,
+    "pregnancy_status": null,
+    "primary_diagnosis": "metastatic triple negative breast cancer",
+    "cancer_stage": "IV",
+    "is_metastatic": true,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": "negative",
+    "pr_status": "negative",
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": null,
+    "received_adjuvant_therapy": null,
+    "has_recurrence": null,
+    "ecog_score": null,
+    "prior_therapies": [
+      {
+        "drug_name": "carboplatin",
+        "drug_class": null,
+        "is_current": false,
+        "days_since_last_dose": null,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      },
+      {
+        "drug_name": "gemcitabine",
+        "drug_class": null,
+        "is_current": false,
+        "days_since_last_dose": null,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      },
+      {
+        "drug_name": "sacituzumab govitecan",
+        "drug_class": null,
+        "is_current": false,
+        "days_since_last_dose": null,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      }
+    ],
+    "lines_of_therapy": 2,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT06771609",
+    "title": "Evaluate the Efficacy and Safety of PD-L1 Monoclonal Antibody Combined with VEX Metronomic Chemotherapy with or Without Radiotherapy in Advanced Triple-negative Breast Cancer: a Prospective, Multicenter, Randomized Controlled Phase II Clinical Trial.",
+    "conditions": [
+      "Advanced Triple-negative Breast Cancer"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_2",
+        "category": "clinical",
+        "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the \"American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.\"",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_3",
+        "category": "prior_therapy",
+        "description": "Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer;",
+        "field": "lines_of_therapy",
+        "operator": "lte",
+        "value": 1,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_4",
+        "category": "clinical",
+        "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ],
+        "unit": null,
+        "timeframe_days": 10,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_5",
+        "category": "clinical",
+        "description": "Subjects must have at least one measurable lesion present; specific reference to the \"Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\" guidelines;",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_6",
+        "category": "prior_therapy",
+        "description": "Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_7",
+        "category": "clinical",
+        "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_8",
+        "category": "clinical",
+        "description": "Subjects are able to sign an informed consent form to participate in the study.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_9",
+        "category": "clinical",
+        "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 10,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT06771609",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 57,
+        "reason": "PASS: age = 57 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_3",
+          "category": "prior_therapy",
+          "description": "Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer;",
+          "field": "lines_of_therapy",
+          "operator": "lte",
+          "value": 1,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": 2,
+        "reason": "FAIL: lines_of_therapy = 2 (required: lte 1)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_4",
+          "category": "clinical",
+          "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "timeframe_days": 10,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'ecog_score'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_2",
+          "category": "clinical",
+          "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the \"American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.\"",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient has metastatic triple-negative breast cancer but no mention of ASCO/CAP guidelines in records"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_5",
+          "category": "clinical",
+          "description": "Subjects must have at least one measurable lesion present; specific reference to the \"Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\" guidelines;",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-b7f2b832-8f7b-488c-ba4f-2b786ff2f535', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The narrative: Ms. Mensah is a 57-year-old woman with metastatic TNBC who has received two prior chemotherapy lines in the metastatic setting: first-line carboplatin/gemcitabine (progressed at 7 months) and second-line sacituzumab govitecan (progressed at 4 months). She now presents with progressive liver disease and is seeking enrollment. The narrative does not mention measurable lesions explicitly. It says \"progressive liver disease\" but not whether lesions are measurable. The structured profile: no lab values, no mention of measurable lesions. So data missing. According to guidelines: If data missing, return \"indeterminate\". So status: \"indeterminate\". Reason: \"No information on measurable lesions provided.\" Provide JSON with status and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_3e7d5da5-2fee-4853-aaa2-48d3125ed53d', function=Function(arguments='{\"reason\":\"No information on measurable lesions provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129541, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_6fb97b13e6', usage=CompletionUsage(completion_tokens=254, prompt_tokens=1187, total_tokens=1441, completion_time=0.283897075, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=225), prompt_time=0.082657134, prompt_tokens_details=None, queue_time=0.003240758, total_time=0.366554209), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jsknefwqrp332xsw9kvp2', debug=None, seed=1331222700, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-7843ad58-487d-41c1-85e3-a64c5897d2ed', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The narrative: Ms. Mensah is a 57-year-old woman with metastatic TNBC who has received two prior chemotherapy lines in the metastatic setting: first-line carboplatin/gemcitabine (progressed at 7 months) and second-line sacituzumab govitecan (progressed at 4 months). She now presents with progressive liver disease and is seeking enrollment. The narrative does not mention measurable lesions explicitly. It says \"progressive liver disease\" but not whether lesions are measurable. The structured profile: no lab values, no mention of measurable lesions. So data missing. According to guidelines: If data missing, return \"indeterminate\". So status: \"indeterminate\". Reason: \"No information on measurable lesions provided.\" Provide JSON with status and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_be510455-d1f5-4abe-9e20-dae3fd3bab41', function=Function(arguments='{\"reason\":\"No information on measurable lesions provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129542, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_e2cb7a84ec', usage=CompletionUsage(completion_tokens=254, prompt_tokens=1187, total_tokens=1441, completion_time=0.29523714, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=225), prompt_time=0.065730693, prompt_tokens_details=None, queue_time=0.003315818, total_time=0.360967833), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jsm28emstc2sxc1c26a1p', debug=None, seed=704696037, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-d0f8bb50-1ecf-4b12-ad7d-becb4aceb471', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The narrative: Ms. Mensah is a 57-year-old woman with metastatic TNBC who has received two prior chemotherapy lines in the metastatic setting: first-line carboplatin/gemcitabine (progressed at 7 months) and second-line sacituzumab govitecan (progressed at 4 months). She now presents with progressive liver disease and is seeking enrollment. The narrative does not mention measurable lesions explicitly. It says \"progressive liver disease\" but not whether lesions are measurable. The structured profile: no lab values, no mention of measurable lesions. So data missing. According to guidelines: If data missing, return \"indeterminate\". So status: \"indeterminate\". Reason: \"No information on measurable lesions provided.\" Provide JSON with status and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_3c445c8e-dc89-4a3d-99b4-25f9fec3544c', function=Function(arguments='{\"reason\":\"No information on measurable lesions provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129542, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_976a85d17a', usage=CompletionUsage(completion_tokens=254, prompt_tokens=1187, total_tokens=1441, completion_time=0.291603106, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=225), prompt_time=0.084978923, prompt_tokens_details=None, queue_time=0.003073879, total_time=0.376582029), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jsmewebd8k5j5yy891r0h', debug=None, seed=906512430, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_6",
+          "category": "prior_therapy",
+          "description": "Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient's record lacks information on anthracycline or taxane exposure and related failure or investigator judgment."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_7",
+          "category": "clinical",
+          "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on pregnancy, lactation, or contraceptive use provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_8",
+          "category": "clinical",
+          "description": "Subjects are able to sign an informed consent form to participate in the study.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No explicit mention of the patient\u2019s ability to sign informed consent in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_9",
+          "category": "clinical",
+          "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 10,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No laboratory or organ function data provided"
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_3",
+          "category": "prior_therapy",
+          "description": "Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer;",
+          "field": "lines_of_therapy",
+          "operator": "lte",
+          "value": 1,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": 2,
+        "reason": "FAIL: lines_of_therapy = 2 (required: lte 1)"
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_4",
+          "category": "clinical",
+          "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "timeframe_days": 10,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'ecog_score'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_2",
+          "category": "clinical",
+          "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the \"American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.\"",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient has metastatic triple-negative breast cancer but no mention of ASCO/CAP guidelines in records"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_5",
+          "category": "clinical",
+          "description": "Subjects must have at least one measurable lesion present; specific reference to the \"Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\" guidelines;",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: LLM fallback failed: <failed_attempts>\n\n<generation number=\"1\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-b7f2b832-8f7b-488c-ba4f-2b786ff2f535', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The narrative: Ms. Mensah is a 57-year-old woman with metastatic TNBC who has received two prior chemotherapy lines in the metastatic setting: first-line carboplatin/gemcitabine (progressed at 7 months) and second-line sacituzumab govitecan (progressed at 4 months). She now presents with progressive liver disease and is seeking enrollment. The narrative does not mention measurable lesions explicitly. It says \"progressive liver disease\" but not whether lesions are measurable. The structured profile: no lab values, no mention of measurable lesions. So data missing. According to guidelines: If data missing, return \"indeterminate\". So status: \"indeterminate\". Reason: \"No information on measurable lesions provided.\" Provide JSON with status and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_3e7d5da5-2fee-4853-aaa2-48d3125ed53d', function=Function(arguments='{\"reason\":\"No information on measurable lesions provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129541, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_6fb97b13e6', usage=CompletionUsage(completion_tokens=254, prompt_tokens=1187, total_tokens=1441, completion_time=0.283897075, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=225), prompt_time=0.082657134, prompt_tokens_details=None, queue_time=0.003240758, total_time=0.366554209), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jsknefwqrp332xsw9kvp2', debug=None, seed=1331222700, usage=None))\n</completion>\n</generation>\n\n<generation number=\"2\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-7843ad58-487d-41c1-85e3-a64c5897d2ed', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The narrative: Ms. Mensah is a 57-year-old woman with metastatic TNBC who has received two prior chemotherapy lines in the metastatic setting: first-line carboplatin/gemcitabine (progressed at 7 months) and second-line sacituzumab govitecan (progressed at 4 months). She now presents with progressive liver disease and is seeking enrollment. The narrative does not mention measurable lesions explicitly. It says \"progressive liver disease\" but not whether lesions are measurable. The structured profile: no lab values, no mention of measurable lesions. So data missing. According to guidelines: If data missing, return \"indeterminate\". So status: \"indeterminate\". Reason: \"No information on measurable lesions provided.\" Provide JSON with status and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_be510455-d1f5-4abe-9e20-dae3fd3bab41', function=Function(arguments='{\"reason\":\"No information on measurable lesions provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129542, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_e2cb7a84ec', usage=CompletionUsage(completion_tokens=254, prompt_tokens=1187, total_tokens=1441, completion_time=0.29523714, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=225), prompt_time=0.065730693, prompt_tokens_details=None, queue_time=0.003315818, total_time=0.360967833), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jsm28emstc2sxc1c26a1p', debug=None, seed=704696037, usage=None))\n</completion>\n</generation>\n\n<generation number=\"3\">\n<exception>\n    Tool name does not match\n</exception>\n<completion>\n    ChatCompletion(id='chatcmpl-d0f8bb50-1ecf-4b12-ad7d-becb4aceb471', choices=[Choice(finish_reason='tool_calls', index=0, logprobs=None, message=ChatCompletionMessage(content=None, role='assistant', annotations=None, executed_tools=None, function_call=None, reasoning='We need to evaluate the rule: \"Subjects must have at least one measurable lesion present; specific reference to the \\'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\\' guidelines; Rule Type: Inclusion Criterion (Patient MUST meet this)\".\\n\\nWe need to determine if patient meets this rule. The narrative: Ms. Mensah is a 57-year-old woman with metastatic TNBC who has received two prior chemotherapy lines in the metastatic setting: first-line carboplatin/gemcitabine (progressed at 7 months) and second-line sacituzumab govitecan (progressed at 4 months). She now presents with progressive liver disease and is seeking enrollment. The narrative does not mention measurable lesions explicitly. It says \"progressive liver disease\" but not whether lesions are measurable. The structured profile: no lab values, no mention of measurable lesions. So data missing. According to guidelines: If data missing, return \"indeterminate\". So status: \"indeterminate\". Reason: \"No information on measurable lesions provided.\" Provide JSON with status and reason.', tool_calls=[ChatCompletionMessageToolCall(id='fc_3c445c8e-dc89-4a3d-99b4-25f9fec3544c', function=Function(arguments='{\"reason\":\"No information on measurable lesions provided.\",\"status\":\"indeterminate\"}', name='functions.RuleEvaluation'), type='function')]))], created=1777129542, model='openai/gpt-oss-20b', object='chat.completion', mcp_list_tools=None, service_tier='on_demand', system_fingerprint='fp_976a85d17a', usage=CompletionUsage(completion_tokens=254, prompt_tokens=1187, total_tokens=1441, completion_time=0.291603106, completion_tokens_details=CompletionTokensDetails(reasoning_tokens=225), prompt_time=0.084978923, prompt_tokens_details=None, queue_time=0.003073879, total_time=0.376582029), usage_breakdown=None, x_groq=XGroq(id='req_01kq2jsmewebd8k5j5yy891r0h', debug=None, seed=906512430, usage=None))\n</completion>\n</generation>\n\n</failed_attempts>\n\n<last_exception>\n    Tool name does not match\n</last_exception>"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_6",
+          "category": "prior_therapy",
+          "description": "Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient's record lacks information on anthracycline or taxane exposure and related failure or investigator judgment."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_7",
+          "category": "clinical",
+          "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on pregnancy, lactation, or contraceptive use provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_8",
+          "category": "clinical",
+          "description": "Subjects are able to sign an informed consent form to participate in the study.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No explicit mention of the patient\u2019s ability to sign informed consent in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_9",
+          "category": "clinical",
+          "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 10,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No laboratory or organ function data provided"
+      }
+    ]
+  },
+  "report_text": "Trial: NCT06771609\nEligible: NO\n\nFAILING CRITERIA:\n  1. [prior_therapy] Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer;\n     Patient value: 2\n     Required: lte 1\n     \u2192 FAIL: lines_of_therapy = 2 (required: lte 1)\n\nINDETERMINATE (missing patient data):\n  1. [clinical] Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;\n     Field: ecog_score\n     \u2192 Data not available in patient record\n\n  2. [clinical] Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the \"American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.\"\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  3. [clinical] Subjects must have at least one measurable lesion present; specific reference to the \"Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\" guidelines;\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  4. [prior_therapy] Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  5. [clinical] Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  6. [clinical] Subjects are able to sign an informed consent form to participate in the study.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  7. [clinical] Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 1 of 9"
+}

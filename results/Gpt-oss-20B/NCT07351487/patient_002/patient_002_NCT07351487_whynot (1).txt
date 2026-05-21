@@ -1,0 +1,53 @@
+Trial: NCT07351487
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [prior_therapy] The patient had undergone major surgical procedures unrelated to breast cancer within 4 weeks before the first administration of the study drug
+     Field: prior_surgery
+     → Data not available in patient record
+
+  2. [prior_therapy] The patient has not fully recovered from major surgical procedures unrelated to breast cancer
+     Field: prior_surgery
+     → Data not available in patient record
+
+  3. [clinical] Pathological examination of PD-L1 expression: The Combined Positive Score (CPS) refers to the percentage of PD-L1 positive cells (including tumor cells, lymphocytes, macrophages) in all tumor cells. Our center detected the PD-L1 antibody site as 22C3.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [clinical] For female patients who have not yet reached menopause or undergone surgical sterilization
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [clinical] For female patients who have not yet reached menopause or undergone surgical sterilization
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  6. [clinical] During the treatment period and in the study treatment, the final use effective contraceptive methods for at least 6 months after a single administration
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  7. [clinical] Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  8. [comorbidity] Serious heart disease or discomfort, including but not limited to the following diseases: 1) Diagnosed history of heart failure or systolic dysfunction (LVEF less than 50%). 2) High risk uncontrolled arrhythmias, such as atrial tachycardia, resting heart rate greater than 100bpm, significant ventricular arrhythmias (such as ventricular tachycardia), or higher-level atrioventricular block (i.e. Mobitz II second or third degree atrioventricular block). 3) Angina requiring medication for treatment. 4) Heart valve disease with clinical significance. 5) ECG shows transmural myocardial infarction. 6) Poor control of hypertension (systolic blood pressure greater than 180mmHg and/or diastolic blood pressure greater than 180mmHg after drug treatment) 100mmHg
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  9. [comorbidity] Uncontrolled active infections that require treatment; History of immunodeficiency, including HIV testing positive Sexual, or suffering from other acquired or congenital immunodeficiency diseases, or having a history of organ transplantation
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  10. [comorbidity] Patients with chronic active hepatitis B or active hepatitis C (excluding hepatitis B virus carriers, stable hepatitis B after drug treatment [HBV-DNA test negative or<50IU/ml] and cured hepatitis C patients [HCV RNA test negative])
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  11. [comorbidity] Individuals with a known history of allergies to the components of this medication regimen
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  12. [clinical] Pregnant and lactating female patients, female patients with fertility and positive baseline pregnancy test results, or reproductive age patients who are unwilling to take effective contraceptive measures during the entire trial period and within 6 months after the last study medication
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 13 of 25

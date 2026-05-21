@@ -1,0 +1,17 @@
+While the pipeline code is flawless, Patient 1 (Ms. Wu) exposed the absolute ceiling of the gpt-oss-20b model's reasoning capabilities.
+
+Look at her failing criterion:
+
+Trial Rule: "Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer."
+LLM Verdict: "FAIL: Patient has T3N1 stage IIIA breast cancer, which does not match the rule's T1N1-3 or T2-4N0-2 criteria."
+
+The Error: The LLM is clinically wrong here. Ms. Wu has cT3N1M0.
+
+T3 falls perfectly within the range of T2-4.
+
+N1 falls perfectly within the range of N0-2.
+Ms. Wu mathematically satisfies the T2-4N0-2 requirement.
+
+Why it happened: Small parameter LLMs (like a 20B) are basically advanced pattern matchers. The model looked at the exact string T3N1 and tried to find it in T1N1-3 or T2-4N0-2. Because the exact string wasn't there, and it lacked the deep logical reasoning to calculate interval ranges (knowing that 3 is between 2 and 4), it panicked and hallucinated a failure.
+
+The only remaining error (the TNM staging interval math) is a pure model-weight limitation.

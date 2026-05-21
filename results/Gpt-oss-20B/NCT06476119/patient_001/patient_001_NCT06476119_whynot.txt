@@ -1,0 +1,25 @@
+Trial: NCT06476119
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Written informed consent
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  2. [clinical] No evidence of nodal or distant metastases (cN0M0) on imaging
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  3. [clinical] Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [comorbidity] Uncontrolled severe illness or medical condition
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [comorbidity] Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 12 of 17

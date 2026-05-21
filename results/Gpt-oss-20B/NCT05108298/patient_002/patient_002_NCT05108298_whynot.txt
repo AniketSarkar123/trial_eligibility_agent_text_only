@@ -1,0 +1,13 @@
+Trial: NCT05108298
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Patient must have a histologically confirmed diagnosis of primary cancer of any stage within 12 weeks (84 days) at registration.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  2. [clinical] Patient must not have basal cell skin carcinoma.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 12 of 14

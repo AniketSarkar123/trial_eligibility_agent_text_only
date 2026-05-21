@@ -1,0 +1,64 @@
+Trial: NCT04698252
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] ECOG performance status 0
+     Patient value: 2
+     Required: eq 0
+     → FAIL: ecog_score = 2 (required: eq 0)
+
+  2. [clinical] ECOG performance status 1
+     Patient value: 2
+     Required: eq 1
+     → FAIL: ecog_score = 2 (required: eq 1)
+
+  3. [clinical] Histologically confirmed invasive breast cancer, with oligometastatic disease defined as one of the following criteria: 1) One to four bone lesions; 2) One to four lung and/ or hepatic lesions; 3) Distant metastasis limited to ipsilateral cervical lymph nodes; 4) Distant metastasis limited to contralateral axillary lymph nodes
+     Field: unmapped_rule
+     → LLM Fallback: Patient has six bone lesions and two lung lesions, exceeding the oligometastatic limits of one to four lesions in a single organ system.
+
+  4. [clinical] Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation
+     Field: unmapped_rule
+     → LLM Fallback: Patient has eight metastatic sites, exceeding the oligometastatic threshold of ≤4 sites.
+
+  5. [clinical] Partial response after at least six months of systemic therapy for breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: Patient shows progressive disease after 3 months of exemestane and no evidence of partial response, thus does not meet the requirement of partial response after at least six months of systemic therapy.
+
+  6. [clinical] Stable disease after at least six months of systemic therapy for breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: Patient has progressive disease after only 3 months of therapy, not stable disease after ≥6 months.
+
+  7. [clinical] Progressive disease during the last systemic treatment received for metastatic disease
+     Field: unmapped_rule
+     → LLM Fallback: Patient shows progressive disease on exemestane, the last systemic therapy for metastatic disease.
+
+INDETERMINATE (missing patient data):
+  1. [biomarker] HER2-positive breast cancer
+     Field: her2_status
+     → Data not available in patient record
+
+  2. [prior_therapy] Previous local therapy for distant metastasis
+     Field: prior_therapy
+     → Data not available in patient record
+
+  3. [clinical] Life expectancy of at least 12 weeks
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [clinical] Signed informed consent form
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [clinical] Disposition and aptitude to fulfill the study protocol during the study duration
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  6. [comorbidity] Current or previous history of severe diseases, such as clinically relevant heart failure, acute myocardium infarction in the last six months, chronic obstructive lung disease, HIV infection, chronic active hepatitis B or C infection, current serious uncontrolled infections or other severe diseases that may impact patients' expected survival
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  7. [comorbidity] Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 6 of 20

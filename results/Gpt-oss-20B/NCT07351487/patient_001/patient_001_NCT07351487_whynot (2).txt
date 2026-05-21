@@ -1,0 +1,58 @@
+Trial: NCT07351487
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: Patient has T3N1 stage IIIA breast cancer, which does not match the rule's T1N1-3 or T2-4N0-2 criteria.
+
+INDETERMINATE (missing patient data):
+  1. [demographic] Female patients who have not yet reached menopause
+     Field: menopausal_status
+     → Data not available in patient record
+
+  2. [prior_therapy] Female patients who have undergone surgical sterilization
+     Field: prior_surgery
+     → Data not available in patient record
+
+  3. [prior_therapy] The patient had undergone major surgical procedures unrelated to breast cancer within 4 weeks before the first administration of the study drug
+     Field: prior_surgery
+     → Data not available in patient record
+
+  4. [clinical] Use effective contraceptive methods for at least 6 months after a single administration
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [clinical] Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  6. [comorbidity] The patient has not fully recovered from such surgical procedures
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  7. [comorbidity] Serious heart disease or discomfort, including but not limited to the following diseases: Diagnosed history of heart failure or systolic dysfunction (LVEF less than 50%). High risk uncontrolled arrhythmias, such as atrial tachycardia, resting heart rate greater than 100bpm, significant ventricular arrhythmias (such as ventricular tachycardia), or higher-level atrioventricular block (i.e. Mobitz II second or third degree atrioventricular block). Angina requiring medication for treatment. Heart valve disease with clinical significance. ECG shows transmural myocardial infarction. Poor control of hypertension (systolic blood pressure greater than 180mmHg and/or diastolic blood pressure greater than 180mmHg after drug treatment) 100mmHg.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  8. [comorbidity] Uncontrolled active infections that require treatment; History of immunodeficiency, including HIV testing positive Sexual, or suffering from other acquired or congenital immunodeficiency diseases, or having a history of organ transplantation.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  9. [comorbidity] Patients with chronic active hepatitis B or active hepatitis C (excluding hepatitis B virus carriers, stable hepatitis B after drug treatment [HBV-DNA test negative or<50IU/ml] and cured hepatitis C patients [HCV RNA test negative]).
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  10. [comorbidity] Individuals with a known history of allergies to the components of this medication regimen.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  11. [comorbidity] Pregnant and lactating female patients, female patients with fertility and positive baseline pregnancy test results, or reproductive age patients who are unwilling to take effective contraceptive measures during the entire trial period and within 6 months after the last study medication.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  12. [comorbidity] Suffering from serious accompanying diseases or other comorbidities that may interfere with the planned treatment, or any other circumstances that the researcher deems unsuitable for the patient to participate in this study.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 11 of 24

@@ -1,0 +1,817 @@
+{
+  "patient": {
+    "analysis": null,
+    "age": 42,
+    "sex": "female",
+    "menopausal_status": null,
+    "pregnancy_status": null,
+    "primary_diagnosis": "triple negative breast cancer",
+    "cancer_stage": "I",
+    "is_metastatic": false,
+    "histology": null,
+    "tumor_size_cm": 1.8,
+    "nodal_status": "negative",
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": "negative",
+    "pr_status": "negative",
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": 65.0,
+    "received_neoadjuvant_therapy": true,
+    "received_adjuvant_therapy": false,
+    "has_recurrence": null,
+    "ecog_score": null,
+    "prior_therapies": [
+      {
+        "drug_name": "carboplatin",
+        "drug_class": null,
+        "is_current": false,
+        "days_since_last_dose": null,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      },
+      {
+        "drug_name": "paclitaxel",
+        "drug_class": null,
+        "is_current": false,
+        "days_since_last_dose": null,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      },
+      {
+        "drug_name": "pembrolizumab",
+        "drug_class": null,
+        "is_current": false,
+        "days_since_last_dose": null,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      }
+    ],
+    "lines_of_therapy": 1,
+    "prior_radiation": null,
+    "prior_surgery": false,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT06476119",
+    "title": "OPTImaL:Optimisation of Treatment for Patients With Low Stage Triple-negative Breast Cancer With High Stromal Tumor-infiltrating Lymphocytes",
+    "conditions": [
+      "Breast Cancer Stage I",
+      "Triple Negative Breast Cancer (TNBC)"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_1",
+        "category": "demographic",
+        "description": "Female or male patients",
+        "field": "sex",
+        "operator": "in",
+        "value": [
+          "female",
+          "male"
+        ],
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_3",
+        "category": "clinical",
+        "description": "Written informed consent",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_4",
+        "category": "clinical",
+        "description": "TNBC defined as invasive carcinoma; ER/PR expression 0-9%; HER2 negative",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_5",
+        "category": "clinical",
+        "description": "Pathological stage I TNBC: pT1a/b/c (\u22642 cm) and pN0, with no microinvasive disease or isolated tumor cells",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_6",
+        "category": "clinical",
+        "description": "No evidence of nodal or distant metastases (cN0M0) on pre- and/or postoperative imaging including 18F-FDG-PET/CT or CT",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_7",
+        "category": "clinical",
+        "description": "sTIL score of \u226550% for patients \u226540 years and \u226575% for patients <40 years at TNBC diagnosis on H&E FFPE surgical specimen",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_8",
+        "category": "clinical",
+        "description": "Has undergone curative breast surgery (breast-conserving or mastectomy with surgical axillary staging including sentinel lymph node procedure)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_9",
+        "category": "clinical",
+        "description": "Absence of recurrence between curative breast surgery and expression of patient preference",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_10",
+        "category": "clinical",
+        "description": "Eligible for radiotherapy (if indicated)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_11",
+        "category": "clinical",
+        "description": "Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_12",
+        "category": "clinical",
+        "description": "Multifocal, multicentric or bilateral breast cancer at the time of screening",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_13",
+        "category": "prior_therapy",
+        "description": "Administration of neoadjuvant systemic therapy",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_14",
+        "category": "clinical",
+        "description": "Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_15",
+        "category": "clinical",
+        "description": "Other invasive malignancy within 5 years prior to inclusion, except adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason \u22646 prostate cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 1825,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_16",
+        "category": "comorbidity",
+        "description": "Uncontrolled severe illness or medical condition",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_17",
+        "category": "clinical",
+        "description": "Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT06476119",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 42,
+        "reason": "PASS: age = 42 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_1",
+          "category": "demographic",
+          "description": "Female or male patients",
+          "field": "sex",
+          "operator": "in",
+          "value": [
+            "female",
+            "male"
+          ],
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "female",
+        "reason": "PASS: sex = female (required: in ['female', 'male'])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_3",
+          "category": "clinical",
+          "description": "Written informed consent",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documentation of written informed consent in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_4",
+          "category": "clinical",
+          "description": "TNBC defined as invasive carcinoma; ER/PR expression 0-9%; HER2 negative",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient has triple negative breast cancer with ER/PR negative and HER2 negative status."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_5",
+          "category": "clinical",
+          "description": "Pathological stage I TNBC: pT1a/b/c (\u22642 cm) and pN0, with no microinvasive disease or isolated tumor cells",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Residual disease 1.8\u202fcm (\u22642\u202fcm) and negative lymph nodes meet pathological stage\u202fI criteria."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_6",
+          "category": "clinical",
+          "description": "No evidence of nodal or distant metastases (cN0M0) on pre- and/or postoperative imaging including 18F-FDG-PET/CT or CT",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No imaging evidence of nodal or distant metastases is documented in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_7",
+          "category": "clinical",
+          "description": "sTIL score of \u226550% for patients \u226540 years and \u226575% for patients <40 years at TNBC diagnosis on H&E FFPE surgical specimen",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: sTIL score 65% meets the \u226550% threshold for patients aged 42."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_8",
+          "category": "clinical",
+          "description": "Has undergone curative breast surgery (breast-conserving or mastectomy with surgical axillary staging including sentinel lymph node procedure)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative confirms surgery and negative lymph nodes but does not specify a sentinel lymph node procedure, so the required axillary staging detail is missing."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_9",
+          "category": "clinical",
+          "description": "Absence of recurrence between curative breast surgery and expression of patient preference",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No evidence of recurrence or patient preference expression after surgery"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_10",
+          "category": "clinical",
+          "description": "Eligible for radiotherapy (if indicated)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient has residual disease >0.5\u202fcm and no contraindications to radiotherapy."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_11",
+          "category": "clinical",
+          "description": "Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient had prior invasive breast cancer (TNBC) and underwent neoadjuvant therapy."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_12",
+          "category": "clinical",
+          "description": "Multifocal, multicentric or bilateral breast cancer at the time of screening",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on multifocal, multicentric, or bilateral disease provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_13",
+          "category": "prior_therapy",
+          "description": "Administration of neoadjuvant systemic therapy",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient received neoadjuvant systemic therapy."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_14",
+          "category": "clinical",
+          "description": "Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Lymphovascular invasion status not reported in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_15",
+          "category": "clinical",
+          "description": "Other invasive malignancy within 5 years prior to inclusion, except adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason \u22646 prostate cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 1825,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No mention of other invasive malignancy within 5 years prior to inclusion."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_16",
+          "category": "comorbidity",
+          "description": "Uncontrolled severe illness or medical condition",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on uncontrolled severe illness or medical condition provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_17",
+          "category": "clinical",
+          "description": "Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on psychological, familial, sociological, or geographical factors affecting compliance"
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_11",
+          "category": "clinical",
+          "description": "Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient had prior invasive breast cancer (TNBC) and underwent neoadjuvant therapy."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_13",
+          "category": "prior_therapy",
+          "description": "Administration of neoadjuvant systemic therapy",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Patient received neoadjuvant systemic therapy."
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_3",
+          "category": "clinical",
+          "description": "Written informed consent",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No documentation of written informed consent in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_6",
+          "category": "clinical",
+          "description": "No evidence of nodal or distant metastases (cN0M0) on pre- and/or postoperative imaging including 18F-FDG-PET/CT or CT",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No imaging evidence of nodal or distant metastases is documented in the narrative or profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_8",
+          "category": "clinical",
+          "description": "Has undergone curative breast surgery (breast-conserving or mastectomy with surgical axillary staging including sentinel lymph node procedure)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The narrative confirms surgery and negative lymph nodes but does not specify a sentinel lymph node procedure, so the required axillary staging detail is missing."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_9",
+          "category": "clinical",
+          "description": "Absence of recurrence between curative breast surgery and expression of patient preference",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No evidence of recurrence or patient preference expression after surgery"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_12",
+          "category": "clinical",
+          "description": "Multifocal, multicentric or bilateral breast cancer at the time of screening",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on multifocal, multicentric, or bilateral disease provided"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_14",
+          "category": "clinical",
+          "description": "Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Lymphovascular invasion status not reported in narrative or profile"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_15",
+          "category": "clinical",
+          "description": "Other invasive malignancy within 5 years prior to inclusion, except adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason \u22646 prostate cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": 1825,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No mention of other invasive malignancy within 5 years prior to inclusion."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_16",
+          "category": "comorbidity",
+          "description": "Uncontrolled severe illness or medical condition",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on uncontrolled severe illness or medical condition provided."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_17",
+          "category": "clinical",
+          "description": "Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "timeframe_days": null,
+          "group_id": null,
+          "group_operator": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: No information on psychological, familial, sociological, or geographical factors affecting compliance"
+      }
+    ]
+  },
+  "report_text": "Trial: NCT06476119\nEligible: NO\n\nFAILING CRITERIA:\n  1. [clinical] Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer\n     Field: unmapped_rule\n     \u2192 LLM Fallback: Patient had prior invasive breast cancer (TNBC) and underwent neoadjuvant therapy.\n\n  2. [prior_therapy] Administration of neoadjuvant systemic therapy\n     Field: unmapped_rule\n     \u2192 LLM Fallback: Patient received neoadjuvant systemic therapy.\n\nINDETERMINATE (missing patient data):\n  1. [clinical] Written informed consent\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  2. [clinical] No evidence of nodal or distant metastases (cN0M0) on pre- and/or postoperative imaging including 18F-FDG-PET/CT or CT\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  3. [clinical] Has undergone curative breast surgery (breast-conserving or mastectomy with surgical axillary staging including sentinel lymph node procedure)\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  4. [clinical] Absence of recurrence between curative breast surgery and expression of patient preference\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  5. [clinical] Multifocal, multicentric or bilateral breast cancer at the time of screening\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  6. [clinical] Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  7. [clinical] Other invasive malignancy within 5 years prior to inclusion, except adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason \u22646 prostate cancer\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  8. [comorbidity] Uncontrolled severe illness or medical condition\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  9. [clinical] Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 6 of 17"
+}

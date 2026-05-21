@@ -1,0 +1,25 @@
+Trial: NCT06476119
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen
+     Field: lymphovascular_invasion
+     → Data not available in patient record
+
+  2. [prior_therapy] Has undergone curative breast surgery (breast-conserving surgery or mastectomy and surgical axillary staging [including at least sentinel lymph node procedure])
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  3. [prior_therapy] Eligible for radiotherapy (if indicated)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [comorbidity] Uncontrolled severe illness or medical condition
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [comorbidity] Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 12 of 17

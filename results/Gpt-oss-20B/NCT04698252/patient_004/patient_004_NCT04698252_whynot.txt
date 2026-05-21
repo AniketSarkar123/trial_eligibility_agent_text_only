@@ -1,0 +1,48 @@
+Trial: NCT04698252
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [biomarker] Estrogen receptor-positive and/ or progesterone receptor-positive breast cancer
+     Patient value: negative
+     Required: eq Positive
+     → FAIL: er_status = negative (required: eq Positive)
+
+  2. [biomarker] Estrogen receptor-positive and/ or progesterone receptor-positive breast cancer
+     Patient value: negative
+     Required: eq Positive
+     → FAIL: pr_status = negative (required: eq Positive)
+
+  3. [clinical] Histologically confirmed invasive breast cancer, with oligometastatic disease defined as one of the following criteria: 1) One to four bone lesions; 2) One to four lung and/ or hepatic lesions; 3) Distant metastasis limited to ipsilateral cervical lymph nodes; 4) Distant metastasis limited to contralateral axillary lymph nodes
+     Field: unmapped_rule
+     → LLM Fallback: She has 7 measurable lesions (3 liver + 4 lung) exceeding the 1-4 limit for lung/hepatic oligometastatic disease.
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1
+     Field: ecog_score
+     → Data not available in patient record
+
+  2. [clinical] Life expectancy of at least 12 weeks
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  3. [clinical] Signed informed consent form
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [clinical] Disposition and aptitude to fulfill the study protocol during the study duration
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [clinical] Previous local therapy for distant metastasis
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  6. [comorbidity] Current or previous history of severe diseases, such as clinically relevant heart failure, acute myocardium infarction in the last six months, chronic obstructive lung disease, HIV infection, chronic active hepatitis B or C infection, current serious uncontrolled infections or other severe diseases that may impact patients' expected survival
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  7. [comorbidity] Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 9 of 19

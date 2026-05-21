@@ -1,0 +1,147 @@
+Trial: NCT04816006
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [demographic] Minimum age: 50 Years
+     Patient value: 48
+     Required: gte 50
+     → FAIL: age = 48 (required: gte 50)
+
+INDETERMINATE (missing patient data):
+  1. [comorbidity] History of major multiple myocardial infarctions (MI)
+     Field: comorbidity
+     → Data not available in patient record
+
+  2. [comorbidity] Recent electrocardiogram (ECG) changes or recent MI
+     Field: comorbidity
+     → Data not available in patient record
+
+  3. [comorbidity] Resting or unstable angina
+     Field: comorbidity
+     → Data not available in patient record
+
+  4. [comorbidity] Significant multivessel coronary occlusion (≥ 70%) on angiography
+     Field: comorbidity
+     → Data not available in patient record
+
+  5. [comorbidity] Uncontrolled and/or serious arrhythmias
+     Field: comorbidity
+     → Data not available in patient record
+
+  6. [comorbidity] 3rd degree heart block
+     Field: comorbidity
+     → Data not available in patient record
+
+  7. [comorbidity] Acute congestive heart failure or ejection fraction < 30%
+     Field: comorbidity
+     → Data not available in patient record
+
+  8. [comorbidity] History of stroke
+     Field: comorbidity
+     → Data not available in patient record
+
+  9. [comorbidity] Transient ischemic attack
+     Field: comorbidity
+     → Data not available in patient record
+
+  10. [comorbidity] Other neurological disorders
+     Field: comorbidity
+     → Data not available in patient record
+
+  11. [comorbidity] Brain surgery involving tissue removal
+     Field: comorbidity
+     → Data not available in patient record
+
+  12. [prior_therapy] PRE-REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  13. [clinical] PRE-REGISTRATION: Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  14. [clinical] PRE-REGISTRATION: Self-reported ability to complete assessments by themselves or with assistance
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  15. [clinical] REGISTRATION: Able to provide medical record release to confirm eligibility
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  16. [prior_therapy] REGISTRATION: Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to pre-registration as confirmed via clinical determination
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  17. [clinical] REGISTRATION: No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  18. [clinical] REGISTRATION: Receive physician's clearance to participate in an exercise program
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  19. [prior_therapy] Greater than 36 months post primary treatment
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  20. [clinical] Planned surgery during the intervention period
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  21. [clinical] Unable to travel regularly to the study locations for intervention sessions and data collection
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  22. [clinical] Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  23. [clinical] Self-reported inability to walk without assistance or devices
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  24. [clinical] Clinically significant TICS-M score (<21) during baseline procedures
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  25. [clinical] Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  26. [clinical] Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  27. [clinical] Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  28. [clinical] Enrolled in another physical activity program
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  29. [clinical] Unable to walk without assistance or devices
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  30. [clinical] Unwilling to complete study requirements
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  31. [clinical] Unwilling to be randomized to the exercise group or health education group
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  32. [clinical] Unable or unwilling to continuously wear and regularly sync/charge an activity tracker during the study period
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  33. [clinical] Unable to travel regularly to the study locations for intervention sessions and data collection
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  34. [clinical] Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 7 of 42
