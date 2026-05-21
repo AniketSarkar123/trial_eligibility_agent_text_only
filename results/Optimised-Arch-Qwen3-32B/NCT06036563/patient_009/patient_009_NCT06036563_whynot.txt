@@ -1,0 +1,58 @@
+Trial: NCT06036563
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [prior_therapy] [Exclusion] Any cancer treatment performed within the past 3 years.
+     Field: unmapped_rule
+     → LLM Fallback: The patient had a major surgical mastectomy last week, which constitutes cancer treatment within the past 3 years.
+
+INDETERMINATE (missing patient data): [Hard: 7 | Soft: 1]
+  1. [comorbidity] [Exclusion] Uncontrolled or active systemic diseases, such as autoimmune diseases, tuberculosis, AIDS, etc.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has no autoimmune diseases, but information about tuberculosis or AIDS is missing.
+
+  2. [comorbidity] [Exclusion] New onset, recurrence, or exacerbation of various inflammations within 2 weeks before blood collection, or the presence of fever, use of corticosteroids.
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about inflammation, fever, or corticosteroid use within 2 weeks before blood collection.
+
+  3. [comorbidity] [Exclusion] New onset or exacerbation of thromboembolic diseases, hemorrhagic diseases, or those who have received allogeneic blood transfusion within 1 month before blood collection.
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about thromboembolic/hemorrhagic diseases or recent blood transfusions
+
+  4. [comorbidity] [Exclusion] Individuals who have undergone organ or bone marrow transplantation.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's records do not provide information about prior organ or bone marrow transplantation.
+
+  5. [clinical_diagnosis] [Exclusion] Participants during pregnancy or lactation.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's reproductive status (pregnancy/lactation) is not mentioned in the clinical narrative or structured profile.
+
+  6. [comorbidity] [Exclusion] Individuals with malnutrition, severe mental illness, or genetic diseases.
+     Field: unmapped_rule
+     → LLM Fallback: No evidence of malnutrition, severe mental illness, or genetic diseases in the provided clinical data.
+
+  7. [comorbidity] [Exclusion] Other diseases or conditions deemed by the physician as unsuitable for participation in this study.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no explicit mention of diseases/conditions that would be deemed unsuitable by a physician for this study.
+
+  8. [administrative] [Exclusion] Individuals who are unable to sign an informed consent form.
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about the patient's ability to sign an informed consent form.
+
+PASSING CRITERIA: 4 of 13
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06036563_LLM_5         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_6         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_7         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_9         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_10        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT06036563_LLM_11        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_12        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_13        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 25.0

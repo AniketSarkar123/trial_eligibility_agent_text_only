@@ -1,0 +1,38 @@
+Trial: NCT06036563
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 5 | Soft: 0]
+  1. [comorbidity] [Exclusion] Uncontrolled or active systemic diseases, such as autoimmune diseases, tuberculosis, AIDS, etc.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record is silent on active/uncontrolled systemic diseases like autoimmune disorders, tuberculosis, or AIDS.
+
+  2. [comorbidity] [Exclusion] New onset, recurrence, or exacerbation of various inflammations within 2 weeks before blood collection, or the presence of fever, use of corticosteroids.
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about inflammation, fever, or corticosteroid use in the 2-week window prior to blood collection.
+
+  3. [comorbidity] [Exclusion] New onset or exacerbation of thromboembolic diseases, hemorrhagic diseases, or those who have received allogeneic blood transfusion within 1 month before blood collection.
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about thromboembolic/hemorrhagic diseases or recent blood transfusions.
+
+  4. [comorbidity] [Exclusion] Individuals who have undergone organ or bone marrow transplantation.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's clinical history does not mention any prior organ or bone marrow transplantation.
+
+  5. [comorbidity] [Exclusion] Individuals with malnutrition, severe mental illness, or genetic diseases.
+     Field: unmapped_rule
+     → LLM Fallback: Patient has no history of mental illness or genetic diseases, but malnutrition status is unknown.
+
+PASSING CRITERIA: 8 of 13
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06036563_LLM_5         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_6         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_7         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_9         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_11        | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 12.5

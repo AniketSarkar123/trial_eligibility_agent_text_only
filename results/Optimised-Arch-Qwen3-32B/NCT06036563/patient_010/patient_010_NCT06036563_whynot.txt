@@ -1,0 +1,37 @@
+Trial: NCT06036563
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [comorbidity] [Exclusion] Uncontrolled or active systemic diseases, such as autoimmune diseases, tuberculosis, AIDS, etc.
+     Field: unmapped_rule
+     → LLM Fallback: Patient has active rheumatoid arthritis, an excluded autoimmune disease.
+
+  2. [comorbidity] [Exclusion] New onset or exacerbation of thromboembolic diseases, hemorrhagic diseases, or those who have received allogeneic blood transfusion within 1 month before blood collection.
+     Field: unmapped_rule
+     → LLM Fallback: Patient received allogeneic blood transfusion 2 weeks prior to blood collection, which falls within the 1-month exclusion window.
+
+INDETERMINATE (missing patient data): [Hard: 2 | Soft: 1]
+  1. [comorbidity] [Exclusion] New onset, recurrence, or exacerbation of various inflammations within 2 weeks before blood collection, or the presence of fever, use of corticosteroids.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has active rheumatoid arthritis, but there is no explicit mention of inflammation exacerbation, fever, or corticosteroid use within 2 weeks before blood collection.
+
+  2. [comorbidity] [Exclusion] Other diseases or conditions deemed by the physician as unsuitable for participation in this study.
+     Field: unmapped_rule
+     → LLM Fallback: The patient has severe active rheumatoid arthritis and recent blood transfusion, which may be physician-deemed unsuitable, but the rule lacks specificity to determine definitively.
+
+  3. [administrative] [Exclusion] Individuals who are unable to sign an informed consent form.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to sign an informed consent form is not mentioned in the clinical narrative or structured profile.
+
+PASSING CRITERIA: 8 of 13
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06036563_LLM_6         | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_12        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06036563_LLM_13        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 5.0
