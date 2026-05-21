@@ -1,0 +1,506 @@
+{
+  "patient": {
+    "age": 60,
+    "sex": "female",
+    "menopausal_status": "postmenopausal",
+    "pregnancy_status": "not_pregnant",
+    "primary_diagnosis": null,
+    "cancer_stage": "IV",
+    "is_metastatic": true,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": "unifocal",
+    "er_status": "positive",
+    "pr_status": null,
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": null,
+    "received_adjuvant_therapy": null,
+    "has_recurrence": null,
+    "has_prior_malignancy": false,
+    "ecog_score": 1,
+    "prior_therapies": [
+      {
+        "drug_name": "letrozole",
+        "drug_class": "aromatase inhibitor",
+        "is_current": true,
+        "days_since_last_dose": 60,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      },
+      {
+        "drug_name": "ribociclib",
+        "drug_class": "CDK4/6 inhibitor",
+        "is_current": true,
+        "days_since_last_dose": 60,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      }
+    ],
+    "lines_of_therapy": null,
+    "prior_radiation": false,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [
+      {
+        "condition": "hypertension",
+        "active": true
+      }
+    ],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": "none"
+  },
+  "nct_id": "NCT04698252",
+  "eligible": false,
+  "has_indeterminate": true,
+  "risk_score": 42.5,
+  "results": [
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": 60,
+      "reason": "PASS: age = 60 (required: gte 18)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_SEX",
+        "category": "demographic",
+        "description": "Sex: FEMALE",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "female",
+      "reason": "PASS: sex = female (required: eq female)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_5",
+        "category": "biomarker",
+        "description": "Estrogen receptor-positive and/ or progesterone receptor-positive breast cancer",
+        "field": "er_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "HORMONE_GROUP",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "positive",
+      "reason": "Group HORMONE_GROUP (OR) condition met by another criterion."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_6",
+        "category": "biomarker",
+        "description": "Estrogen receptor-positive and/ or progesterone receptor-positive breast cancer",
+        "field": "pr_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "HORMONE_GROUP",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": null,
+      "reason": "Group HORMONE_GROUP (OR) condition met by another criterion."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_8",
+        "category": "clinical_diagnosis",
+        "description": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ],
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": 1,
+      "reason": "PASS: ecog_score = 1 (required: in [0, 1])"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_14",
+        "category": "biomarker",
+        "description": "HER2-positive breast cancer",
+        "field": "her2_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "negative",
+      "reason": "PASS: her2_status = negative (required: eq positive)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_3",
+        "category": "clinical_diagnosis",
+        "description": "Histologically confirmed invasive breast cancer, with oligometastatic disease defined as one of the following criteria: 1) One to four bone lesions; 2) One to four lung and/ or hepatic lesions; 3) Distant metastasis limited to ipsilateral cervical lymph nodes; 4) Distant metastasis limited to contralateral axillary lymph nodes",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient has a single bone metastasis, which satisfies the oligometastatic disease criterion of 1-4 bone lesions."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_4",
+        "category": "clinical_diagnosis",
+        "description": "Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has a single bone metastasis amenable to stereotactic radiotherapy as planned."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_7",
+        "category": "clinical_diagnosis",
+        "description": "Partial response or stable disease after at least six months of systemic therapy for breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 180,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "fail",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has stable disease but has not met the six-month duration requirement for systemic therapy."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_9",
+        "category": "clinical_diagnosis",
+        "description": "Measurable or non-measuble disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient\u2019s bone lesion is described as stable in size, but there is no explicit information about lesion size or RECIST 1.1 classification."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_10",
+        "category": "clinical_diagnosis",
+        "description": "Life expectancy of at least 12 weeks",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 84,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Life expectancy of at least 12 weeks is not explicitly documented in the patient's record."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_11",
+        "category": "clinical_diagnosis",
+        "description": "For women in childbearing age, negative pregnancy test until 21 days before the date of study enrollment",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 21,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient is postmenopausal (age 60) and not in childbearing age, so pregnancy testing requirements do not apply."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_12",
+        "category": "administrative",
+        "description": "Signed informed consent form",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's clinical narrative and structured profile do not mention a signed informed consent form."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_13",
+        "category": "administrative",
+        "description": "Disposition and aptitude to fulfill the study protocol during the study duration",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's interest in one treatment modality does not explicitly confirm her overall disposition or aptitude to fulfill the entire study protocol requirements."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_15",
+        "category": "clinical_diagnosis",
+        "description": "Progressive disease during the last systemic treatment received for metastatic disease",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's lesion is stable in size per MRI, indicating no progressive disease during the last systemic treatment."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_16",
+        "category": "prior_therapy",
+        "description": "Previous local therapy for distant metastasis",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient has not received prior local therapy for distant metastasis; her prior therapies are systemic, and no local treatments (e.g., radiation) for metastases are documented."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_17",
+        "category": "comorbidity",
+        "description": "Current or previous history of severe diseases, such as clinically relevant heart failure, acute myocardium infarction in the last six months, chronic obstructive lung disease, HIV infection, chronic active hepatitis B or C infection, current serious uncontrolled infections or other severe diseases that may impact patients' expected survival",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 180,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's record does not mention any of the exclusionary severe diseases (e.g., heart failure, HIV, hepatitis), but this information is also not explicitly confirmed to be absent."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_18",
+        "category": "comorbidity",
+        "description": "Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 1825,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has no prior invasive malignancies within the last five years."
+    }
+  ],
+  "failing_criteria": [
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_7",
+        "category": "clinical_diagnosis",
+        "description": "Partial response or stable disease after at least six months of systemic therapy for breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 180,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "fail",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has stable disease but has not met the six-month duration requirement for systemic therapy."
+    }
+  ],
+  "indeterminate_criteria": [
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_9",
+        "category": "clinical_diagnosis",
+        "description": "Measurable or non-measuble disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient\u2019s bone lesion is described as stable in size, but there is no explicit information about lesion size or RECIST 1.1 classification."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_10",
+        "category": "clinical_diagnosis",
+        "description": "Life expectancy of at least 12 weeks",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 84,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Life expectancy of at least 12 weeks is not explicitly documented in the patient's record."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_12",
+        "category": "administrative",
+        "description": "Signed informed consent form",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's clinical narrative and structured profile do not mention a signed informed consent form."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_13",
+        "category": "administrative",
+        "description": "Disposition and aptitude to fulfill the study protocol during the study duration",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's interest in one treatment modality does not explicitly confirm her overall disposition or aptitude to fulfill the entire study protocol requirements."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04698252_LLM_17",
+        "category": "comorbidity",
+        "description": "Current or previous history of severe diseases, such as clinically relevant heart failure, acute myocardium infarction in the last six months, chronic obstructive lung disease, HIV infection, chronic active hepatitis B or C infection, current serious uncontrolled infections or other severe diseases that may impact patients' expected survival",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 180,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's record does not mention any of the exclusionary severe diseases (e.g., heart failure, HIV, hepatitis), but this information is also not explicitly confirmed to be absent."
+    }
+  ]
+}

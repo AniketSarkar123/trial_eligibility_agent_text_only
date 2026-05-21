@@ -1,0 +1,44 @@
+Trial: NCT04698252
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 4 | Soft: 2]
+  1. [demographic] [Inclusion] Sex: FEMALE
+     Field: sex
+     → Data not available in patient record
+
+  2. [clinical_diagnosis] [Inclusion] Measurable or non-measuble disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1
+     Field: unmapped_rule
+     → LLM Fallback: The patient's metastatic sites are described as stable, but there is no explicit confirmation in the narrative or structured data whether the lesions meet RECIST 1.1 criteria for measurable or non-measurable disease.
+
+  3. [clinical_diagnosis] [Inclusion] Life expectancy of at least 12 weeks
+     Field: unmapped_rule
+     → LLM Fallback: The patient's life expectancy is not explicitly documented in the clinical narrative or structured profile.
+
+  4. [clinical_diagnosis] [Inclusion] For women in childbearing age, negative pregnancy test until 21 days before the date of study enrollment
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about pregnancy testing within the required 21-day window.
+
+  5. [administrative] [Inclusion] Signed informed consent form
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no explicit documentation of a signed informed consent form.
+
+  6. [administrative] [Inclusion] Disposition and aptitude to fulfill the study protocol during the study duration
+     Field: unmapped_rule
+     → LLM Fallback: No clinical or administrative data addresses the patient's disposition/aptitude to fulfill the study protocol.
+
+PASSING CRITERIA: 12 of 18
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+STRUCT_SEX                | demographic          | 10.0            | 2.5        | 25.0      
+NCT04698252_LLM_9         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_10        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_11        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_12        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04698252_LLM_13        | administrative       | 10.0            | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 85.0

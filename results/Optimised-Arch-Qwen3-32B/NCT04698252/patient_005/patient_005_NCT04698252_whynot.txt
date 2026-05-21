@@ -1,0 +1,29 @@
+Trial: NCT04698252
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 1 | Soft: 2]
+  1. [clinical_diagnosis] [Inclusion] Life expectancy of at least 12 weeks
+     Field: unmapped_rule
+     → LLM Fallback: The patient's life expectancy is not explicitly documented in the clinical narrative or structured profile.
+
+  2. [administrative] [Inclusion] Signed informed consent form
+     Field: unmapped_rule
+     → LLM Fallback: The patient's documentation does not specify whether she has a signed informed consent form.
+
+  3. [administrative] [Inclusion] Disposition and aptitude to fulfill the study protocol during the study duration
+     Field: unmapped_rule
+     → LLM Fallback: The patient's readiness for surgery and ECOG 0 status suggest capacity, but explicit confirmation of disposition/aptitude for the full study protocol is missing.
+
+PASSING CRITERIA: 15 of 18
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04698252_LLM_10        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04698252_LLM_12        | administrative       | 10.0            | 0.0        | 0.0       
+NCT04698252_LLM_13        | administrative       | 10.0            | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 20.0
