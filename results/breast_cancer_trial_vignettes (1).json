@@ -1,0 +1,513 @@
+{
+  "trials": [
+    {
+      "trial_id": "NCT04698252",
+      "title": "Local Therapy for ER/PR-positive Oligometastatic Breast Cancer",
+      "eligibility_summary": {
+        "inclusion": [
+          "Histologically confirmed invasive ER+ and/or PR+ breast cancer",
+          "Oligometastatic disease: 1-4 bone lesions OR 1-4 lung/hepatic lesions OR ipsilateral cervical/contralateral axillary lymph nodes",
+          "Partial response or stable disease after at least 6 months of systemic therapy",
+          "ECOG performance status 0 or 1",
+          "Oligometastatic sites amenable to local therapy (surgery, SBRT, or RFA)"
+        ],
+        "exclusion": [
+          "HER2-positive breast cancer (separate treatment algorithm)",
+          "Triple-negative breast cancer",
+          "More than 4 metastatic lesions or visceral crisis",
+          "Disease progression on systemic therapy at time of enrollment",
+          "ECOG PS \u22652"
+        ]
+      },
+      "patients": [
+        {
+          "id": "OLIGO-001",
+          "eligible": true,
+          "text": "Mrs. Ferreira is a 61-year-old postmenopausal woman with ER+/PR+, HER2-negative metastatic breast cancer. She was diagnosed 14 months ago and has been on letrozole plus palbociclib since then. Restaging imaging after 9 months of treatment shows a partial response: her previously 2.8 cm liver lesion has shrunk to 1.1 cm and no new lesions have appeared. CT and bone scan confirm she has a single hepatic metastasis and two vertebral bone lesions (T8 and L2), for a total of three oligometastatic sites, all amenable to SBRT. ECOG PS is 1. She has no visceral crisis. Her oncologist believes all three sites are treatable with stereotactic radiation. She is now being considered for enrollment in a randomized trial of local ablative therapy on top of her current systemic regimen."
+        },
+        {
+          "id": "OLIGO-002",
+          "eligible": true,
+          "text": "Ms. Andrade is a 54-year-old woman with ER+, PR+, HER2-negative breast cancer with two isolated pulmonary nodules (left lower lobe 1.4 cm and right upper lobe 0.9 cm), confirmed as breast cancer metastases on CT-guided biopsy. She has been on fulvestrant for 8 months with stable disease on her most recent restaging scan performed 4 weeks ago. ECOG PS is 0. A thoracic surgery consult confirms that both lesions are technically resectable via VATS, or alternatively treatable with SBRT. No other sites of disease are identified on full-body PET-CT. She is otherwise healthy with normal organ function and eagerly consents to randomization."
+        },
+        {
+          "id": "OLIGO-003",
+          "eligible": true,
+          "text": "Dr. Christodoulou is a 67-year-old retired physician with ER+/PR+, HER2-negative breast cancer and contralateral axillary lymph node involvement (two nodes, left side, confirmed on ultrasound-guided biopsy as breast cancer metastases). She has been on ribociclib plus letrozole for 11 months and showed a partial response at her 6-month restaging, with the larger node shrinking from 2.2 cm to 0.8 cm. ECOG PS is 1. No other distant metastases are identified. Surgical oncology confirms the nodal region is amenable to axillary dissection, and radiation oncology offers SBRT as an alternative. She meets the definition of oligometastatic disease per protocol criteria."
+        },
+        {
+          "id": "OLIGO-004",
+          "eligible": false,
+          "text": "Ms. Osei is a 49-year-old woman with triple-negative metastatic breast cancer involving three liver lesions and bilateral pulmonary nodules (total of seven measurable lesions). She has been on carboplatin plus gemcitabine for 6 months with partial response. Although her number of liver lesions would individually fall within oligometastatic range, her tumor is triple-negative (ER-/PR-/HER2-), which is an explicit exclusion criterion for this ER/PR-positive oligometastatic trial. She is referred to alternative protocols for TNBC."
+        },
+        {
+          "id": "OLIGO-005",
+          "eligible": false,
+          "text": "Mrs. Tanaka is a 58-year-old woman with ER+/PR+ metastatic breast cancer who was placed on exemestane after progression on first-line letrozole. Restaging imaging performed 3 months into exemestane therapy reveals progressive disease with six new bone lesions and two new pulmonary nodules, for a total of eight metastatic sites. Her ECOG PS is 2 due to increasing bone pain. She does not fulfill oligometastatic criteria (exceeds four lesions) and is progressing on current therapy rather than showing partial response or stable disease, making her ineligible for this protocol."
+        }
+      ]
+    },
+    {
+      "trial_id": "NCT07351487",
+      "title": "Neoadjuvant Chemotherapy Combined With Sintilimab and Bevacizumab for TNBC (NEOTORCH-BREAST07)",
+      "eligibility_summary": {
+        "inclusion": [
+          "Histologically confirmed triple-negative breast cancer (ER-, PR-, HER2-)",
+          "Early stage: stage II or III (cT2-4, any N, M0)",
+          "Treatment-naive (no prior systemic therapy for this breast cancer)",
+          "Age \u226518 years, female",
+          "ECOG PS 0-1",
+          "Adequate organ function: ANC \u22651500 cells/\u03bcL, PLT \u2265100,000/\u03bcL, Hgb \u22659 g/dL, creatinine \u22641.5\u00d7 ULN, bilirubin \u22641.5\u00d7 ULN, ALT/AST \u22642.5\u00d7 ULN",
+          "Planned for definitive surgery after neoadjuvant therapy"
+        ],
+        "exclusion": [
+          "ER+, PR+, or HER2+ breast cancer",
+          "Stage IV (metastatic) disease",
+          "Active autoimmune disease requiring systemic therapy",
+          "Prior anti-PD-1/PD-L1/CTLA-4 immunotherapy",
+          "Prior bevacizumab or other anti-angiogenic therapy",
+          "Uncontrolled hypertension (SBP >150 mmHg or DBP >100 mmHg)",
+          "Active infection requiring systemic antibiotics",
+          "Pregnant or breastfeeding"
+        ]
+      },
+      "patients": [
+        {
+          "id": "NEOTORCH-001",
+          "eligible": true,
+          "text": "Ms. Wu is a 38-year-old woman with a newly diagnosed, biopsy-confirmed triple-negative breast cancer (ER 0%, PR 0%, HER2 IHC 0, FISH non-amplified) measuring 4.5 cm in the right breast with two ipsilateral axillary nodes clinically suspicious (cT3N1M0, Stage IIIA). She has received no prior therapy. ECOG PS is 0. Labs: ANC 2800 cells/\u03bcL, PLT 214,000/\u03bcL, Hgb 12.6 g/dL, creatinine 0.7 mg/dL (within 1.0\u00d7 ULN), ALT 22 U/L, AST 19 U/L, bilirubin 0.5 mg/dL. Blood pressure is 118/74 mmHg. She has no autoimmune disease history and is not pregnant. She is a good candidate for neoadjuvant systemic therapy with planned breast surgery afterward."
+        },
+        {
+          "id": "NEOTORCH-002",
+          "eligible": true,
+          "text": "Ms. Diallo is a 52-year-old woman diagnosed with stage IIB (cT2N1M0) TNBC following core needle biopsy of a 3.1 cm left breast mass with a single palpable axillary node, confirmed malignant on ultrasound-guided fine needle aspiration. IHC shows ER <1%, PR <1%, HER2 negative (score 1+). She has never received any systemic cancer treatment. ECOG PS is 1. ANC 1900 cells/\u03bcL, platelets 188,000/\u03bcL, Hgb 11.2 g/dL, creatinine 0.85 mg/dL, ALT 31 U/L, bilirubin 0.8 mg/dL. BP is 128/80 mmHg. No autoimmune disease. She is not pregnant and is planning breast-conserving surgery after neoadjuvant treatment. She agrees to participate."
+        },
+        {
+          "id": "NEOTORCH-003",
+          "eligible": true,
+          "text": "Ms. Rocha is a 44-year-old woman with BRCA1 germline mutation and newly diagnosed stage IIC (cT3N2M0) TNBC of the left breast \u2014 a 5.8 cm mass with clinically palpable level II axillary nodes. Biopsy confirmed poorly differentiated invasive carcinoma, ER-negative, PR-negative, HER2-negative. PET-CT shows no distant metastases. She has not received any cancer treatment to date. ECOG PS is 0. ANC 2400 cells/\u03bcL, platelets 201,000/\u03bcL, Hgb 12.0 g/dL, creatinine 0.78 mg/dL, ALT 28 U/L, bilirubin 0.6 mg/dL, BP 124/76 mmHg. No autoimmune disease on her medical record. She consents to neoadjuvant therapy with planned mastectomy and axillary dissection."
+        },
+        {
+          "id": "NEOTORCH-004",
+          "eligible": false,
+          "text": "Ms. Ibarra is a 47-year-old woman with stage IV TNBC at initial presentation, with liver metastases confirmed on PET-CT in addition to the primary left breast mass and nodal disease. Despite being triple-negative (ER-, PR-, HER2-) and treatment-naive, the presence of distant metastatic disease (M1 classification) is a strict exclusion criterion for this neoadjuvant study, which targets non-metastatic early-stage disease. She is referred to first-line metastatic TNBC protocols."
+        },
+        {
+          "id": "NEOTORCH-005",
+          "eligible": false,
+          "text": "Ms. Kim is a 39-year-old woman with stage IIB TNBC confirmed on biopsy who was initiated on pembrolizumab plus carboplatin/paclitaxel as neoadjuvant therapy three months ago at an outside institution. She is now seeking to transfer to a clinical trial center. However, she has already received prior anti-PD-1 immunotherapy (pembrolizumab), which is a specific exclusion criterion for this trial assessing the novel combination of sintilimab and bevacizumab with chemotherapy. Her prior PD-1 blockade exposure renders her ineligible."
+        }
+      ]
+    },
+    {
+      "trial_id": "NCT06771609",
+      "title": "Phase II PD-L1 + VEX Metronomic Chemotherapy \u00b1 Radiotherapy for Advanced Triple-Negative Breast Cancer",
+      "eligibility_summary": {
+        "inclusion": [
+          "Histologically confirmed advanced (locally advanced inoperable or metastatic) TNBC",
+          "No more than one prior line of chemotherapy for advanced/metastatic disease",
+          "Prior anthracycline and/or taxane exposure (adjuvant/neoadjuvant OR first-line metastatic)",
+          "At least one measurable lesion per RECIST v1.1",
+          "Age \u226518 years, female",
+          "ECOG PS 0-2",
+          "Adequate organ function",
+          "Radiotherapy completed \u22654 weeks before first study dose (if applicable)"
+        ],
+        "exclusion": [
+          "More than one prior chemotherapy line for advanced/metastatic disease",
+          "Symptomatic brain or leptomeningeal metastases",
+          "Malabsorption syndrome or inability to swallow oral medications",
+          "Peripheral neuropathy grade \u22652",
+          "Clinically significant active infection within prior 2 weeks",
+          "Active organ transplant history",
+          "Less than 3 weeks since prior chemotherapy ended",
+          "Any other concurrent anti-tumor therapy for metastatic disease"
+        ]
+      },
+      "patients": [
+        {
+          "id": "VEX-001",
+          "eligible": true,
+          "text": "Ms. Okonkwo is a 61-year-old woman with metastatic TNBC (ER 0%, PR 0%, HER2-negative) involving the liver (two lesions, largest 2.6 cm, measurable) and bilateral pulmonary nodules. She received adjuvant dose-dense AC followed by paclitaxel four years ago. This is her first recurrence in the metastatic setting and she has received no systemic treatment for metastatic disease. ECOG PS is 1. Neurological exam shows no peripheral neuropathy. She can swallow tablets and has no GI malabsorption. No active infection. No brain metastases on baseline MRI. She has not received any investigational agent in the past 30 days. She is eager to enroll."
+        },
+        {
+          "id": "VEX-002",
+          "eligible": true,
+          "text": "Mrs. Vidal is a 68-year-old woman with locally advanced unresectable TNBC relapsing 18 months after completing neoadjuvant capecitabine (post-residual disease protocol) and mastectomy. She now has chest wall recurrence and contralateral axillary involvement (measurable lesions per RECIST 1.1). She has not received any systemic therapy for her recurrent disease. ECOG PS is 1. She completed palliative chest wall radiotherapy 6 weeks ago. She can take oral medications, has no neuropathy, and has no GI problems. Liver enzymes, creatinine, and CBC are within acceptable ranges. She is not on any other anti-tumor agents."
+        },
+        {
+          "id": "VEX-003",
+          "eligible": true,
+          "text": "Ms. Ndiaye is a 55-year-old woman with metastatic TNBC who received first-line carboplatin plus nab-paclitaxel for 5 months with initial partial response followed by progressive disease. Restaging CT shows enlarging liver lesions (largest 3.0 cm) and new bilateral pulmonary nodules. ECOG PS is 2. She has recovered from her prior chemotherapy \u2014 last dose was 5 weeks ago. Brain MRI is negative for metastases. No peripheral neuropathy above grade 1. She is able to swallow oral tablets and has normal GI function. She has no active infections. This is her first progression after one line of metastatic chemotherapy, making her eligible for second-line VEX + PD-L1."
+        },
+        {
+          "id": "VEX-004",
+          "eligible": false,
+          "text": "Ms. Mensah is a 57-year-old woman with metastatic TNBC who has received two prior chemotherapy lines in the metastatic setting: first-line carboplatin/gemcitabine (progressed at 7 months) and second-line sacituzumab govitecan (progressed at 4 months). She now presents with progressive liver disease and is seeking enrollment. However, the trial permits a maximum of one prior chemotherapy line for advanced disease; her two prior metastatic lines exceed this threshold, rendering her ineligible."
+        },
+        {
+          "id": "VEX-005",
+          "eligible": false,
+          "text": "Ms. Pham is a 50-year-old woman with metastatic TNBC who is being considered for VEX metronomic chemotherapy. However, she was diagnosed 3 weeks ago with symptomatic brain metastases confirmed on MRI \u2014 she has headaches, nausea, and mild left arm weakness. Symptomatic brain or leptomeningeal metastases constitute a specific exclusion criterion for this oral metronomic chemotherapy protocol, due to CNS penetration concerns and the difficulty of assessing response. She is being referred for urgent whole-brain radiotherapy first."
+        }
+      ]
+    },
+    {
+      "trial_id": "NCT04985032",
+      "title": "Accelerated Partial Breast Irradiation (APBI) Using Stereotactic Body Radiation Therapy (SBRT)",
+      "eligibility_summary": {
+        "inclusion": [
+          "Female, age \u226550 years",
+          "Low to intermediate grade DCIS or invasive ductal carcinoma",
+          "Tumor size <2 cm (invasive) or <2.5 cm (DCIS)",
+          "Unifocal lesion",
+          "Node-negative (pN0)",
+          "ER and/or PR positive",
+          "Clear surgical margins: >2 mm for invasive cancer, >3 mm for DCIS",
+          "Well-defined lumpectomy cavity on CT",
+          "Status post breast-conserving surgery"
+        ],
+        "exclusion": [
+          "Age <50 years",
+          "High-grade DCIS or invasive lobular carcinoma",
+          "HER2-positive or triple-negative histology",
+          "Positive lymph nodes (any pN+)",
+          "Tumor \u22652 cm (invasive) or \u22652.5 cm (DCIS)",
+          "Positive or close margins (<2 mm invasive / <3 mm DCIS)",
+          "Multifocal or bilateral disease",
+          "Prior radiation to the ipsilateral breast"
+        ]
+      },
+      "patients": [
+        {
+          "id": "APBI-001",
+          "eligible": true,
+          "text": "Ms. Nakamura is a 63-year-old woman who recently underwent left breast lumpectomy for a 1.4 cm grade 1 invasive ductal carcinoma (ER+, PR+, HER2-). Surgical pathology confirms negative sentinel lymph nodes (pN0) and clear margins of 3.1 mm on all sides. The lesion was unifocal on preoperative imaging and pathology. CT simulation shows a well-defined lumpectomy cavity. She has no prior radiation to the left breast. She is postmenopausal and has no history of connective tissue disease. She is an excellent candidate for APBI-SBRT in lieu of whole-breast irradiation."
+        },
+        {
+          "id": "APBI-002",
+          "eligible": true,
+          "text": "Mrs. Svensson is a 72-year-old woman with intermediate-grade DCIS (nuclear grade 2) measuring 1.9 cm, resected via lumpectomy with margins of 3.5 mm. ER expression is strongly positive. No invasive component was identified. The lesion was unifocal and the postoperative CT simulation shows a clearly visible seroma-defined cavity with fiducials in place. Sentinel lymph node biopsy was not performed (pure DCIS). She has no prior breast radiation and no bilateral disease. Her age, grade, and margin status are all compatible with the protocol's APBI-SBRT criteria."
+        },
+        {
+          "id": "APBI-003",
+          "eligible": true,
+          "text": "Ms. Rahman is a 56-year-old woman with a 1.8 cm low-grade invasive ductal carcinoma (grade 1, ER+, PR+, HER2-negative) of the right breast removed by lumpectomy. Pathology shows margins of 2.4 mm (anterior) and wider elsewhere. Sentinel lymph node biopsy confirmed no nodal involvement (pN0, 0/2 nodes). The lesion was unifocal on preoperative MRI. CT simulation reveals a well-delineated lumpectomy cavity. She has never received breast radiation. All inclusion criteria are met and she consents to APBI via SBRT (30 Gy in 5 fractions)."
+        },
+        {
+          "id": "APBI-004",
+          "eligible": false,
+          "text": "Ms. Petersen is a 47-year-old woman with a 1.5 cm grade 2 invasive ductal carcinoma, ER+, HER2-negative, with negative sentinel lymph nodes and clear margins of 3 mm. Her pathology would otherwise qualify for APBI. However, she is 47 years old \u2014 below the trial's minimum age requirement of 50 years. Younger patients have higher baseline rates of ipsilateral breast tumor recurrence, particularly with partial breast techniques, and are therefore excluded from this APBI registry. She is recommended for standard whole-breast radiation."
+        },
+        {
+          "id": "APBI-005",
+          "eligible": false,
+          "text": "Mrs. Oduola is a 62-year-old woman with an 1.7 cm invasive ductal carcinoma who underwent lumpectomy. Initial pathology suggested clear margins; however, re-excision specimen analysis identified a positive anterior margin with tumor at ink. A second re-excision was performed, ultimately yielding a final anterior margin of 1.4 mm (below the 2 mm threshold for invasive cancer). Although her age, tumor size, and nodal status would qualify her, the marginal clearance does not meet the minimum 2 mm requirement. She is deemed ineligible for APBI-SBRT and is instead planned for whole-breast irradiation."
+        }
+      ]
+    },
+    {
+      "trial_id": "NCT05108298",
+      "title": "Improving Adolescent and Young Adult Self-Reported Data in ECOG-ACRIN Trials (EAQ202)",
+      "eligibility_summary": {
+        "inclusion": [
+          "Age 18\u201339 years (AYA definition)",
+          "Histologically confirmed primary cancer diagnosis of any type and stage (excluding basal cell skin carcinoma)",
+          "Diagnosis within the past 12 weeks (84 days) at registration",
+          "Has received, is currently receiving, or plans to receive cancer treatment",
+          "ECOG performance status 0\u20133",
+          "Life expectancy >24 months",
+          "Ability to complete questionnaires in English",
+          "Internet access via computer, tablet, or smartphone",
+          "Active email address and mobile phone capable of text messaging",
+          "Adequate cognitive function to self-report (per clinical judgment)"
+        ],
+        "exclusion": [
+          "Age <18 or >39 years",
+          "Recurrence or second primary cancer (not a new primary diagnosis)",
+          "Diagnosis of basal cell skin carcinoma only",
+          "Life expectancy \u226424 months",
+          "Inability to complete English-language questionnaires",
+          "No internet access or email/mobile phone",
+          "Cognitive impairment precluding accurate self-report"
+        ]
+      },
+      "patients": [
+        {
+          "id": "AYA-001",
+          "eligible": true,
+          "text": "Mr. Osei-Mensah is a 26-year-old man diagnosed with stage IIB classical Hodgkin lymphoma 5 weeks ago (within the 84-day window). He is scheduled to begin ABVD chemotherapy next week at a participating NCTN center. His life expectancy with treatment is well above 24 months (5-year survival >90% for his stage). ECOG PS is 1. He is cognitively intact, fluent in English, owns a smartphone with text messaging, has a personal email, and accesses the internet daily. This is his first cancer diagnosis with no history of prior malignancy. He consents to complete quality-of-life questionnaires at baseline, 1, 3, 6, and 12 months."
+        },
+        {
+          "id": "AYA-002",
+          "eligible": true,
+          "text": "Ms. Reyes is a 33-year-old woman newly diagnosed with stage IIA cervical squamous cell carcinoma 7 weeks ago. She is undergoing concurrent chemoradiation with weekly cisplatin. Life expectancy is estimated at more than 5 years with treatment. ECOG PS is 0. She is cognitively intact and communicates well in English. She owns a laptop and a smartphone, has an active email, and is comfortable completing digital surveys. This is her first cancer diagnosis. She expressed strong interest in contributing to research that helps future young cancer patients."
+        },
+        {
+          "id": "AYA-003",
+          "eligible": true,
+          "text": "Ms. Nguyen is a 19-year-old woman diagnosed with stage III osteosarcoma of the left distal femur 10 weeks ago (within the 84-day registration window). She has completed one cycle of neoadjuvant MAP chemotherapy and is planning surgical resection. Her life expectancy with treatment is estimated at greater than 24 months. ECOG PS is 1. She speaks and reads English fluently, owns a smartphone and tablet, and has access to high-speed internet at her university dormitory. She is cognitively intact and has no prior cancer history. Her enrollment will contribute to understanding QoL in adolescent and young adult bone cancer patients."
+        },
+        {
+          "id": "AYA-004",
+          "eligible": false,
+          "text": "Ms. Park is a 42-year-old woman diagnosed with stage I invasive ductal carcinoma of the breast 3 weeks ago. While she is newly diagnosed and within the 84-day window, she is 42 years old \u2014 exceeding the AYA age cap of 39 years for this protocol, which specifically targets the adolescent and young adult developmental cohort (ages 18\u201339). She does not qualify for EAQ202 regardless of all other characteristics. She is offered enrollment in a separate adult breast cancer PRO substudy."
+        },
+        {
+          "id": "AYA-005",
+          "eligible": false,
+          "text": "Mr. Santos is a 29-year-old man who had acute lymphoblastic leukemia at age 12, achieved remission, and was discharged from oncology care at age 18. He now presents at age 29 with a new diagnosis of diffuse large B-cell lymphoma \u2014 his second primary malignancy. The trial specifically excludes patients with a recurrence or second primary cancer; EAQ202 is designed for patients with a first, newly-diagnosed primary cancer only. Despite being in the correct AYA age range, his prior cancer history disqualifies him."
+        }
+      ]
+    },
+    {
+      "trial_id": "NCT04816006",
+      "title": "Breast Cancer, Reasoning, and Activity Intervention (BRAI)",
+      "eligibility_summary": {
+        "inclusion": [
+          "Female, age \u226518 years",
+          "Diagnosed with stage I, II, or III breast cancer (any subtype)",
+          "Completed primary treatment (surgery \u00b1 chemotherapy \u00b1 radiation); endocrine therapy ongoing is permitted",
+          "Within 6\u201336 months of completing active treatment",
+          "Self-reported cognitive complaints (memory, concentration) following cancer treatment",
+          "Able to participate in both physical activity and cognitive training sessions",
+          "Willing to use digital devices for study activities"
+        ],
+        "exclusion": [
+          "Stage IV (metastatic) breast cancer",
+          "Currently undergoing active chemotherapy, immunotherapy, or radiation therapy",
+          "Significant pre-existing neurological disorder (dementia, stroke, TBI)",
+          "Severe psychiatric illness precluding participation",
+          "Active substance use disorder",
+          "Physical limitations preventing exercise participation",
+          "Non-English speaking (questionnaire language constraint)"
+        ]
+      },
+      "patients": [
+        {
+          "id": "BRAI-001",
+          "eligible": true,
+          "text": "Ms. Wheeler is a 52-year-old woman who completed adjuvant chemotherapy (dose-dense AC-T) and radiation for stage II ER+/HER2- breast cancer 14 months ago. She continues letrozole. Since completing chemo, she reports difficulty concentrating at work, frequent word-finding problems, and trouble multitasking \u2014 symptoms she attributes to 'chemo brain.' She scores 24/30 on the MoCA (mild subjective cognitive issues, no formal dementia). She has no neurological history, no severe psychiatric illness, and no substance abuse. She exercises occasionally and is able to participate in a structured activity program. She uses a smartphone and is comfortable with app-based tools."
+        },
+        {
+          "id": "BRAI-002",
+          "eligible": true,
+          "text": "Mrs. Johansson is a 47-year-old woman who finished neoadjuvant chemotherapy and mastectomy for stage IIIA TNBC 20 months ago. She completed adjuvant capecitabine 8 months ago and has no evidence of disease. She reports significant memory lapses and difficulty concentrating \u2014 she failed a recertification exam at work she attributes to cognitive dysfunction since chemotherapy. She has no neurological disorder, no psychiatric illness, and is physically able to exercise. She has no active cancer therapy ongoing. She is highly motivated to enroll."
+        },
+        {
+          "id": "BRAI-003",
+          "eligible": true,
+          "text": "Ms. Lopez is a 61-year-old retired teacher who was diagnosed with stage I ER+ invasive ductal carcinoma 2 years ago and underwent lumpectomy plus sentinel node biopsy and radiation. She has been on exemestane for 18 months. She reports persistent difficulty remembering names and following complex conversations \u2014 concerns she didn't have before treatment. She completed active treatment (chemo was not required given low Oncotype DX score) 23 months ago, placing her within the 6\u201336 month window. She has no dementia diagnosis, no relevant neurological disease, and is fully ambulatory. She actively wants to improve her cognition and fitness."
+        },
+        {
+          "id": "BRAI-004",
+          "eligible": false,
+          "text": "Ms. Okoro is a 48-year-old woman with stage IV ER+/HER2- metastatic breast cancer with bone and liver metastases, currently on palbociclib plus fulvestrant with stable disease. She reports cognitive symptoms that she attributes to treatment effects. Despite her symptom burden, stage IV (metastatic) disease is an explicit exclusion criterion for this survivorship intervention trial, which is designed for early-stage breast cancer survivors who have completed active treatment. She is referred to a separate palliative support program."
+        },
+        {
+          "id": "BRAI-005",
+          "eligible": false,
+          "text": "Mrs. Bernstein is a 56-year-old woman who completed chemotherapy for stage II breast cancer 18 months ago and reports cognitive complaints. However, her neuropsychological evaluation reveals moderate-to-severe dementia (MoCA score 14/30), and her neurologist has documented a diagnosis of early Alzheimer's disease predating her cancer diagnosis. Pre-existing significant neurological disorders affecting cognition are an explicit exclusion criterion, as the intervention cannot be validly studied in patients with pre-existing dementia. She is ineligible."
+        }
+      ]
+    },
+    {
+      "trial_id": "NCT06476119",
+      "title": "OPTImaL: Optimisation of Treatment for Patients With Low Stage Triple-Negative Breast Cancer With High Stromal TILs",
+      "eligibility_summary": {
+        "inclusion": [
+          "Histologically confirmed triple-negative breast cancer (TNBC)",
+          "Pathological stage I: pT1a/b/c (\u22642 cm invasive component on surgical specimen), pN0",
+          "High stromal TIL (sTIL) score: \u226550% for patients aged \u226540 years; \u226575% for patients aged <40 years",
+          "Curative breast surgery completed (BCS or mastectomy with sentinel lymph node procedure)",
+          "No evidence of recurrence between surgery and registration",
+          "Eligible for radiotherapy if indicated",
+          "No prior or concurrent treatment for breast cancer (neoadjuvant therapy not permitted)"
+        ],
+        "exclusion": [
+          "Pathological stage >I (any T2, T3, T4, or N+) or microinvasive disease (pT1mi \u22641 mm)",
+          "Isolated tumor cells in sentinel node [pN0(i+)] are not allowed",
+          "Low sTIL score below threshold",
+          "Multifocal, multicentric, or bilateral breast cancer",
+          "Prior breast cancer history or ongoing breast cancer treatment",
+          "Administration of neoadjuvant systemic therapy prior to surgery",
+          "Prior cancer diagnosis (other than non-melanoma skin cancer)"
+        ]
+      },
+      "patients": [
+        {
+          "id": "OPTImaL-001",
+          "eligible": true,
+          "text": "Ms. Johanssen is a 46-year-old woman who underwent left breast lumpectomy and sentinel lymph node biopsy for TNBC. Final pathology shows a 1.6 cm grade 3 invasive ductal carcinoma, ER-negative, PR-negative, HER2 IHC 0 (FISH non-amplified), with two sentinel nodes clear of malignant cells (pT1cN0). The pathologist reports stromal TILs at 72% \u2014 above the \u226550% threshold required for patients aged \u226540 years. The patient did not receive any neoadjuvant therapy. Disease is unifocal. She has no history of prior cancer and no bilateral disease. She is registered after surgery with no sign of recurrence."
+        },
+        {
+          "id": "OPTImaL-002",
+          "eligible": true,
+          "text": "Ms. Ferreira is a 36-year-old woman with pT1b (0.7 cm) grade 3 TNBC of the right breast, surgically removed by wide local excision. Sentinel lymph node biopsy confirmed pN0 (2 nodes negative, no isolated tumor cells). The pathology report documents sTILs at 80%, meeting the \u226575% threshold required for patients aged under 40 years. She received no neoadjuvant treatment. There is no multifocal, bilateral, or prior breast cancer. This is her first cancer diagnosis. She is willing to participate in the international OPTImaL trial to evaluate whether adjuvant chemotherapy can be safely omitted in her high-sTIL, low-stage TNBC."
+        },
+        {
+          "id": "OPTImaL-003",
+          "eligible": true,
+          "text": "Ms. Oyelaran is a 51-year-old woman with pT1c (1.9 cm) grade 3 TNBC removed by mastectomy, sentinel lymph node biopsy negative (pN0, 3 nodes, no isolated tumor cells). sTILs measured at 60% on H&E \u2014 above the \u226550% threshold for patients aged \u226540 years. She received no neoadjuvant systemic therapy. Her disease is unicentric with no prior cancer history. She is registered after curative surgery without evidence of recurrence and is considered eligible for radiotherapy as indicated. She consents to the patient preference arm of the OPTImaL trial."
+        },
+        {
+          "id": "OPTImaL-004",
+          "eligible": false,
+          "text": "Ms. Ivanova is a 42-year-old woman with TNBC who underwent neoadjuvant chemotherapy (carboplatin/paclitaxel plus pembrolizumab) prior to surgery. Surgical pathology shows residual disease of 1.8 cm (ypT1c) and pathologically negative lymph nodes. Although her post-surgical stage appears to be pathological stage I and her sTILs are 65%, the administration of neoadjuvant systemic therapy prior to surgery is an explicit exclusion criterion for OPTImaL, which is specifically designed for patients who proceed directly to primary surgery without any prior treatment."
+        },
+        {
+          "id": "OPTImaL-005",
+          "eligible": false,
+          "text": "Ms. DeLuca is a 38-year-old woman with a 1.5 cm TNBC (pT1c) and a sentinel lymph node showing a 0.4 mm isolated tumor cell cluster (classified as pN0(i+)). The pathology report documents sTILs of 82% \u2014 above the 75% threshold for her age group. However, the protocol explicitly states that isolated tumor cells [pN0(i+)] do not constitute a true pN0 and are not permitted for enrollment. Her nodal status renders her ineligible for this chemotherapy de-escalation trial."
+        }
+      ]
+    },
+    {
+      "trial_id": "NCT02102165",
+      "title": "AURORA: Aiming to Understand the Molecular Aberrations in Metastatic Breast Cancer",
+      "eligibility_summary": {
+        "inclusion": [
+          "Age \u226518 years, female or male",
+          "Histologically confirmed metastatic or locally recurrent invasive breast cancer",
+          "No more than 1 line of systemic therapy in the metastatic setting",
+          "Metastatic lesion accessible for biopsy (or bone-only with plasma collected at screening)",
+          "Biopsy performed at initial metastatic diagnosis (before 1st-line systemic therapy) OR at first disease progression (before 2nd-line systemic therapy)",
+          "ECOG PS \u22642",
+          "Agreement to provide blood (whole blood, serum, plasma) at screening and follow-up intervals",
+          "Availability of archived primary tumor tissue (FFPE)"
+        ],
+        "exclusion": [
+          "More than 1 prior line of systemic therapy in the metastatic setting",
+          "Prior palliative radiotherapy to the only biopsiable site",
+          "Severe hematopoietic, renal, or hepatic dysfunction (albumin <3 g/dL is a proxy)",
+          "Known increased bleeding risk contraindicated for biopsy",
+          "Anti-VEGF or anti-VEGFR treatment within 4 weeks prior to planned biopsy without appropriate washout",
+          "Inappropriate anticoagulation status for biopsy procedure"
+        ]
+      },
+      "patients": [
+        {
+          "id": "AURORA-001",
+          "eligible": true,
+          "text": "Ms. Leclerc is a 58-year-old French woman with ER+/PR+, HER2-negative metastatic breast cancer, newly diagnosed with liver and pulmonary metastases confirmed on CT-guided biopsy of the liver (performed 2 weeks ago, before initiating first-line therapy). She has not received any systemic treatment for metastatic disease to date. ECOG PS is 1. Serum albumin 4.1 g/dL. She has no coagulopathy and is not on anticoagulants. Archival FFPE tissue from her primary breast cancer surgery 6 years ago is available at her previous hospital. She consents to baseline blood collection (whole blood, serum, plasma) and agrees to follow-up blood draws every 3 months."
+        },
+        {
+          "id": "AURORA-002",
+          "eligible": true,
+          "text": "Mr. Chen is a 45-year-old man with HER2-positive metastatic breast cancer (a rare diagnosis), who progressed on first-line trastuzumab plus pertuzumab and taxane after 8 months. He is now being planned for second-line therapy (trastuzumab deruxtecan). A CT-guided biopsy of a liver metastasis was performed 1 week ago (at first progression, before initiating 2nd-line therapy). ECOG PS is 1. Albumin 3.8 g/dL, platelets 185,000/\u03bcL, INR 1.1. Primary FFPE block is available from his original mastectomy. He agrees to serial blood sampling. Enrollment at first progression before 2nd-line treatment fulfills AURORA's biopsy timing requirement."
+        },
+        {
+          "id": "AURORA-003",
+          "eligible": true,
+          "text": "Ms. Bergstrom is a 49-year-old woman with TNBC who recurred with bone-only metastases (three vertebral lesions) 3 years after completing adjuvant therapy. She has not yet initiated systemic treatment for her metastatic disease. A CT-guided bone biopsy was deemed too technically complex. Per the bone-only exception in the protocol (up to 100 patients), plasma samples were collected at screening and all other eligibility criteria are met. ECOG PS is 0. Albumin 4.2 g/dL. INR 1.0. No prior palliative radiation to any site. Archival primary FFPE tissue is available. She consents to all blood draws at the specified intervals."
+        },
+        {
+          "id": "AURORA-004",
+          "eligible": false,
+          "text": "Ms. Picard is a 53-year-old woman with ER+ metastatic breast cancer who has already received two lines of systemic therapy in the metastatic setting (first-line letrozole plus CDK4/6 inhibitor for 18 months, then second-line fulvestrant for 9 months, now progressing). She presents seeking enrollment in AURORA at second progression. However, the protocol allows biopsy and enrollment only before first-line or second-line therapy initiation \u2014 not at or beyond second progression. Having received more than one line of metastatic systemic therapy, she is ineligible."
+        },
+        {
+          "id": "AURORA-005",
+          "eligible": false,
+          "text": "Ms. Andersen is a 62-year-old woman with ER+ metastatic breast cancer who has newly progressed on first-line letrozole (before second-line therapy begins). She would otherwise qualify for AURORA enrollment. However, she has severe liver dysfunction from hepatic metastases \u2014 serum albumin is 2.4 g/dL (below the 3 g/dL threshold indicating severe hepatic dysfunction), and her INR is 2.1, signaling increased bleeding risk. The combination of hypoalbuminemia and elevated INR places her at unacceptably high procedural risk for metastatic biopsy, making her ineligible per the bleeding risk and organ dysfunction exclusion criteria."
+        }
+      ]
+    },
+    {
+      "trial_id": "NCT06036563",
+      "title": "Prospective Screening and Differentiating Common Cancers Using Peripheral Blood Cell-Free DNA Sequencing",
+      "eligibility_summary": {
+        "inclusion": [
+          "Age \u226518 years",
+          "Suspected or newly confirmed diagnosis of a common cancer type (breast, lung, colorectal, gastric, or liver) scheduled for diagnostic workup or biopsy",
+          "OR matched healthy control (age/sex-matched, no prior cancer history)",
+          "Willing to provide blood sample for cfDNA analysis before initiation of cancer treatment",
+          "No cancer treatment (chemotherapy, radiation, or surgery for suspected cancer) started prior to blood collection"
+        ],
+        "exclusion": [
+          "Prior history of cancer within the past 5 years",
+          "Currently receiving any anti-cancer therapy (chemotherapy, immunotherapy, targeted therapy, or radiation)",
+          "Recent major surgery within 4 weeks (could elevate cfDNA non-specifically)",
+          "Active systemic inflammatory disease or autoimmune condition known to elevate cfDNA",
+          "Known blood transfusion within 4 weeks",
+          "Pregnancy"
+        ]
+      },
+      "patients": [
+        {
+          "id": "CFDNA-001",
+          "eligible": true,
+          "text": "Mr. Zhou is a 54-year-old man with a 3.8 cm right upper lobe pulmonary mass identified on CT scan during a routine health check. He has not had any biopsy or cancer diagnosis confirmed yet, and no treatment has been started. He is being worked up for suspected lung cancer. He has no prior cancer history, no systemic inflammatory disease, no recent surgery, and no recent blood transfusion. He is scheduled for CT-guided biopsy next week. A peripheral blood sample for cfDNA sequencing is to be collected today, prior to any procedure. He is not pregnant. He consents to participate."
+        },
+        {
+          "id": "CFDNA-002",
+          "eligible": true,
+          "text": "Ms. Huang is a 62-year-old woman referred for colonoscopy due to iron deficiency anemia and change in bowel habits. Colonoscopy identified a 3 cm mass in the sigmoid colon with biopsy pending. No cancer treatment has been initiated. She has no prior malignancy history in the past 5 years, no autoimmune disease, no recent major surgery, and no recent transfusion. She is not pregnant. A peripheral blood sample is to be collected today for cfDNA profiling as part of this prospective multi-cancer screening cohort, before any treatment or definitive surgery."
+        },
+        {
+          "id": "CFDNA-003",
+          "eligible": true,
+          "text": "Ms. Park is a 45-year-old woman recruited as a healthy control participant. She has no personal history of cancer, no symptoms suggestive of malignancy, and her most recent annual health check (including mammogram, Pap smear, and abdominal ultrasound) was entirely normal. She has no autoimmune disease, no recent surgery, no transfusion in the past month, and is not pregnant. She is enrolled as an age/sex-matched control and will donate a peripheral blood sample for cfDNA sequencing baseline comparison. She provides written informed consent."
+        },
+        {
+          "id": "CFDNA-004",
+          "eligible": false,
+          "text": "Mr. Li is a 58-year-old man recently diagnosed with stage IIIB non-small cell lung cancer who started carboplatin and pemetrexed chemotherapy 3 weeks ago. His oncologist wishes to enroll him for serial cfDNA monitoring. However, the protocol requires blood collection before initiation of any anti-cancer therapy, as post-treatment cfDNA profiles are confounded by treatment effects (DNA shedding from dying tumor cells and normal tissue). Having already begun chemotherapy, Mr. Li does not meet the pre-treatment blood collection requirement and is ineligible."
+        },
+        {
+          "id": "CFDNA-005",
+          "eligible": false,
+          "text": "Ms. Chen is a 50-year-old woman with a suspected liver mass on ultrasound who would otherwise qualify for the study. However, her medical history includes stage II colon cancer treated 3 years ago (within the 5-year exclusion window), for which she received surgical resection and adjuvant FOLFOX. She is currently in surveillance. A prior cancer history within the past 5 years is an exclusion criterion, as residual tumor or treatment-associated cfDNA signals could confound detection of a potential new primary cancer. She is ineligible."
+        }
+      ]
+    },
+    {
+      "trial_id": "NCT05590949",
+      "title": "Observational Study of Bone Complications in Post-menopausal Breast Cancer Patients Who Have Stopped Treatment With Denosumab and Aromatase Inhibitors",
+      "eligibility_summary": {
+        "inclusion": [
+          "Postmenopausal women",
+          "Diagnosis of non-metastatic (stage I\u2013III) hormone receptor-positive breast cancer",
+          "Previously treated with an aromatase inhibitor (letrozole, anastrozole, or exemestane) AND concurrent denosumab 60 mg SC every 6 months",
+          "Both denosumab AND aromatase inhibitor treatment have now been discontinued",
+          "Willing to attend follow-up visits and provide bone mineral density measurements and blood tests"
+        ],
+        "exclusion": [
+          "Currently on active denosumab or aromatase inhibitor therapy",
+          "Metastatic (stage IV) breast cancer",
+          "Currently receiving bisphosphonate or other bone-targeted therapy initiated before enrollment",
+          "Active secondary osteoporosis from another cause (e.g., glucocorticoid-induced, hyperparathyroidism)",
+          "eGFR <30 mL/min (severe renal impairment affecting calcium/bone metabolism)",
+          "Known hypocalcemia (corrected calcium <2.1 mmol/L) at enrollment"
+        ]
+      },
+      "patients": [
+        {
+          "id": "BONE-001",
+          "eligible": true,
+          "text": "Mrs. Muller is a 68-year-old postmenopausal woman who completed 5 years of adjuvant letrozole plus denosumab 60 mg every 6 months for stage II ER+/PR+, HER2-negative breast cancer. Both treatments were discontinued 3 months ago after the planned 5-year adjuvant course. She is now off all endocrine and bone-targeted therapy. She has no bone metastases or stage IV disease. Baseline DXA shows a lumbar spine T-score of -1.8 and she has not started any bisphosphonate. Serum corrected calcium is 2.28 mmol/L (normal). eGFR is 72 mL/min. No other causes of secondary osteoporosis. She consents to serial DXA scans and bone turnover marker blood tests every 6 months."
+        },
+        {
+          "id": "BONE-002",
+          "eligible": true,
+          "text": "Ms. Petrova is a 62-year-old postmenopausal woman who received 3 years of anastrozole plus denosumab as adjuvant therapy for stage I ER+ breast cancer, but discontinued both medications 6 months ago due to joint pain and patient preference. She has no evidence of metastatic disease. No bisphosphonate has been started. Serum calcium is 2.31 mmol/L, eGFR is 84 mL/min, and she has no glucocorticoid use or parathyroid disease. She is particularly concerned about the bone rebound phenomenon following denosumab discontinuation and is eager to be monitored within a structured observational framework."
+        },
+        {
+          "id": "BONE-003",
+          "eligible": true,
+          "text": "Mrs. Nakamura is a 71-year-old postmenopausal woman who completed 6 years of exemestane plus denosumab 60 mg SC every 6 months for stage IIIA ER+/HER2- breast cancer (high-risk, opted for extended therapy). She stopped both agents 4 months ago after her oncologist confirmed no evidence of disease recurrence on surveillance imaging. She has not initiated bisphosphonate therapy. Baseline corrected calcium is 2.25 mmol/L, eGFR is 58 mL/min (above the 30 mL/min exclusion threshold), and she has no hyperparathyroidism or steroid use. She is enrolled to monitor post-discontinuation bone health."
+        },
+        {
+          "id": "BONE-004",
+          "eligible": false,
+          "text": "Ms. Renard is a 65-year-old postmenopausal woman with stage II ER+ breast cancer who received adjuvant letrozole and denosumab. She discontinued letrozole 8 months ago but is currently still receiving denosumab (most recent injection was 2 months ago, with the next scheduled in 4 months). The study specifically requires that denosumab has already been stopped at enrollment. With active ongoing denosumab therapy, she does not meet the entry criterion of treatment discontinuation and is ineligible at this time. She is encouraged to re-screen after her final denosumab dose."
+        },
+        {
+          "id": "BONE-005",
+          "eligible": false,
+          "text": "Mrs. Okonjo is a 69-year-old postmenopausal woman who stopped both letrozole and denosumab 5 months ago after completing adjuvant therapy for stage II ER+ breast cancer. However, at her screening visit, corrected serum calcium was found to be 1.98 mmol/L \u2014 below the 2.1 mmol/L threshold, indicating symptomatic hypocalcemia (she reported perioral tingling and muscle cramps). Known hypocalcemia at enrollment is an explicit exclusion criterion, as it could represent a direct post-denosumab discontinuation complication requiring immediate clinical management rather than observational study participation. She is referred for urgent calcium and vitamin D supplementation."
+        }
+      ]
+    }
+  ]
+}
