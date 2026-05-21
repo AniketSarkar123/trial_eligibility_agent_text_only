@@ -1,0 +1,49 @@
+Trial: NCT02102165
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 3 | Soft: 4]
+  1. [administrative] [Inclusion] Availability of primary tumor tissue for research purposes
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about primary tumor tissue availability in either the clinical narrative or structured profile.
+
+  2. [administrative] [Inclusion] Biopsies obtained during routine clinical practice are accepted if both formalin-fixed paraffin-embedded (FFPE) and Frozen Tissue (FT) blocks were collected concurrently from the same metastatic lesion and if collected at the pre-specified timelines for AURORA
+     Field: unmapped_rule
+     → LLM Fallback: The patient's biopsy was performed but the narrative does not specify whether both FFPE and Frozen Tissue blocks were collected.
+
+  3. [administrative] [Inclusion] Availability of a whole blood, serum and plasma samples collected at the time of screening
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not mention availability of required biological samples.
+
+  4. [administrative] [Inclusion] Patient agrees to provide blood samples at regular intervals, from the screening as well as during the follow-up phase of the program
+     Field: unmapped_rule
+     → LLM Fallback: The patient's agreement to provide blood samples is not explicitly documented in the clinical narrative or structured profile.
+
+  5. [comorbidity] [Exclusion] Presence of severe hematopoietic, renal, and/or hepatic dysfunction, including but not restricted to albumin < 3 g/dl
+     Field: unmapped_rule
+     → LLM Fallback: The patient's lab values (including albumin) are missing, making it impossible to confirm or rule out hepatic dysfunction parameters specified in the exclusion criterion.
+
+  6. [comorbidity] [Exclusion] Known increased risk of hemorrhage during biopsy procedure, as evaluated by the treating physician
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about the patient's hemorrhage risk assessment by the treating physician or relevant clinical factors.
+
+  7. [comorbidity] [Exclusion] Inappropriate anticoagulation status for biopsy procedure
+     Field: unmapped_rule
+     → LLM Fallback: Patient's anticoagulation status is not mentioned in the clinical narrative or structured profile.
+
+PASSING CRITERIA: 16 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT02102165_LLM_8         | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_14        | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_15        | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_16        | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_19        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT02102165_LLM_20        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT02102165_MANUAL_EX2    | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 7.5

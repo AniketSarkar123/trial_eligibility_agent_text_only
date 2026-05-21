@@ -1,0 +1,19 @@
+Trial: NCT02102165
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 1 | Soft: 0]
+  1. [comorbidity] [Exclusion] Presence of severe hematopoietic, renal, and/or hepatic dysfunction, including but not restricted to albumin < 3 g/dl
+     Field: unmapped_rule
+     → LLM Fallback: The patient's narrative and profile confirm no severe dysfunction, but albumin levels are not explicitly provided.
+
+PASSING CRITERIA: 22 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT02102165_LLM_19        | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 2.5

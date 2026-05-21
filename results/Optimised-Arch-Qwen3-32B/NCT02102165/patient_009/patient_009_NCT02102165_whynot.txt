@@ -1,0 +1,99 @@
+Trial: NCT02102165
+Eligible: NO
+Triage Status: INELIGIBLE
+THE PATIENT IS METASTATIC!
+
+FAILING CRITERIA:
+  1. [clinical_diagnosis] [Inclusion] Eastern Cooperative Oncology Group (ECOG) Performance Status 0 or 1
+     Patient value: 2
+     Required: in [0, 1]
+     → FAIL: ecog_score = 2 (required: in [0, 1])
+
+  2. [administrative] [Inclusion] Patient must have a metastatic lesion accessible for biopsy and must agree with the biopsy procedure
+     Field: unmapped_rule
+     → LLM Fallback: Patient has a contraindicated biopsy due to critically elevated bleeding risk, making the lesion inaccessible.
+
+  3. [administrative] [Inclusion] Up until protocol 3.0, up to 100 patients with bone-only metastasis have been included without a metastatic biopsy, if plasma samples have been collected at screening, and if the patient met all other eligibility criteria
+     Field: unmapped_rule
+     → LLM Fallback: Patient has visceral metastasis, not bone-only metastasis as required by the rule
+
+  4. [administrative] [Inclusion] In protocol 4.0, metastatic tumor biopsies from bone lesions will be accepted provided that the chosen site of biopsy was not previously irradiated
+     Field: unmapped_rule
+     → LLM Fallback: The patient cannot undergo biopsy procedures due to contraindications, making it impossible to meet the requirement for a biopsy from a bone lesion.
+
+  5. [administrative] [Inclusion] Biopsies obtained during routine clinical practice are accepted if both formalin-fixed paraffin-embedded (FFPE) and Frozen Tissue (FT) blocks were collected concurrently from the same metastatic lesion and if collected at the pre-specified timelines for AURORA
+     Field: unmapped_rule
+     → LLM Fallback: Biopsy is strictly contraindicated due to critically elevated bleeding risk, preventing collection of required FFPE and FT blocks.
+
+  6. [comorbidity] [Exclusion] Presence of severe hematopoietic, renal, and/or hepatic dysfunction, including but not restricted to albumin < 3 g/dl
+     Field: unmapped_rule
+     → LLM Fallback: Patient has severe hepatic dysfunction and albumin <3 g/dL, meeting the exclusion criterion.
+
+  7. [comorbidity] [Exclusion] Known increased risk of hemorrhage during biopsy procedure, as evaluated by the treating physician
+     Field: unmapped_rule
+     → LLM Fallback: Patient has a critically elevated bleeding risk making biopsy contraindicated, as stated in the clinical narrative.
+
+INDETERMINATE (missing patient data): [Hard: 7 | Soft: 4]
+  1. [clinical_diagnosis] [Inclusion] Histopathology-confirmed TNBC as defined by ER <1% and HER2 negative following ASCO-CAP guidelines
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record lacks explicit documentation of ER/HER2 status or histopathology confirmation required for TNBC classification.
+
+  2. [clinical_diagnosis] [Inclusion] ILC (either based on ILC morphology or negative E-cadherin expression confirmed by IHC). Mixed ILC/invasive ductal carcinoma are not eligible for the ILC cohort
+     Field: unmapped_rule
+     → LLM Fallback: The patient's histological diagnosis (ILC) or E-cadherin status is not documented in the clinical record.
+
+  3. [clinical_diagnosis] [Inclusion] Late relapse BC (any subtype). Late relapse is defined as a patient with a radiologic or histologic confirmation of advanced or MBC relapse > 10 years from the primary BC diagnosis
+     Field: unmapped_rule
+     → LLM Fallback: The patient's time from primary BC diagnosis to current relapse is not provided in the clinical record.
+
+  4. [administrative] [Inclusion] Written informed consent prior to registration into the program
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about informed consent status
+
+  5. [administrative] [Inclusion] Availability of primary tumor tissue for research purposes
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about primary tumor tissue availability for research.
+
+  6. [administrative] [Inclusion] Brain tissue is accepted if it is obtained through surgical excision not planned for AURORA, but as part of the routine clinical practice
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about brain tissue availability or surgical excision of brain lesions.
+
+  7. [administrative] [Inclusion] The biopsy of the metastatic lesion must be conducted either at the initial diagnosis of the BC relapse before the initiation of 1st line systemic therapy or at the 1st disease progression before initiation of a second line systemic treatment
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not explicitly state whether a biopsy was conducted at the required times (initial diagnosis before 1st line therapy or 1st progression before 2nd line therapy).
+
+  8. [prior_therapy] [Exclusion] Received prior palliative radiotherapy to the only site that is accessible to biopsy
+     Field: unmapped_rule
+     → LLM Fallback: The patient's prior therapy type is unspecified, making it impossible to confirm receipt of palliative radiotherapy to the biopsy-accessible site.
+
+  9. [comorbidity] [Exclusion] Previous or current malignancies of other histologies within the last 5 years, with the exception of in situ carcinoma of the cervix, and adequately treated basal cell or squamous cell carcinoma of the skin
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about prior malignancies other than breast cancer, making it impossible to determine if additional malignancies exist within the 5-year window.
+
+  10. [prior_therapy] [Exclusion] Anti-VEGF or anti-VEGFR treatment within 4 weeks prior to planned biopsy without appropriate washout
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about prior anti-VEGF/VEGFR treatment or biopsy timing in the patient's record.
+
+  11. [comorbidity] [Exclusion] Inappropriate anticoagulation status for biopsy procedure
+     Field: unmapped_rule
+     → LLM Fallback: The patient's anticoagulation status is not mentioned in the narrative or structured data, making it impossible to determine if this exclusion criterion is met.
+
+PASSING CRITERIA: 5 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT02102165_LLM_3         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT02102165_LLM_4         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT02102165_LLM_5         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT02102165_LLM_6         | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_8         | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_12        | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_13        | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_18        | prior_therapy        | 5.0             | 1.5        | 7.5       
+NCT02102165_LLM_21        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT02102165_MANUAL_EX1    | prior_therapy        | 5.0             | 1.5        | 7.5       
+NCT02102165_MANUAL_EX2    | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 80.0

@@ -1,0 +1,790 @@
+{
+  "patient": {
+    "age": 61,
+    "sex": "female",
+    "menopausal_status": "postmenopausal",
+    "pregnancy_status": "not_pregnant",
+    "primary_diagnosis": null,
+    "cancer_stage": "IV",
+    "is_metastatic": true,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": null,
+    "pr_status": null,
+    "her2_status": null,
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": false,
+    "received_adjuvant_therapy": null,
+    "has_recurrence": null,
+    "has_prior_malignancy": null,
+    "ecog_score": 1,
+    "prior_therapies": [],
+    "lines_of_therapy": 3,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "nct_id": "NCT02102165",
+  "eligible": false,
+  "has_indeterminate": true,
+  "risk_score": 85.0,
+  "results": [
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": 61,
+      "reason": "PASS: age = 61 (required: gte 18)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_2",
+        "category": "prior_therapy",
+        "description": "Not received more than 1 line of systemic therapy in the metastatic setting",
+        "field": "lines_of_therapy",
+        "operator": "lte",
+        "value": 1,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "fail",
+      "patient_value": 3,
+      "reason": "FAIL: lines_of_therapy = 3 (required: lte 1)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_7",
+        "category": "clinical_diagnosis",
+        "description": "Eastern Cooperative Oncology Group (ECOG) Performance Status 0 or 1",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ],
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": 1,
+      "reason": "PASS: ecog_score = 1 (required: in [0, 1])"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_17",
+        "category": "prior_therapy",
+        "description": "Received more than 1 line of systemic therapy (any type) in the metastatic setting",
+        "field": "lines_of_therapy",
+        "operator": "gt",
+        "value": 1,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "fail",
+      "patient_value": 3,
+      "reason": "FAIL: lines_of_therapy = 3 (required: gt 1)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_3",
+        "category": "clinical_diagnosis",
+        "description": "Histopathology-confirmed TNBC as defined by ER <1% and HER2 negative following ASCO-CAP guidelines",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_1",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient's hormone receptor status and HER2 testing results are not provided in the clinical record"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_4",
+        "category": "clinical_diagnosis",
+        "description": "ILC (either based on ILC morphology or negative E-cadherin expression confirmed by IHC). Mixed ILC/invasive ductal carcinoma are not eligible for the ILC cohort",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_1",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's histological type (ILC) or E-cadherin expression status is not mentioned in the clinical record."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_5",
+        "category": "clinical_diagnosis",
+        "description": "Late relapse BC (any subtype). Late relapse is defined as a patient with a radiologic or histologic confirmation of advanced or MBC relapse > 10 years from the primary BC diagnosis",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 3650,
+        "group_id": "COHORT_1",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's time from primary breast cancer diagnosis to current metastatic relapse is not documented in the clinical narrative or structured profile."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_6",
+        "category": "administrative",
+        "description": "Written informed consent prior to registration into the program",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's record contains no information about informed consent status."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_8",
+        "category": "administrative",
+        "description": "Availability of primary tumor tissue for research purposes",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient's narrative explicitly confirms archival primary tumor tissue is available for research."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_9",
+        "category": "administrative",
+        "description": "Patient must have a metastatic lesion accessible for biopsy and must agree with the biopsy procedure",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has an accessible liver lesion but biopsy agreement is not explicitly confirmed."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_10",
+        "category": "administrative",
+        "description": "Up until protocol 3.0, up to 100 patients with bone-only metastasis have been included without a metastatic biopsy, if plasma samples have been collected at screening, and if the patient met all other eligibility criteria",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "fail",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has liver and lung metastases, which disqualify her from the bone-only metastasis requirement."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_11",
+        "category": "administrative",
+        "description": "In protocol 4.0, metastatic tumor biopsies from bone lesions will be accepted provided that the chosen site of biopsy was not previously irradiated",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "fail",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient does not have a bone lesion biopsy site available, which is required by the rule."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_12",
+        "category": "administrative",
+        "description": "Brain tissue is accepted if it is obtained through surgical excision not planned for AURORA, but as part of the routine clinical practice",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: No information is provided about brain tissue or surgical excision in the patient's record."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_13",
+        "category": "administrative",
+        "description": "The biopsy of the metastatic lesion must be conducted either at the initial diagnosis of the BC relapse before the initiation of 1st line systemic therapy or at the 1st disease progression before initiation of a second line systemic treatment",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient has received three lines of therapy, but the timing of the biopsy relative to treatment lines is not specified in the narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_14",
+        "category": "administrative",
+        "description": "Biopsies obtained during routine clinical practice are accepted if both formalin-fixed paraffin-embedded (FFPE) and Frozen Tissue (FT) blocks were collected concurrently from the same metastatic lesion and if collected at the pre-specified timelines for AURORA",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's record does not specify whether FFPE and Frozen Tissue blocks were collected concurrently from the same metastatic lesion as required by the AURORA trial timelines."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_15",
+        "category": "administrative",
+        "description": "Availability of a whole blood, serum and plasma samples collected at the time of screening",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient is willing to provide blood samples, which implies availability of whole blood, serum, and plasma."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_16",
+        "category": "administrative",
+        "description": "Patient agrees to provide blood samples at regular intervals, from the screening as well as during the follow-up phase of the program",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly agrees to provide blood samples as stated in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_18",
+        "category": "prior_therapy",
+        "description": "Received prior palliative radiotherapy to the only site that is accessible to biopsy",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's clinical history does not mention prior palliative radiotherapy, and the structured profile lists no prior radiotherapy in the 'prior_therapies' field."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_19",
+        "category": "comorbidity",
+        "description": "Presence of severe hematopoietic, renal, and/or hepatic dysfunction, including but not restricted to albumin < 3 g/dl",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's lab values (including albumin) are not provided in the structured profile or narrative, making it impossible to assess organ dysfunction."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_20",
+        "category": "comorbidity",
+        "description": "Known increased risk of hemorrhage during biopsy procedure, as evaluated by the treating physician",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: No information is provided about the patient's hemorrhage risk or the treating physician's evaluation of this risk."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_21",
+        "category": "comorbidity",
+        "description": "Previous or current malignancies of other histologies within the last 5 years, with the exception of in situ carcinoma of the cervix, and adequately treated basal cell or squamous cell carcinoma of the skin",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 1825,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient has no documented previous or current malignancies other than breast cancer, and there is no information about other histologies within the last 5 years."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_MANUAL_EX1",
+        "category": "prior_therapy",
+        "description": "Anti-VEGF or anti-VEGFR treatment within 4 weeks prior to planned biopsy without appropriate washout",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 28,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: No information is provided about anti-VEGF/VEGFR treatment history or timing relative to biopsy."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_MANUAL_EX2",
+        "category": "comorbidity",
+        "description": "Inappropriate anticoagulation status for biopsy procedure",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's anticoagulation status is not mentioned in the clinical narrative or structured profile."
+    }
+  ],
+  "failing_criteria": [
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_2",
+        "category": "prior_therapy",
+        "description": "Not received more than 1 line of systemic therapy in the metastatic setting",
+        "field": "lines_of_therapy",
+        "operator": "lte",
+        "value": 1,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "fail",
+      "patient_value": 3,
+      "reason": "FAIL: lines_of_therapy = 3 (required: lte 1)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_17",
+        "category": "prior_therapy",
+        "description": "Received more than 1 line of systemic therapy (any type) in the metastatic setting",
+        "field": "lines_of_therapy",
+        "operator": "gt",
+        "value": 1,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "fail",
+      "patient_value": 3,
+      "reason": "FAIL: lines_of_therapy = 3 (required: gt 1)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_10",
+        "category": "administrative",
+        "description": "Up until protocol 3.0, up to 100 patients with bone-only metastasis have been included without a metastatic biopsy, if plasma samples have been collected at screening, and if the patient met all other eligibility criteria",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "fail",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has liver and lung metastases, which disqualify her from the bone-only metastasis requirement."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_11",
+        "category": "administrative",
+        "description": "In protocol 4.0, metastatic tumor biopsies from bone lesions will be accepted provided that the chosen site of biopsy was not previously irradiated",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "fail",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient does not have a bone lesion biopsy site available, which is required by the rule."
+    }
+  ],
+  "indeterminate_criteria": [
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_3",
+        "category": "clinical_diagnosis",
+        "description": "Histopathology-confirmed TNBC as defined by ER <1% and HER2 negative following ASCO-CAP guidelines",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_1",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient's hormone receptor status and HER2 testing results are not provided in the clinical record"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_4",
+        "category": "clinical_diagnosis",
+        "description": "ILC (either based on ILC morphology or negative E-cadherin expression confirmed by IHC). Mixed ILC/invasive ductal carcinoma are not eligible for the ILC cohort",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_1",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's histological type (ILC) or E-cadherin expression status is not mentioned in the clinical record."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_5",
+        "category": "clinical_diagnosis",
+        "description": "Late relapse BC (any subtype). Late relapse is defined as a patient with a radiologic or histologic confirmation of advanced or MBC relapse > 10 years from the primary BC diagnosis",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 3650,
+        "group_id": "COHORT_1",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's time from primary breast cancer diagnosis to current metastatic relapse is not documented in the clinical narrative or structured profile."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_6",
+        "category": "administrative",
+        "description": "Written informed consent prior to registration into the program",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's record contains no information about informed consent status."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_9",
+        "category": "administrative",
+        "description": "Patient must have a metastatic lesion accessible for biopsy and must agree with the biopsy procedure",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has an accessible liver lesion but biopsy agreement is not explicitly confirmed."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_12",
+        "category": "administrative",
+        "description": "Brain tissue is accepted if it is obtained through surgical excision not planned for AURORA, but as part of the routine clinical practice",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "COHORT_2",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: No information is provided about brain tissue or surgical excision in the patient's record."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_13",
+        "category": "administrative",
+        "description": "The biopsy of the metastatic lesion must be conducted either at the initial diagnosis of the BC relapse before the initiation of 1st line systemic therapy or at the 1st disease progression before initiation of a second line systemic treatment",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient has received three lines of therapy, but the timing of the biopsy relative to treatment lines is not specified in the narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_14",
+        "category": "administrative",
+        "description": "Biopsies obtained during routine clinical practice are accepted if both formalin-fixed paraffin-embedded (FFPE) and Frozen Tissue (FT) blocks were collected concurrently from the same metastatic lesion and if collected at the pre-specified timelines for AURORA",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's record does not specify whether FFPE and Frozen Tissue blocks were collected concurrently from the same metastatic lesion as required by the AURORA trial timelines."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_18",
+        "category": "prior_therapy",
+        "description": "Received prior palliative radiotherapy to the only site that is accessible to biopsy",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's clinical history does not mention prior palliative radiotherapy, and the structured profile lists no prior radiotherapy in the 'prior_therapies' field."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_19",
+        "category": "comorbidity",
+        "description": "Presence of severe hematopoietic, renal, and/or hepatic dysfunction, including but not restricted to albumin < 3 g/dl",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's lab values (including albumin) are not provided in the structured profile or narrative, making it impossible to assess organ dysfunction."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_20",
+        "category": "comorbidity",
+        "description": "Known increased risk of hemorrhage during biopsy procedure, as evaluated by the treating physician",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: No information is provided about the patient's hemorrhage risk or the treating physician's evaluation of this risk."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_LLM_21",
+        "category": "comorbidity",
+        "description": "Previous or current malignancies of other histologies within the last 5 years, with the exception of in situ carcinoma of the cervix, and adequately treated basal cell or squamous cell carcinoma of the skin",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 1825,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient has no documented previous or current malignancies other than breast cancer, and there is no information about other histologies within the last 5 years."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_MANUAL_EX1",
+        "category": "prior_therapy",
+        "description": "Anti-VEGF or anti-VEGFR treatment within 4 weeks prior to planned biopsy without appropriate washout",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": 28,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: No information is provided about anti-VEGF/VEGFR treatment history or timing relative to biopsy."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT02102165_MANUAL_EX2",
+        "category": "comorbidity",
+        "description": "Inappropriate anticoagulation status for biopsy procedure",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's anticoagulation status is not mentioned in the clinical narrative or structured profile."
+    }
+  ]
+}

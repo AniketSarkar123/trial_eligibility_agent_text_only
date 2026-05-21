@@ -1,0 +1,54 @@
+Trial: NCT02102165
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+THE PATIENT IS METASTATIC!
+
+INDETERMINATE (missing patient data): [Hard: 3 | Soft: 5]
+  1. [administrative] [Inclusion] Written informed consent prior to registration into the program
+     Field: unmapped_rule
+     → LLM Fallback: The patient's agreement to a biopsy procedure is not equivalent to providing written informed consent for trial registration, which is explicitly required by the rule.
+
+  2. [administrative] [Inclusion] Availability of primary tumor tissue for research purposes
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not specify whether primary tumor tissue is available for research purposes.
+
+  3. [administrative] [Inclusion] Biopsies obtained during routine clinical practice are accepted if both formalin-fixed paraffin-embedded (FFPE) and Frozen Tissue (FT) blocks were collected concurrently from the same metastatic lesion and if collected at the pre-specified timelines for AURORA
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not specify whether formalin-fixed paraffin-embedded and frozen tissue blocks were collected concurrently from the liver metastasis at the required AURORA timelines.
+
+  4. [administrative] [Inclusion] Availability of a whole blood, serum and plasma samples collected at the time of screening
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record does not explicitly confirm availability of whole blood, serum, and plasma samples as required by the rule.
+
+  5. [administrative] [Inclusion] Patient agrees to provide blood samples at regular intervals, from the screening as well as during the follow-up phase of the program
+     Field: unmapped_rule
+     → LLM Fallback: The patient's agreement is explicitly mentioned only for a liver biopsy, not for blood samples. No information is provided about blood sample consent.
+
+  6. [comorbidity] [Exclusion] Known increased risk of hemorrhage during biopsy procedure, as evaluated by the treating physician
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about the treating physician's evaluation of hemorrhage risk during biopsy.
+
+  7. [comorbidity] [Exclusion] Previous or current malignancies of other histologies within the last 5 years, with the exception of in situ carcinoma of the cervix, and adequately treated basal cell or squamous cell carcinoma of the skin
+     Field: unmapped_rule
+     → LLM Fallback: No evidence of other malignancies in the past 5 years, but information is not explicitly provided to confirm or refute this exclusion criterion.
+
+  8. [comorbidity] [Exclusion] Inappropriate anticoagulation status for biopsy procedure
+     Field: unmapped_rule
+     → LLM Fallback: Patient's anticoagulation status is not mentioned in the narrative or structured profile.
+
+PASSING CRITERIA: 15 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT02102165_LLM_6         | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_8         | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_14        | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_15        | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_16        | administrative       | 10.0            | 0.0        | 0.0       
+NCT02102165_LLM_20        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT02102165_LLM_21        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT02102165_MANUAL_EX2    | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 7.5
