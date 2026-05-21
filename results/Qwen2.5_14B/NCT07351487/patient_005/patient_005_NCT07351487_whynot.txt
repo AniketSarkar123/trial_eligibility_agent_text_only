@@ -1,0 +1,54 @@
+Trial: NCT07351487
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: Ms. Kim has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  2. [clinical] Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up
+     Field: unmapped_rule
+     → LLM Fallback: Ms. Kim has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  3. [clinical] Stage IV breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: Ms. Kim has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  4. [clinical] Inflammatory breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: Ms. Kim has received prior anti-PD-1 immunotherapy (pembrolizumab), which is an exclusion criterion for the trial.
+
+  5. [prior_therapy] Previously received anti-tumor treatment or radiation therapy for any malignant tumor, excluding those that have been cured Malignant tumors such as cervical carcinoma in situ, basal cell carcinoma, or squamous cell carcinoma.
+     Field: unmapped_rule
+     → LLM Fallback: Ms. Kim has received prior anti-PD-1 immunotherapy (pembrolizumab), which is explicitly excluded by the trial rule.
+
+  6. [clinical] Suffering from serious accompanying diseases or other comorbidities that may interfere with the planned treatment, or any other circumstances that the researcher deems unsuitable for the patient to participate in this study.
+     Field: unmapped_rule
+     → LLM Fallback: Ms. Kim has received prior anti-PD-1 immunotherapy (pembrolizumab), which is explicitly excluded by the trial's criteria.
+
+INDETERMINATE (missing patient data):
+  1. [clinical] ECOG score is 0-1 points
+     Field: ecog_score
+     → Data not available in patient record
+
+  2. [biomarker] Pathological examination of PD-L1 expression: The Combined Positive Score (CPS) refers to the percentage of PD-L1 positive cells in all tumor cells. Our center detected the PD-L1 antibody site as 22C3.
+     Field: pdl1_status
+     → Data not available in patient record
+
+  3. [clinical] The functional level of major organs must meet requirements
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [clinical] Have received immunotherapy and experienced adverse immune events such as immune related pneumonia and myocarditis, which have been determined by researchers to potentially affect the safety of the experimental medication.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [clinical] Individuals with a known history of allergies to the components of this medication regimen.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  6. [clinical] Pregnant and lactating female patients, female patients with fertility and positive baseline pregnancy test results, or reproductive age patients who are unwilling to take effective contraceptive measures during the entire trial period and within 6 months after the last study medication.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 11 of 23

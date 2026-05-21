@@ -1,0 +1,9 @@
+Trial: NCT06476119
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 16 of 17

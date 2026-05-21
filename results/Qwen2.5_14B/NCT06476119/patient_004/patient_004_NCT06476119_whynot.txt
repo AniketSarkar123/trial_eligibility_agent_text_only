@@ -1,0 +1,38 @@
+Trial: NCT06476119
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Triple Negative Breast Cancer (TNBC) defined as ER/PR expression 0-9% and HER2 negative
+     Field: unmapped_rule
+     → LLM Fallback: The patient received neoadjuvant chemotherapy and pembrolizumab prior to surgery, which explicitly excludes her from the OPTImaL trial.
+
+  2. [clinical] Pathological stage I TNBC (pT1a/b/c, ≤2 cm) and pN0
+     Field: unmapped_rule
+     → LLM Fallback: The patient received neoadjuvant chemotherapy and pembrolizumab prior to surgery, which explicitly excludes her from the OPTImaL trial.
+
+  3. [clinical] Absence of recurrence between curative breast surgery and expression of patient preference
+     Field: unmapped_rule
+     → LLM Fallback: The patient received neoadjuvant chemotherapy prior to surgery, which explicitly excludes her from the trial.
+
+  4. [clinical] Administration of neoadjuvant systemic therapy
+     Field: unmapped_rule
+     → LLM Fallback: The patient received neoadjuvant chemotherapy (carboplatin/paclitaxel plus pembrolizumab) prior to surgery, which is an explicit exclusion criterion for the trial.
+
+  5. [clinical] Uncontrolled severe illness or medical condition
+     Field: unmapped_rule
+     → LLM Fallback: The patient received neoadjuvant chemotherapy and immunotherapy prior to surgery, which explicitly excludes her from the OPTImaL trial.
+
+INDETERMINATE (missing patient data):
+  1. [clinical] No evidence of nodal or distant metastases (cN0M0)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  2. [clinical] Eligible for radiotherapy (if indicated)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  3. [clinical] Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 9 of 17

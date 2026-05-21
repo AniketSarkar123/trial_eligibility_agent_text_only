@@ -1,0 +1,397 @@
+{
+  "patient": {
+    "age": 55,
+    "sex": "female",
+    "menopausal_status": null,
+    "primary_diagnosis": "metastatic TNBC",
+    "cancer_stage": null,
+    "is_metastatic": true,
+    "histology": "TNBC",
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": "negative",
+    "pr_status": "negative",
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": false,
+    "received_adjuvant_therapy": false,
+    "has_recurrence": null,
+    "ecog_score": 2,
+    "prior_therapies": [
+      {
+        "drug_name": "carboplatin",
+        "drug_class": null,
+        "is_current": false,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      },
+      {
+        "drug_name": "nab-paclitaxel",
+        "drug_class": null,
+        "is_current": false,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      }
+    ],
+    "lines_of_therapy": 1,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [
+      {
+        "condition": "peripheral neuropathy",
+        "active": true
+      }
+    ],
+    "adequate_liver_function": true,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": "none"
+  },
+  "trial": {
+    "nct_id": "NCT06771609",
+    "title": "Evaluate the Efficacy and Safety of PD-L1 Monoclonal Antibody Combined with VEX Metronomic Chemotherapy with or Without Radiotherapy in Advanced Triple-negative Breast Cancer: a Prospective, Multicenter, Randomized Controlled Phase II Clinical Trial.",
+    "conditions": [
+      "Advanced Triple-negative Breast Cancer"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_1",
+        "category": "demographic",
+        "description": "Male or female who is 18 years of age or older on the day of signing the informed consent form.",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_2",
+        "category": "clinical",
+        "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the 'American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.'",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_3",
+        "category": "prior_therapy",
+        "description": "Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer;",
+        "field": "lines_of_therapy",
+        "operator": "lte",
+        "value": 1,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_4",
+        "category": "clinical",
+        "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_5",
+        "category": "clinical",
+        "description": "Subjects must have at least one measurable lesion present; specific reference to the 'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)' guidelines;",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_6",
+        "category": "prior_therapy",
+        "description": "Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_7",
+        "category": "demographic",
+        "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_8",
+        "category": "demographic",
+        "description": "Subjects are able to sign an informed consent form to participate in the study.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06771609_LLM_9",
+        "category": "lab_value",
+        "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT06771609",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 55,
+        "reason": "PASS: age = 55 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_1",
+          "category": "demographic",
+          "description": "Male or female who is 18 years of age or older on the day of signing the informed consent form.",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 55,
+        "reason": "PASS: age = 55 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_2",
+          "category": "clinical",
+          "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the 'American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.'",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient meets the criteria for metastatic TNBC and has clear clinical data as per the narrative."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_3",
+          "category": "prior_therapy",
+          "description": "Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer;",
+          "field": "lines_of_therapy",
+          "operator": "lte",
+          "value": 1,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 1,
+        "reason": "PASS: lines_of_therapy = 1 (required: lte 1)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_4",
+          "category": "clinical",
+          "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": 2,
+        "reason": "FAIL: ecog_score = 2 (required: in [0, 1])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_5",
+          "category": "clinical",
+          "description": "Subjects must have at least one measurable lesion present; specific reference to the 'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)' guidelines;",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has measurable liver lesions (largest 3.0 cm) and new bilateral pulmonary nodules as per the CT scan, meeting RECIST v1.1 criteria."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_6",
+          "category": "prior_therapy",
+          "description": "Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has received taxanes (nab-paclitaxel) in first-line therapy and experienced progressive disease, meeting the criteria for having used taxanes with treatment failure."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_7",
+          "category": "demographic",
+          "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The clinical narrative and structured patient profile do not provide any information regarding pregnancy status, lactation, or contraceptive measures."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_8",
+          "category": "demographic",
+          "description": "Subjects are able to sign an informed consent form to participate in the study.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The clinical narrative and structured profile do not provide any information about the patient's ability to sign an informed consent form."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_9",
+          "category": "lab_value",
+          "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The structured patient profile and clinical narrative do not provide specific details about the patient's organ function tests or laboratory values required by Table 1."
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_4",
+          "category": "clinical",
+          "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": 2,
+        "reason": "FAIL: ecog_score = 2 (required: in [0, 1])"
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_7",
+          "category": "demographic",
+          "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The clinical narrative and structured patient profile do not provide any information regarding pregnancy status, lactation, or contraceptive measures."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_8",
+          "category": "demographic",
+          "description": "Subjects are able to sign an informed consent form to participate in the study.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The clinical narrative and structured profile do not provide any information about the patient's ability to sign an informed consent form."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06771609_LLM_9",
+          "category": "lab_value",
+          "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The structured patient profile and clinical narrative do not provide specific details about the patient's organ function tests or laboratory values required by Table 1."
+      }
+    ]
+  },
+  "report_text": "Trial: NCT06771609\nEligible: NO\n\nFAILING CRITERIA:\n  1. [clinical] Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;\n     Patient value: 2\n     Required: in [0, 1]\n     \u2192 FAIL: ecog_score = 2 (required: in [0, 1])\n\nINDETERMINATE (missing patient data):\n  1. [demographic] Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  2. [demographic] Subjects are able to sign an informed consent form to participate in the study.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  3. [lab_value] Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 6 of 10"
+}

@@ -1,0 +1,21 @@
+Trial: NCT06476119
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Eligible for radiotherapy (if indicated)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  2. [clinical] Administration of neoadjuvant systemic therapy
+     Field: received_neoadjuvant_therapy
+     → Data not available in patient record
+
+  3. [clinical] Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen
+     Field: lymphovascular_invasion
+     → Data not available in patient record
+
+  4. [clinical] Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 14 of 18

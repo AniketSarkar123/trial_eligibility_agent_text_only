@@ -1,0 +1,118 @@
+Trial: NCT04816006
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] First, primary diagnosis of stage I-IIIa breast cancer according to participant report and/or clinical determination
+     Patient value: breast cancer
+     Required: eq stage I-IIIa breast cancer
+     → FAIL: primary_diagnosis = breast cancer (required: eq stage I-IIIa breast cancer)
+
+  2. [clinical] Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 3-36 months prior to registration according to participant report and/or clinical determination
+     Patient value: [LLM Evaluated]
+     Required: N/A N/A
+     → LLM Fallback: The patient has pre-existing moderate-to-severe dementia (MoCA score 14/30) and an early diagnosis of Alzheimer's disease, which are exclusion criteria for the trial.
+
+  3. [clinical] Self-reported ability to complete assessments by themselves or with assistance
+     Field: unmapped_rule
+     → LLM Fallback: The patient has a documented diagnosis of early Alzheimer's disease predating her breast cancer diagnosis, which is an explicit exclusion criterion for the trial.
+
+  4. [clinical] Able to provide medical record release to confirm eligibility
+     Field: unmapped_rule
+     → LLM Fallback: The patient has a documented diagnosis of early Alzheimer's disease predating her breast cancer diagnosis, which is an explicit exclusion criterion.
+
+  5. [clinical] First, primary diagnosis of stage I-IIIa breast cancer as confirmed via clinical determination
+     Patient value: breast cancer
+     Required: eq stage I-IIIa breast cancer
+     → FAIL: primary_diagnosis = breast cancer (required: eq stage I-IIIa breast cancer)
+
+  6. [clinical] Post-surgery and completed primary treatment (i.e., surgery, chemotherapy, and/or radiation therapy) 12-36 months prior to pre-registration as confirmed via clinical determination
+     Patient value: [LLM Evaluated]
+     Required: N/A N/A
+     → LLM Fallback: The patient has pre-existing moderate-to-severe dementia (MoCA score 14/30) and an early diagnosis of Alzheimer's disease predating her breast cancer diagnosis, which excludes her from the trial due to the explicit exclusion criterion for significant neurological disorders affecting cognition.
+
+  7. [clinical] No evidence of possible cognitive impairment as assessed using the Telephone Interview of Cognitive status (13-item modified version) (TICS-M; score > 21)
+     Field: unmapped_rule
+     → LLM Fallback: The patient has a documented diagnosis of early Alzheimer's disease predating her breast cancer diagnosis, which is an explicit exclusion criterion.
+
+  8. [clinical] Receive physician's clearance to participate in an exercise program
+     Field: unmapped_rule
+     → LLM Fallback: The patient has a pre-existing diagnosis of early Alzheimer's disease, which is an explicit exclusion criterion for the trial.
+
+  9. [clinical] Ability to complete assessments by themselves or with assistance
+     Field: unmapped_rule
+     → LLM Fallback: The patient has pre-existing moderate-to-severe dementia (MoCA score 14/30) and an early diagnosis of Alzheimer's disease, which are exclusion criteria for the trial.
+
+  10. [clinical] Stage 0 breast cancer diagnosis OR metastatic disease
+     Field: unmapped_rule
+     → LLM Fallback: The patient has stage II breast cancer, which does not meet the criteria of Stage 0 or metastatic disease.
+
+  11. [clinical] History of stroke, transient ischemic attack, other neurological disorders, or brain surgery involving tissue removal as confirmed via clinical determination
+     Field: unmapped_rule
+     → LLM Fallback: The patient has a pre-existing diagnosis of early Alzheimer's disease documented by her neurologist.
+
+  12. [clinical] Contraindications to functional magnetic resonance imaging (fMRI) in accordance with the Mayo Clinic Department of Radiology safety protocols
+     Field: unmapped_rule
+     → LLM Fallback: The patient has pre-existing moderate-to-severe dementia (MoCA score 14/30) and an early diagnosis of Alzheimer's disease predating her breast cancer, which are explicit exclusion criteria for the trial.
+
+  13. [clinical] Unwilling to complete study requirements
+     Field: unmapped_rule
+     → LLM Fallback: The patient has a documented diagnosis of early Alzheimer's disease predating her breast cancer diagnosis, which is an explicit exclusion criterion.
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Sedentary except for casual lifestyle recreation defined as self-reporting no more than 90 minutes per week of moderate-intensity aerobic exercise within the last 6 months
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  2. [clinical] Planned surgery during the intervention period
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  3. [clinical] Unable to travel regularly to the study locations for intervention sessions and data collection
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [clinical] Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [clinical] Self-reported inability to walk without assistance or devices
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  6. [clinical] Clinically significant TICS-M score (< 21) during baseline procedures
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  7. [clinical] Not able to provide physician re-clearance for exercise if required based upon clinically significant baseline exercise test (as determined by ECG and blood pressure monitoring)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  8. [clinical] Clinically significant MRI scan as determined by physician review in which the following is advised via radiologist overread: remarkable/abnormal limited diagnostic brain image with recommended medical follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  9. [clinical] Enrolled in another physical activity program
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  10. [clinical] Unable to walk without assistance or devices
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  11. [clinical] Unwilling to be randomized to the exercise group or health education group
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  12. [clinical] Unable or unwilling to continuously wear and regularly sync/charge an activity tracker during the study period
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  13. [clinical] Unable to travel regularly to the study locations for intervention sessions and data collection
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  14. [clinical] Unwilling to return to enrolling institution for follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 6 of 33

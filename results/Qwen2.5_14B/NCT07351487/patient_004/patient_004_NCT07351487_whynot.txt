@@ -1,0 +1,34 @@
+Trial: NCT07351487
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: The patient has stage IV TNBC with liver metastases, which does not meet the inclusion criteria of histologically confirmed stage II-III invasive breast cancer without distant metastasis.
+
+INDETERMINATE (missing patient data):
+  1. [clinical] ECOG score is 0-1 points
+     Field: ecog_score
+     → Data not available in patient record
+
+  2. [biomarker] Pathological examination of PD-L1 expression: The Combined Positive Score (CPS) refers to the percentage of PD-L1 positive cells in all tumor cells. Our center detected the PD-L1 antibody site as 22C3.
+     Field: pdl1_status
+     → Data not available in patient record
+
+  3. [clinical] The functional level of major organs must meet requirements
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [clinical] Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  5. [clinical] Simultaneously undergoing anti-tumor treatment in other clinical trials, including but not limited to chemotherapy and endocrine therapy. Treatment, biological therapy, bone improvement drug therapy, or immune checkpoint inhibitor therapy, etc.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  6. [clinical] Individuals with a known history of allergies to the components of this medication regimen.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 16 of 23

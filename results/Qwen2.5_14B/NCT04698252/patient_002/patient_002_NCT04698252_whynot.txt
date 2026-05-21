@@ -1,0 +1,9 @@
+Trial: NCT04698252
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [clinical] For women in childbearing age, negative pregnancy test until 21 days before the date of study enrollment.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 18 of 19

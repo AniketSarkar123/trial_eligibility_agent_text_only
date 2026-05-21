@@ -1,0 +1,34 @@
+Trial: NCT06476119
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Triple Negative Breast Cancer (TNBC) defined as ER/PR expression 0-9% and HER2 negative
+     Field: unmapped_rule
+     → LLM Fallback: The patient's nodal status of pN0(i+) due to isolated tumor cells does not meet the protocol requirement for true pN0 status, rendering her ineligible.
+
+  2. [clinical] Pathological stage I TNBC (pT1a/b/c, ≤2 cm) and pN0
+     Field: unmapped_rule
+     → LLM Fallback: The patient's nodal status is pN0(i+), which does not meet the protocol requirement of true pN0 for eligibility.
+
+  3. [clinical] No evidence of nodal or distant metastases (cN0M0)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's nodal status is pN0(i+), which does not meet the protocol requirement of true cN0 (no isolated tumor cells).
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Absence of recurrence between curative breast surgery and expression of patient preference
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  2. [clinical] Eligible for radiotherapy (if indicated)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  3. [clinical] Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  4. [clinical] Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 10 of 17

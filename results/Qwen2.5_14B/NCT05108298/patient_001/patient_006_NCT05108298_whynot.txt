@@ -1,0 +1,48 @@
+Trial: NCT05108298
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Patient must not have a recurrence or second primary cancer.
+     Patient value: False
+     Required: eq False
+     → FAIL: has_recurrence = False (required: eq False)
+
+  2. [clinical] Patients must not have basal cell skin carcinoma.
+     Patient value: stage IIB classical Hodgkin lymphoma
+     Required: neq basal cell skin carcinoma
+     → FAIL: primary_diagnosis = stage IIB classical Hodgkin lymphoma (required: neq basal cell skin carcinoma)
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy.
+     Field: received_neoadjuvant_therapy
+     → Data not available in patient record
+
+  2. [clinical] Patient must have a life expectancy >24 months.
+     Field: life_expectancy_months
+     → Data not available in patient record
+
+  3. [demographic] Patient must be able to complete questionnaires in English.
+     Field: language_ability
+     → Data not available in patient record
+
+  4. [demographic] Patient must have internet access through computer, tablet, or smartphone.
+     Field: internet_access
+     → Data not available in patient record
+
+  5. [demographic] Patient must have an email address.
+     Field: email_address
+     → Data not available in patient record
+
+  6. [demographic] Patient must have a mobile phone able with text messaging capabilities.
+     Field: mobile_phone_access
+     → Data not available in patient record
+
+  7. [clinical] Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact).
+     Field: self_report_ability
+     → Data not available in patient record
+
+  8. [clinical] Patient must be able to provide informed consent.
+     Field: informed_consent
+     → Data not available in patient record
+
+PASSING CRITERIA: 6 of 16

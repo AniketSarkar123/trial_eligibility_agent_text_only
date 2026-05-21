@@ -1,0 +1,641 @@
+{
+  "patient": {
+    "age": 26,
+    "sex": "male",
+    "menopausal_status": null,
+    "primary_diagnosis": "stage IIB classical Hodgkin lymphoma",
+    "cancer_stage": "IIB",
+    "is_metastatic": null,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": null,
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": null,
+    "pr_status": null,
+    "her2_status": null,
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": null,
+    "received_adjuvant_therapy": null,
+    "has_recurrence": false,
+    "ecog_score": 1,
+    "prior_therapies": [],
+    "lines_of_therapy": null,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT05108298",
+    "title": "Improving Adolescent and Young Adult Self-Reported Data in ECOG-ACRIN Trials",
+    "conditions": [
+      "Breast Cancer, NOS",
+      "CNS Primary Tumor, NOS",
+      "Cervical Cancer, NOS",
+      "Colorectal Cancer, NOS",
+      "Leukemia, NOS",
+      "Lymphoma, NOS",
+      "Miscellaneous Neoplasm, NOS",
+      "Non-Rhabdomyosarcoma Soft Tissue Sarcoma, NOS",
+      "Testicular Nonseminomatous Germ Cell Tumor, NOS",
+      "Thyroid Cancer, NOS",
+      "Melanoma",
+      "Bone Cancer, NOS"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_AGE_MAX",
+        "category": "demographic",
+        "description": "Maximum age: 39 Years",
+        "field": "age",
+        "operator": "lte",
+        "value": 39,
+        "unit": "years",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_1",
+        "category": "demographic",
+        "description": "Patient must be \u2265 18 years and \u2264 39 years of age at registration.",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_2",
+        "category": "demographic",
+        "description": "Patient must be \u2265 18 years and \u2264 39 years of age at registration.",
+        "field": "age",
+        "operator": "lte",
+        "value": 39,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_3",
+        "category": "clinical",
+        "description": "Patient must have a histologically confirmed diagnosis of primary cancer of any stage within 12 weeks (84 days) at registration.",
+        "field": "primary_diagnosis",
+        "operator": "exists",
+        "value": true,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_4",
+        "category": "clinical",
+        "description": "Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy.",
+        "field": "received_neoadjuvant_therapy",
+        "operator": "in",
+        "value": [
+          "surgery",
+          "chemotherapy",
+          "radiation"
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_5",
+        "category": "clinical",
+        "description": "Patient must have an ECOG performance status 0-3.",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_6",
+        "category": "clinical",
+        "description": "Patient must have a life expectancy >24 months.",
+        "field": "life_expectancy_months",
+        "operator": "gte",
+        "value": 24,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_7",
+        "category": "demographic",
+        "description": "Patient must be able to complete questionnaires in English.",
+        "field": "language_ability",
+        "operator": "eq",
+        "value": "English",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_8",
+        "category": "demographic",
+        "description": "Patient must have internet access through computer, tablet, or smartphone.",
+        "field": "internet_access",
+        "operator": "exists",
+        "value": true,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_9",
+        "category": "demographic",
+        "description": "Patient must have an email address.",
+        "field": "email_address",
+        "operator": "exists",
+        "value": true,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_10",
+        "category": "demographic",
+        "description": "Patient must have a mobile phone able with text messaging capabilities.",
+        "field": "mobile_phone_access",
+        "operator": "exists",
+        "value": true,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_11",
+        "category": "clinical",
+        "description": "Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact).",
+        "field": "self_report_ability",
+        "operator": "exists",
+        "value": true,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_12",
+        "category": "clinical",
+        "description": "Patient must be able to provide informed consent.",
+        "field": "informed_consent",
+        "operator": "exists",
+        "value": true,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_13",
+        "category": "clinical",
+        "description": "Patient must not have a recurrence or second primary cancer.",
+        "field": "has_recurrence",
+        "operator": "eq",
+        "value": false,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT05108298_LLM_14",
+        "category": "clinical",
+        "description": "Patients must not have basal cell skin carcinoma.",
+        "field": "primary_diagnosis",
+        "operator": "neq",
+        "value": "basal cell skin carcinoma",
+        "unit": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT05108298",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 26,
+        "reason": "PASS: age = 26 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MAX",
+          "category": "demographic",
+          "description": "Maximum age: 39 Years",
+          "field": "age",
+          "operator": "lte",
+          "value": 39,
+          "unit": "years",
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 26,
+        "reason": "PASS: age = 26 (required: lte 39)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_1",
+          "category": "demographic",
+          "description": "Patient must be \u2265 18 years and \u2264 39 years of age at registration.",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 26,
+        "reason": "PASS: age = 26 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_2",
+          "category": "demographic",
+          "description": "Patient must be \u2265 18 years and \u2264 39 years of age at registration.",
+          "field": "age",
+          "operator": "lte",
+          "value": 39,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 26,
+        "reason": "PASS: age = 26 (required: lte 39)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_3",
+          "category": "clinical",
+          "description": "Patient must have a histologically confirmed diagnosis of primary cancer of any stage within 12 weeks (84 days) at registration.",
+          "field": "primary_diagnosis",
+          "operator": "exists",
+          "value": true,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "stage IIB classical Hodgkin lymphoma",
+        "reason": "PASS: primary_diagnosis = stage IIB classical Hodgkin lymphoma (required: exists True)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_4",
+          "category": "clinical",
+          "description": "Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy.",
+          "field": "received_neoadjuvant_therapy",
+          "operator": "in",
+          "value": [
+            "surgery",
+            "chemotherapy",
+            "radiation"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'received_neoadjuvant_therapy'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_5",
+          "category": "clinical",
+          "description": "Patient must have an ECOG performance status 0-3.",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 1,
+        "reason": "PASS: ecog_score = 1 (required: in [0, 1, 2, 3])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_6",
+          "category": "clinical",
+          "description": "Patient must have a life expectancy >24 months.",
+          "field": "life_expectancy_months",
+          "operator": "gte",
+          "value": 24,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'life_expectancy_months'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_7",
+          "category": "demographic",
+          "description": "Patient must be able to complete questionnaires in English.",
+          "field": "language_ability",
+          "operator": "eq",
+          "value": "English",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'language_ability'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_8",
+          "category": "demographic",
+          "description": "Patient must have internet access through computer, tablet, or smartphone.",
+          "field": "internet_access",
+          "operator": "exists",
+          "value": true,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'internet_access'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_9",
+          "category": "demographic",
+          "description": "Patient must have an email address.",
+          "field": "email_address",
+          "operator": "exists",
+          "value": true,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'email_address'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_10",
+          "category": "demographic",
+          "description": "Patient must have a mobile phone able with text messaging capabilities.",
+          "field": "mobile_phone_access",
+          "operator": "exists",
+          "value": true,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'mobile_phone_access'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_11",
+          "category": "clinical",
+          "description": "Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact).",
+          "field": "self_report_ability",
+          "operator": "exists",
+          "value": true,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'self_report_ability'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_12",
+          "category": "clinical",
+          "description": "Patient must be able to provide informed consent.",
+          "field": "informed_consent",
+          "operator": "exists",
+          "value": true,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'informed_consent'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_13",
+          "category": "clinical",
+          "description": "Patient must not have a recurrence or second primary cancer.",
+          "field": "has_recurrence",
+          "operator": "eq",
+          "value": false,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": false,
+        "reason": "FAIL: has_recurrence = False (required: eq False)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_14",
+          "category": "clinical",
+          "description": "Patients must not have basal cell skin carcinoma.",
+          "field": "primary_diagnosis",
+          "operator": "neq",
+          "value": "basal cell skin carcinoma",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "stage IIB classical Hodgkin lymphoma",
+        "reason": "FAIL: primary_diagnosis = stage IIB classical Hodgkin lymphoma (required: neq basal cell skin carcinoma)"
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_13",
+          "category": "clinical",
+          "description": "Patient must not have a recurrence or second primary cancer.",
+          "field": "has_recurrence",
+          "operator": "eq",
+          "value": false,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": false,
+        "reason": "FAIL: has_recurrence = False (required: eq False)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_14",
+          "category": "clinical",
+          "description": "Patients must not have basal cell skin carcinoma.",
+          "field": "primary_diagnosis",
+          "operator": "neq",
+          "value": "basal cell skin carcinoma",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "stage IIB classical Hodgkin lymphoma",
+        "reason": "FAIL: primary_diagnosis = stage IIB classical Hodgkin lymphoma (required: neq basal cell skin carcinoma)"
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_4",
+          "category": "clinical",
+          "description": "Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy.",
+          "field": "received_neoadjuvant_therapy",
+          "operator": "in",
+          "value": [
+            "surgery",
+            "chemotherapy",
+            "radiation"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'received_neoadjuvant_therapy'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_6",
+          "category": "clinical",
+          "description": "Patient must have a life expectancy >24 months.",
+          "field": "life_expectancy_months",
+          "operator": "gte",
+          "value": 24,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'life_expectancy_months'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_7",
+          "category": "demographic",
+          "description": "Patient must be able to complete questionnaires in English.",
+          "field": "language_ability",
+          "operator": "eq",
+          "value": "English",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'language_ability'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_8",
+          "category": "demographic",
+          "description": "Patient must have internet access through computer, tablet, or smartphone.",
+          "field": "internet_access",
+          "operator": "exists",
+          "value": true,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'internet_access'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_9",
+          "category": "demographic",
+          "description": "Patient must have an email address.",
+          "field": "email_address",
+          "operator": "exists",
+          "value": true,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'email_address'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_10",
+          "category": "demographic",
+          "description": "Patient must have a mobile phone able with text messaging capabilities.",
+          "field": "mobile_phone_access",
+          "operator": "exists",
+          "value": true,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'mobile_phone_access'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_11",
+          "category": "clinical",
+          "description": "Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact).",
+          "field": "self_report_ability",
+          "operator": "exists",
+          "value": true,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'self_report_ability'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT05108298_LLM_12",
+          "category": "clinical",
+          "description": "Patient must be able to provide informed consent.",
+          "field": "informed_consent",
+          "operator": "exists",
+          "value": true,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'informed_consent'"
+      }
+    ]
+  },
+  "report_text": "Trial: NCT05108298\nEligible: NO\n\nFAILING CRITERIA:\n  1. [clinical] Patient must not have a recurrence or second primary cancer.\n     Patient value: False\n     Required: eq False\n     \u2192 FAIL: has_recurrence = False (required: eq False)\n\n  2. [clinical] Patients must not have basal cell skin carcinoma.\n     Patient value: stage IIB classical Hodgkin lymphoma\n     Required: neq basal cell skin carcinoma\n     \u2192 FAIL: primary_diagnosis = stage IIB classical Hodgkin lymphoma (required: neq basal cell skin carcinoma)\n\nINDETERMINATE (missing patient data):\n  1. [clinical] Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy.\n     Field: received_neoadjuvant_therapy\n     \u2192 Data not available in patient record\n\n  2. [clinical] Patient must have a life expectancy >24 months.\n     Field: life_expectancy_months\n     \u2192 Data not available in patient record\n\n  3. [demographic] Patient must be able to complete questionnaires in English.\n     Field: language_ability\n     \u2192 Data not available in patient record\n\n  4. [demographic] Patient must have internet access through computer, tablet, or smartphone.\n     Field: internet_access\n     \u2192 Data not available in patient record\n\n  5. [demographic] Patient must have an email address.\n     Field: email_address\n     \u2192 Data not available in patient record\n\n  6. [demographic] Patient must have a mobile phone able with text messaging capabilities.\n     Field: mobile_phone_access\n     \u2192 Data not available in patient record\n\n  7. [clinical] Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact).\n     Field: self_report_ability\n     \u2192 Data not available in patient record\n\n  8. [clinical] Patient must be able to provide informed consent.\n     Field: informed_consent\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 6 of 16"
+}

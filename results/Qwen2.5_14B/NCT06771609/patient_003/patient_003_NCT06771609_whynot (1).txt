@@ -1,0 +1,23 @@
+Trial: NCT06771609
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;
+     Patient value: 2
+     Required: in [0, 1]
+     → FAIL: ecog_score = 2 (required: in [0, 1])
+
+INDETERMINATE (missing patient data):
+  1. [demographic] Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  2. [demographic] Subjects are able to sign an informed consent form to participate in the study.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  3. [lab_value] Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 6 of 10

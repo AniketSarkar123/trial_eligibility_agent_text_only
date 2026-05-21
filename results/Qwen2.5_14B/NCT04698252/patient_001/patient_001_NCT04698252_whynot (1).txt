@@ -1,0 +1,9 @@
+Trial: NCT04698252
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Signed informed consent form
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 18 of 19

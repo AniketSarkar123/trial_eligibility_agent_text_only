@@ -1,0 +1,696 @@
+{
+  "patient": {
+    "age": 44,
+    "sex": "female",
+    "menopausal_status": null,
+    "primary_diagnosis": "invasive ductal carcinoma of the breast",
+    "cancer_stage": "IIIC",
+    "is_metastatic": false,
+    "histology": "triple-negative breast cancer (TNBC)",
+    "tumor_size_cm": 5.8,
+    "nodal_status": "N2",
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": "negative",
+    "pr_status": "negative",
+    "her2_status": "negative",
+    "brca_status": "BRCA1_mutated",
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "ecog_score": 0,
+    "prior_therapies": [],
+    "lines_of_therapy": null,
+    "prior_radiation": false,
+    "prior_surgery": false,
+    "lab_values": [
+      {
+        "test_name": "ANC",
+        "value": 2400.0,
+        "unit": "cells/\u00b5L"
+      },
+      {
+        "test_name": "platelets",
+        "value": 201000.0,
+        "unit": "cells/\u00b5L"
+      },
+      {
+        "test_name": "Hgb",
+        "value": 12.0,
+        "unit": "g/dL"
+      },
+      {
+        "test_name": "creatinine",
+        "value": 0.78,
+        "unit": "mg/dL"
+      },
+      {
+        "test_name": "ALT",
+        "value": 28.0,
+        "unit": "U/L"
+      },
+      {
+        "test_name": "bilirubin",
+        "value": 0.6,
+        "unit": "mg/dL"
+      }
+    ],
+    "comorbidities": [],
+    "adequate_liver_function": true,
+    "adequate_renal_function": true,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT07351487",
+    "title": "Neoadjuvant Chemotherapy Combined With Sintilimab and Bevacizumab for Triple Negative Breast Cancer:A Prospective, Single-Arm, Multicenter Clinical Study (NEOTORCII-BREASTO7)",
+    "conditions": [
+      "TNBC - Triple-Negative Breast Cancer"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_AGE_MAX",
+        "category": "demographic",
+        "description": "Maximum age: 75 Years",
+        "field": "age",
+        "operator": "lte",
+        "value": 75,
+        "unit": "years",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_SEX",
+        "category": "demographic",
+        "description": "Sex: FEMALE",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_1",
+        "category": "demographic",
+        "description": "Female patients aged 18-70 years old",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_2",
+        "category": "demographic",
+        "description": "Female patients aged 18-70 years old",
+        "field": "age",
+        "operator": "lte",
+        "value": 70,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_3",
+        "category": "clinical",
+        "description": "ECOG score is 0-1 points",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_4",
+        "category": "clinical",
+        "description": "Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_5",
+        "category": "biomarker",
+        "description": "ER-negative, PR-negative, and HER2 receptor-negative. Alternatively, if ER and PR expression is less than 10% and HER2 receptor is negative, it is also classified as TNBC",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_6",
+        "category": "biomarker",
+        "description": "Pathological examination of PD-L1 expression: The Combined Positive Score (CPS) refers to the percentage of PD-L1 positive cells in all tumor cells. Our center detected the PD-L1 antibody site as 22C3.",
+        "field": "pdl1_status",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_7",
+        "category": "clinical",
+        "description": "The functional level of major organs must meet requirements",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_8",
+        "category": "clinical",
+        "description": "Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_9",
+        "category": "clinical",
+        "description": "Stage IV breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_10",
+        "category": "clinical",
+        "description": "Inflammatory breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_11",
+        "category": "prior_therapy",
+        "description": "Previously received anti-tumor treatment or radiation therapy for any malignant tumor, excluding those that have been cured Malignant tumors such as cervical carcinoma in situ, basal cell carcinoma, or squamous cell carcinoma.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_12",
+        "category": "clinical",
+        "description": "Simultaneously undergoing anti-tumor treatment in other clinical trials, including but not limited to chemotherapy and endocrine therapy. Treatment, biological therapy, bone improvement drug therapy, or immune checkpoint inhibitor therapy, etc.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_13",
+        "category": "clinical",
+        "description": "The patient had undergone major surgical procedures unrelated to breast cancer within 4 weeks before the first administration of the study drug, or the patient has not fully recovered from such surgical procedures.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_14",
+        "category": "clinical",
+        "description": "Serious heart disease or discomfort, including but not limited to the following diseases: 1) Diagnosed history of heart failure or systolic dysfunction (LVEF less than 50%).2) High risk uncontrolled arrhythmias, such as atrial tachycardia, resting heart rate greater than 100bpm, significant ventricular arrhythmias (such as ventricular tachycardia), or higher-level atrioventricular block (i.e. Mobitz II second or third degree atrioventricular block).3) Angina requiring medication for treatment. 4) Heart valve disease with clinical significance. 5) ECG shows transmural myocardial infarction. 6) Poor control of hypertension (systolic blood pressure greater than 180mmHg and/or diastolic blood pressure greater than 180mmHg after drug treatment).",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_15",
+        "category": "clinical",
+        "description": "Uncontrolled active infections that require treatment; History of immunodeficiency, including HIV testing positive Sexual, or suffering from other acquired or congenital immunodeficiency diseases, or having a history of organ transplantation.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_16",
+        "category": "clinical",
+        "description": "Have chronic active hepatitis B or active hepatitis C (excluding hepatitis B virus carriers, stable hepatitis B after drug treatment [HBV-DNA test negative or <50IU/ml] and cured hepatitis C patients [HCV RNA test negative]).",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_17",
+        "category": "clinical",
+        "description": "Have received immunotherapy and experienced adverse immune events such as immune related pneumonia and myocarditis, which have been determined by researchers to potentially affect the safety of the experimental medication.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_18",
+        "category": "clinical",
+        "description": "Individuals with a known history of allergies to the components of this medication regimen.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_19",
+        "category": "clinical",
+        "description": "Pregnant and lactating female patients, female patients with fertility and positive baseline pregnancy test results, or reproductive age patients who are unwilling to take effective contraceptive measures during the entire trial period and within 6 months after the last study medication.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT07351487_LLM_20",
+        "category": "clinical",
+        "description": "Suffering from serious accompanying diseases or other comorbidities that may interfere with the planned treatment, or any other circumstances that the researcher deems unsuitable for the patient to participate in this study.",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT07351487",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 44,
+        "reason": "PASS: age = 44 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MAX",
+          "category": "demographic",
+          "description": "Maximum age: 75 Years",
+          "field": "age",
+          "operator": "lte",
+          "value": 75,
+          "unit": "years",
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 44,
+        "reason": "PASS: age = 44 (required: lte 75)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_SEX",
+          "category": "demographic",
+          "description": "Sex: FEMALE",
+          "field": "sex",
+          "operator": "eq",
+          "value": "female",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "female",
+        "reason": "PASS: sex = female (required: eq female)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_1",
+          "category": "demographic",
+          "description": "Female patients aged 18-70 years old",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 44,
+        "reason": "PASS: age = 44 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_2",
+          "category": "demographic",
+          "description": "Female patients aged 18-70 years old",
+          "field": "age",
+          "operator": "lte",
+          "value": 70,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 44,
+        "reason": "PASS: age = 44 (required: lte 70)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_3",
+          "category": "clinical",
+          "description": "ECOG score is 0-1 points",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 0,
+        "reason": "PASS: ecog_score = 0 (required: in [0, 1])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_4",
+          "category": "clinical",
+          "description": "Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has histologically confirmed stage IIC (T3N2M0) invasive triple-negative breast cancer, which falls within the specified range of T2-4N0-2 for inclusion in the trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_5",
+          "category": "biomarker",
+          "description": "ER-negative, PR-negative, and HER2 receptor-negative. Alternatively, if ER and PR expression is less than 10% and HER2 receptor is negative, it is also classified as TNBC",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient's breast cancer is ER-negative, PR-negative, and HER2-negative, meeting the criteria for triple-negative breast cancer (TNBC)."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_6",
+          "category": "biomarker",
+          "description": "Pathological examination of PD-L1 expression: The Combined Positive Score (CPS) refers to the percentage of PD-L1 positive cells in all tumor cells. Our center detected the PD-L1 antibody site as 22C3.",
+          "field": "pdl1_status",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'pdl1_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_7",
+          "category": "clinical",
+          "description": "The functional level of major organs must meet requirements",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has adequate liver and renal function as indicated by normal ALT (28 U/L), bilirubin (0.6 mg/dL), creatinine (0.78 mg/dL) levels."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_8",
+          "category": "clinical",
+          "description": "Voluntarily join this study, sign an informed consent form, have good compliance, and are willing to cooperate with follow-up",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: Ms. Rocha has voluntarily consented to neoadjuvant therapy and meets all criteria for good compliance and cooperation with follow-up as she is newly diagnosed and willing to undergo planned treatment."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_9",
+          "category": "clinical",
+          "description": "Stage IV breast cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has stage IIC breast cancer, not stage IV."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_10",
+          "category": "clinical",
+          "description": "Inflammatory breast cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient does not have inflammatory breast cancer as her diagnosis is stage IIC TNBC with no mention of inflammatory features."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_11",
+          "category": "prior_therapy",
+          "description": "Previously received anti-tumor treatment or radiation therapy for any malignant tumor, excluding those that have been cured Malignant tumors such as cervical carcinoma in situ, basal cell carcinoma, or squamous cell carcinoma.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has not received any cancer treatment to date and there is no mention of prior radiation therapy or other malignant tumors that would exclude her from the trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_12",
+          "category": "clinical",
+          "description": "Simultaneously undergoing anti-tumor treatment in other clinical trials, including but not limited to chemotherapy and endocrine therapy. Treatment, biological therapy, bone improvement drug therapy, or immune checkpoint inhibitor therapy, etc.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has not received any cancer treatment to date and is not currently undergoing anti-tumor treatment in other clinical trials."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_13",
+          "category": "clinical",
+          "description": "The patient had undergone major surgical procedures unrelated to breast cancer within 4 weeks before the first administration of the study drug, or the patient has not fully recovered from such surgical procedures.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has not undergone any prior surgery or radiation therapy unrelated to breast cancer, as indicated in the structured profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_14",
+          "category": "clinical",
+          "description": "Serious heart disease or discomfort, including but not limited to the following diseases: 1) Diagnosed history of heart failure or systolic dysfunction (LVEF less than 50%).2) High risk uncontrolled arrhythmias, such as atrial tachycardia, resting heart rate greater than 100bpm, significant ventricular arrhythmias (such as ventricular tachycardia), or higher-level atrioventricular block (i.e. Mobitz II second or third degree atrioventricular block).3) Angina requiring medication for treatment. 4) Heart valve disease with clinical significance. 5) ECG shows transmural myocardial infarction. 6) Poor control of hypertension (systolic blood pressure greater than 180mmHg and/or diastolic blood pressure greater than 180mmHg after drug treatment).",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has no history of heart disease or discomfort as indicated by her normal ECG and stable vital signs."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_15",
+          "category": "clinical",
+          "description": "Uncontrolled active infections that require treatment; History of immunodeficiency, including HIV testing positive Sexual, or suffering from other acquired or congenital immunodeficiency diseases, or having a history of organ transplantation.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has no history of uncontrolled active infections, immunodeficiency, HIV positivity, other acquired or congenital immunodeficiencies, or organ transplantation."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_16",
+          "category": "clinical",
+          "description": "Have chronic active hepatitis B or active hepatitis C (excluding hepatitis B virus carriers, stable hepatitis B after drug treatment [HBV-DNA test negative or <50IU/ml] and cured hepatitis C patients [HCV RNA test negative]).",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient's structured profile and clinical narrative do not indicate any history of chronic active hepatitis B or active hepatitis C."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_17",
+          "category": "clinical",
+          "description": "Have received immunotherapy and experienced adverse immune events such as immune related pneumonia and myocarditis, which have been determined by researchers to potentially affect the safety of the experimental medication.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has not received any cancer treatment to date and there is no mention of immunotherapy or adverse immune events in her medical history."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_18",
+          "category": "clinical",
+          "description": "Individuals with a known history of allergies to the components of this medication regimen.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The clinical narrative and structured patient profile do not provide any information about allergies to medication components."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_19",
+          "category": "clinical",
+          "description": "Pregnant and lactating female patients, female patients with fertility and positive baseline pregnancy test results, or reproductive age patients who are unwilling to take effective contraceptive measures during the entire trial period and within 6 months after the last study medication.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient is not pregnant, lactating, or of reproductive age unwilling to use contraception, as there is no mention of pregnancy, lactation, or contraceptive measures in the clinical narrative."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_20",
+          "category": "clinical",
+          "description": "Suffering from serious accompanying diseases or other comorbidities that may interfere with the planned treatment, or any other circumstances that the researcher deems unsuitable for the patient to participate in this study.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has no reported comorbidities or serious accompanying diseases that would interfere with planned treatment."
+      }
+    ],
+    "failing_criteria": [],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_6",
+          "category": "biomarker",
+          "description": "Pathological examination of PD-L1 expression: The Combined Positive Score (CPS) refers to the percentage of PD-L1 positive cells in all tumor cells. Our center detected the PD-L1 antibody site as 22C3.",
+          "field": "pdl1_status",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'pdl1_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT07351487_LLM_18",
+          "category": "clinical",
+          "description": "Individuals with a known history of allergies to the components of this medication regimen.",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The clinical narrative and structured patient profile do not provide any information about allergies to medication components."
+      }
+    ]
+  },
+  "report_text": "Trial: NCT07351487\nEligible: NO\n\nINDETERMINATE (missing patient data):\n  1. [biomarker] Pathological examination of PD-L1 expression: The Combined Positive Score (CPS) refers to the percentage of PD-L1 positive cells in all tumor cells. Our center detected the PD-L1 antibody site as 22C3.\n     Field: pdl1_status\n     \u2192 Data not available in patient record\n\n  2. [clinical] Individuals with a known history of allergies to the components of this medication regimen.\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 21 of 23"
+}

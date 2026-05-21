@@ -1,0 +1,13 @@
+Trial: NCT06476119
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Eligible for radiotherapy (if indicated)
+     Field: unmapped_rule
+     → Data not available in patient record
+
+  2. [clinical] Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule
+     Field: unmapped_rule
+     → Data not available in patient record
+
+PASSING CRITERIA: 15 of 17

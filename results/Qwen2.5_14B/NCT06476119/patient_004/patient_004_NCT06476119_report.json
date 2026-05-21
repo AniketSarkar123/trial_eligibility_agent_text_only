@@ -1,0 +1,632 @@
+{
+  "patient": {
+    "age": 42,
+    "sex": "female",
+    "menopausal_status": null,
+    "primary_diagnosis": "TNBC (Triple Negative Breast Cancer)",
+    "cancer_stage": null,
+    "is_metastatic": null,
+    "histology": null,
+    "tumor_size_cm": 1.8,
+    "nodal_status": "negative",
+    "tumor_grade": null,
+    "lymphovascular_invasion": null,
+    "disease_focality": null,
+    "er_status": "negative",
+    "pr_status": "negative",
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": 65.0,
+    "received_neoadjuvant_therapy": true,
+    "received_adjuvant_therapy": false,
+    "has_recurrence": false,
+    "ecog_score": null,
+    "prior_therapies": [
+      {
+        "drug_name": "carboplatin",
+        "drug_class": null,
+        "is_current": false,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      },
+      {
+        "drug_name": "paclitaxel",
+        "drug_class": null,
+        "is_current": false,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      },
+      {
+        "drug_name": "pembrolizumab",
+        "drug_class": null,
+        "is_current": false,
+        "discontinued_reason": null,
+        "months_since_last_dose": null
+      }
+    ],
+    "lines_of_therapy": null,
+    "prior_radiation": false,
+    "prior_surgery": true,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT06476119",
+    "title": "OPTImaL:Optimisation of Treatment for Patients With Low Stage Triple-negative Breast Cancer With High Stromal Tumor-infiltrating Lymphocytes",
+    "conditions": [
+      "Breast Cancer Stage I",
+      "Triple Negative Breast Cancer (TNBC)"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_1",
+        "category": "demographic",
+        "description": "Female or male patients",
+        "field": "sex",
+        "operator": "in",
+        "value": [
+          "male",
+          "female"
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_2",
+        "category": "demographic",
+        "description": "Age >= 18 years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_3",
+        "category": "clinical",
+        "description": "Triple Negative Breast Cancer (TNBC) defined as ER/PR expression 0-9% and HER2 negative",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_4",
+        "category": "clinical",
+        "description": "Pathological stage I TNBC (pT1a/b/c, \u22642 cm) and pN0",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_5",
+        "category": "clinical",
+        "description": "No evidence of nodal or distant metastases (cN0M0)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_6",
+        "category": "clinical",
+        "description": "sTIL score of \u226550% for patients \u226540 years and \u226575% for patients <40 years",
+        "field": "stil_score_percent",
+        "operator": "gte",
+        "value": 50,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_7",
+        "category": "clinical",
+        "description": "Has undergone curative breast surgery (breast-conserving surgery or mastectomy and surgical axillary staging)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_8",
+        "category": "clinical",
+        "description": "Absence of recurrence between curative breast surgery and expression of patient preference",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_9",
+        "category": "clinical",
+        "description": "Eligible for radiotherapy (if indicated)",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_10",
+        "category": "clinical",
+        "description": "Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_11",
+        "category": "clinical",
+        "description": "Multifocal, multicentric or bilateral breast cancer at the time of screening",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_12",
+        "category": "clinical",
+        "description": "Administration of neoadjuvant systemic therapy",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_13",
+        "category": "clinical",
+        "description": "Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_14",
+        "category": "clinical",
+        "description": "Other invasive malignancy within 5 years prior to inclusion, with the exception of adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason \u22646 prostate cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_15",
+        "category": "clinical",
+        "description": "Uncontrolled severe illness or medical condition",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_16",
+        "category": "clinical",
+        "description": "Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT06476119",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 42,
+        "reason": "PASS: age = 42 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_1",
+          "category": "demographic",
+          "description": "Female or male patients",
+          "field": "sex",
+          "operator": "in",
+          "value": [
+            "male",
+            "female"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "female",
+        "reason": "PASS: sex = female (required: in ['male', 'female'])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_2",
+          "category": "demographic",
+          "description": "Age >= 18 years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 42,
+        "reason": "PASS: age = 42 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_3",
+          "category": "clinical",
+          "description": "Triple Negative Breast Cancer (TNBC) defined as ER/PR expression 0-9% and HER2 negative",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant chemotherapy and pembrolizumab prior to surgery, which explicitly excludes her from the OPTImaL trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_4",
+          "category": "clinical",
+          "description": "Pathological stage I TNBC (pT1a/b/c, \u22642 cm) and pN0",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant chemotherapy and pembrolizumab prior to surgery, which explicitly excludes her from the OPTImaL trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_5",
+          "category": "clinical",
+          "description": "No evidence of nodal or distant metastases (cN0M0)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The structured patient profile does not explicitly state the nodal or distant metastasis status (cN0M0), and while the surgical pathology indicates pathologically negative lymph nodes, it does not provide information on distant metastases."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_6",
+          "category": "clinical",
+          "description": "sTIL score of \u226550% for patients \u226540 years and \u226575% for patients <40 years",
+          "field": "stil_score_percent",
+          "operator": "gte",
+          "value": 50,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 65.0,
+        "reason": "PASS: stil_score_percent = 65.0 (required: gte 50)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_7",
+          "category": "clinical",
+          "description": "Has undergone curative breast surgery (breast-conserving surgery or mastectomy and surgical axillary staging)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient underwent surgery as indicated by her surgical pathology report and structured profile."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_8",
+          "category": "clinical",
+          "description": "Absence of recurrence between curative breast surgery and expression of patient preference",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant chemotherapy prior to surgery, which explicitly excludes her from the trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_9",
+          "category": "clinical",
+          "description": "Eligible for radiotherapy (if indicated)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The rule does not specify criteria for radiotherapy eligibility and no lab values or clinical indicators are provided to assess the need for radiotherapy."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_10",
+          "category": "clinical",
+          "description": "Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant therapy prior to surgery, which explicitly excludes her from the trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_11",
+          "category": "clinical",
+          "description": "Multifocal, multicentric or bilateral breast cancer at the time of screening",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient's clinical narrative and structured profile do not indicate multifocal, multicentric or bilateral breast cancer."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_12",
+          "category": "clinical",
+          "description": "Administration of neoadjuvant systemic therapy",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant chemotherapy (carboplatin/paclitaxel plus pembrolizumab) prior to surgery, which is an explicit exclusion criterion for the trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_13",
+          "category": "clinical",
+          "description": "Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The clinical narrative and structured patient profile do not provide any information regarding lymphovascular invasion on the diagnostic biopsy or surgical specimen."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_14",
+          "category": "clinical",
+          "description": "Other invasive malignancy within 5 years prior to inclusion, with the exception of adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason \u22646 prostate cancer",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The clinical trial rule regarding other invasive malignancies within 5 years prior to inclusion does not apply as there is no mention of any other malignancies in the patient's history."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_15",
+          "category": "clinical",
+          "description": "Uncontrolled severe illness or medical condition",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant chemotherapy and immunotherapy prior to surgery, which explicitly excludes her from the OPTImaL trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_16",
+          "category": "clinical",
+          "description": "Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant therapy prior to surgery, which explicitly excludes her from this clinical trial."
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_3",
+          "category": "clinical",
+          "description": "Triple Negative Breast Cancer (TNBC) defined as ER/PR expression 0-9% and HER2 negative",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant chemotherapy and pembrolizumab prior to surgery, which explicitly excludes her from the OPTImaL trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_4",
+          "category": "clinical",
+          "description": "Pathological stage I TNBC (pT1a/b/c, \u22642 cm) and pN0",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant chemotherapy and pembrolizumab prior to surgery, which explicitly excludes her from the OPTImaL trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_8",
+          "category": "clinical",
+          "description": "Absence of recurrence between curative breast surgery and expression of patient preference",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant chemotherapy prior to surgery, which explicitly excludes her from the trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_12",
+          "category": "clinical",
+          "description": "Administration of neoadjuvant systemic therapy",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant chemotherapy (carboplatin/paclitaxel plus pembrolizumab) prior to surgery, which is an explicit exclusion criterion for the trial."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_15",
+          "category": "clinical",
+          "description": "Uncontrolled severe illness or medical condition",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient received neoadjuvant chemotherapy and immunotherapy prior to surgery, which explicitly excludes her from the OPTImaL trial."
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_5",
+          "category": "clinical",
+          "description": "No evidence of nodal or distant metastases (cN0M0)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The structured patient profile does not explicitly state the nodal or distant metastasis status (cN0M0), and while the surgical pathology indicates pathologically negative lymph nodes, it does not provide information on distant metastases."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_9",
+          "category": "clinical",
+          "description": "Eligible for radiotherapy (if indicated)",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The rule does not specify criteria for radiotherapy eligibility and no lab values or clinical indicators are provided to assess the need for radiotherapy."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_13",
+          "category": "clinical",
+          "description": "Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen",
+          "field": "unmapped_rule",
+          "operator": null,
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The clinical narrative and structured patient profile do not provide any information regarding lymphovascular invasion on the diagnostic biopsy or surgical specimen."
+      }
+    ]
+  },
+  "report_text": "Trial: NCT06476119\nEligible: NO\n\nFAILING CRITERIA:\n  1. [clinical] Triple Negative Breast Cancer (TNBC) defined as ER/PR expression 0-9% and HER2 negative\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient received neoadjuvant chemotherapy and pembrolizumab prior to surgery, which explicitly excludes her from the OPTImaL trial.\n\n  2. [clinical] Pathological stage I TNBC (pT1a/b/c, \u22642 cm) and pN0\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient received neoadjuvant chemotherapy and pembrolizumab prior to surgery, which explicitly excludes her from the OPTImaL trial.\n\n  3. [clinical] Absence of recurrence between curative breast surgery and expression of patient preference\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient received neoadjuvant chemotherapy prior to surgery, which explicitly excludes her from the trial.\n\n  4. [clinical] Administration of neoadjuvant systemic therapy\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient received neoadjuvant chemotherapy (carboplatin/paclitaxel plus pembrolizumab) prior to surgery, which is an explicit exclusion criterion for the trial.\n\n  5. [clinical] Uncontrolled severe illness or medical condition\n     Field: unmapped_rule\n     \u2192 LLM Fallback: The patient received neoadjuvant chemotherapy and immunotherapy prior to surgery, which explicitly excludes her from the OPTImaL trial.\n\nINDETERMINATE (missing patient data):\n  1. [clinical] No evidence of nodal or distant metastases (cN0M0)\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  2. [clinical] Eligible for radiotherapy (if indicated)\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\n  3. [clinical] Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen\n     Field: unmapped_rule\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 9 of 17"
+}
