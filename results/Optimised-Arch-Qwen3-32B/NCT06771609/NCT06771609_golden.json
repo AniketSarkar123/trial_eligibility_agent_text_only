@@ -1,0 +1,155 @@
+{
+  "nct_id": "NCT06771609",
+  "title": "Evaluate the Efficacy and Safety of PD-L1 Monoclonal Antibody Combined with VEX Metronomic Chemotherapy with or Without Radiotherapy in Advanced Triple-negative Breast Cancer: a Prospective, Multicenter, Randomized Controlled Phase II Clinical Trial.",
+  "conditions": [
+    "Advanced Triple-negative Breast Cancer"
+  ],
+  "criteria": [
+    {
+      "criterion_id": "STRUCT_AGE_MIN",
+      "category": "demographic",
+      "description": "Minimum age: 18 Years",
+      "field": "age",
+      "operator": "gte",
+      "value": 18,
+      "unit": "years",
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT06771609_LLM_2",
+      "category": "clinical_diagnosis",
+      "description": "Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the \"American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.\"",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT06771609_LLM_3",
+      "category": "prior_therapy",
+      "description": "Have received less than or equal to 1 line of chemotherapy for metastatic breast cancer;",
+      "field": "lines_of_therapy",
+      "operator": "lte",
+      "value": 1,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT06771609_LLM_4",
+      "category": "clinical_diagnosis",
+      "description": "Have an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1 as assessed within 10 days before the start of study treatment;",
+      "field": "ecog_score",
+      "operator": "in",
+      "value": [
+        0,
+        1
+      ],
+      "unit": null,
+      "timeframe_days": 10,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT06771609_LLM_5",
+      "category": "clinical_diagnosis",
+      "description": "Subjects must have at least one measurable lesion present; specific reference to the \"Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)\" guidelines;",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT06771609_LLM_6",
+      "category": "prior_therapy",
+      "description": "The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence.",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": "GRP_1",
+      "group_operator": "OR",
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT06771609_LLM_7",
+      "category": "prior_therapy",
+      "description": "The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes.",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": "GRP_1",
+      "group_operator": "OR",
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT06771609_LLM_8",
+      "category": "prior_therapy",
+      "description": "According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": "GRP_1",
+      "group_operator": "OR",
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT06771609_LLM_9",
+      "category": "clinical_diagnosis",
+      "description": "Female subjects are not pregnant, not lactating, and agree to use necessary contraceptive measures.",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT06771609_LLM_10",
+      "category": "administrative",
+      "description": "Subjects are able to sign an informed consent form to participate in the study.",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": null,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    },
+    {
+      "criterion_id": "NCT06771609_LLM_11",
+      "category": "lab_value",
+      "description": "Have appropriate organ function, as detailed in Table 1; all screening laboratory tests should be completed within 10 days before the start of study treatment.",
+      "field": "unmapped_rule",
+      "operator": null,
+      "value": null,
+      "unit": null,
+      "timeframe_days": 10,
+      "group_id": null,
+      "group_operator": null,
+      "is_inclusion": true
+    }
+  ]
+}

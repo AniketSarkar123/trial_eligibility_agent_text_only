@@ -1,0 +1,12 @@
+Trial: NCT06771609
+Eligible: NO
+Triage Status: INELIGIBLE
+THE PATIENT IS METASTATIC!
+
+FAILING CRITERIA:
+  1. [demographic] [Inclusion] Minimum age: 18 Years
+     Patient value: 17
+     Required: gte 18
+     → FAIL: age = 17 (required: gte 18)
+
+PASSING CRITERIA: 10 of 11
