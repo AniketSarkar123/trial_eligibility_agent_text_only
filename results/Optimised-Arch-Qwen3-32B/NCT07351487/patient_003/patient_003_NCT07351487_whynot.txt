@@ -1,0 +1,53 @@
+Trial: NCT07351487
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 5 | Soft: 3]
+  1. [lab_value] [Inclusion] The functional level of major organs must meet requirements
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about organ function tests (e.g., liver/kidney enzymes, LVEF) required to assess major organ function.
+
+  2. [administrative] [Inclusion] Effective contraceptive methods for at least 6 months after a single administration
+     Field: unmapped_rule
+     → LLM Fallback: The patient's contraceptive method status is not explicitly documented in the clinical narrative or structured profile.
+
+  3. [prior_therapy] [Exclusion] Previously received anti-tumor treatment or radiation therapy for any malignant tumor (excluding cured Malignant tumors)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about prior anti-tumor treatments, radiation therapy, or history of other malignancies.
+
+  4. [administrative] [Exclusion] Simultaneously undergoing anti-tumor treatment in other clinical trials
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about participation in other clinical trials.
+
+  5. [comorbidity] [Exclusion] Major surgical procedures unrelated to breast cancer within 4 weeks before first administration
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about major surgical procedures unrelated to breast cancer in the clinical narrative or structured profile.
+
+  6. [comorbidity] [Exclusion] Immunotherapy adverse events (pneumonia, myocarditis) affecting safety
+     Field: unmapped_rule
+     → LLM Fallback: No evidence of immunotherapy-related adverse events (pneumonia, myocarditis) in the patient's history.
+
+  7. [comorbidity] [Exclusion] Allergies to medication components
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about allergies to medication components.
+
+  8. [administrative] [Exclusion] Pregnant, lactating, or unwilling to use contraception
+     Field: unmapped_rule
+     → LLM Fallback: Patient is not pregnant, but lactation status and contraception willingness are unmentioned.
+
+PASSING CRITERIA: 15 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT07351487_LLM_7         | lab_value            | 10.0            | 1.0        | 10.0      
+NCT07351487_LLM_8         | administrative       | 10.0            | 0.0        | 0.0       
+NCT07351487_LLM_12        | prior_therapy        | 5.0             | 1.5        | 7.5       
+NCT07351487_LLM_13        | administrative       | 5.0             | 0.0        | 0.0       
+NCT07351487_LLM_14        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_18        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_19        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_20        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 25.0

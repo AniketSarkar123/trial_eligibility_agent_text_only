@@ -1,0 +1,62 @@
+Trial: NCT07351487
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [biomarker] [Inclusion] ER-negative, PR-negative, and HER2 receptor-negative
+     Field: unmapped_rule
+     → LLM Fallback: Patient has ER-positive, PR-positive, and HER2 receptor-positive status, which fails the requirement for all three biomarkers to be negative.
+
+  2. [biomarker] [Inclusion] ER and PR expression less than 10% and HER2 receptor negative
+     Field: unmapped_rule
+     → LLM Fallback: Patient has ER-positive (85%), PR-positive, and HER2 receptor-positive, which fails the requirement of ER/PR <10% and HER2-negative.
+
+INDETERMINATE (missing patient data): [Hard: 6 | Soft: 2]
+  1. [clinical_diagnosis] [Inclusion] Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: The patient has stage III breast cancer, but the rule's specific T/N staging parameters (T1N1-3; T2-4N0-2) are not explicitly confirmed in the provided data.
+
+  2. [administrative] [Inclusion] Voluntarily join this study, sign informed consent, have good compliance
+     Field: unmapped_rule
+     → LLM Fallback: The patient signed the informed consent form, but her compliance status is not documented.
+
+  3. [administrative] [Exclusion] Simultaneously undergoing anti-tumor treatment in other clinical trials
+     Field: unmapped_rule
+     → LLM Fallback: The patient's profile does not mention participation in other clinical trials with anti-tumor treatment.
+
+  4. [comorbidity] [Exclusion] Serious heart disease or discomfort (including heart failure, arrhythmias, etc.)
+     Field: unmapped_rule
+     → LLM Fallback: No evidence of serious heart disease or discomfort is present in the clinical record.
+
+  5. [comorbidity] [Exclusion] Uncontrolled active infections or immunodeficiency (HIV, etc.)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about active infections or immunodeficiency status.
+
+  6. [comorbidity] [Exclusion] Chronic active hepatitis B or active hepatitis C
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about hepatitis B/C status in narrative or structured profile
+
+  7. [comorbidity] [Exclusion] Immunotherapy adverse events (pneumonia, myocarditis) affecting safety
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about prior immunotherapy adverse events (pneumonia, myocarditis) in the patient's record.
+
+  8. [comorbidity] [Exclusion] Allergies to medication components
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about allergies to medication components.
+
+PASSING CRITERIA: 13 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT07351487_LLM_3         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT07351487_LLM_9         | administrative       | 10.0            | 0.0        | 0.0       
+NCT07351487_LLM_13        | administrative       | 5.0             | 0.0        | 0.0       
+NCT07351487_LLM_15        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_16        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_17        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_18        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_19        | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 32.5

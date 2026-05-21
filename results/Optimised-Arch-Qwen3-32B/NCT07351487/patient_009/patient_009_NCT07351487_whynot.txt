@@ -1,0 +1,38 @@
+Trial: NCT07351487
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [prior_therapy] [Exclusion] Previously received anti-tumor treatment or radiation therapy for any malignant tumor (excluding cured Malignant tumors)
+     Field: unmapped_rule
+     → LLM Fallback: Patient previously received anti-tumor treatment and radiation therapy for a non-cured malignant thyroid tumor.
+
+INDETERMINATE (missing patient data): [Hard: 2 | Soft: 2]
+  1. [administrative] [Inclusion] Effective contraceptive methods for at least 6 months after a single administration
+     Field: unmapped_rule
+     → LLM Fallback: The patient's contraceptive method is not explicitly described in terms of duration or effectiveness post-administration.
+
+  2. [administrative] [Inclusion] Voluntarily join this study, sign informed consent, have good compliance
+     Field: unmapped_rule
+     → LLM Fallback: The patient signed informed consent, but voluntary participation and compliance status are not explicitly documented.
+
+  3. [comorbidity] [Exclusion] Immunotherapy adverse events (pneumonia, myocarditis) affecting safety
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about immunotherapy adverse events (pneumonia, myocarditis) in the patient's record.
+
+  4. [comorbidity] [Exclusion] Allergies to medication components
+     Field: unmapped_rule
+     → LLM Fallback: The patient's allergy status to medication components is not mentioned in the clinical narrative or structured profile.
+
+PASSING CRITERIA: 18 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT07351487_LLM_8         | administrative       | 10.0            | 0.0        | 0.0       
+NCT07351487_LLM_9         | administrative       | 10.0            | 0.0        | 0.0       
+NCT07351487_LLM_18        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT07351487_LLM_19        | comorbidity          | 5.0             | 0.5        | 2.5       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 5.0

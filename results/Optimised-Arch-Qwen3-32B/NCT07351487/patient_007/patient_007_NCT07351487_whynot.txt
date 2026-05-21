@@ -1,0 +1,18 @@
+Trial: NCT07351487
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 1 | Soft: 0]
+  1. [clinical_diagnosis] [Inclusion] Histologically confirmed stage II-III (T1N1-3; T2-4N0-2) invasive breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: The patient meets the histological confirmation and stage III requirement, but the T/N classifications (T1N1-3; T2-4N0-2) are not explicitly documented in the narrative or structured data.
+
+PASSING CRITERIA: 22 of 23
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT07351487_LLM_3         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 20.0
