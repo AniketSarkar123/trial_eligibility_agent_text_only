@@ -1,0 +1,38 @@
+Trial: NCT06476119
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [clinical_diagnosis] [Exclusion] Prior disease history of invasive and/or non-invasive breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: Patient has a prior history of invasive breast cancer (triple-negative subtype).
+
+INDETERMINATE (missing patient data): [Hard: 3 | Soft: 1]
+  1. [clinical_diagnosis] [Exclusion] Multifocal, multicentric or bilateral breast cancer at the time of screening
+     Field: unmapped_rule
+     → LLM Fallback: The patient's records do not provide information about multifocal, multicentric, or bilateral disease.
+
+  2. [comorbidity] [Exclusion] Other invasive malignancy within 5 years prior to inclusion (excluding non-melanoma skin cancer, localized cervical cancer, Gleason <=6 prostate cancer)
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about other invasive malignancies within 5 years.
+
+  3. [comorbidity] [Exclusion] Uncontrolled severe illness or medical condition
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about uncontrolled severe illnesses or medical conditions in the patient's record.
+
+  4. [administrative] [Exclusion] Psychological, familial, sociological or geographical conditions hampering compliance with study protocol
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about psychological, familial, sociological, or geographical factors affecting compliance.
+
+PASSING CRITERIA: 14 of 19
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06476119_LLM_12        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT06476119_LLM_15        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06476119_LLM_16        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06476119_LLM_17        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 15.0

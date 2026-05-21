@@ -1,0 +1,43 @@
+Trial: NCT06476119
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [clinical_diagnosis] [Inclusion] sTIL score of >=50% for patients >=40 years and >=75% for patients <40 years
+     Field: unmapped_rule
+     → LLM Fallback: Patient is 55 years old with sTIL score of 25%, which is below the required 50% threshold for patients >=40 years.
+
+INDETERMINATE (missing patient data): [Hard: 2 | Soft: 3]
+  1. [clinical_diagnosis] [Exclusion] Presence of lymphovascular invasion on diagnostic biopsy and/or surgical specimen
+     Field: lymphovascular_invasion
+     → Data not available in patient record
+
+  2. [administrative] [Inclusion] Written informed consent
+     Field: unmapped_rule
+     → LLM Fallback: No information about written informed consent is present in the narrative or structured profile.
+
+  3. [clinical_diagnosis] [Inclusion] Has undergone curative breast surgery (breast-conserving surgery or mastectomy and surgical axillary staging)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's surgical details are insufficient to confirm whether the surgery included axillary staging as required by the rule.
+
+  4. [administrative] [Inclusion] Eligible for radiotherapy (if indicated)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's clinical narrative and structured profile do not provide information about radiotherapy eligibility or indication.
+
+  5. [administrative] [Exclusion] Psychological, familial, sociological or geographical conditions hampering compliance with study protocol
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about psychological, familial, sociological, or geographical factors affecting compliance.
+
+PASSING CRITERIA: 13 of 19
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06476119_LLM_14        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT06476119_LLM_3         | administrative       | 10.0            | 0.0        | 0.0       
+NCT06476119_LLM_8         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT06476119_LLM_10        | administrative       | 10.0            | 0.0        | 0.0       
+NCT06476119_LLM_17        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 30.0

@@ -1,0 +1,39 @@
+Trial: NCT06476119
+Eligible: NO
+Triage Status: INELIGIBLE
+
+FAILING CRITERIA:
+  1. [prior_therapy] [Exclusion] Administration of neoadjuvant systemic therapy
+     Patient value: True
+     Required: eq True
+     → FAIL: received_neoadjuvant_therapy = True (required: eq True)
+
+INDETERMINATE (missing patient data): [Hard: 2 | Soft: 2]
+  1. [clinical_diagnosis] [Exclusion] Presence of lymphovascular invasion on diagnostic biopsy and/or surgical specimen
+     Field: lymphovascular_invasion
+     → Data not available in patient record
+
+  2. [administrative] [Inclusion] Written informed consent
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about informed consent status.
+
+  3. [comorbidity] [Exclusion] Uncontrolled severe illness or medical condition
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about uncontrolled severe illnesses or medical conditions in the patient's record.
+
+  4. [administrative] [Exclusion] Psychological, familial, sociological or geographical conditions hampering compliance with study protocol
+     Field: unmapped_rule
+     → LLM Fallback: No data provided in the patient record about psychological, familial, sociological, or geographical factors affecting compliance.
+
+PASSING CRITERIA: 14 of 19
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06476119_LLM_14        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT06476119_LLM_3         | administrative       | 10.0            | 0.0        | 0.0       
+NCT06476119_LLM_16        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT06476119_LLM_17        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 12.5

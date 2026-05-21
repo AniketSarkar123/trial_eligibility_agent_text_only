@@ -1,0 +1,23 @@
+Trial: NCT06476119
+Eligible: YES
+Triage Status: ELIGIBLE (Pending Administrative Verification)
+
+INDETERMINATE (missing patient data): [Hard: 0 | Soft: 2]
+  1. [administrative] [Inclusion] Written informed consent
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about informed consent status.
+
+  2. [administrative] [Exclusion] Psychological, familial, sociological or geographical conditions hampering compliance with study protocol
+     Field: unmapped_rule
+     → LLM Fallback: No data provided about psychological, familial, sociological, or geographical factors affecting compliance
+
+PASSING CRITERIA: 17 of 19
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06476119_LLM_3         | administrative       | 10.0            | 0.0        | 0.0       
+NCT06476119_LLM_17        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 0.0

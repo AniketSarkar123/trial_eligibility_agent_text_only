@@ -1,0 +1,33 @@
+Trial: NCT06476119
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 1 | Soft: 3]
+  1. [clinical_diagnosis] [Exclusion] Presence of lymphovascular invasion on diagnostic biopsy and/or surgical specimen
+     Field: lymphovascular_invasion
+     → Data not available in patient record
+
+  2. [administrative] [Inclusion] Written informed consent
+     Field: unmapped_rule
+     → LLM Fallback: No mention of written informed consent in the clinical narrative or structured profile
+
+  3. [administrative] [Inclusion] Eligible for radiotherapy (if indicated)
+     Field: unmapped_rule
+     → LLM Fallback: The patient's eligibility for radiotherapy is not addressed in the provided clinical data.
+
+  4. [administrative] [Exclusion] Psychological, familial, sociological or geographical conditions hampering compliance with study protocol
+     Field: unmapped_rule
+     → LLM Fallback: No clinical narrative or structured data fields address psychological, familial, sociological, or geographical factors affecting compliance.
+
+PASSING CRITERIA: 15 of 19
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT06476119_LLM_14        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT06476119_LLM_3         | administrative       | 10.0            | 0.0        | 0.0       
+NCT06476119_LLM_10        | administrative       | 10.0            | 0.0        | 0.0       
+NCT06476119_LLM_17        | administrative       | 5.0             | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 10.0
