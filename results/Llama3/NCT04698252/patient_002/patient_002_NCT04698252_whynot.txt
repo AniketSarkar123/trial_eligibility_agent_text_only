@@ -1,0 +1,25 @@
+Trial: NCT04698252
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation
+     Patient value: [LLM Evaluated]
+     Required: exists None
+     → LLM Fallback: The patient has metastatic breast cancer, which does not meet the criteria for oligometastatic sites amenable to treatment with local therapy modalities.
+
+  2. [prior_therapy] Previous local therapy for distant metastasis
+     Patient value: False
+     Required: exists None
+     → FAIL: prior_drug_class:local_therapy = False (required: exists None)
+
+  3. [prior_therapy] Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer
+     Patient value: False
+     Required: exists None
+     → FAIL: prior_drug_class:other_invasive_malignancy = False (required: exists None)
+
+INDETERMINATE (missing patient data):
+  1. [demographic] Life expectancy of at least 12 weeks
+     Field: lab: life_expectancy
+     → Data not available in patient record
+
+PASSING CRITERIA: 15 of 19

@@ -1,0 +1,120 @@
+Trial: NCT04985032
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [demographic] Minimum age: 50 Years
+     Patient value: 47
+     Required: gte 50
+     → FAIL: age = 47 (required: gte 50)
+
+  2. [demographic] Women 50 years or older
+     Patient value: 47
+     Required: gte 50
+     → FAIL: age = 47 (required: gte 50)
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Low to intermediate grade DCIS or invasive ductal carcinoma
+     Field: histology
+     → Data not available in patient record
+
+  2. [lab_value] Tumor size < 2 cm invasive ductal carcinoma and < 2.5 cm DCIS
+     Field: tumor_size
+     → Data not available in patient record
+
+  3. [lab_value] Well defined lumpectomy cavity on CT
+     Field: lumpectomy_cavity_definition
+     → Data not available in patient record
+
+  4. [lab_value] Clear surgical ink margins > 2mm for invasive cancer and > 3 mm for DCIS
+     Field: surgical_ink_margins
+     → Data not available in patient record
+
+  5. [clinical] Node negative
+     Field: lymph_node_status
+     → Data not available in patient record
+
+  6. [clinical] Unifocal lesion
+     Field: lesion_type
+     → Data not available in patient record
+
+  7. [biomarker] ER and/or PR positive
+     Field: hormone_receptor_status
+     → Data not available in patient record
+
+  8. [biomarker] BRCA negative
+     Field: brca_status
+     → Data not available in patient record
+
+  9. [lab_value] Lumpectomy cavity must be < 30% of whole breast volume
+     Field: lumpectomy_cavity_volume
+     → Data not available in patient record
+
+  10. [prior_therapy] Lobular histology
+     Field: histology
+     → Data not available in patient record
+
+  11. [prior_therapy] Angiolymphatic invasion
+     Field: invasion_type
+     → Data not available in patient record
+
+  12. [prior_therapy] Multiple foci of disease
+     Field: lesion_type
+     → Data not available in patient record
+
+  13. [prior_therapy] Lymphovascular invasion
+     Field: invasion_type
+     → Data not available in patient record
+
+  14. [comorbidity] Active lupus or sarcoid
+     Field: condition
+     → Data not available in patient record
+
+  15. [comorbidity] Distant metastases
+     Field: metastasis_status
+     → Data not available in patient record
+
+  16. [comorbidity] Non-epithelial malignancies
+     Field: malignancy_type
+     → Data not available in patient record
+
+  17. [comorbidity] Synchronous contralateral breast cancer
+     Field: breast_cancer_status
+     → Data not available in patient record
+
+  18. [comorbidity] Grade 2 or higher oncoplastic surgery
+     Field: surgery_grade
+     → Data not available in patient record
+
+  19. [comorbidity] Ipsilateral pacemaker
+     Field: pacemaker_status
+     → Data not available in patient record
+
+  20. [comorbidity] Ipsilateral breast implant
+     Field: breast_implant_status
+     → Data not available in patient record
+
+  21. [prior_therapy] Neoadjuvant chemotherapy
+     Field: chemotherapy_type
+     → Data not available in patient record
+
+  22. [prior_therapy] Prior ipsilateral breast cancer or thoracic radiation
+     Field: prior_cancer_status
+     → Data not available in patient record
+
+  23. [comorbidity] Poor breast integrity
+     Field: breast_integrity_status
+     → Data not available in patient record
+
+  24. [comorbidity] Paget's Disease of the nipple
+     Field: nipple_disease_status
+     → Data not available in patient record
+
+  25. [comorbidity] Pregnant patients
+     Field: pregnancy_status
+     → Data not available in patient record
+
+  26. [comorbidity] Severe cardiac, pulmonary, or liver diseases
+     Field: organ_disease_status
+     → Data not available in patient record
+
+PASSING CRITERIA: 3 of 31

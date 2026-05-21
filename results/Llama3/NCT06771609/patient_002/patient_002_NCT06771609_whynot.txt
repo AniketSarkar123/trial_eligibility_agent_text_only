@@ -1,0 +1,19 @@
+Trial: NCT06771609
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [prior_therapy] Subjects may have previously received treatment with anthracyclines (e.g., doxorubicin, epirubicin) and/or taxanes (e.g., paclitaxel, docetaxel) as follows: a) The subject has used anthracyclines and/or taxanes during adjuvant and/or neoadjuvant therapy before breast cancer recurrence. b) The subject has experienced treatment failure during or after chemotherapy based on anthracyclines and/or taxanes. c) According to the investigator's judgment, the Subject is not suitable for anthracyclines and/or taxanes-based chemotherapy as a first-line treatment option.
+     Patient value: False
+     Required: in ['used', 'experienced failure', 'not suitable']
+     → FAIL: prior_drug_class:anthracycline_taxane = False (required: in ['used', 'experienced failure', 'not suitable'])
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Subjects with metastatic triple-negative breast cancer, with clear clinical data records; specific reference to the 'American Society of Clinical Oncology - College of American Pathologists (ASCO/CAP) guidelines.'
+     Field: menopausal_status
+     → Data not available in patient record
+
+  2. [clinical] Subjects must have at least one measurable lesion present; specific reference to the 'Response Evaluation Criteria in Solid Tumors Version 1.1 (RECIST v1.1)' guidelines;
+     Field: brain_metastases
+     → Data not available in patient record
+
+PASSING CRITERIA: 7 of 10

@@ -1,0 +1,69 @@
+Trial: NCT06476119
+Eligible: NO
+
+INDETERMINATE (missing patient data):
+  1. [demographic] Female or male patients
+     Field: gender
+     → Data not available in patient record
+
+  2. [demographic] Written informed consent
+     Field: consent_status
+     → Data not available in patient record
+
+  3. [biomarker] TNBC on diagnostic biopsy and surgical specimen
+     Field: tumor_type
+     → Data not available in patient record
+
+  4. [clinical] Pathological stage I TNBC (pT1a/b/c, pN0)
+     Field: pathologic_stage
+     → Data not available in patient record
+
+  5. [clinical] No evidence of nodal or distant metastases (cN0M0)
+     Field: metastasis_status
+     → Data not available in patient record
+
+  6. [lab_value] sTIL score of >=50% for patients >=40 years and >=75% for patients <40 years
+     Field: stil_score
+     → Data not available in patient record
+
+  7. [prior_therapy] Has undergone curative breast surgery (breast-conserving surgery or mastectomy and surgical axillary staging)
+     Field: surgical_status
+     → Data not available in patient record
+
+  8. [comorbidity] Absence of recurrence between curative breast surgery and expression of patient preference
+     Field: recurrence_status
+     → Data not available in patient record
+
+  9. [comorbidity] Eligible for radiotherapy (if indicated)
+     Field: radiotherapy_status
+     → Data not available in patient record
+
+  10. [prior_therapy] Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer
+     Field: breast_cancer_history
+     → Data not available in patient record
+
+  11. [comorbidity] Multifocal, multicentric or bilateral breast cancer at the time of screening
+     Field: breast_cancer_type
+     → Data not available in patient record
+
+  12. [prior_therapy] Administration of neoadjuvant systemic therapy
+     Field: neoadjuvant_systemic_therapy_status
+     → Data not available in patient record
+
+  13. [comorbidity] Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen
+     Field: lymphovascular_invasion_status
+     → Data not available in patient record
+
+  14. [prior_therapy] Other invasive malignancy within 5 years prior to inclusion, with the exception of adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason <=6 prostate cancer
+     Field: other_invasive_malignancy_status
+     → Data not available in patient record
+
+  15. [comorbidity] Uncontrolled severe illness or medical condition
+     Field: medical_condition_status
+     → Data not available in patient record
+
+  16. [comorbidity] Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule
+     Field: condition_status
+     → Data not available in patient record
+
+PASSING CRITERIA: 2 of 18

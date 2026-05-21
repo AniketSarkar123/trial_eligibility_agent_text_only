@@ -1,0 +1,598 @@
+{
+  "patient": {
+    "age": 54,
+    "sex": "female",
+    "menopausal_status": null,
+    "primary_diagnosis": "breast cancer",
+    "cancer_stage": null,
+    "is_metastatic": true,
+    "histology": null,
+    "er_status": "positive",
+    "pr_status": "positive",
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "ecog_score": 0,
+    "prior_therapies": [
+      {
+        "drug_name": "fulvestrant",
+        "drug_class": null,
+        "is_current": true,
+        "discontinued_reason": null,
+        "months_since_last_dose": 8.0
+      }
+    ],
+    "lines_of_therapy": 1,
+    "prior_radiation": null,
+    "prior_surgery": null,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": true,
+    "adequate_renal_function": true,
+    "adequate_bone_marrow": true,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT04698252",
+    "title": "Local Therapy for Hormone Receptor-positive Oligometastatic Breast Cancer - a Phase II Randomized Trial",
+    "conditions": [
+      "Breast Cancer"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_SEX",
+        "category": "demographic",
+        "description": "Sex: FEMALE",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_1",
+        "category": "demographic",
+        "description": "Female sex",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_2",
+        "category": "demographic",
+        "description": "\u2265 18 years of age",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_3",
+        "category": "clinical",
+        "description": "Histologically confirmed invasive breast cancer, with oligometastatic disease defined as one of the following criteria: 1) One to four bone lesions; 2) One to four lung and/ or hepatic lesions; 3) Distant metastasis limited to ipsilateral cervical lymph nodes; 4) Distant metastasis limited to contralateral axillary lymph nodes",
+        "field": "unmapped_rule",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_4",
+        "category": "clinical",
+        "description": "Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation",
+        "field": "unmapped_rule",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_5",
+        "category": "biomarker",
+        "description": "Estrogen receptor-positive and/ or progesterone receptor-positive breast cancer",
+        "field": "unmapped_rule",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_6",
+        "category": "clinical",
+        "description": "Partial response or stable disease after at least six months of systemic therapy for breast cancer",
+        "field": "unmapped_rule",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_7",
+        "category": "clinical",
+        "description": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+        "field": "ecog_score",
+        "operator": "in",
+        "value": [
+          0,
+          1
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_8",
+        "category": "clinical",
+        "description": "Measurable or non-measuble disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1",
+        "field": "unmapped_rule",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_9",
+        "category": "demographic",
+        "description": "Life expectancy of at least 12 weeks",
+        "field": "lab: life_expectancy",
+        "operator": "gte",
+        "value": 12,
+        "unit": "weeks",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_10",
+        "category": "demographic",
+        "description": "For women in childbearing age, negative pregnancy test until 21 days before the date of study enrollment.",
+        "field": "unmapped_rule",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_11",
+        "category": "demographic",
+        "description": "Signed informed consent form",
+        "field": "unmapped_rule",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_12",
+        "category": "demographic",
+        "description": "Disposition and aptitude to fulfill the study protocol during the study duration",
+        "field": "unmapped_rule",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_13",
+        "category": "biomarker",
+        "description": "HER2-positive breast cancer",
+        "field": "her2_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_14",
+        "category": "clinical",
+        "description": "Progressive disease during the last systemic treatment received for metastatic disease",
+        "field": "unmapped_rule",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_15",
+        "category": "prior_therapy",
+        "description": "Previous local therapy for distant metastasis",
+        "field": "prior_drug_class:local_therapy",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_16",
+        "category": "comorbidity",
+        "description": "Current or previous history of severe diseases, such as clinically relevant heart failure, acute myocardium infarction in the last six months, chronic obstructive lung disease, HIV infection, chronic active hepatitis B or C infection, current serious uncontrolled infections or other severe diseases that may impact patients' expected survival)",
+        "field": "unmapped_rule",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04698252_LLM_17",
+        "category": "prior_therapy",
+        "description": "Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer",
+        "field": "prior_drug_class:other_invasive_malignancy",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT04698252",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 54,
+        "reason": "PASS: age = 54 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_SEX",
+          "category": "demographic",
+          "description": "Sex: FEMALE",
+          "field": "sex",
+          "operator": "eq",
+          "value": "female",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "female",
+        "reason": "PASS: sex = female (required: eq female)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_1",
+          "category": "demographic",
+          "description": "Female sex",
+          "field": "sex",
+          "operator": "eq",
+          "value": "female",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "female",
+        "reason": "PASS: sex = female (required: eq female)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_2",
+          "category": "demographic",
+          "description": "\u2265 18 years of age",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 54,
+        "reason": "PASS: age = 54 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_3",
+          "category": "clinical",
+          "description": "Histologically confirmed invasive breast cancer, with oligometastatic disease defined as one of the following criteria: 1) One to four bone lesions; 2) One to four lung and/ or hepatic lesions; 3) Distant metastasis limited to ipsilateral cervical lymph nodes; 4) Distant metastasis limited to contralateral axillary lymph nodes",
+          "field": "unmapped_rule",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has oligometastatic disease with one lung lesion, meeting criterion 2."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_4",
+          "category": "clinical",
+          "description": "Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation",
+          "field": "unmapped_rule",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has metastatic breast cancer, which does not meet the criteria for oligometastatic sites amenable to treatment with local therapy modalities."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_5",
+          "category": "biomarker",
+          "description": "Estrogen receptor-positive and/ or progesterone receptor-positive breast cancer",
+          "field": "unmapped_rule",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has estrogen receptor-positive breast cancer (er_status: 'positive') and meets the inclusion criterion."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_6",
+          "category": "clinical",
+          "description": "Partial response or stable disease after at least six months of systemic therapy for breast cancer",
+          "field": "unmapped_rule",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has been on systemic therapy for breast cancer (fulvestrant) for at least six months, and their primary diagnosis is breast cancer."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_7",
+          "category": "clinical",
+          "description": "Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1",
+          "field": "ecog_score",
+          "operator": "in",
+          "value": [
+            0,
+            1
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 0,
+        "reason": "PASS: ecog_score = 0 (required: in [0, 1])"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_8",
+          "category": "clinical",
+          "description": "Measurable or non-measuble disease according to Response Evaluation Criteria in Solid Tumors (RECIST) 1.1",
+          "field": "unmapped_rule",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has measurable or non-measurable disease according to RECIST 1.1 criteria, as breast cancer is considered a measurable disease."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_9",
+          "category": "demographic",
+          "description": "Life expectancy of at least 12 weeks",
+          "field": "lab: life_expectancy",
+          "operator": "gte",
+          "value": 12,
+          "unit": "weeks",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lab: life_expectancy'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_10",
+          "category": "demographic",
+          "description": "For women in childbearing age, negative pregnancy test until 21 days before the date of study enrollment.",
+          "field": "unmapped_rule",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient is not in childbearing age (54 years old), so she does not need to take a pregnancy test."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_11",
+          "category": "demographic",
+          "description": "Signed informed consent form",
+          "field": "unmapped_rule",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has signed an informed consent form as they are currently receiving fulvestrant therapy."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_12",
+          "category": "demographic",
+          "description": "Disposition and aptitude to fulfill the study protocol during the study duration",
+          "field": "unmapped_rule",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient meets the inclusion criterion as they have adequate liver function, renal function, and bone marrow function."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_13",
+          "category": "biomarker",
+          "description": "HER2-positive breast cancer",
+          "field": "her2_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "negative",
+        "reason": "PASS: her2_status = negative (required: eq positive)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_14",
+          "category": "clinical",
+          "description": "Progressive disease during the last systemic treatment received for metastatic disease",
+          "field": "unmapped_rule",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient's primary diagnosis is breast cancer and they have metastatic disease, but their last systemic treatment was fulvestrant, which was received 8 months ago, indicating no progressive disease during the last systemic treatment."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_15",
+          "category": "prior_therapy",
+          "description": "Previous local therapy for distant metastasis",
+          "field": "prior_drug_class:local_therapy",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": false,
+        "reason": "FAIL: prior_drug_class:local_therapy = False (required: exists None)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_16",
+          "category": "comorbidity",
+          "description": "Current or previous history of severe diseases, such as clinically relevant heart failure, acute myocardium infarction in the last six months, chronic obstructive lung disease, HIV infection, chronic active hepatitis B or C infection, current serious uncontrolled infections or other severe diseases that may impact patients' expected survival)",
+          "field": "unmapped_rule",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "pass",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient does not have a current or previous history of severe diseases that may impact their expected survival."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_17",
+          "category": "prior_therapy",
+          "description": "Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer",
+          "field": "prior_drug_class:other_invasive_malignancy",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": false,
+        "reason": "FAIL: prior_drug_class:other_invasive_malignancy = False (required: exists None)"
+      }
+    ],
+    "failing_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_4",
+          "category": "clinical",
+          "description": "Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation",
+          "field": "unmapped_rule",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "fail",
+        "patient_value": "[LLM Evaluated]",
+        "reason": "LLM Fallback: The patient has metastatic breast cancer, which does not meet the criteria for oligometastatic sites amenable to treatment with local therapy modalities."
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_15",
+          "category": "prior_therapy",
+          "description": "Previous local therapy for distant metastasis",
+          "field": "prior_drug_class:local_therapy",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": false,
+        "reason": "FAIL: prior_drug_class:local_therapy = False (required: exists None)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_17",
+          "category": "prior_therapy",
+          "description": "Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer",
+          "field": "prior_drug_class:other_invasive_malignancy",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "fail",
+        "patient_value": false,
+        "reason": "FAIL: prior_drug_class:other_invasive_malignancy = False (required: exists None)"
+      }
+    ],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT04698252_LLM_9",
+          "category": "demographic",
+          "description": "Life expectancy of at least 12 weeks",
+          "field": "lab: life_expectancy",
+          "operator": "gte",
+          "value": 12,
+          "unit": "weeks",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lab: life_expectancy'"
+      }
+    ]
+  },
+  "report_text": "Trial: NCT04698252\nEligible: NO\n\nFAILING CRITERIA:\n  1. [clinical] Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation\n     Patient value: [LLM Evaluated]\n     Required: exists None\n     \u2192 LLM Fallback: The patient has metastatic breast cancer, which does not meet the criteria for oligometastatic sites amenable to treatment with local therapy modalities.\n\n  2. [prior_therapy] Previous local therapy for distant metastasis\n     Patient value: False\n     Required: exists None\n     \u2192 FAIL: prior_drug_class:local_therapy = False (required: exists None)\n\n  3. [prior_therapy] Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer\n     Patient value: False\n     Required: exists None\n     \u2192 FAIL: prior_drug_class:other_invasive_malignancy = False (required: exists None)\n\nINDETERMINATE (missing patient data):\n  1. [demographic] Life expectancy of at least 12 weeks\n     Field: lab: life_expectancy\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 15 of 19"
+}

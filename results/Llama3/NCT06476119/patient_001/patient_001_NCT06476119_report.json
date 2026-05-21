@@ -1,0 +1,748 @@
+{
+  "patient": {
+    "age": 46,
+    "sex": "female",
+    "menopausal_status": null,
+    "primary_diagnosis": "invasive ductal carcinoma",
+    "cancer_stage": null,
+    "is_metastatic": false,
+    "histology": "ductal",
+    "er_status": "negative",
+    "pr_status": "negative",
+    "her2_status": "negative",
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "ecog_score": null,
+    "prior_therapies": [],
+    "lines_of_therapy": null,
+    "prior_radiation": false,
+    "prior_surgery": true,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": "none"
+  },
+  "trial": {
+    "nct_id": "NCT06476119",
+    "title": "OPTImaL:Optimisation of Treatment for Patients With Low Stage Triple-negative Breast Cancer With High Stromal Tumor-infiltrating Lymphocytes",
+    "conditions": [
+      "Breast Cancer Stage I",
+      "Triple Negative Breast Cancer (TNBC)"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 18 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": "years",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_1",
+        "category": "demographic",
+        "description": "Female or male patients",
+        "field": "gender",
+        "operator": "eq",
+        "value": [
+          "female",
+          "male"
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_2",
+        "category": "demographic",
+        "description": ">=18 years",
+        "field": "age",
+        "operator": "gte",
+        "value": 18,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_3",
+        "category": "demographic",
+        "description": "Written informed consent",
+        "field": "consent_status",
+        "operator": "eq",
+        "value": "written",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_4",
+        "category": "biomarker",
+        "description": "TNBC on diagnostic biopsy and surgical specimen",
+        "field": "tumor_type",
+        "operator": "eq",
+        "value": "triple_negative_breast_cancer",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_5",
+        "category": "clinical",
+        "description": "Pathological stage I TNBC (pT1a/b/c, pN0)",
+        "field": "pathologic_stage",
+        "operator": "eq",
+        "value": "I",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_6",
+        "category": "clinical",
+        "description": "No evidence of nodal or distant metastases (cN0M0)",
+        "field": "metastasis_status",
+        "operator": "eq",
+        "value": "no_metastases",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_7",
+        "category": "lab_value",
+        "description": "sTIL score of >=50% for patients >=40 years and >=75% for patients <40 years",
+        "field": "stil_score",
+        "operator": "gte",
+        "value": 50,
+        "unit": "%",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_8",
+        "category": "prior_therapy",
+        "description": "Has undergone curative breast surgery (breast-conserving surgery or mastectomy and surgical axillary staging)",
+        "field": "surgical_status",
+        "operator": "eq",
+        "value": "curative_breast_surgery",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_9",
+        "category": "comorbidity",
+        "description": "Absence of recurrence between curative breast surgery and expression of patient preference",
+        "field": "recurrence_status",
+        "operator": "eq",
+        "value": "no_recurrence",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_10",
+        "category": "comorbidity",
+        "description": "Eligible for radiotherapy (if indicated)",
+        "field": "radiotherapy_status",
+        "operator": "eq",
+        "value": "eligible",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_11",
+        "category": "prior_therapy",
+        "description": "Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer",
+        "field": "breast_cancer_history",
+        "operator": "neq",
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_12",
+        "category": "comorbidity",
+        "description": "Multifocal, multicentric or bilateral breast cancer at the time of screening",
+        "field": "breast_cancer_type",
+        "operator": "neq",
+        "value": "triple_negative_breast_cancer",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_13",
+        "category": "prior_therapy",
+        "description": "Administration of neoadjuvant systemic therapy",
+        "field": "neoadjuvant_systemic_therapy_status",
+        "operator": "eq",
+        "value": "administered",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_14",
+        "category": "comorbidity",
+        "description": "Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen",
+        "field": "lymphovascular_invasion_status",
+        "operator": "eq",
+        "value": "present",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_15",
+        "category": "prior_therapy",
+        "description": "Other invasive malignancy within 5 years prior to inclusion, with the exception of adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason <=6 prostate cancer",
+        "field": "other_invasive_malignancy_status",
+        "operator": "neq",
+        "value": null,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_16",
+        "category": "comorbidity",
+        "description": "Uncontrolled severe illness or medical condition",
+        "field": "medical_condition_status",
+        "operator": "eq",
+        "value": "uncontrolled",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT06476119_LLM_17",
+        "category": "comorbidity",
+        "description": "Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule",
+        "field": "condition_status",
+        "operator": "eq",
+        "value": "present",
+        "unit": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT06476119",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 18 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": "years",
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 46,
+        "reason": "PASS: age = 46 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_1",
+          "category": "demographic",
+          "description": "Female or male patients",
+          "field": "gender",
+          "operator": "eq",
+          "value": [
+            "female",
+            "male"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'gender'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_2",
+          "category": "demographic",
+          "description": ">=18 years",
+          "field": "age",
+          "operator": "gte",
+          "value": 18,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 46,
+        "reason": "PASS: age = 46 (required: gte 18)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_3",
+          "category": "demographic",
+          "description": "Written informed consent",
+          "field": "consent_status",
+          "operator": "eq",
+          "value": "written",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'consent_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_4",
+          "category": "biomarker",
+          "description": "TNBC on diagnostic biopsy and surgical specimen",
+          "field": "tumor_type",
+          "operator": "eq",
+          "value": "triple_negative_breast_cancer",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'tumor_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_5",
+          "category": "clinical",
+          "description": "Pathological stage I TNBC (pT1a/b/c, pN0)",
+          "field": "pathologic_stage",
+          "operator": "eq",
+          "value": "I",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'pathologic_stage'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_6",
+          "category": "clinical",
+          "description": "No evidence of nodal or distant metastases (cN0M0)",
+          "field": "metastasis_status",
+          "operator": "eq",
+          "value": "no_metastases",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'metastasis_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_7",
+          "category": "lab_value",
+          "description": "sTIL score of >=50% for patients >=40 years and >=75% for patients <40 years",
+          "field": "stil_score",
+          "operator": "gte",
+          "value": 50,
+          "unit": "%",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'stil_score'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_8",
+          "category": "prior_therapy",
+          "description": "Has undergone curative breast surgery (breast-conserving surgery or mastectomy and surgical axillary staging)",
+          "field": "surgical_status",
+          "operator": "eq",
+          "value": "curative_breast_surgery",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'surgical_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_9",
+          "category": "comorbidity",
+          "description": "Absence of recurrence between curative breast surgery and expression of patient preference",
+          "field": "recurrence_status",
+          "operator": "eq",
+          "value": "no_recurrence",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'recurrence_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_10",
+          "category": "comorbidity",
+          "description": "Eligible for radiotherapy (if indicated)",
+          "field": "radiotherapy_status",
+          "operator": "eq",
+          "value": "eligible",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'radiotherapy_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_11",
+          "category": "prior_therapy",
+          "description": "Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer",
+          "field": "breast_cancer_history",
+          "operator": "neq",
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'breast_cancer_history'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_12",
+          "category": "comorbidity",
+          "description": "Multifocal, multicentric or bilateral breast cancer at the time of screening",
+          "field": "breast_cancer_type",
+          "operator": "neq",
+          "value": "triple_negative_breast_cancer",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'breast_cancer_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_13",
+          "category": "prior_therapy",
+          "description": "Administration of neoadjuvant systemic therapy",
+          "field": "neoadjuvant_systemic_therapy_status",
+          "operator": "eq",
+          "value": "administered",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'neoadjuvant_systemic_therapy_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_14",
+          "category": "comorbidity",
+          "description": "Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen",
+          "field": "lymphovascular_invasion_status",
+          "operator": "eq",
+          "value": "present",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lymphovascular_invasion_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_15",
+          "category": "prior_therapy",
+          "description": "Other invasive malignancy within 5 years prior to inclusion, with the exception of adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason <=6 prostate cancer",
+          "field": "other_invasive_malignancy_status",
+          "operator": "neq",
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'other_invasive_malignancy_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_16",
+          "category": "comorbidity",
+          "description": "Uncontrolled severe illness or medical condition",
+          "field": "medical_condition_status",
+          "operator": "eq",
+          "value": "uncontrolled",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'medical_condition_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_17",
+          "category": "comorbidity",
+          "description": "Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule",
+          "field": "condition_status",
+          "operator": "eq",
+          "value": "present",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'condition_status'"
+      }
+    ],
+    "failing_criteria": [],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_1",
+          "category": "demographic",
+          "description": "Female or male patients",
+          "field": "gender",
+          "operator": "eq",
+          "value": [
+            "female",
+            "male"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'gender'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_3",
+          "category": "demographic",
+          "description": "Written informed consent",
+          "field": "consent_status",
+          "operator": "eq",
+          "value": "written",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'consent_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_4",
+          "category": "biomarker",
+          "description": "TNBC on diagnostic biopsy and surgical specimen",
+          "field": "tumor_type",
+          "operator": "eq",
+          "value": "triple_negative_breast_cancer",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'tumor_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_5",
+          "category": "clinical",
+          "description": "Pathological stage I TNBC (pT1a/b/c, pN0)",
+          "field": "pathologic_stage",
+          "operator": "eq",
+          "value": "I",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'pathologic_stage'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_6",
+          "category": "clinical",
+          "description": "No evidence of nodal or distant metastases (cN0M0)",
+          "field": "metastasis_status",
+          "operator": "eq",
+          "value": "no_metastases",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'metastasis_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_7",
+          "category": "lab_value",
+          "description": "sTIL score of >=50% for patients >=40 years and >=75% for patients <40 years",
+          "field": "stil_score",
+          "operator": "gte",
+          "value": 50,
+          "unit": "%",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'stil_score'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_8",
+          "category": "prior_therapy",
+          "description": "Has undergone curative breast surgery (breast-conserving surgery or mastectomy and surgical axillary staging)",
+          "field": "surgical_status",
+          "operator": "eq",
+          "value": "curative_breast_surgery",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'surgical_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_9",
+          "category": "comorbidity",
+          "description": "Absence of recurrence between curative breast surgery and expression of patient preference",
+          "field": "recurrence_status",
+          "operator": "eq",
+          "value": "no_recurrence",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'recurrence_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_10",
+          "category": "comorbidity",
+          "description": "Eligible for radiotherapy (if indicated)",
+          "field": "radiotherapy_status",
+          "operator": "eq",
+          "value": "eligible",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'radiotherapy_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_11",
+          "category": "prior_therapy",
+          "description": "Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer",
+          "field": "breast_cancer_history",
+          "operator": "neq",
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'breast_cancer_history'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_12",
+          "category": "comorbidity",
+          "description": "Multifocal, multicentric or bilateral breast cancer at the time of screening",
+          "field": "breast_cancer_type",
+          "operator": "neq",
+          "value": "triple_negative_breast_cancer",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'breast_cancer_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_13",
+          "category": "prior_therapy",
+          "description": "Administration of neoadjuvant systemic therapy",
+          "field": "neoadjuvant_systemic_therapy_status",
+          "operator": "eq",
+          "value": "administered",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'neoadjuvant_systemic_therapy_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_14",
+          "category": "comorbidity",
+          "description": "Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen",
+          "field": "lymphovascular_invasion_status",
+          "operator": "eq",
+          "value": "present",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lymphovascular_invasion_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_15",
+          "category": "prior_therapy",
+          "description": "Other invasive malignancy within 5 years prior to inclusion, with the exception of adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason <=6 prostate cancer",
+          "field": "other_invasive_malignancy_status",
+          "operator": "neq",
+          "value": null,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'other_invasive_malignancy_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_16",
+          "category": "comorbidity",
+          "description": "Uncontrolled severe illness or medical condition",
+          "field": "medical_condition_status",
+          "operator": "eq",
+          "value": "uncontrolled",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'medical_condition_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT06476119_LLM_17",
+          "category": "comorbidity",
+          "description": "Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule",
+          "field": "condition_status",
+          "operator": "eq",
+          "value": "present",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'condition_status'"
+      }
+    ]
+  },
+  "report_text": "Trial: NCT06476119\nEligible: NO\n\nINDETERMINATE (missing patient data):\n  1. [demographic] Female or male patients\n     Field: gender\n     \u2192 Data not available in patient record\n\n  2. [demographic] Written informed consent\n     Field: consent_status\n     \u2192 Data not available in patient record\n\n  3. [biomarker] TNBC on diagnostic biopsy and surgical specimen\n     Field: tumor_type\n     \u2192 Data not available in patient record\n\n  4. [clinical] Pathological stage I TNBC (pT1a/b/c, pN0)\n     Field: pathologic_stage\n     \u2192 Data not available in patient record\n\n  5. [clinical] No evidence of nodal or distant metastases (cN0M0)\n     Field: metastasis_status\n     \u2192 Data not available in patient record\n\n  6. [lab_value] sTIL score of >=50% for patients >=40 years and >=75% for patients <40 years\n     Field: stil_score\n     \u2192 Data not available in patient record\n\n  7. [prior_therapy] Has undergone curative breast surgery (breast-conserving surgery or mastectomy and surgical axillary staging)\n     Field: surgical_status\n     \u2192 Data not available in patient record\n\n  8. [comorbidity] Absence of recurrence between curative breast surgery and expression of patient preference\n     Field: recurrence_status\n     \u2192 Data not available in patient record\n\n  9. [comorbidity] Eligible for radiotherapy (if indicated)\n     Field: radiotherapy_status\n     \u2192 Data not available in patient record\n\n  10. [prior_therapy] Prior disease history of invasive and/or non-invasive breast cancer, or ongoing treatment for invasive and/or non-invasive breast cancer\n     Field: breast_cancer_history\n     \u2192 Data not available in patient record\n\n  11. [comorbidity] Multifocal, multicentric or bilateral breast cancer at the time of screening\n     Field: breast_cancer_type\n     \u2192 Data not available in patient record\n\n  12. [prior_therapy] Administration of neoadjuvant systemic therapy\n     Field: neoadjuvant_systemic_therapy_status\n     \u2192 Data not available in patient record\n\n  13. [comorbidity] Presence of lymphovascular invasion on the diagnostic biopsy and/or the surgical specimen\n     Field: lymphovascular_invasion_status\n     \u2192 Data not available in patient record\n\n  14. [prior_therapy] Other invasive malignancy within 5 years prior to inclusion, with the exception of adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason <=6 prostate cancer\n     Field: other_invasive_malignancy_status\n     \u2192 Data not available in patient record\n\n  15. [comorbidity] Uncontrolled severe illness or medical condition\n     Field: medical_condition_status\n     \u2192 Data not available in patient record\n\n  16. [comorbidity] Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule\n     Field: condition_status\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 2 of 18"
+}

@@ -1,0 +1,1283 @@
+{
+  "patient": {
+    "age": 72,
+    "sex": "female",
+    "menopausal_status": null,
+    "primary_diagnosis": "DCIS (nuclear grade 2)",
+    "cancer_stage": null,
+    "is_metastatic": false,
+    "histology": "DCIS",
+    "er_status": "positive",
+    "pr_status": null,
+    "her2_status": null,
+    "brca_status": null,
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "ecog_score": null,
+    "prior_therapies": [],
+    "lines_of_therapy": null,
+    "prior_radiation": false,
+    "prior_surgery": true,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": null
+  },
+  "trial": {
+    "nct_id": "NCT04985032",
+    "title": "Accelerated Partial Breast Irradiation (APBI) Using Stereotactic Body Radiation Therapy (SBRT): a Multicenter, Observational Clinical Trial",
+    "conditions": [
+      "Ductal Carcinoma in Situ",
+      "Invasive Ductal Carcinoma of Female Breast"
+    ],
+    "criteria": [
+      {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 50 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 50,
+        "unit": "years",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_AGE_MAX",
+        "category": "demographic",
+        "description": "Maximum age: 100 Years",
+        "field": "age",
+        "operator": "lte",
+        "value": 100,
+        "unit": "years",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "STRUCT_SEX",
+        "category": "demographic",
+        "description": "Sex: FEMALE",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_1",
+        "category": "demographic",
+        "description": "Women 50 years or older",
+        "field": "age",
+        "operator": "gte",
+        "value": 50,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_2",
+        "category": "clinical",
+        "description": "Low to intermediate grade DCIS or invasive ductal carcinoma",
+        "field": "histology",
+        "operator": "in",
+        "value": [
+          "DCIS",
+          "invasive ductal carcinoma"
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_3",
+        "category": "lab_value",
+        "description": "Tumor size < 2 cm invasive ductal carcinoma and < 2.5 cm DCIS",
+        "field": "tumor_size",
+        "operator": "lte",
+        "value": 2,
+        "unit": "cm",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_4",
+        "category": "lab_value",
+        "description": "Well defined lumpectomy cavity on CT",
+        "field": "lumpectomy_cavity_definition",
+        "operator": "exists",
+        "value": null,
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_5",
+        "category": "lab_value",
+        "description": "Clear surgical ink margins > 2mm for invasive cancer and > 3 mm for DCIS",
+        "field": "surgical_ink_margins",
+        "operator": "gte",
+        "value": 2,
+        "unit": "mm",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_6",
+        "category": "clinical",
+        "description": "Node negative",
+        "field": "lymph_node_status",
+        "operator": "eq",
+        "value": "negative",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_7",
+        "category": "clinical",
+        "description": "Unifocal lesion",
+        "field": "lesion_type",
+        "operator": "in",
+        "value": [
+          "unifocal"
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_8",
+        "category": "biomarker",
+        "description": "ER and/or PR positive",
+        "field": "hormone_receptor_status",
+        "operator": "in",
+        "value": [
+          "ER",
+          "PR"
+        ],
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_9",
+        "category": "biomarker",
+        "description": "HER-2 negative",
+        "field": "her2_status",
+        "operator": "eq",
+        "value": "negative",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_10",
+        "category": "biomarker",
+        "description": "BRCA negative",
+        "field": "brca_status",
+        "operator": "eq",
+        "value": "negative",
+        "unit": null,
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_11",
+        "category": "lab_value",
+        "description": "Lumpectomy cavity must be < 30% of whole breast volume",
+        "field": "lumpectomy_cavity_volume",
+        "operator": "lte",
+        "value": 0.3,
+        "unit": "%",
+        "is_inclusion": true
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_12",
+        "category": "prior_therapy",
+        "description": "Lobular histology",
+        "field": "histology",
+        "operator": "eq",
+        "value": "lobular",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_13",
+        "category": "prior_therapy",
+        "description": "Angiolymphatic invasion",
+        "field": "invasion_type",
+        "operator": "eq",
+        "value": "angiolymphatic",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_14",
+        "category": "prior_therapy",
+        "description": "Multiple foci of disease",
+        "field": "lesion_type",
+        "operator": "eq",
+        "value": "multiple",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_15",
+        "category": "prior_therapy",
+        "description": "Lymphovascular invasion",
+        "field": "invasion_type",
+        "operator": "eq",
+        "value": "lymphovascular",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_16",
+        "category": "comorbidity",
+        "description": "Active lupus or sarcoid",
+        "field": "condition",
+        "operator": "in",
+        "value": [
+          "lupus",
+          "sarcoid"
+        ],
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_17",
+        "category": "comorbidity",
+        "description": "Distant metastases",
+        "field": "metastasis_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_18",
+        "category": "comorbidity",
+        "description": "Non-epithelial malignancies",
+        "field": "malignancy_type",
+        "operator": "eq",
+        "value": "non-epithelial",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_19",
+        "category": "comorbidity",
+        "description": "Synchronous contralateral breast cancer",
+        "field": "breast_cancer_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_20",
+        "category": "comorbidity",
+        "description": "Grade 2 or higher oncoplastic surgery",
+        "field": "surgery_grade",
+        "operator": "gte",
+        "value": 2,
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_21",
+        "category": "comorbidity",
+        "description": "Ipsilateral pacemaker",
+        "field": "pacemaker_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_22",
+        "category": "comorbidity",
+        "description": "Ipsilateral breast implant",
+        "field": "breast_implant_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_23",
+        "category": "prior_therapy",
+        "description": "Neoadjuvant chemotherapy",
+        "field": "chemotherapy_type",
+        "operator": "eq",
+        "value": "neoadjuvant",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_24",
+        "category": "prior_therapy",
+        "description": "Prior ipsilateral breast cancer or thoracic radiation",
+        "field": "prior_cancer_status",
+        "operator": "in",
+        "value": [
+          "breast",
+          "thoracic"
+        ],
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_25",
+        "category": "comorbidity",
+        "description": "Poor breast integrity",
+        "field": "breast_integrity_status",
+        "operator": "eq",
+        "value": "poor",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_26",
+        "category": "comorbidity",
+        "description": "Paget's Disease of the nipple",
+        "field": "nipple_disease_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_27",
+        "category": "comorbidity",
+        "description": "Pregnant patients",
+        "field": "pregnancy_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "is_inclusion": false
+      },
+      {
+        "criterion_id": "NCT04985032_LLM_28",
+        "category": "comorbidity",
+        "description": "Severe cardiac, pulmonary, or liver diseases",
+        "field": "organ_disease_status",
+        "operator": "in",
+        "value": [
+          "cardiac",
+          "pulmonary",
+          "liver"
+        ],
+        "unit": null,
+        "is_inclusion": false
+      }
+    ]
+  },
+  "result": {
+    "nct_id": "NCT04985032",
+    "eligible": false,
+    "has_indeterminate": true,
+    "results": [
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MIN",
+          "category": "demographic",
+          "description": "Minimum age: 50 Years",
+          "field": "age",
+          "operator": "gte",
+          "value": 50,
+          "unit": "years",
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 72,
+        "reason": "PASS: age = 72 (required: gte 50)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_AGE_MAX",
+          "category": "demographic",
+          "description": "Maximum age: 100 Years",
+          "field": "age",
+          "operator": "lte",
+          "value": 100,
+          "unit": "years",
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 72,
+        "reason": "PASS: age = 72 (required: lte 100)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "STRUCT_SEX",
+          "category": "demographic",
+          "description": "Sex: FEMALE",
+          "field": "sex",
+          "operator": "eq",
+          "value": "female",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": "female",
+        "reason": "PASS: sex = female (required: eq female)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_1",
+          "category": "demographic",
+          "description": "Women 50 years or older",
+          "field": "age",
+          "operator": "gte",
+          "value": 50,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "pass",
+        "patient_value": 72,
+        "reason": "PASS: age = 72 (required: gte 50)"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_2",
+          "category": "clinical",
+          "description": "Low to intermediate grade DCIS or invasive ductal carcinoma",
+          "field": "histology",
+          "operator": "in",
+          "value": [
+            "DCIS",
+            "invasive ductal carcinoma"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'histology'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_3",
+          "category": "lab_value",
+          "description": "Tumor size < 2 cm invasive ductal carcinoma and < 2.5 cm DCIS",
+          "field": "tumor_size",
+          "operator": "lte",
+          "value": 2,
+          "unit": "cm",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'tumor_size'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_4",
+          "category": "lab_value",
+          "description": "Well defined lumpectomy cavity on CT",
+          "field": "lumpectomy_cavity_definition",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lumpectomy_cavity_definition'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_5",
+          "category": "lab_value",
+          "description": "Clear surgical ink margins > 2mm for invasive cancer and > 3 mm for DCIS",
+          "field": "surgical_ink_margins",
+          "operator": "gte",
+          "value": 2,
+          "unit": "mm",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'surgical_ink_margins'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_6",
+          "category": "clinical",
+          "description": "Node negative",
+          "field": "lymph_node_status",
+          "operator": "eq",
+          "value": "negative",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lymph_node_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_7",
+          "category": "clinical",
+          "description": "Unifocal lesion",
+          "field": "lesion_type",
+          "operator": "in",
+          "value": [
+            "unifocal"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lesion_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_8",
+          "category": "biomarker",
+          "description": "ER and/or PR positive",
+          "field": "hormone_receptor_status",
+          "operator": "in",
+          "value": [
+            "ER",
+            "PR"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'hormone_receptor_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_9",
+          "category": "biomarker",
+          "description": "HER-2 negative",
+          "field": "her2_status",
+          "operator": "eq",
+          "value": "negative",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'her2_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_10",
+          "category": "biomarker",
+          "description": "BRCA negative",
+          "field": "brca_status",
+          "operator": "eq",
+          "value": "negative",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'brca_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_11",
+          "category": "lab_value",
+          "description": "Lumpectomy cavity must be < 30% of whole breast volume",
+          "field": "lumpectomy_cavity_volume",
+          "operator": "lte",
+          "value": 0.3,
+          "unit": "%",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lumpectomy_cavity_volume'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_12",
+          "category": "prior_therapy",
+          "description": "Lobular histology",
+          "field": "histology",
+          "operator": "eq",
+          "value": "lobular",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'histology'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_13",
+          "category": "prior_therapy",
+          "description": "Angiolymphatic invasion",
+          "field": "invasion_type",
+          "operator": "eq",
+          "value": "angiolymphatic",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'invasion_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_14",
+          "category": "prior_therapy",
+          "description": "Multiple foci of disease",
+          "field": "lesion_type",
+          "operator": "eq",
+          "value": "multiple",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lesion_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_15",
+          "category": "prior_therapy",
+          "description": "Lymphovascular invasion",
+          "field": "invasion_type",
+          "operator": "eq",
+          "value": "lymphovascular",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'invasion_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_16",
+          "category": "comorbidity",
+          "description": "Active lupus or sarcoid",
+          "field": "condition",
+          "operator": "in",
+          "value": [
+            "lupus",
+            "sarcoid"
+          ],
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'condition'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_17",
+          "category": "comorbidity",
+          "description": "Distant metastases",
+          "field": "metastasis_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'metastasis_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_18",
+          "category": "comorbidity",
+          "description": "Non-epithelial malignancies",
+          "field": "malignancy_type",
+          "operator": "eq",
+          "value": "non-epithelial",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'malignancy_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_19",
+          "category": "comorbidity",
+          "description": "Synchronous contralateral breast cancer",
+          "field": "breast_cancer_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'breast_cancer_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_20",
+          "category": "comorbidity",
+          "description": "Grade 2 or higher oncoplastic surgery",
+          "field": "surgery_grade",
+          "operator": "gte",
+          "value": 2,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'surgery_grade'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_21",
+          "category": "comorbidity",
+          "description": "Ipsilateral pacemaker",
+          "field": "pacemaker_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'pacemaker_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_22",
+          "category": "comorbidity",
+          "description": "Ipsilateral breast implant",
+          "field": "breast_implant_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'breast_implant_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_23",
+          "category": "prior_therapy",
+          "description": "Neoadjuvant chemotherapy",
+          "field": "chemotherapy_type",
+          "operator": "eq",
+          "value": "neoadjuvant",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'chemotherapy_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_24",
+          "category": "prior_therapy",
+          "description": "Prior ipsilateral breast cancer or thoracic radiation",
+          "field": "prior_cancer_status",
+          "operator": "in",
+          "value": [
+            "breast",
+            "thoracic"
+          ],
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'prior_cancer_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_25",
+          "category": "comorbidity",
+          "description": "Poor breast integrity",
+          "field": "breast_integrity_status",
+          "operator": "eq",
+          "value": "poor",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'breast_integrity_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_26",
+          "category": "comorbidity",
+          "description": "Paget's Disease of the nipple",
+          "field": "nipple_disease_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'nipple_disease_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_27",
+          "category": "comorbidity",
+          "description": "Pregnant patients",
+          "field": "pregnancy_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'pregnancy_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_28",
+          "category": "comorbidity",
+          "description": "Severe cardiac, pulmonary, or liver diseases",
+          "field": "organ_disease_status",
+          "operator": "in",
+          "value": [
+            "cardiac",
+            "pulmonary",
+            "liver"
+          ],
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'organ_disease_status'"
+      }
+    ],
+    "failing_criteria": [],
+    "indeterminate_criteria": [
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_2",
+          "category": "clinical",
+          "description": "Low to intermediate grade DCIS or invasive ductal carcinoma",
+          "field": "histology",
+          "operator": "in",
+          "value": [
+            "DCIS",
+            "invasive ductal carcinoma"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'histology'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_3",
+          "category": "lab_value",
+          "description": "Tumor size < 2 cm invasive ductal carcinoma and < 2.5 cm DCIS",
+          "field": "tumor_size",
+          "operator": "lte",
+          "value": 2,
+          "unit": "cm",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'tumor_size'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_4",
+          "category": "lab_value",
+          "description": "Well defined lumpectomy cavity on CT",
+          "field": "lumpectomy_cavity_definition",
+          "operator": "exists",
+          "value": null,
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lumpectomy_cavity_definition'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_5",
+          "category": "lab_value",
+          "description": "Clear surgical ink margins > 2mm for invasive cancer and > 3 mm for DCIS",
+          "field": "surgical_ink_margins",
+          "operator": "gte",
+          "value": 2,
+          "unit": "mm",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'surgical_ink_margins'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_6",
+          "category": "clinical",
+          "description": "Node negative",
+          "field": "lymph_node_status",
+          "operator": "eq",
+          "value": "negative",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lymph_node_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_7",
+          "category": "clinical",
+          "description": "Unifocal lesion",
+          "field": "lesion_type",
+          "operator": "in",
+          "value": [
+            "unifocal"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lesion_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_8",
+          "category": "biomarker",
+          "description": "ER and/or PR positive",
+          "field": "hormone_receptor_status",
+          "operator": "in",
+          "value": [
+            "ER",
+            "PR"
+          ],
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'hormone_receptor_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_9",
+          "category": "biomarker",
+          "description": "HER-2 negative",
+          "field": "her2_status",
+          "operator": "eq",
+          "value": "negative",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'her2_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_10",
+          "category": "biomarker",
+          "description": "BRCA negative",
+          "field": "brca_status",
+          "operator": "eq",
+          "value": "negative",
+          "unit": null,
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'brca_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_11",
+          "category": "lab_value",
+          "description": "Lumpectomy cavity must be < 30% of whole breast volume",
+          "field": "lumpectomy_cavity_volume",
+          "operator": "lte",
+          "value": 0.3,
+          "unit": "%",
+          "is_inclusion": true
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lumpectomy_cavity_volume'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_12",
+          "category": "prior_therapy",
+          "description": "Lobular histology",
+          "field": "histology",
+          "operator": "eq",
+          "value": "lobular",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'histology'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_13",
+          "category": "prior_therapy",
+          "description": "Angiolymphatic invasion",
+          "field": "invasion_type",
+          "operator": "eq",
+          "value": "angiolymphatic",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'invasion_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_14",
+          "category": "prior_therapy",
+          "description": "Multiple foci of disease",
+          "field": "lesion_type",
+          "operator": "eq",
+          "value": "multiple",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'lesion_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_15",
+          "category": "prior_therapy",
+          "description": "Lymphovascular invasion",
+          "field": "invasion_type",
+          "operator": "eq",
+          "value": "lymphovascular",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'invasion_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_16",
+          "category": "comorbidity",
+          "description": "Active lupus or sarcoid",
+          "field": "condition",
+          "operator": "in",
+          "value": [
+            "lupus",
+            "sarcoid"
+          ],
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'condition'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_17",
+          "category": "comorbidity",
+          "description": "Distant metastases",
+          "field": "metastasis_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'metastasis_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_18",
+          "category": "comorbidity",
+          "description": "Non-epithelial malignancies",
+          "field": "malignancy_type",
+          "operator": "eq",
+          "value": "non-epithelial",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'malignancy_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_19",
+          "category": "comorbidity",
+          "description": "Synchronous contralateral breast cancer",
+          "field": "breast_cancer_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'breast_cancer_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_20",
+          "category": "comorbidity",
+          "description": "Grade 2 or higher oncoplastic surgery",
+          "field": "surgery_grade",
+          "operator": "gte",
+          "value": 2,
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'surgery_grade'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_21",
+          "category": "comorbidity",
+          "description": "Ipsilateral pacemaker",
+          "field": "pacemaker_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'pacemaker_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_22",
+          "category": "comorbidity",
+          "description": "Ipsilateral breast implant",
+          "field": "breast_implant_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'breast_implant_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_23",
+          "category": "prior_therapy",
+          "description": "Neoadjuvant chemotherapy",
+          "field": "chemotherapy_type",
+          "operator": "eq",
+          "value": "neoadjuvant",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'chemotherapy_type'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_24",
+          "category": "prior_therapy",
+          "description": "Prior ipsilateral breast cancer or thoracic radiation",
+          "field": "prior_cancer_status",
+          "operator": "in",
+          "value": [
+            "breast",
+            "thoracic"
+          ],
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'prior_cancer_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_25",
+          "category": "comorbidity",
+          "description": "Poor breast integrity",
+          "field": "breast_integrity_status",
+          "operator": "eq",
+          "value": "poor",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'breast_integrity_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_26",
+          "category": "comorbidity",
+          "description": "Paget's Disease of the nipple",
+          "field": "nipple_disease_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'nipple_disease_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_27",
+          "category": "comorbidity",
+          "description": "Pregnant patients",
+          "field": "pregnancy_status",
+          "operator": "eq",
+          "value": "positive",
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'pregnancy_status'"
+      },
+      {
+        "criterion": {
+          "criterion_id": "NCT04985032_LLM_28",
+          "category": "comorbidity",
+          "description": "Severe cardiac, pulmonary, or liver diseases",
+          "field": "organ_disease_status",
+          "operator": "in",
+          "value": [
+            "cardiac",
+            "pulmonary",
+            "liver"
+          ],
+          "unit": null,
+          "is_inclusion": false
+        },
+        "status": "indeterminate",
+        "patient_value": null,
+        "reason": "Patient data missing for 'organ_disease_status'"
+      }
+    ]
+  },
+  "report_text": "Trial: NCT04985032\nEligible: NO\n\nINDETERMINATE (missing patient data):\n  1. [clinical] Low to intermediate grade DCIS or invasive ductal carcinoma\n     Field: histology\n     \u2192 Data not available in patient record\n\n  2. [lab_value] Tumor size < 2 cm invasive ductal carcinoma and < 2.5 cm DCIS\n     Field: tumor_size\n     \u2192 Data not available in patient record\n\n  3. [lab_value] Well defined lumpectomy cavity on CT\n     Field: lumpectomy_cavity_definition\n     \u2192 Data not available in patient record\n\n  4. [lab_value] Clear surgical ink margins > 2mm for invasive cancer and > 3 mm for DCIS\n     Field: surgical_ink_margins\n     \u2192 Data not available in patient record\n\n  5. [clinical] Node negative\n     Field: lymph_node_status\n     \u2192 Data not available in patient record\n\n  6. [clinical] Unifocal lesion\n     Field: lesion_type\n     \u2192 Data not available in patient record\n\n  7. [biomarker] ER and/or PR positive\n     Field: hormone_receptor_status\n     \u2192 Data not available in patient record\n\n  8. [biomarker] HER-2 negative\n     Field: her2_status\n     \u2192 Data not available in patient record\n\n  9. [biomarker] BRCA negative\n     Field: brca_status\n     \u2192 Data not available in patient record\n\n  10. [lab_value] Lumpectomy cavity must be < 30% of whole breast volume\n     Field: lumpectomy_cavity_volume\n     \u2192 Data not available in patient record\n\n  11. [prior_therapy] Lobular histology\n     Field: histology\n     \u2192 Data not available in patient record\n\n  12. [prior_therapy] Angiolymphatic invasion\n     Field: invasion_type\n     \u2192 Data not available in patient record\n\n  13. [prior_therapy] Multiple foci of disease\n     Field: lesion_type\n     \u2192 Data not available in patient record\n\n  14. [prior_therapy] Lymphovascular invasion\n     Field: invasion_type\n     \u2192 Data not available in patient record\n\n  15. [comorbidity] Active lupus or sarcoid\n     Field: condition\n     \u2192 Data not available in patient record\n\n  16. [comorbidity] Distant metastases\n     Field: metastasis_status\n     \u2192 Data not available in patient record\n\n  17. [comorbidity] Non-epithelial malignancies\n     Field: malignancy_type\n     \u2192 Data not available in patient record\n\n  18. [comorbidity] Synchronous contralateral breast cancer\n     Field: breast_cancer_status\n     \u2192 Data not available in patient record\n\n  19. [comorbidity] Grade 2 or higher oncoplastic surgery\n     Field: surgery_grade\n     \u2192 Data not available in patient record\n\n  20. [comorbidity] Ipsilateral pacemaker\n     Field: pacemaker_status\n     \u2192 Data not available in patient record\n\n  21. [comorbidity] Ipsilateral breast implant\n     Field: breast_implant_status\n     \u2192 Data not available in patient record\n\n  22. [prior_therapy] Neoadjuvant chemotherapy\n     Field: chemotherapy_type\n     \u2192 Data not available in patient record\n\n  23. [prior_therapy] Prior ipsilateral breast cancer or thoracic radiation\n     Field: prior_cancer_status\n     \u2192 Data not available in patient record\n\n  24. [comorbidity] Poor breast integrity\n     Field: breast_integrity_status\n     \u2192 Data not available in patient record\n\n  25. [comorbidity] Paget's Disease of the nipple\n     Field: nipple_disease_status\n     \u2192 Data not available in patient record\n\n  26. [comorbidity] Pregnant patients\n     Field: pregnancy_status\n     \u2192 Data not available in patient record\n\n  27. [comorbidity] Severe cardiac, pulmonary, or liver diseases\n     Field: organ_disease_status\n     \u2192 Data not available in patient record\n\nPASSING CRITERIA: 4 of 31"
+}

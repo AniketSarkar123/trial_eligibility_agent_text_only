@@ -1,0 +1,59 @@
+Trial: NCT05108298
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [demographic] Maximum age: 39 Years
+     Patient value: 42
+     Required: lte 39
+     → FAIL: age = 42 (required: lte 39)
+
+INDETERMINATE (missing patient data):
+  1. [demographic] Patient must have a histologically confirmed diagnosis of primary cancer of any stage within 12 weeks (84 days) at registration.
+     Field: diagnosis
+     → Data not available in patient record
+
+  2. [prior_therapy] Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy.
+     Field: prior_therapy
+     → Data not available in patient record
+
+  3. [clinical] Patient must have an ECOG performance status 0-3.
+     Field: ecog_score
+     → Data not available in patient record
+
+  4. [lab_value] Patient must have a life expectancy >24 months.
+     Field: life_expectancy
+     → Data not available in patient record
+
+  5. [demographic] Patient must be able to complete questionnaires in English.
+     Field: language
+     → Data not available in patient record
+
+  6. [prior_therapy] Patient must have internet access through computer, tablet, or smartphone.
+     Field: internet_access
+     → Data not available in patient record
+
+  7. [demographic] Patient must have an email address.
+     Field: email_address
+     → Data not available in patient record
+
+  8. [prior_therapy] Patient must have a mobile phone able with text messaging capabilities.
+     Field: mobile_phone
+     → Data not available in patient record
+
+  9. [comorbidity] Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact).
+     Field: cognitive_function
+     → Data not available in patient record
+
+  10. [demographic] Patient must be able to provide informed consent.
+     Field: informed_consent
+     → Data not available in patient record
+
+  11. [comorbidity] Patient must not have a recurrence or second primary cancer.
+     Field: recurrence_status
+     → Data not available in patient record
+
+  12. [comorbidity] Patients must not have basal cell skin carcinoma.
+     Field: basal_cell_skin_carcinoma
+     → Data not available in patient record
+
+PASSING CRITERIA: 2 of 15

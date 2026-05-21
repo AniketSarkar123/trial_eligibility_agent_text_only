@@ -1,0 +1,39 @@
+Trial: NCT04698252
+Eligible: NO
+
+FAILING CRITERIA:
+  1. [clinical] Histologically confirmed invasive breast cancer, with oligometastatic disease defined as one of the following criteria: 1) One to four bone lesions; 2) One to four lung and/ or hepatic lesions; 3) Distant metastasis limited to ipsilateral cervical lymph nodes; 4) Distant metastasis limited to contralateral axillary lymph nodes
+     Patient value: [LLM Evaluated]
+     Required: exists None
+     → LLM Fallback: The patient has triple-negative metastatic breast cancer, which does not meet the oligometastatic disease criteria specified in the trial rule.
+
+  2. [clinical] Oligometastatic sites amenable to treatment with a local therapy modality, including surgical resection, stereotactic radiotherapy, or radiofrequency ablation
+     Patient value: [LLM Evaluated]
+     Required: exists None
+     → LLM Fallback: The patient has metastatic breast cancer, which does not meet the oligometastatic sites amenable to treatment with local therapy criteria.
+
+  3. [biomarker] Estrogen receptor-positive and/ or progesterone receptor-positive breast cancer
+     Patient value: [LLM Evaluated]
+     Required: exists None
+     → LLM Fallback: The patient has triple-negative metastatic breast cancer, which is not estrogen receptor-positive or progesterone receptor-positive.
+
+  4. [prior_therapy] Previous local therapy for distant metastasis
+     Patient value: False
+     Required: exists None
+     → FAIL: prior_drug_class:local_therapy = False (required: exists None)
+
+  5. [prior_therapy] Current or previous history of other invasive malignancy within the last five years, excluding non-melanoma skin cancer
+     Patient value: False
+     Required: exists None
+     → FAIL: prior_drug_class:other_invasive_malignancy = False (required: exists None)
+
+INDETERMINATE (missing patient data):
+  1. [clinical] Eastern Cooperative Oncology Group (ECOG) performance status 0 or 1
+     Field: ecog_score
+     → Data not available in patient record
+
+  2. [demographic] Life expectancy of at least 12 weeks
+     Field: lab: life_expectancy
+     → Data not available in patient record
+
+PASSING CRITERIA: 12 of 19
