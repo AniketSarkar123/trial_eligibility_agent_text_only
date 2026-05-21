@@ -1,0 +1,18 @@
+Trial: NCT05108298
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 1 | Soft: 0]
+  1. [clinical_diagnosis] [Inclusion] Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy.
+     Field: unmapped_rule
+     → LLM Fallback: No evidence of received, ongoing, or planned cancer treatment in the narrative or structured profile.
+
+PASSING CRITERIA: 14 of 15
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT05108298_LLM_4         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 20.0

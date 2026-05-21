@@ -1,0 +1,23 @@
+Trial: NCT05108298
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 2 | Soft: 0]
+  1. [clinical_diagnosis] [Inclusion] Patient must have a histologically confirmed diagnosis of primary cancer of any stage within 12 weeks (84 days) at registration.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's diagnosis of cervical cancer occurred exactly 84 days ago, meeting the 12-week window. Histological confirmation is implied by the clinical diagnosis but not explicitly stated.
+
+  2. [clinical_diagnosis] [Inclusion] Patient must have received, be currently receiving or planning to receive treatment for cancer, including surgery and/or chemotherapy and/or radiation therapy.
+     Field: unmapped_rule
+     → LLM Fallback: No information is provided about treatment received, ongoing, or planned for the patient's cervical cancer.
+
+PASSING CRITERIA: 13 of 15
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT05108298_LLM_3         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT05108298_LLM_4         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 40.0

@@ -1,0 +1,33 @@
+Trial: NCT05108298
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 3 | Soft: 1]
+  1. [clinical_diagnosis] [Exclusion] Patient must not have a recurrence or second primary cancer.
+     Field: has_recurrence
+     → Data not available in patient record
+
+  2. [clinical_diagnosis] [Inclusion] Patient must have a histologically confirmed diagnosis of primary cancer of any stage within 12 weeks (84 days) at registration.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's diagnosis is within the 84-day window, but histological confirmation is not explicitly documented in the narrative or structured data.
+
+  3. [clinical_diagnosis] [Inclusion] Patient must be able to accurately provide self-report data (e.g. per clinical judgment, cognitive function is intact).
+     Field: unmapped_rule
+     → LLM Fallback: The patient's cognitive status is not explicitly documented in the clinical narrative or structured profile.
+
+  4. [administrative] [Inclusion] Patient must be able to provide informed consent.
+     Field: unmapped_rule
+     → LLM Fallback: The patient's ability to provide informed consent for the trial is not explicitly documented in the narrative or structured profile.
+
+PASSING CRITERIA: 11 of 15
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT05108298_LLM_13        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT05108298_LLM_3         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT05108298_LLM_11        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT05108298_LLM_12        | administrative       | 10.0            | 0.0        | 0.0       
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 50.0
