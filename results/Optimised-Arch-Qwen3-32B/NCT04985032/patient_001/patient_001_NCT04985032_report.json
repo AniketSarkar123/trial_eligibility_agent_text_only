@@ -1,0 +1,646 @@
+{
+  "patient": {
+    "age": 62,
+    "sex": "female",
+    "menopausal_status": "postmenopausal",
+    "pregnancy_status": "not_pregnant",
+    "primary_diagnosis": "invasive ductal carcinoma",
+    "cancer_stage": null,
+    "is_metastatic": false,
+    "histology": null,
+    "tumor_size_cm": null,
+    "nodal_status": "negative",
+    "tumor_grade": null,
+    "lymphovascular_invasion": false,
+    "disease_focality": "unifocal",
+    "er_status": "positive",
+    "pr_status": "positive",
+    "her2_status": "negative",
+    "brca_status": "BRCA_wildtype",
+    "ki67_percent": null,
+    "pdl1_status": null,
+    "stil_score_percent": null,
+    "received_neoadjuvant_therapy": false,
+    "received_adjuvant_therapy": null,
+    "has_recurrence": null,
+    "has_prior_malignancy": null,
+    "ecog_score": null,
+    "prior_therapies": [],
+    "lines_of_therapy": 0,
+    "prior_radiation": null,
+    "prior_surgery": true,
+    "lab_values": [],
+    "comorbidities": [],
+    "adequate_liver_function": null,
+    "adequate_renal_function": null,
+    "adequate_bone_marrow": null,
+    "brain_metastases": "none"
+  },
+  "nct_id": "NCT04985032",
+  "eligible": true,
+  "has_indeterminate": true,
+  "risk_score": 10.0,
+  "results": [
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_AGE_MIN",
+        "category": "demographic",
+        "description": "Minimum age: 50 Years",
+        "field": "age",
+        "operator": "gte",
+        "value": 50,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": 62,
+      "reason": "PASS: age = 62 (required: gte 50)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_AGE_MAX",
+        "category": "demographic",
+        "description": "Maximum age: 100 Years",
+        "field": "age",
+        "operator": "lte",
+        "value": 100,
+        "unit": "years",
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": 62,
+      "reason": "PASS: age = 62 (required: lte 100)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "STRUCT_SEX",
+        "category": "demographic",
+        "description": "Sex: FEMALE",
+        "field": "sex",
+        "operator": "eq",
+        "value": "female",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "female",
+      "reason": "PASS: sex = female (required: eq female)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_6",
+        "category": "clinical_diagnosis",
+        "description": "Node negative",
+        "field": "nodal_status",
+        "operator": "eq",
+        "value": "negative",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "negative",
+      "reason": "PASS: nodal_status = negative (required: eq negative)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_8",
+        "category": "biomarker",
+        "description": "ER positive",
+        "field": "er_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "HORMONE_GROUP",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "positive",
+      "reason": "Group HORMONE_GROUP (OR) condition met by another criterion."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_9",
+        "category": "biomarker",
+        "description": "PR positive",
+        "field": "pr_status",
+        "operator": "eq",
+        "value": "positive",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": "HORMONE_GROUP",
+        "group_operator": "OR",
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "positive",
+      "reason": "Group HORMONE_GROUP (OR) condition met by another criterion."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_10",
+        "category": "biomarker",
+        "description": "HER-2 negative",
+        "field": "her2_status",
+        "operator": "eq",
+        "value": "negative",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "negative",
+      "reason": "PASS: her2_status = negative (required: eq negative)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_11",
+        "category": "biomarker",
+        "description": "BRCA negative",
+        "field": "brca_status",
+        "operator": "in",
+        "value": [
+          "negative",
+          "BRCA_wildtype",
+          "wildtype"
+        ],
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "BRCA_wildtype",
+      "reason": "PASS: brca_status = BRCA_wildtype (required: in ['negative', 'BRCA_wildtype', 'wildtype'])"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_13",
+        "category": "clinical_diagnosis",
+        "description": "Lobular histology",
+        "field": "histology",
+        "operator": "eq",
+        "value": "lobular",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": null,
+      "reason": "Patient data missing for 'histology'"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_16",
+        "category": "clinical_diagnosis",
+        "description": "Lymphovascular invasion",
+        "field": "Lymphovascular_invasion",
+        "operator": "eq",
+        "value": true,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": false,
+      "reason": "PASS: Lymphovascular_invasion = False (required: eq True)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_18",
+        "category": "clinical_diagnosis",
+        "description": "Distant metastases",
+        "field": "is_metastatic",
+        "operator": "eq",
+        "value": true,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": false,
+      "reason": "PASS: is_metastatic = False (required: eq True)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_24",
+        "category": "prior_therapy",
+        "description": "Neoadjuvant chemotherapy",
+        "field": "received_neoadjuvant_therapy",
+        "operator": "eq",
+        "value": true,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": false,
+      "reason": "PASS: received_neoadjuvant_therapy = False (required: eq True)"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_2",
+        "category": "clinical_diagnosis",
+        "description": "Low to intermediate grade DCIS or invasive ductal carcinoma",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has low to intermediate grade invasive ductal carcinoma as required by the rule."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_3",
+        "category": "clinical_diagnosis",
+        "description": "Tumor size < 2 cm invasive ductal carcinoma and < 2.5 cm DCIS",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has <2 cm invasive ductal carcinoma as required by the rule."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_4",
+        "category": "clinical_diagnosis",
+        "description": "Well defined lumpectomy cavity on CT",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient's CT demonstrates a well-defined lumpectomy cavity as required by the inclusion criterion."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_5",
+        "category": "clinical_diagnosis",
+        "description": "Clear surgical ink margins > 2mm for invasive cancer and > 3 mm for DCIS",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient meets the required margin for invasive cancer and has no DCIS, making the DCIS margin requirement inapplicable."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_7",
+        "category": "clinical_diagnosis",
+        "description": "Unifocal lesion",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has a unifocal lesion as explicitly stated in both clinical narrative and structured profile."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_12",
+        "category": "clinical_diagnosis",
+        "description": "Lumpectomy cavity must be < 30% of whole breast volume",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": true
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient's lumpectomy cavity is explicitly stated to be < 30% of whole breast volume per CT imaging."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_14",
+        "category": "clinical_diagnosis",
+        "description": "Angiolymphatic invasion",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has no angiolymphatic invasion as explicitly stated in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_15",
+        "category": "clinical_diagnosis",
+        "description": "Multiple foci of disease",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has unifocal disease, which does not meet the exclusion criterion of multiple foci."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_17",
+        "category": "comorbidity",
+        "description": "Active lupus or sarcoid",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has neither active lupus nor sarcoid as explicitly stated in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_19",
+        "category": "clinical_diagnosis",
+        "description": "Non-epithelial malignancies",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly has no non-epithelial malignancies as stated in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_20",
+        "category": "clinical_diagnosis",
+        "description": "Synchronous contralateral breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly has no synchronous contralateral breast cancer per clinical narrative"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_21",
+        "category": "clinical_diagnosis",
+        "description": "Grade 2 or higher oncoplastic surgery",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has no grade 2 or higher oncoplastic surgery"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_22",
+        "category": "comorbidity",
+        "description": "Ipsilateral pacemaker",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient does not have an ipsilateral pacemaker as explicitly stated in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_23",
+        "category": "comorbidity",
+        "description": "Ipsilateral breast implant",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has no ipsilateral breast implant as documented in clinical narrative"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_25",
+        "category": "prior_therapy",
+        "description": "Prior ipsilateral breast cancer",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has no prior ipsilateral breast cancer as confirmed by both clinical narrative and structured profile."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_26",
+        "category": "prior_therapy",
+        "description": "Thoracic radiation",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient has no history of thoracic radiation as explicitly stated in the clinical narrative and structured profile."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_27",
+        "category": "clinical_diagnosis",
+        "description": "Poor breast integrity",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: The patient explicitly has no poor breast integrity as stated in the clinical narrative."
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_28",
+        "category": "clinical_diagnosis",
+        "description": "Paget's Disease of the nipple",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly lacks Paget's Disease of the nipple as stated in the clinical narrative"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_29",
+        "category": "clinical_diagnosis",
+        "description": "Pregnant patients",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient is explicitly stated to be not pregnant in both clinical narrative and structured profile"
+    },
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_30",
+        "category": "comorbidity",
+        "description": "Severe cardiac, pulmonary, or liver diseases",
+        "field": "unmapped_rule",
+        "operator": null,
+        "value": null,
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "pass",
+      "patient_value": "[LLM Evaluated]",
+      "reason": "LLM Fallback: Patient explicitly lacks severe cardiac, pulmonary, or liver diseases per clinical narrative"
+    }
+  ],
+  "failing_criteria": [],
+  "indeterminate_criteria": [
+    {
+      "criterion": {
+        "criterion_id": "NCT04985032_LLM_13",
+        "category": "clinical_diagnosis",
+        "description": "Lobular histology",
+        "field": "histology",
+        "operator": "eq",
+        "value": "lobular",
+        "unit": null,
+        "timeframe_days": null,
+        "group_id": null,
+        "group_operator": null,
+        "is_inclusion": false
+      },
+      "status": "indeterminate",
+      "patient_value": null,
+      "reason": "Patient data missing for 'histology'"
+    }
+  ]
+}

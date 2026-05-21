@@ -1,0 +1,18 @@
+Trial: NCT04985032
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 1 | Soft: 0]
+  1. [clinical_diagnosis] [Exclusion] Lobular histology
+     Field: histology
+     → Data not available in patient record
+
+PASSING CRITERIA: 31 of 32
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04985032_LLM_13        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 10.0

@@ -1,0 +1,123 @@
+Trial: NCT04985032
+Eligible: NO
+Triage Status: INELIGIBLE
+THE PATIENT IS METASTATIC!
+
+FAILING CRITERIA:
+  1. [biomarker] [Inclusion] ER positive
+     Patient value: negative
+     Required: eq positive
+     → FAIL: er_status = negative (required: eq positive)
+
+  2. [biomarker] [Inclusion] PR positive
+     Patient value: negative
+     Required: eq positive
+     → FAIL: pr_status = negative (required: eq positive)
+
+  3. [clinical_diagnosis] [Exclusion] Distant metastases
+     Patient value: True
+     Required: eq True
+     → FAIL: is_metastatic = True (required: eq True)
+
+  4. [clinical_diagnosis] [Inclusion] Unifocal lesion
+     Field: unmapped_rule
+     → LLM Fallback: Patient has multiple metastases (lung, liver, and brain), violating the 'unifocal lesion' requirement.
+
+  5. [clinical_diagnosis] [Exclusion] Multiple foci of disease
+     Field: unmapped_rule
+     → LLM Fallback: The patient has lung and liver metastases, indicating multiple foci of disease.
+
+INDETERMINATE (missing patient data): [Hard: 17 | Soft: 0]
+  1. [clinical_diagnosis] [Inclusion] Node negative
+     Field: nodal_status
+     → Data not available in patient record
+
+  2. [biomarker] [Inclusion] BRCA negative
+     Field: brca_status
+     → Data not available in patient record
+
+  3. [clinical_diagnosis] [Exclusion] Lymphovascular invasion
+     Field: Lymphovascular_invasion
+     → Data not available in patient record
+
+  4. [prior_therapy] [Exclusion] Neoadjuvant chemotherapy
+     Field: received_neoadjuvant_therapy
+     → Data not available in patient record
+
+  5. [clinical_diagnosis] [Inclusion] Low to intermediate grade DCIS or invasive ductal carcinoma
+     Field: unmapped_rule
+     → LLM Fallback: The patient has invasive ductal carcinoma (TNBC) but the grade is unspecified, making it impossible to confirm if it meets the low to intermediate grade requirement.
+
+  6. [clinical_diagnosis] [Inclusion] Tumor size < 2 cm invasive ductal carcinoma and < 2.5 cm DCIS
+     Field: unmapped_rule
+     → LLM Fallback: Tumor size measurements are not provided in the clinical narrative or structured profile.
+
+  7. [clinical_diagnosis] [Inclusion] Well defined lumpectomy cavity on CT
+     Field: unmapped_rule
+     → LLM Fallback: No clinical documentation of a lumpectomy cavity exists in the patient's narrative or structured profile.
+
+  8. [clinical_diagnosis] [Inclusion] Clear surgical ink margins > 2mm for invasive cancer and > 3 mm for DCIS
+     Field: unmapped_rule
+     → LLM Fallback: The patient's medical records contain no information about surgical ink margins or DCIS status.
+
+  9. [clinical_diagnosis] [Inclusion] Lumpectomy cavity must be < 30% of whole breast volume
+     Field: unmapped_rule
+     → LLM Fallback: The patient's medical record contains no information about lumpectomy cavity size or breast volume measurements required to evaluate this rule.
+
+  10. [clinical_diagnosis] [Exclusion] Angiolymphatic invasion
+     Field: unmapped_rule
+     → LLM Fallback: The patient's records do not mention angiolymphatic invasion status.
+
+  11. [comorbidity] [Exclusion] Active lupus or sarcoid
+     Field: unmapped_rule
+     → LLM Fallback: The patient's medical records contain no mention of active lupus or sarcoid.
+
+  12. [clinical_diagnosis] [Exclusion] Synchronous contralateral breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: The patient's clinical narrative and structured profile do not mention synchronous contralateral breast cancer.
+
+  13. [clinical_diagnosis] [Exclusion] Grade 2 or higher oncoplastic surgery
+     Field: unmapped_rule
+     → LLM Fallback: The patient's medical record contains no information about oncoplastic surgery, so it is unknown whether she has had Grade 2 or higher surgery.
+
+  14. [comorbidity] [Exclusion] Ipsilateral pacemaker
+     Field: unmapped_rule
+     → LLM Fallback: No information provided about pacemaker presence in clinical narrative or structured profile
+
+  15. [prior_therapy] [Exclusion] Prior ipsilateral breast cancer
+     Field: unmapped_rule
+     → LLM Fallback: The patient's medical history does not include any mention of prior ipsilateral breast cancer.
+
+  16. [prior_therapy] [Exclusion] Thoracic radiation
+     Field: unmapped_rule
+     → LLM Fallback: The patient's record contains no information about thoracic radiation history.
+
+  17. [clinical_diagnosis] [Exclusion] Poor breast integrity
+     Field: unmapped_rule
+     → LLM Fallback: The patient's clinical record contains no information about breast integrity status.
+
+PASSING CRITERIA: 10 of 32
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04985032_LLM_6         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04985032_LLM_11        | biomarker            | 10.0            | 3.0        | 30.0      
+NCT04985032_LLM_16        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT04985032_LLM_24        | prior_therapy        | 5.0             | 1.5        | 7.5       
+NCT04985032_LLM_2         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04985032_LLM_3         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04985032_LLM_4         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04985032_LLM_5         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04985032_LLM_12        | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+NCT04985032_LLM_14        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT04985032_LLM_17        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT04985032_LLM_20        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT04985032_LLM_21        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+NCT04985032_LLM_22        | comorbidity          | 5.0             | 0.5        | 2.5       
+NCT04985032_LLM_25        | prior_therapy        | 5.0             | 1.5        | 7.5       
+NCT04985032_LLM_26        | prior_therapy        | 5.0             | 1.5        | 7.5       
+NCT04985032_LLM_27        | clinical_diagnosis   | 5.0             | 2.0        | 10.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 227.5

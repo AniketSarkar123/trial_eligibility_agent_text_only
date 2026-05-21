@@ -1,0 +1,18 @@
+Trial: NCT04985032
+Eligible: YES
+Triage Status: POTENTIALLY ELIGIBLE (Needs Chart Review)
+
+INDETERMINATE (missing patient data): [Hard: 1 | Soft: 0]
+  1. [clinical_diagnosis] [Inclusion] Clear surgical ink margins > 2mm for invasive cancer and > 3 mm for DCIS
+     Field: unmapped_rule
+     → LLM Fallback: The patient meets the invasive cancer margin requirement (>2mm), but DCIS margin data is not provided.
+
+PASSING CRITERIA: 31 of 32
+
+RISK SCORE CALCULATION BREAKDOWN:
+------------------------------------------------------------------------------------------
+CRITERION ID              | CATEGORY             | BASE PENALTY    | MULTIPLIER | SCORE     
+------------------------------------------------------------------------------------------
+NCT04985032_LLM_5         | clinical_diagnosis   | 10.0            | 2.0        | 20.0      
+------------------------------------------------------------------------------------------
+TOTAL RISK SCORE:                                                                 20.0

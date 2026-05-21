@@ -1,0 +1,5 @@
+Trial: NCT04985032
+Eligible: YES
+Triage Status: FULLY ELIGIBLE
+
+PASSING CRITERIA: 32 of 32
